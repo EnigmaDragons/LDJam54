@@ -40,6 +40,7 @@ Software Requirements:
 - Git
 - Unity 2021 (Version 2021.3.30f1)
 - Any C# IDE
+- FMOD Studio v.2.02.17
 
 Setup:
 1. Clone this repository using git
@@ -51,6 +52,21 @@ Setup:
 7. Click on ``
 
 ----
+FMOD:
+The Fmod studio project is in src/FMOD_LD54
+- Adding sound to Unity
+1. In the Browser add a 2D or 3D Timeline Event and name it
+2. Add sound in the start of the timeline
+3. Assign the Event to the "Master" bank (right click in the browser).
+Build from the File menu or (F7)
+
+- In Unity
+1. Add an FMOD Studio Event Emitter to a gameobject 
+2. Set start and stop method (OnTrigger, etc) 
+3. Add the event from the build (if the events aren't visible try refreshing the banks from the FMOD windows menu)
+
+Note that while built files are compressed FMOD Studio accepts any file format and higher res files can grow the FMOD session quickly. 
+Therefore 48kHz/16 or 24 bit files are recommended. 
 
 ### Team
 
