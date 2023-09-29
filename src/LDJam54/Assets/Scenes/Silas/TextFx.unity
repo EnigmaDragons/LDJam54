@@ -1,0 +1,2728 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 9
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 12
+  m_GIWorkflowMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 12
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+    m_BakeBackend: 1
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 512
+    m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 256
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 1
+    m_PVRDenoiserTypeDirect: 1
+    m_PVRDenoiserTypeIndirect: 1
+    m_PVRDenoiserTypeAO: 1
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVREnvironmentMIS: 1
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
+  m_LightingDataAsset: {fileID: 0}
+  m_LightingSettings: {fileID: 0}
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!43 &141288001
+Mesh:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  serializedVersion: 10
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 54
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 36
+    localAABB:
+      m_Center: {x: -0.061630607, y: 1.201742, z: 0}
+      m_Extent: {x: 3.6751213, y: 0.75520205, z: 0}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 0200010000000300020000000600050004000700060004000a00090008000b000a0008000e000d000c000f000e000c001200110010001300120010001600150014001700160014001a00190018001b001a0018001e001d001c001f001e001c00220021002000230022002000
+  m_VertexData:
+    serializedVersion: 3
+    m_VertexCount: 36
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 24
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 40
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 1728
+    _typelessdata: dda51dc023baf03f000000000000000000000000000080bfb8da103f52ac763f0000803f0000803f0000a03d00000000d8d369c0257dfa3f000000000000000000000000000080bfb8da103f52ac763f0000803f0000803f0000103d00000000f1266fc0bb8e283f000000000000000000000000000080bfb8da103f52ac763f0000803f0000803f0000103d0000403df6f822c0b508153f000000000000000000000000000080bfb8da103f52ac763f0000803f0000803f0000a03d0000403db438ecbf69b8b93f000000000000000000000000000080bfc82e7a3f08837f3f0000803f0000803f0000e83d00000000d6f62fc0364eba3f000000000000000000000000000080bfc82e7a3f08837f3f0000803f0000803f0000a03d000000000e4a30c017f8e63e000000000000000000000000000080bfc82e7a3f08837f3f0000803f0000803f0000a03d0000203d26dfecbfe4a0e43e000000000000000000000000000080bfc82e7a3f08837f3f0000803f0000803f0000e83d0000203df78303c09056bb3f000000000000000000000000000080bf9c2b753f5a177f3f0000803f0000803f0000103d0000183ef78303c029620e3f000000000000000000000000000080bf9c2b753f5a177f3f0000803f0000803f000000000000183e955658bf29620e3f000000000000000000000000000080bf9c2b753f5a177f3f0000803f0000803f000000000000d03d955658bf9056bb3f000000000000000000000000000080bf9c2b753f5a177f3f0000803f0000803f0000103d0000d03d9ee4763eac2fea3f000000000000000000000000000080bf6dc2403f70b17a3f0000803f0000803f0000203d0000603dd4344ebf7851e33f000000000000000000000000000080bf6dc2403f70b17a3f0000803f0000803f000000000000603d28b93dbff51e053f000000000000000000000000000080bf6dc2403f70b17a3f0000803f0000803f000000000000d03daa699c3e5bdb123f000000000000000000000000000080bf6dc2403f70b17a3f0000803f0000803f0000203d0000d03d17de7a3fab80c13f000000000000000000000000000080bf2ade3c3fd65d7a3f0000803f0000803f0000e83d0000000098180c3d1c22c33f000000000000000000000000000080bf2ade3c3fd65d7a3f0000803f0000803f0000a03d00000000a03ca43cd781f23e000000000000000000000000000080bf2ade3c3fd65d7a3f0000803f0000803f0000a03d0000203d723e773f15fceb3e000000000000000000000000000080bf2ade3c3fd65d7a3f0000803f0000803f0000e83d0000203d4974cf3f403bca3f000000000000000000000000000080bf8b19243fc249783f0000803f0000803f0000c83d0000403d88312a3f1995bb3f000000000000000000000000000080bf8b19243fc249783f0000803f0000803f0000803d0000403dd67d473f2a73023f000000000000000000000000000080bf8b19243fc249783f0000803f0000803f0000803d0000a83d701ade3f78bf1f3f000000000000000000000000000080bf8b19243fc249783f0000803f0000803f0000c83d0000a83da6360240fa5ff43f000000000000000000000000000080bf00f1313f1c73793f0000803f0000803f0000803d0000403df22bb33f547ff03f000000000000000000000000000080bf00f1313f1c73793f0000803f0000803f0000203d0000403daf92bb3f75e3003f000000000000000000000000000080bf00f1313f1c73793f0000803f0000803f0000203d0000c83d056a0640c1a4083f000000000000000000000000000080bf00f1313f1c73793f0000803f0000803f0000803d0000c83dc330394026e7e23f000000000000000000000000000080bf1bcc3f3fc59c7a3f0000803f0000803f0000103d0000003cd4a4f93f1e1fe73f000000000000000000000000000080bf1bcc3f3fc59c7a3f0000803f0000803f000000000000003cde04f43f0c470c3f000000000000000000000000000080bf1bcc3f3fc59c7a3f0000803f0000803f000000000000603dc86036401cd7033f000000000000000000000000000080bf1bcc3f3fc59c7a3f0000803f0000803f0000103d0000603d821f6440bcd4c53f000000000000000000000000000080bf91140c3fc345763f0000803f0000803f0000c83d0000403d60892540e48cbf3f000000000000000000000000000080bf91140c3fc345763f0000803f0000803f0000803d0000403d4cad28403fc1043f000000000000000000000000000080bf91140c3fc345763f0000803f0000803f0000803d0000a83d6e436740f150113f000000000000000000000000000080bf91140c3fc345763f0000803f0000803f0000c83d0000a83d
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: -0.049999952, y: 1.1, z: 0}
+    m_Extent: {x: 3.6000001, y: 0.65000004, z: 0}
+  m_MeshUsageFlags: 0
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshMetrics[0]: 1
+  m_MeshMetrics[1]: 1
+  m_MeshOptimizationFlags: 1
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
+--- !u!1 &684929768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 684929770}
+  - component: {fileID: 684929769}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &684929769
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684929768}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 1
+  m_Shape: 0
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &684929770
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684929768}
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1336450569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1336450573}
+  - component: {fileID: 1336450572}
+  - component: {fileID: 1336450571}
+  - component: {fileID: 1336450570}
+  m_Layer: 0
+  m_Name: TextFx Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1336450570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336450569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9dab6f68a3d91444a287d7a744d706b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_text: New TextFx
+  m_font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_font_data_file: {fileID: 0}
+  m_font_material: {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  m_px_offset: {x: 0, y: 0}
+  m_character_size: 1
+  m_use_colour_gradient: 0
+  m_textColour: {r: 1, g: 1, b: 1, a: 1}
+  m_textColourGradient:
+    top_left: {r: 1, g: 1, b: 1, a: 1}
+    top_right: {r: 1, g: 1, b: 1, a: 1}
+    bottom_right: {r: 1, g: 1, b: 1, a: 1}
+    bottom_left: {r: 1, g: 1, b: 1, a: 1}
+  m_display_axis: 0
+  m_text_anchor: 4
+  m_text_alignment: 0
+  m_line_height_factor: 1
+  m_max_width: 0
+  m_override_font_baseline: 0
+  m_font_baseline_override: 0
+  m_animation_manager:
+    m_master_animations:
+    - m_letter_actions:
+      - m_colour_section_foldout: 0
+        m_position_section_foldout: 0
+        m_global_rotation_section_foldout: 0
+        m_local_rotation_section_foldout: 0
+        m_global_scale_section_foldout: 0
+        m_local_scale_section_foldout: 0
+        m_offset_from_last: 1
+        m_action_type: 0
+        m_colour_transition_active: 1
+        m_start_colour:
+          m_reference_data:
+            m_data_type: 7
+            m_start_state: 1
+            m_action_index: 0
+          m_progression: 0
+          m_progression_idx: 0
+          m_ease_type: 0
+          m_is_offset_from_last: 1
+          m_to_to_bool: 0
+          m_unique_randoms: 0
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values:
+          - top_left: {r: 0, g: 0, b: 0, a: 0}
+            top_right: {r: 0, g: 0, b: 0, a: 0}
+            bottom_right: {r: 0, g: 0, b: 0, a: 0}
+            bottom_left: {r: 0, g: 0, b: 0, a: 0}
+          m_from:
+            top_left: {r: 0, g: 0, b: 0, a: 0}
+            top_right: {r: 1, g: 1, b: 1, a: 1}
+            bottom_right: {r: 1, g: 1, b: 1, a: 1}
+            bottom_left: {r: 1, g: 1, b: 1, a: 1}
+          m_to:
+            top_left: {r: 1, g: 1, b: 1, a: 1}
+            top_right: {r: 1, g: 1, b: 1, a: 1}
+            bottom_right: {r: 1, g: 1, b: 1, a: 1}
+            bottom_left: {r: 1, g: 1, b: 1, a: 1}
+          m_to_to:
+            top_left: {r: 1, g: 1, b: 1, a: 1}
+            top_right: {r: 1, g: 1, b: 1, a: 1}
+            bottom_right: {r: 1, g: 1, b: 1, a: 1}
+            bottom_left: {r: 1, g: 1, b: 1, a: 1}
+          m_override_alpha: 0
+          m_use_colour_gradients: 0
+          m_value_state: 2
+          m_offset_progression:
+            m_data_type: 7
+            m_start_state: 1
+            m_action_index: -1
+        m_end_colour:
+          m_reference_data:
+            m_data_type: 7
+            m_start_state: 0
+            m_action_index: 0
+          m_progression: 0
+          m_progression_idx: 0
+          m_ease_type: 0
+          m_is_offset_from_last: 0
+          m_to_to_bool: 0
+          m_unique_randoms: 0
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values:
+          - top_left: {r: 0.4850746, g: 0.9567896, b: 1, a: 1}
+            top_right: {r: 0.4850746, g: 0.9567896, b: 1, a: 1}
+            bottom_right: {r: 0.4850746, g: 0.9567896, b: 1, a: 1}
+            bottom_left: {r: 0.4850746, g: 0.9567896, b: 1, a: 1}
+          m_from:
+            top_left: {r: 0.4850746, g: 0.9567896, b: 1, a: 1}
+            top_right: {r: 0.4850746, g: 0.9567896, b: 1, a: 1}
+            bottom_right: {r: 0.4850746, g: 0.9567896, b: 1, a: 1}
+            bottom_left: {r: 0.4850746, g: 0.9567896, b: 1, a: 1}
+          m_to:
+            top_left: {r: 1, g: 1, b: 1, a: 1}
+            top_right: {r: 1, g: 1, b: 1, a: 1}
+            bottom_right: {r: 1, g: 1, b: 1, a: 1}
+            bottom_left: {r: 1, g: 1, b: 1, a: 1}
+          m_to_to:
+            top_left: {r: 1, g: 1, b: 1, a: 1}
+            top_right: {r: 1, g: 1, b: 1, a: 1}
+            bottom_right: {r: 1, g: 1, b: 1, a: 1}
+            bottom_left: {r: 1, g: 1, b: 1, a: 1}
+          m_override_alpha: 0
+          m_use_colour_gradients: 0
+          m_value_state: 0
+          m_offset_progression:
+            m_data_type: 0
+            m_start_state: 0
+            m_action_index: 0
+        m_position_transition_active: 1
+        m_position_axis_ease_data:
+          m_override_default: 0
+          m_x_ease: 0
+          m_y_ease: 0
+          m_z_ease: 0
+        m_start_pos:
+          m_reference_data:
+            m_data_type: 8
+            m_start_state: 1
+            m_action_index: 0
+          m_progression: 0
+          m_progression_idx: 0
+          m_ease_type: 0
+          m_is_offset_from_last: 0
+          m_to_to_bool: 0
+          m_unique_randoms: 0
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values:
+          - {x: 0, y: 0, z: 0}
+          m_from: {x: 0, y: 0, z: 0}
+          m_to: {x: 0, y: 0, z: 0}
+          m_to_to: {x: 0, y: 0, z: 0}
+          m_ease_curve_per_axis: 0
+          m_custom_ease_curve_y:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_custom_ease_curve_z:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_value_state: 0
+          m_offset_progression:
+            m_data_type: 8
+            m_start_state: 0
+            m_action_index: 0
+          m_force_position_override: 0
+        m_end_pos:
+          m_reference_data:
+            m_data_type: 8
+            m_start_state: 0
+            m_action_index: 0
+          m_progression: 0
+          m_progression_idx: 1
+          m_ease_type: 0
+          m_is_offset_from_last: 0
+          m_to_to_bool: 0
+          m_unique_randoms: 1
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values:
+          - {x: 0, y: 0.1417936, z: 0}
+          - {x: 0, y: 0.023247365, z: 0}
+          - {x: 0, y: 0.12028884, z: 0}
+          - {x: 0, y: 0.17615548, z: 0}
+          - {x: 0, y: 0.051676806, z: 0}
+          - {x: 0, y: 0.08383216, z: 0}
+          - {x: 0, y: 0.06419109, z: 0}
+          - {x: 0, y: 0.17955534, z: 0}
+          - {x: 0, y: 0.021187166, z: 0}
+          - {x: 0, y: 0.036462527, z: 0}
+          m_from: {x: 0, y: 0, z: 0}
+          m_to: {x: 0, y: 0.2, z: 0}
+          m_to_to: {x: 0, y: 0, z: 0}
+          m_ease_curve_per_axis: 0
+          m_custom_ease_curve_y:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_custom_ease_curve_z:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_value_state: 0
+          m_offset_progression:
+            m_data_type: 0
+            m_start_state: 0
+            m_action_index: 0
+          m_force_position_override: 0
+        m_global_rotation_transition_active: 1
+        m_global_rotation_axis_ease_data:
+          m_override_default: 0
+          m_x_ease: 0
+          m_y_ease: 0
+          m_z_ease: 0
+        m_global_start_euler_rotation:
+          m_reference_data:
+            m_data_type: 10
+            m_start_state: 1
+            m_action_index: 0
+          m_progression: 0
+          m_progression_idx: 0
+          m_ease_type: 0
+          m_is_offset_from_last: 0
+          m_to_to_bool: 0
+          m_unique_randoms: 0
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values:
+          - {x: 0, y: 0, z: 0}
+          m_from: {x: 0, y: 0, z: 0}
+          m_to: {x: 0, y: 0, z: 0}
+          m_to_to: {x: 0, y: 0, z: 0}
+          m_ease_curve_per_axis: 0
+          m_custom_ease_curve_y:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_custom_ease_curve_z:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_value_state: 0
+          m_offset_progression:
+            m_data_type: 10
+            m_start_state: 0
+            m_action_index: 0
+        m_global_end_euler_rotation:
+          m_reference_data:
+            m_data_type: 10
+            m_start_state: 0
+            m_action_index: 0
+          m_progression: 0
+          m_progression_idx: 0
+          m_ease_type: 0
+          m_is_offset_from_last: 0
+          m_to_to_bool: 0
+          m_unique_randoms: 0
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values:
+          - {x: 0, y: 0, z: 0}
+          m_from: {x: 0, y: 0, z: 0}
+          m_to: {x: 0, y: 0, z: 2}
+          m_to_to: {x: 0, y: 0, z: 0}
+          m_ease_curve_per_axis: 0
+          m_custom_ease_curve_y:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_custom_ease_curve_z:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_value_state: 0
+          m_offset_progression:
+            m_data_type: 0
+            m_start_state: 0
+            m_action_index: 0
+        m_local_rotation_transition_active: 1
+        m_rotation_axis_ease_data:
+          m_override_default: 0
+          m_x_ease: 0
+          m_y_ease: 0
+          m_z_ease: 0
+        m_start_euler_rotation:
+          m_reference_data:
+            m_data_type: 9
+            m_start_state: 1
+            m_action_index: 0
+          m_progression: 0
+          m_progression_idx: 0
+          m_ease_type: 0
+          m_is_offset_from_last: 0
+          m_to_to_bool: 0
+          m_unique_randoms: 0
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values:
+          - {x: 0, y: 0, z: 0}
+          m_from: {x: 0, y: 0, z: 0}
+          m_to: {x: 0, y: 0, z: 0}
+          m_to_to: {x: 0, y: 0, z: 0}
+          m_ease_curve_per_axis: 0
+          m_custom_ease_curve_y:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_custom_ease_curve_z:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_value_state: 0
+          m_offset_progression:
+            m_data_type: 9
+            m_start_state: 0
+            m_action_index: 0
+        m_end_euler_rotation:
+          m_reference_data:
+            m_data_type: 9
+            m_start_state: 0
+            m_action_index: 0
+          m_progression: 0
+          m_progression_idx: 1
+          m_ease_type: 0
+          m_is_offset_from_last: 0
+          m_to_to_bool: 0
+          m_unique_randoms: 0
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values:
+          - {x: 0, y: 0, z: -4.347915}
+          - {x: 0, y: 0, z: -6.565947}
+          - {x: 0, y: 0, z: -1.2981975}
+          - {x: 0, y: 0, z: 8.480597}
+          - {x: 0, y: 0, z: 6.1174226}
+          - {x: 0, y: 0, z: -1.5153658}
+          - {x: 0, y: 0, z: 9.79279}
+          - {x: 0, y: 0, z: 4.613818}
+          - {x: 0, y: 0, z: -4.1087265}
+          - {x: 0, y: 0, z: 3.2664812}
+          m_from: {x: 0, y: 0, z: -10}
+          m_to: {x: 0, y: 0, z: 10}
+          m_to_to: {x: 0, y: 0, z: 0}
+          m_ease_curve_per_axis: 0
+          m_custom_ease_curve_y:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_custom_ease_curve_z:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_value_state: 0
+          m_offset_progression:
+            m_data_type: 0
+            m_start_state: 0
+            m_action_index: 0
+        m_global_scale_transition_active: 1
+        m_global_scale_axis_ease_data:
+          m_override_default: 0
+          m_x_ease: 0
+          m_y_ease: 0
+          m_z_ease: 0
+        m_global_start_scale:
+          m_reference_data:
+            m_data_type: 12
+            m_start_state: 1
+            m_action_index: 0
+          m_progression: 0
+          m_progression_idx: 0
+          m_ease_type: 0
+          m_is_offset_from_last: 0
+          m_to_to_bool: 0
+          m_unique_randoms: 0
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values:
+          - {x: 1, y: 1, z: 1}
+          m_from: {x: 1, y: 1, z: 1}
+          m_to: {x: 1, y: 1, z: 1}
+          m_to_to: {x: 1, y: 1, z: 1}
+          m_ease_curve_per_axis: 0
+          m_custom_ease_curve_y:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_custom_ease_curve_z:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_value_state: 0
+          m_offset_progression:
+            m_data_type: 12
+            m_start_state: 0
+            m_action_index: 0
+        m_global_end_scale:
+          m_reference_data:
+            m_data_type: 12
+            m_start_state: 0
+            m_action_index: 0
+          m_progression: 0
+          m_progression_idx: 0
+          m_ease_type: 0
+          m_is_offset_from_last: 0
+          m_to_to_bool: 0
+          m_unique_randoms: 0
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values:
+          - {x: 1, y: 1, z: 1}
+          m_from: {x: 1, y: 1, z: 1}
+          m_to: {x: 1, y: 1, z: 1}
+          m_to_to: {x: 1, y: 1, z: 1}
+          m_ease_curve_per_axis: 0
+          m_custom_ease_curve_y:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_custom_ease_curve_z:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_value_state: 0
+          m_offset_progression:
+            m_data_type: 0
+            m_start_state: 0
+            m_action_index: 0
+        m_local_scale_transition_active: 1
+        m_scale_axis_ease_data:
+          m_override_default: 0
+          m_x_ease: 0
+          m_y_ease: 0
+          m_z_ease: 0
+        m_start_scale:
+          m_reference_data:
+            m_data_type: 11
+            m_start_state: 1
+            m_action_index: 0
+          m_progression: 0
+          m_progression_idx: 0
+          m_ease_type: 0
+          m_is_offset_from_last: 0
+          m_to_to_bool: 0
+          m_unique_randoms: 0
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values:
+          - {x: 1, y: 1, z: 1}
+          m_from: {x: 1, y: 1, z: 1}
+          m_to: {x: 1, y: 1, z: 1}
+          m_to_to: {x: 1, y: 1, z: 1}
+          m_ease_curve_per_axis: 0
+          m_custom_ease_curve_y:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_custom_ease_curve_z:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_value_state: 0
+          m_offset_progression:
+            m_data_type: 11
+            m_start_state: 0
+            m_action_index: 0
+        m_end_scale:
+          m_reference_data:
+            m_data_type: 11
+            m_start_state: 0
+            m_action_index: 0
+          m_progression: 0
+          m_progression_idx: 0
+          m_ease_type: 0
+          m_is_offset_from_last: 0
+          m_to_to_bool: 0
+          m_unique_randoms: 0
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values:
+          - {x: 1.1, y: 1.1, z: 1}
+          m_from: {x: 1.1, y: 1.1, z: 1}
+          m_to: {x: 1, y: 1, z: 1}
+          m_to_to: {x: 1, y: 1, z: 1}
+          m_ease_curve_per_axis: 0
+          m_custom_ease_curve_y:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_custom_ease_curve_z:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_value_state: 0
+          m_offset_progression:
+            m_data_type: 0
+            m_start_state: 0
+            m_action_index: 0
+        m_force_same_start_time: 1
+        m_delay_with_white_space_influence: 0
+        m_delay_progression:
+          m_reference_data:
+            m_data_type: 0
+            m_start_state: 0
+            m_action_index: 0
+          m_progression: 0
+          m_progression_idx: 1
+          m_ease_type: 0
+          m_is_offset_from_last: 0
+          m_to_to_bool: 0
+          m_unique_randoms: 0
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values:
+          - 0.2537495
+          - 0.07629216
+          - 0.46868733
+          - 0.38916892
+          - 0.38326457
+          - 0.34568623
+          - 0.20354931
+          - 0.38770926
+          - 0.30924377
+          m_from: 0
+          m_to: 0.5625
+          m_to_to: 0
+        m_duration_progression:
+          m_reference_data:
+            m_data_type: 0
+            m_start_state: 0
+            m_action_index: 0
+          m_progression: 0
+          m_progression_idx: 0
+          m_ease_type: 0
+          m_is_offset_from_last: 0
+          m_to_to_bool: 0
+          m_unique_randoms: 0
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values:
+          - 0.2
+          m_from: 0.2
+          m_to: 1
+          m_to_to: 1
+        m_ease_type: 0
+        m_letter_anchor_start: 4
+        m_letter_anchor_end: 4
+        m_letter_anchor_2_way: 0
+        m_particle_effects: []
+        m_audio_effects: []
+        m_anchor_offset: {x: 0.5, y: 0.5, z: 0}
+        m_anchor_offset_end: {x: 0.5, y: 0.5, z: 0}
+      - m_colour_section_foldout: 0
+        m_position_section_foldout: 0
+        m_global_rotation_section_foldout: 0
+        m_local_rotation_section_foldout: 0
+        m_global_scale_section_foldout: 0
+        m_local_scale_section_foldout: 0
+        m_offset_from_last: 0
+        m_action_type: 1
+        m_colour_transition_active: 0
+        m_start_colour:
+          m_reference_data:
+            m_data_type: 7
+            m_start_state: 1
+            m_action_index: 1
+          m_progression: 0
+          m_progression_idx: -1
+          m_ease_type: 0
+          m_is_offset_from_last: 1
+          m_to_to_bool: 0
+          m_unique_randoms: 0
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values: []
+          m_from:
+            top_left: {r: 0, g: 0, b: 0, a: 1}
+            top_right: {r: 0, g: 0, b: 0, a: 1}
+            bottom_right: {r: 0, g: 0, b: 0, a: 1}
+            bottom_left: {r: 0, g: 0, b: 0, a: 1}
+          m_to:
+            top_left: {r: 0, g: 0, b: 0, a: 1}
+            top_right: {r: 0, g: 0, b: 0, a: 1}
+            bottom_right: {r: 0, g: 0, b: 0, a: 1}
+            bottom_left: {r: 0, g: 0, b: 0, a: 1}
+          m_to_to:
+            top_left: {r: 0, g: 0, b: 0, a: 1}
+            top_right: {r: 0, g: 0, b: 0, a: 1}
+            bottom_right: {r: 0, g: 0, b: 0, a: 1}
+            bottom_left: {r: 0, g: 0, b: 0, a: 1}
+          m_override_alpha: 0
+          m_use_colour_gradients: 0
+          m_value_state: 1
+          m_offset_progression:
+            m_data_type: 7
+            m_start_state: 1
+            m_action_index: 0
+        m_end_colour:
+          m_reference_data:
+            m_data_type: 7
+            m_start_state: 0
+            m_action_index: 1
+          m_progression: 0
+          m_progression_idx: -1
+          m_ease_type: 0
+          m_is_offset_from_last: 1
+          m_to_to_bool: 0
+          m_unique_randoms: 0
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values: []
+          m_from:
+            top_left: {r: 0, g: 0, b: 0, a: 1}
+            top_right: {r: 0, g: 0, b: 0, a: 1}
+            bottom_right: {r: 0, g: 0, b: 0, a: 1}
+            bottom_left: {r: 0, g: 0, b: 0, a: 1}
+          m_to:
+            top_left: {r: 0, g: 0, b: 0, a: 1}
+            top_right: {r: 0, g: 0, b: 0, a: 1}
+            bottom_right: {r: 0, g: 0, b: 0, a: 1}
+            bottom_left: {r: 0, g: 0, b: 0, a: 1}
+          m_to_to:
+            top_left: {r: 0, g: 0, b: 0, a: 1}
+            top_right: {r: 0, g: 0, b: 0, a: 1}
+            bottom_right: {r: 0, g: 0, b: 0, a: 1}
+            bottom_left: {r: 0, g: 0, b: 0, a: 1}
+          m_override_alpha: 0
+          m_use_colour_gradients: 0
+          m_value_state: 1
+          m_offset_progression:
+            m_data_type: 7
+            m_start_state: 1
+            m_action_index: 0
+        m_position_transition_active: 0
+        m_position_axis_ease_data:
+          m_override_default: 0
+          m_x_ease: 0
+          m_y_ease: 0
+          m_z_ease: 0
+        m_start_pos:
+          m_reference_data:
+            m_data_type: 8
+            m_start_state: 1
+            m_action_index: 1
+          m_progression: 0
+          m_progression_idx: -1
+          m_ease_type: 0
+          m_is_offset_from_last: 0
+          m_to_to_bool: 0
+          m_unique_randoms: 0
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values: []
+          m_from: {x: 0, y: 0, z: 0}
+          m_to: {x: 0, y: 0, z: 0}
+          m_to_to: {x: 0, y: 0, z: 0}
+          m_ease_curve_per_axis: 0
+          m_custom_ease_curve_y:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_custom_ease_curve_z:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_value_state: 1
+          m_offset_progression:
+            m_data_type: 8
+            m_start_state: 1
+            m_action_index: 0
+          m_force_position_override: 0
+        m_end_pos:
+          m_reference_data:
+            m_data_type: 8
+            m_start_state: 0
+            m_action_index: 1
+          m_progression: 0
+          m_progression_idx: -1
+          m_ease_type: 0
+          m_is_offset_from_last: 0
+          m_to_to_bool: 0
+          m_unique_randoms: 0
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values: []
+          m_from: {x: 0, y: 0, z: 0}
+          m_to: {x: 0, y: 0, z: 0}
+          m_to_to: {x: 0, y: 0, z: 0}
+          m_ease_curve_per_axis: 0
+          m_custom_ease_curve_y:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_custom_ease_curve_z:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_value_state: 1
+          m_offset_progression:
+            m_data_type: 8
+            m_start_state: 1
+            m_action_index: 0
+          m_force_position_override: 0
+        m_global_rotation_transition_active: 0
+        m_global_rotation_axis_ease_data:
+          m_override_default: 0
+          m_x_ease: 0
+          m_y_ease: 0
+          m_z_ease: 0
+        m_global_start_euler_rotation:
+          m_reference_data:
+            m_data_type: 10
+            m_start_state: 1
+            m_action_index: 1
+          m_progression: 0
+          m_progression_idx: -1
+          m_ease_type: 0
+          m_is_offset_from_last: 0
+          m_to_to_bool: 0
+          m_unique_randoms: 0
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values: []
+          m_from: {x: 0, y: 0, z: 0}
+          m_to: {x: 0, y: 0, z: 0}
+          m_to_to: {x: 0, y: 0, z: 0}
+          m_ease_curve_per_axis: 0
+          m_custom_ease_curve_y:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_custom_ease_curve_z:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_value_state: 1
+          m_offset_progression:
+            m_data_type: 10
+            m_start_state: 1
+            m_action_index: 0
+        m_global_end_euler_rotation:
+          m_reference_data:
+            m_data_type: 10
+            m_start_state: 0
+            m_action_index: 1
+          m_progression: 0
+          m_progression_idx: -1
+          m_ease_type: 0
+          m_is_offset_from_last: 0
+          m_to_to_bool: 0
+          m_unique_randoms: 0
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values: []
+          m_from: {x: 0, y: 0, z: 0}
+          m_to: {x: 0, y: 0, z: 0}
+          m_to_to: {x: 0, y: 0, z: 0}
+          m_ease_curve_per_axis: 0
+          m_custom_ease_curve_y:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_custom_ease_curve_z:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_value_state: 1
+          m_offset_progression:
+            m_data_type: 10
+            m_start_state: 1
+            m_action_index: 0
+        m_local_rotation_transition_active: 0
+        m_rotation_axis_ease_data:
+          m_override_default: 0
+          m_x_ease: 0
+          m_y_ease: 0
+          m_z_ease: 0
+        m_start_euler_rotation:
+          m_reference_data:
+            m_data_type: 9
+            m_start_state: 1
+            m_action_index: 1
+          m_progression: 0
+          m_progression_idx: -1
+          m_ease_type: 0
+          m_is_offset_from_last: 0
+          m_to_to_bool: 0
+          m_unique_randoms: 0
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values: []
+          m_from: {x: 0, y: 0, z: 0}
+          m_to: {x: 0, y: 0, z: 0}
+          m_to_to: {x: 0, y: 0, z: 0}
+          m_ease_curve_per_axis: 0
+          m_custom_ease_curve_y:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_custom_ease_curve_z:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_value_state: 1
+          m_offset_progression:
+            m_data_type: 9
+            m_start_state: 1
+            m_action_index: 0
+        m_end_euler_rotation:
+          m_reference_data:
+            m_data_type: 9
+            m_start_state: 0
+            m_action_index: 1
+          m_progression: 0
+          m_progression_idx: -1
+          m_ease_type: 0
+          m_is_offset_from_last: 0
+          m_to_to_bool: 0
+          m_unique_randoms: 0
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values: []
+          m_from: {x: 0, y: 0, z: 0}
+          m_to: {x: 0, y: 0, z: 0}
+          m_to_to: {x: 0, y: 0, z: 0}
+          m_ease_curve_per_axis: 0
+          m_custom_ease_curve_y:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_custom_ease_curve_z:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_value_state: 1
+          m_offset_progression:
+            m_data_type: 9
+            m_start_state: 1
+            m_action_index: 0
+        m_global_scale_transition_active: 0
+        m_global_scale_axis_ease_data:
+          m_override_default: 0
+          m_x_ease: 0
+          m_y_ease: 0
+          m_z_ease: 0
+        m_global_start_scale:
+          m_reference_data:
+            m_data_type: 12
+            m_start_state: 1
+            m_action_index: 1
+          m_progression: 0
+          m_progression_idx: -1
+          m_ease_type: 0
+          m_is_offset_from_last: 0
+          m_to_to_bool: 0
+          m_unique_randoms: 0
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values: []
+          m_from: {x: 1, y: 1, z: 1}
+          m_to: {x: 1, y: 1, z: 1}
+          m_to_to: {x: 1, y: 1, z: 1}
+          m_ease_curve_per_axis: 0
+          m_custom_ease_curve_y:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_custom_ease_curve_z:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_value_state: 1
+          m_offset_progression:
+            m_data_type: 12
+            m_start_state: 1
+            m_action_index: 0
+        m_global_end_scale:
+          m_reference_data:
+            m_data_type: 12
+            m_start_state: 0
+            m_action_index: 1
+          m_progression: 0
+          m_progression_idx: -1
+          m_ease_type: 0
+          m_is_offset_from_last: 0
+          m_to_to_bool: 0
+          m_unique_randoms: 0
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values: []
+          m_from: {x: 1, y: 1, z: 1}
+          m_to: {x: 1, y: 1, z: 1}
+          m_to_to: {x: 1, y: 1, z: 1}
+          m_ease_curve_per_axis: 0
+          m_custom_ease_curve_y:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_custom_ease_curve_z:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_value_state: 1
+          m_offset_progression:
+            m_data_type: 12
+            m_start_state: 1
+            m_action_index: 0
+        m_local_scale_transition_active: 0
+        m_scale_axis_ease_data:
+          m_override_default: 0
+          m_x_ease: 0
+          m_y_ease: 0
+          m_z_ease: 0
+        m_start_scale:
+          m_reference_data:
+            m_data_type: 11
+            m_start_state: 1
+            m_action_index: 1
+          m_progression: 0
+          m_progression_idx: -1
+          m_ease_type: 0
+          m_is_offset_from_last: 0
+          m_to_to_bool: 0
+          m_unique_randoms: 0
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values: []
+          m_from: {x: 1, y: 1, z: 1}
+          m_to: {x: 1, y: 1, z: 1}
+          m_to_to: {x: 1, y: 1, z: 1}
+          m_ease_curve_per_axis: 0
+          m_custom_ease_curve_y:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_custom_ease_curve_z:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_value_state: 1
+          m_offset_progression:
+            m_data_type: 11
+            m_start_state: 1
+            m_action_index: 0
+        m_end_scale:
+          m_reference_data:
+            m_data_type: 11
+            m_start_state: 0
+            m_action_index: 1
+          m_progression: 0
+          m_progression_idx: -1
+          m_ease_type: 0
+          m_is_offset_from_last: 0
+          m_to_to_bool: 0
+          m_unique_randoms: 0
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values: []
+          m_from: {x: 1, y: 1, z: 1}
+          m_to: {x: 1, y: 1, z: 1}
+          m_to_to: {x: 1, y: 1, z: 1}
+          m_ease_curve_per_axis: 0
+          m_custom_ease_curve_y:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_custom_ease_curve_z:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_value_state: 1
+          m_offset_progression:
+            m_data_type: 11
+            m_start_state: 1
+            m_action_index: 0
+        m_force_same_start_time: 0
+        m_delay_with_white_space_influence: 0
+        m_delay_progression:
+          m_reference_data:
+            m_data_type: 0
+            m_start_state: 0
+            m_action_index: 0
+          m_progression: 0
+          m_progression_idx: -1
+          m_ease_type: 0
+          m_is_offset_from_last: 0
+          m_to_to_bool: 0
+          m_unique_randoms: 0
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values: []
+          m_from: 0
+          m_to: 0
+          m_to_to: 0
+        m_duration_progression:
+          m_reference_data:
+            m_data_type: 0
+            m_start_state: 0
+            m_action_index: 0
+          m_progression: 0
+          m_progression_idx: 0
+          m_ease_type: 0
+          m_is_offset_from_last: 0
+          m_to_to_bool: 0
+          m_unique_randoms: 0
+          m_animate_per: 0
+          m_override_animate_per_option: 0
+          m_custom_ease_curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          m_values:
+          - 0.000001
+          m_from: 0.000001
+          m_to: 1
+          m_to_to: 1
+        m_ease_type: 0
+        m_letter_anchor_start: 4
+        m_letter_anchor_end: 4
+        m_letter_anchor_2_way: 0
+        m_particle_effects: []
+        m_audio_effects: []
+        m_anchor_offset: {x: 0, y: 0, z: 0}
+        m_anchor_offset_end: {x: 0, y: 0, z: 0}
+      m_loop_cycles:
+      - m_start_action_idx: 0
+        m_end_action_idx: 0
+        m_number_of_loops: 0
+        m_loop_type: 1
+        m_delay_first_only: 1
+        m_finish_at_end: 0
+        m_active_loop_index: -1
+      m_letters_to_animate_option: 0
+      m_letters_to_animate: 000000000100000002000000040000000500000006000000070000000800000009000000
+      m_letters_to_animate_custom_idx: 1
+      m_num_white_space_chars_to_include: 1
+      m_defaultTextColourProgression:
+        m_reference_data:
+          m_data_type: 7
+          m_start_state: 1
+          m_action_index: -1
+        m_progression: 0
+        m_progression_idx: 2
+        m_ease_type: 0
+        m_is_offset_from_last: 0
+        m_to_to_bool: 0
+        m_unique_randoms: 0
+        m_animate_per: 0
+        m_override_animate_per_option: 0
+        m_custom_ease_curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        m_values:
+        - top_left: {r: 1, g: 1, b: 1, a: 1}
+          top_right: {r: 1, g: 1, b: 1, a: 1}
+          bottom_right: {r: 1, g: 1, b: 1, a: 1}
+          bottom_left: {r: 1, g: 1, b: 1, a: 1}
+        - top_left: {r: 1, g: 1, b: 1, a: 1}
+          top_right: {r: 1, g: 1, b: 1, a: 1}
+          bottom_right: {r: 1, g: 1, b: 1, a: 1}
+          bottom_left: {r: 1, g: 1, b: 1, a: 1}
+        - top_left: {r: 1, g: 1, b: 1, a: 1}
+          top_right: {r: 1, g: 1, b: 1, a: 1}
+          bottom_right: {r: 1, g: 1, b: 1, a: 1}
+          bottom_left: {r: 1, g: 1, b: 1, a: 1}
+        - top_left: {r: 1, g: 1, b: 1, a: 1}
+          top_right: {r: 1, g: 1, b: 1, a: 1}
+          bottom_right: {r: 1, g: 1, b: 1, a: 1}
+          bottom_left: {r: 1, g: 1, b: 1, a: 1}
+        - top_left: {r: 1, g: 1, b: 1, a: 1}
+          top_right: {r: 1, g: 1, b: 1, a: 1}
+          bottom_right: {r: 1, g: 1, b: 1, a: 1}
+          bottom_left: {r: 1, g: 1, b: 1, a: 1}
+        - top_left: {r: 1, g: 1, b: 1, a: 1}
+          top_right: {r: 1, g: 1, b: 1, a: 1}
+          bottom_right: {r: 1, g: 1, b: 1, a: 1}
+          bottom_left: {r: 1, g: 1, b: 1, a: 1}
+        - top_left: {r: 1, g: 1, b: 1, a: 1}
+          top_right: {r: 1, g: 1, b: 1, a: 1}
+          bottom_right: {r: 1, g: 1, b: 1, a: 1}
+          bottom_left: {r: 1, g: 1, b: 1, a: 1}
+        - top_left: {r: 1, g: 1, b: 1, a: 1}
+          top_right: {r: 1, g: 1, b: 1, a: 1}
+          bottom_right: {r: 1, g: 1, b: 1, a: 1}
+          bottom_left: {r: 1, g: 1, b: 1, a: 1}
+        - top_left: {r: 1, g: 1, b: 1, a: 1}
+          top_right: {r: 1, g: 1, b: 1, a: 1}
+          bottom_right: {r: 1, g: 1, b: 1, a: 1}
+          bottom_left: {r: 1, g: 1, b: 1, a: 1}
+        m_from:
+          top_left: {r: 1, g: 1, b: 1, a: 1}
+          top_right: {r: 1, g: 1, b: 1, a: 1}
+          bottom_right: {r: 1, g: 1, b: 1, a: 1}
+          bottom_left: {r: 1, g: 1, b: 1, a: 1}
+        m_to:
+          top_left: {r: 1, g: 1, b: 1, a: 1}
+          top_right: {r: 1, g: 1, b: 1, a: 1}
+          bottom_right: {r: 1, g: 1, b: 1, a: 1}
+          bottom_left: {r: 1, g: 1, b: 1, a: 1}
+        m_to_to:
+          top_left: {r: 1, g: 1, b: 1, a: 1}
+          top_right: {r: 1, g: 1, b: 1, a: 1}
+          bottom_right: {r: 1, g: 1, b: 1, a: 1}
+          bottom_left: {r: 1, g: 1, b: 1, a: 1}
+        m_override_alpha: 0
+        m_use_colour_gradients: 1
+        m_value_state: 0
+        m_offset_progression:
+          m_data_type: 0
+          m_start_state: 0
+          m_action_index: 0
+    m_begin_on_start: 0
+    m_on_finish_action: 0
+    m_animation_speed_factor: 1
+    m_begin_delay: 0
+    m_animate_per: 0
+    m_time_type: 0
+    m_letters:
+    - m_base_vertices:
+      - {x: -2.5500002, y: 1.75, z: 0}
+      - {x: -3.65, y: 1.75, z: 0}
+      - {x: -3.65, y: 0.54999995, z: 0}
+      - {x: -2.5500002, y: 0.54999995, z: 0}
+      m_base_extra_vertices: []
+      m_using_curved_data: 0
+      m_curve_base_vertices: []
+      m_curve_base_extra_vertices: []
+      m_base_colours:
+        top_left: {r: 1, g: 1, b: 1, a: 1}
+        top_right: {r: 1, g: 1, b: 1, a: 1}
+        bottom_right: {r: 1, g: 1, b: 1, a: 1}
+        bottom_left: {r: 1, g: 1, b: 1, a: 1}
+      m_base_extra_colours: []
+      m_base_indexes: 01000000000000000300000002000000
+      m_visible_character: 1
+      m_stub_instance: 0
+      m_mesh_index: 0
+      m_width: 1.0999999
+      m_height: 1.2
+      m_progression_variables:
+        m_letter_value: 0
+        m_letter_value_inc_white_space: 0
+        m_word_value: 0
+        m_line_value: 0
+      m_current_animated_vertices:
+      - {x: -2.4632485, y: 1.8806804, z: 0}
+      - {x: -3.653555, y: 1.9569441, z: 0}
+      - {x: -3.7367518, y: 0.6584279, z: 0}
+      - {x: -2.5464454, y: 0.5821641, z: 0}
+      m_current_animated_colours:
+      - {r: 0.5658374, g: 0.9635669, b: 1, a: 1}
+      - {r: 0.5658374, g: 0.9635669, b: 1, a: 1}
+      - {r: 0.5658374, g: 0.9635669, b: 1, a: 1}
+      - {r: 0.5658374, g: 0.9635669, b: 1, a: 1}
+      m_anchor_offset_middle_center: {x: -3.1000001, y: 1.1500001, z: 0}
+      m_active_anchor_offset_upper_left: {x: -3.65, y: 1.7500001, z: 0}
+      m_active_anchor_offset_upper_center: {x: -3.1000001, y: 1.7500001, z: 0}
+      m_active_anchor_offset_upper_right: {x: -2.5500002, y: 1.7500001, z: 0}
+      m_active_anchor_offset_middle_left: {x: -3.65, y: 1.1500001, z: 0}
+      m_active_anchor_offset_middle_center: {x: -3.1000001, y: 1.1500001, z: 0}
+      m_active_anchor_offset_middle_right: {x: -2.5500002, y: 1.1500001, z: 0}
+      m_active_anchor_offset_lower_left: {x: -3.65, y: 0.5500001, z: 0}
+      m_active_anchor_offset_lower_center: {x: -3.1000001, y: 0.5500001, z: 0}
+      m_active_anchor_offset_lower_right: {x: -2.5500002, y: 0.5500001, z: 0}
+    - m_base_vertices:
+      - {x: -1.8500003, y: 1.45, z: 0}
+      - {x: -2.7500002, y: 1.45, z: 0}
+      - {x: -2.7500002, y: 0.44999996, z: 0}
+      - {x: -1.8500003, y: 0.44999996, z: 0}
+      m_base_extra_vertices: []
+      m_using_curved_data: 0
+      m_curve_base_vertices: []
+      m_curve_base_extra_vertices: []
+      m_base_colours:
+        top_left: {r: 1, g: 1, b: 1, a: 1}
+        top_right: {r: 1, g: 1, b: 1, a: 1}
+        bottom_right: {r: 1, g: 1, b: 1, a: 1}
+        bottom_left: {r: 1, g: 1, b: 1, a: 1}
+      m_base_extra_colours: []
+      m_base_indexes: 01000000000000000300000002000000
+      m_visible_character: 1
+      m_stub_instance: 0
+      m_mesh_index: 1
+      m_width: 0.9
+      m_height: 1.0000001
+      m_progression_variables:
+        m_letter_value: 1
+        m_letter_value_inc_white_space: 1
+        m_word_value: 0
+        m_line_value: 0
+      m_current_animated_vertices:
+      - {x: -1.8454804, y: 1.4509403, z: 0}
+      - {x: -2.7494407, y: 1.4555118, z: 0}
+      - {x: -2.75452, y: 0.45111153, z: 0}
+      - {x: -1.85056, y: 0.44654, z: 0}
+      m_current_animated_colours:
+      - {r: 0.9772763, g: 0.9980931, b: 1, a: 1}
+      - {r: 0.9772763, g: 0.9980931, b: 1, a: 1}
+      - {r: 0.9772763, g: 0.9980931, b: 1, a: 1}
+      - {r: 0.9772763, g: 0.9980931, b: 1, a: 1}
+      m_anchor_offset_middle_center: {x: -2.3000002, y: 0.95000005, z: 0}
+      m_active_anchor_offset_upper_left: {x: -2.7500002, y: 1.45, z: 0}
+      m_active_anchor_offset_upper_center: {x: -2.3000002, y: 1.45, z: 0}
+      m_active_anchor_offset_upper_right: {x: -1.8500001, y: 1.45, z: 0}
+      m_active_anchor_offset_middle_left: {x: -2.7500002, y: 0.95000005, z: 0}
+      m_active_anchor_offset_middle_center: {x: -2.3000002, y: 0.95000005, z: 0}
+      m_active_anchor_offset_middle_right: {x: -1.8500001, y: 0.95000005, z: 0}
+      m_active_anchor_offset_lower_left: {x: -2.7500002, y: 0.45, z: 0}
+      m_active_anchor_offset_lower_center: {x: -2.3000002, y: 0.45, z: 0}
+      m_active_anchor_offset_lower_right: {x: -1.8500001, y: 0.45, z: 0}
+    - m_base_vertices:
+      - {x: -2.0500002, y: 1.45, z: 0}
+      - {x: -2.0500002, y: 0.55, z: 0}
+      - {x: -0.8500004, y: 0.55, z: 0}
+      - {x: -0.8500004, y: 1.45, z: 0}
+      m_base_extra_vertices: []
+      m_using_curved_data: 0
+      m_curve_base_vertices: []
+      m_curve_base_extra_vertices: []
+      m_base_colours:
+        top_left: {r: 1, g: 1, b: 1, a: 1}
+        top_right: {r: 1, g: 1, b: 1, a: 1}
+        bottom_right: {r: 1, g: 1, b: 1, a: 1}
+        bottom_left: {r: 1, g: 1, b: 1, a: 1}
+      m_base_extra_colours: []
+      m_base_indexes: 00000000030000000200000001000000
+      m_visible_character: 1
+      m_stub_instance: 0
+      m_mesh_index: 2
+      m_width: 1.1999998
+      m_height: 0.90000004
+      m_progression_variables:
+        m_letter_value: 2
+        m_letter_value_inc_white_space: 2
+        m_word_value: 0
+        m_line_value: 0
+      m_current_animated_vertices:
+      - {x: -2.0549295, y: 1.4635792, z: 0}
+      - {x: -2.0549295, y: 0.5561853, z: 0}
+      - {x: -0.84507114, y: 0.5561853, z: 0}
+      - {x: -0.84507114, y: 1.4635792, z: 0}
+      m_current_animated_colours:
+      - {r: 0.9576967, g: 0.99645007, b: 1, a: 1}
+      - {r: 0.9576967, g: 0.99645007, b: 1, a: 1}
+      - {r: 0.9576967, g: 0.99645007, b: 1, a: 1}
+      - {r: 0.9576967, g: 0.99645007, b: 1, a: 1}
+      m_anchor_offset_middle_center: {x: -1.4500003, y: 1, z: 0}
+      m_active_anchor_offset_upper_left: {x: -2.0500002, y: 1.45, z: 0}
+      m_active_anchor_offset_upper_center: {x: -1.4500003, y: 1.45, z: 0}
+      m_active_anchor_offset_upper_right: {x: -0.8500004, y: 1.45, z: 0}
+      m_active_anchor_offset_middle_left: {x: -2.0500002, y: 1, z: 0}
+      m_active_anchor_offset_middle_center: {x: -1.4500003, y: 1, z: 0}
+      m_active_anchor_offset_middle_right: {x: -0.8500004, y: 1, z: 0}
+      m_active_anchor_offset_lower_left: {x: -2.0500002, y: 0.54999995, z: 0}
+      m_active_anchor_offset_lower_center: {x: -1.4500003, y: 0.54999995, z: 0}
+      m_active_anchor_offset_lower_right: {x: -0.8500004, y: 0.54999995, z: 0}
+    - m_base_vertices: []
+      m_base_extra_vertices: []
+      m_using_curved_data: 0
+      m_curve_base_vertices: []
+      m_curve_base_extra_vertices: []
+      m_base_colours:
+        top_left: {r: 1, g: 1, b: 1, a: 1}
+        top_right: {r: 1, g: 1, b: 1, a: 1}
+        bottom_right: {r: 1, g: 1, b: 1, a: 1}
+        bottom_left: {r: 1, g: 1, b: 1, a: 1}
+      m_base_extra_colours: []
+      m_base_indexes: 
+      m_visible_character: 0
+      m_stub_instance: 1
+      m_mesh_index: -1
+      m_width: 0
+      m_height: 0
+      m_progression_variables:
+        m_letter_value: -1
+        m_letter_value_inc_white_space: -1
+        m_word_value: 1
+        m_line_value: 0
+      m_current_animated_vertices: []
+      m_current_animated_colours: []
+      m_anchor_offset_middle_center: {x: 0, y: 0, z: 0}
+      m_active_anchor_offset_upper_left: {x: 0, y: 0, z: 0}
+      m_active_anchor_offset_upper_center: {x: 0, y: 0, z: 0}
+      m_active_anchor_offset_upper_right: {x: 0, y: 0, z: 0}
+      m_active_anchor_offset_middle_left: {x: 0, y: 0, z: 0}
+      m_active_anchor_offset_middle_center: {x: 0, y: 0, z: 0}
+      m_active_anchor_offset_middle_right: {x: 0, y: 0, z: 0}
+      m_active_anchor_offset_lower_left: {x: 0, y: 0, z: 0}
+      m_active_anchor_offset_lower_center: {x: 0, y: 0, z: 0}
+      m_active_anchor_offset_lower_right: {x: 0, y: 0, z: 0}
+    - m_base_vertices:
+      - {x: 0.25, y: 1.75, z: 0}
+      - {x: -0.75, y: 1.75, z: 0}
+      - {x: -0.75, y: 0.54999995, z: 0}
+      - {x: 0.25, y: 0.54999995, z: 0}
+      m_base_extra_vertices: []
+      m_using_curved_data: 0
+      m_curve_base_vertices: []
+      m_curve_base_extra_vertices: []
+      m_base_colours:
+        top_left: {r: 1, g: 1, b: 1, a: 1}
+        top_right: {r: 1, g: 1, b: 1, a: 1}
+        bottom_right: {r: 1, g: 1, b: 1, a: 1}
+        bottom_left: {r: 1, g: 1, b: 1, a: 1}
+      m_base_extra_colours: []
+      m_base_indexes: 01000000000000000300000002000000
+      m_visible_character: 1
+      m_stub_instance: 0
+      m_mesh_index: 3
+      m_width: 1
+      m_height: 1.2
+      m_progression_variables:
+        m_letter_value: 3
+        m_letter_value_inc_white_space: 4
+        m_word_value: 1
+        m_line_value: 0
+      m_current_animated_vertices:
+      - {x: 0.24110648, y: 1.8295798, z: 0}
+      - {x: -0.8054936, y: 1.7759237, z: 0}
+      - {x: -0.7411065, y: 0.5200036, z: 0}
+      - {x: 0.30549365, y: 0.5736596, z: 0}
+      m_current_animated_colours:
+      - {r: 0.7529667, g: 0.97927, b: 1, a: 1}
+      - {r: 0.7529667, g: 0.97927, b: 1, a: 1}
+      - {r: 0.7529667, g: 0.97927, b: 1, a: 1}
+      - {r: 0.7529667, g: 0.97927, b: 1, a: 1}
+      m_anchor_offset_middle_center: {x: -0.25, y: 1.1500001, z: 0}
+      m_active_anchor_offset_upper_left: {x: -0.75, y: 1.7500001, z: 0}
+      m_active_anchor_offset_upper_center: {x: -0.25, y: 1.7500001, z: 0}
+      m_active_anchor_offset_upper_right: {x: 0.25, y: 1.7500001, z: 0}
+      m_active_anchor_offset_middle_left: {x: -0.75, y: 1.1500001, z: 0}
+      m_active_anchor_offset_middle_center: {x: -0.25, y: 1.1500001, z: 0}
+      m_active_anchor_offset_middle_right: {x: 0.25, y: 1.1500001, z: 0}
+      m_active_anchor_offset_lower_left: {x: -0.75, y: 0.5500001, z: 0}
+      m_active_anchor_offset_lower_center: {x: -0.25, y: 0.5500001, z: 0}
+      m_active_anchor_offset_lower_right: {x: 0.25, y: 0.5500001, z: 0}
+    - m_base_vertices:
+      - {x: 0.9499998, y: 1.45, z: 0}
+      - {x: 0.049999952, y: 1.45, z: 0}
+      - {x: 0.049999952, y: 0.44999996, z: 0}
+      - {x: 0.9499998, y: 0.44999996, z: 0}
+      m_base_extra_vertices: []
+      m_using_curved_data: 0
+      m_curve_base_vertices: []
+      m_curve_base_extra_vertices: []
+      m_base_colours:
+        top_left: {r: 1, g: 1, b: 1, a: 1}
+        top_right: {r: 1, g: 1, b: 1, a: 1}
+        bottom_right: {r: 1, g: 1, b: 1, a: 1}
+        bottom_left: {r: 1, g: 1, b: 1, a: 1}
+      m_base_extra_colours: []
+      m_base_indexes: 01000000000000000300000002000000
+      m_visible_character: 1
+      m_stub_instance: 0
+      m_mesh_index: 4
+      m_width: 0.89999986
+      m_height: 1.0000001
+      m_progression_variables:
+        m_letter_value: 4
+        m_letter_value_inc_white_space: 5
+        m_word_value: 1
+        m_line_value: 0
+      m_current_animated_vertices:
+      - {x: 0.9799513, y: 1.5117391, z: 0}
+      - {x: 0.034203142, y: 1.5244784, z: 0}
+      - {x: 0.02004844, y: 0.47364685, z: 0}
+      - {x: 0.9657966, y: 0.4609076, z: 0}
+      m_current_animated_colours:
+      - {r: 0.73776495, g: 0.9779943, b: 1, a: 1}
+      - {r: 0.73776495, g: 0.9779943, b: 1, a: 1}
+      - {r: 0.73776495, g: 0.9779943, b: 1, a: 1}
+      - {r: 0.73776495, g: 0.9779943, b: 1, a: 1}
+      m_anchor_offset_middle_center: {x: 0.49999988, y: 0.95000005, z: 0}
+      m_active_anchor_offset_upper_left: {x: 0.049999952, y: 1.45, z: 0}
+      m_active_anchor_offset_upper_center: {x: 0.49999988, y: 1.45, z: 0}
+      m_active_anchor_offset_upper_right: {x: 0.9499998, y: 1.45, z: 0}
+      m_active_anchor_offset_middle_left: {x: 0.049999952, y: 0.95000005, z: 0}
+      m_active_anchor_offset_middle_center: {x: 0.49999988, y: 0.95000005, z: 0}
+      m_active_anchor_offset_middle_right: {x: 0.9499998, y: 0.95000005, z: 0}
+      m_active_anchor_offset_lower_left: {x: 0.049999952, y: 0.45, z: 0}
+      m_active_anchor_offset_lower_center: {x: 0.49999988, y: 0.45, z: 0}
+      m_active_anchor_offset_lower_right: {x: 0.9499998, y: 0.45, z: 0}
+    - m_base_vertices:
+      - {x: 1.6500001, y: 1.45, z: 0}
+      - {x: 0.75, y: 1.45, z: 0}
+      - {x: 0.75, y: 0.55, z: 0}
+      - {x: 1.6500001, y: 0.55, z: 0}
+      m_base_extra_vertices: []
+      m_using_curved_data: 0
+      m_curve_base_vertices: []
+      m_curve_base_extra_vertices: []
+      m_base_colours:
+        top_left: {r: 1, g: 1, b: 1, a: 1}
+        top_right: {r: 1, g: 1, b: 1, a: 1}
+        bottom_right: {r: 1, g: 1, b: 1, a: 1}
+        bottom_left: {r: 1, g: 1, b: 1, a: 1}
+      m_base_extra_colours: []
+      m_base_indexes: 01000000000000000300000002000000
+      m_visible_character: 1
+      m_stub_instance: 0
+      m_mesh_index: 5
+      m_width: 0.9000001
+      m_height: 0.90000004
+      m_progression_variables:
+        m_letter_value: 5
+        m_letter_value_inc_white_space: 6
+        m_word_value: 1
+        m_line_value: 0
+      m_current_animated_vertices:
+      - {x: 1.6207362, y: 1.5799332, z: 0}
+      - {x: 0.6648183, y: 1.4654876, z: 0}
+      - {x: 0.77926385, y: 0.50956976, z: 0}
+      - {x: 1.7351818, y: 0.62401533, z: 0}
+      m_current_animated_colours:
+      - {r: 0.64101475, g: 0.96987545, b: 1, a: 1}
+      - {r: 0.64101475, g: 0.96987545, b: 1, a: 1}
+      - {r: 0.64101475, g: 0.96987545, b: 1, a: 1}
+      - {r: 0.64101475, g: 0.96987545, b: 1, a: 1}
+      m_anchor_offset_middle_center: {x: 1.2, y: 1, z: 0}
+      m_active_anchor_offset_upper_left: {x: 0.75, y: 1.45, z: 0}
+      m_active_anchor_offset_upper_center: {x: 1.2, y: 1.45, z: 0}
+      m_active_anchor_offset_upper_right: {x: 1.6500001, y: 1.45, z: 0}
+      m_active_anchor_offset_middle_left: {x: 0.75, y: 1, z: 0}
+      m_active_anchor_offset_middle_center: {x: 1.2, y: 1, z: 0}
+      m_active_anchor_offset_middle_right: {x: 1.6500001, y: 1, z: 0}
+      m_active_anchor_offset_lower_left: {x: 0.75, y: 0.54999995, z: 0}
+      m_active_anchor_offset_lower_center: {x: 1.2, y: 0.54999995, z: 0}
+      m_active_anchor_offset_lower_right: {x: 1.6500001, y: 0.54999995, z: 0}
+    - m_base_vertices:
+      - {x: 2.0499997, y: 1.75, z: 0}
+      - {x: 1.4499998, y: 1.75, z: 0}
+      - {x: 1.4499998, y: 0.45000002, z: 0}
+      - {x: 2.0499997, y: 0.45000002, z: 0}
+      m_base_extra_vertices: []
+      m_using_curved_data: 0
+      m_curve_base_vertices: []
+      m_curve_base_extra_vertices: []
+      m_base_colours:
+        top_left: {r: 1, g: 1, b: 1, a: 1}
+        top_right: {r: 1, g: 1, b: 1, a: 1}
+        bottom_right: {r: 1, g: 1, b: 1, a: 1}
+        bottom_left: {r: 1, g: 1, b: 1, a: 1}
+      m_base_extra_colours: []
+      m_base_indexes: 01000000000000000300000002000000
+      m_visible_character: 1
+      m_stub_instance: 0
+      m_mesh_index: 6
+      m_width: 0.5999999
+      m_height: 1.3
+      m_progression_variables:
+        m_letter_value: 6
+        m_letter_value_inc_white_space: 7
+        m_word_value: 1
+        m_line_value: 0
+      m_current_animated_vertices:
+      - {x: 2.0345855, y: 1.909179, z: 0}
+      - {x: 1.3997786, y: 1.8788857, z: 0}
+      - {x: 1.4654139, y: 0.5034707, z: 0}
+      - {x: 2.100221, y: 0.53376395, z: 0}
+      m_current_animated_colours:
+      - {r: 0.6950836, g: 0.9744127, b: 1, a: 1}
+      - {r: 0.6950836, g: 0.9744127, b: 1, a: 1}
+      - {r: 0.6950836, g: 0.9744127, b: 1, a: 1}
+      - {r: 0.6950836, g: 0.9744127, b: 1, a: 1}
+      m_anchor_offset_middle_center: {x: 1.7499998, y: 1.1, z: 0}
+      m_active_anchor_offset_upper_left: {x: 1.4499998, y: 1.75, z: 0}
+      m_active_anchor_offset_upper_center: {x: 1.7499998, y: 1.75, z: 0}
+      m_active_anchor_offset_upper_right: {x: 2.0499997, y: 1.75, z: 0}
+      m_active_anchor_offset_middle_left: {x: 1.4499998, y: 1.1, z: 0}
+      m_active_anchor_offset_middle_center: {x: 1.7499998, y: 1.1, z: 0}
+      m_active_anchor_offset_middle_right: {x: 2.0499997, y: 1.1, z: 0}
+      m_active_anchor_offset_lower_left: {x: 1.4499998, y: 0.45000005, z: 0}
+      m_active_anchor_offset_lower_center: {x: 1.7499998, y: 0.45000005, z: 0}
+      m_active_anchor_offset_lower_right: {x: 2.0499997, y: 0.45000005, z: 0}
+    - m_base_vertices:
+      - {x: 2.85, y: 1.75, z: 0}
+      - {x: 1.9499998, y: 1.75, z: 0}
+      - {x: 1.9499998, y: 0.54999995, z: 0}
+      - {x: 2.85, y: 0.54999995, z: 0}
+      m_base_extra_vertices: []
+      m_using_curved_data: 0
+      m_curve_base_vertices: []
+      m_curve_base_extra_vertices: []
+      m_base_colours:
+        top_left: {r: 1, g: 1, b: 1, a: 1}
+        top_right: {r: 1, g: 1, b: 1, a: 1}
+        bottom_right: {r: 1, g: 1, b: 1, a: 1}
+        bottom_left: {r: 1, g: 1, b: 1, a: 1}
+      m_base_extra_colours: []
+      m_base_indexes: 01000000000000000300000002000000
+      m_visible_character: 1
+      m_stub_instance: 0
+      m_mesh_index: 7
+      m_width: 0.9000001
+      m_height: 1.2
+      m_progression_variables:
+        m_letter_value: 7
+        m_letter_value_inc_white_space: 8
+        m_word_value: 1
+        m_line_value: 0
+      m_current_animated_vertices:
+      - {x: 2.8936012, y: 1.7726791, z: 0}
+      - {x: 1.9503427, y: 1.8056371, z: 0}
+      - {x: 1.9063985, y: 0.5479591, z: 0}
+      - {x: 2.849657, y: 0.51500106, z: 0}
+      m_current_animated_colours:
+      - {r: 0.74920815, g: 0.9789546, b: 1, a: 1}
+      - {r: 0.74920815, g: 0.9789546, b: 1, a: 1}
+      - {r: 0.74920815, g: 0.9789546, b: 1, a: 1}
+      - {r: 0.74920815, g: 0.9789546, b: 1, a: 1}
+      m_anchor_offset_middle_center: {x: 2.3999999, y: 1.1500001, z: 0}
+      m_active_anchor_offset_upper_left: {x: 1.9499998, y: 1.7500001, z: 0}
+      m_active_anchor_offset_upper_center: {x: 2.3999999, y: 1.7500001, z: 0}
+      m_active_anchor_offset_upper_right: {x: 2.85, y: 1.7500001, z: 0}
+      m_active_anchor_offset_middle_left: {x: 1.9499998, y: 1.1500001, z: 0}
+      m_active_anchor_offset_middle_center: {x: 2.3999999, y: 1.1500001, z: 0}
+      m_active_anchor_offset_middle_right: {x: 2.85, y: 1.1500001, z: 0}
+      m_active_anchor_offset_lower_left: {x: 1.9499998, y: 0.5500001, z: 0}
+      m_active_anchor_offset_lower_center: {x: 2.3999999, y: 0.5500001, z: 0}
+      m_active_anchor_offset_lower_right: {x: 2.85, y: 0.5500001, z: 0}
+    - m_base_vertices:
+      - {x: 3.5500002, y: 1.45, z: 0}
+      - {x: 2.65, y: 1.45, z: 0}
+      - {x: 2.65, y: 0.55, z: 0}
+      - {x: 3.5500002, y: 0.55, z: 0}
+      m_base_extra_vertices: []
+      m_using_curved_data: 0
+      m_curve_base_vertices: []
+      m_curve_base_extra_vertices: []
+      m_base_colours:
+        top_left: {r: 1, g: 1, b: 1, a: 1}
+        top_right: {r: 1, g: 1, b: 1, a: 1}
+        bottom_right: {r: 1, g: 1, b: 1, a: 1}
+        bottom_left: {r: 1, g: 1, b: 1, a: 1}
+      m_base_extra_colours: []
+      m_base_indexes: 01000000000000000300000002000000
+      m_visible_character: 1
+      m_stub_instance: 0
+      m_mesh_index: 8
+      m_width: 0.9000001
+      m_height: 0.90000004
+      m_progression_variables:
+        m_letter_value: 8
+        m_letter_value_inc_white_space: 9
+        m_word_value: 1
+        m_line_value: 0
+      m_current_animated_vertices:
+      - {x: 3.564423, y: 1.5455546, z: 0}
+      - {x: 2.5865097, y: 1.4964871, z: 0}
+      - {x: 2.6355772, y: 0.5185737, z: 0}
+      - {x: 3.6134906, y: 0.5676413, z: 0}
+      m_current_animated_colours:
+      - {r: 0.5471888, g: 0.962002, b: 1, a: 1}
+      - {r: 0.5471888, g: 0.962002, b: 1, a: 1}
+      - {r: 0.5471888, g: 0.962002, b: 1, a: 1}
+      - {r: 0.5471888, g: 0.962002, b: 1, a: 1}
+      m_anchor_offset_middle_center: {x: 3.1000001, y: 1, z: 0}
+      m_active_anchor_offset_upper_left: {x: 2.65, y: 1.45, z: 0}
+      m_active_anchor_offset_upper_center: {x: 3.1000001, y: 1.45, z: 0}
+      m_active_anchor_offset_upper_right: {x: 3.5500002, y: 1.45, z: 0}
+      m_active_anchor_offset_middle_left: {x: 2.65, y: 1, z: 0}
+      m_active_anchor_offset_middle_center: {x: 3.1000001, y: 1, z: 0}
+      m_active_anchor_offset_middle_right: {x: 3.5500002, y: 1, z: 0}
+      m_active_anchor_offset_lower_left: {x: 2.65, y: 0.54999995, z: 0}
+      m_active_anchor_offset_lower_center: {x: 3.1000001, y: 0.54999995, z: 0}
+      m_active_anchor_offset_lower_right: {x: 3.5500002, y: 0.54999995, z: 0}
+    m_audio_sources: []
+    m_particle_systems: []
+    m_particle_effect_managers: []
+    m_gameObect: {fileID: 1336450569}
+    m_transform: {fileID: 1336450573}
+    m_monobehaviour: {fileID: 1336450570}
+    m_num_letters: 9
+    m_num_extra_verts_per_letter: 0
+    m_textWidths:
+    - 7.2000003
+    m_textHeights:
+    - 1.3000001
+    m_current_mesh_verts:
+    - {x: -2.4632485, y: 1.8806804, z: 0}
+    - {x: -3.653555, y: 1.9569441, z: 0}
+    - {x: -3.7367518, y: 0.6584279, z: 0}
+    - {x: -2.5464454, y: 0.5821641, z: 0}
+    - {x: -1.8454804, y: 1.4509403, z: 0}
+    - {x: -2.7494407, y: 1.4555118, z: 0}
+    - {x: -2.75452, y: 0.45111153, z: 0}
+    - {x: -1.85056, y: 0.44654, z: 0}
+    - {x: -2.0549295, y: 1.4635792, z: 0}
+    - {x: -2.0549295, y: 0.5561853, z: 0}
+    - {x: -0.84507114, y: 0.5561853, z: 0}
+    - {x: -0.84507114, y: 1.4635792, z: 0}
+    - {x: 0.24110648, y: 1.8295798, z: 0}
+    - {x: -0.8054936, y: 1.7759237, z: 0}
+    - {x: -0.7411065, y: 0.5200036, z: 0}
+    - {x: 0.30549365, y: 0.5736596, z: 0}
+    - {x: 0.9799513, y: 1.5117391, z: 0}
+    - {x: 0.034203142, y: 1.5244784, z: 0}
+    - {x: 0.02004844, y: 0.47364685, z: 0}
+    - {x: 0.9657966, y: 0.4609076, z: 0}
+    - {x: 1.6207362, y: 1.5799332, z: 0}
+    - {x: 0.6648183, y: 1.4654876, z: 0}
+    - {x: 0.77926385, y: 0.50956976, z: 0}
+    - {x: 1.7351818, y: 0.62401533, z: 0}
+    - {x: 2.0345855, y: 1.909179, z: 0}
+    - {x: 1.3997786, y: 1.8788857, z: 0}
+    - {x: 1.4654139, y: 0.5034707, z: 0}
+    - {x: 2.100221, y: 0.53376395, z: 0}
+    - {x: 2.8936012, y: 1.7726791, z: 0}
+    - {x: 1.9503427, y: 1.8056371, z: 0}
+    - {x: 1.9063985, y: 0.5479591, z: 0}
+    - {x: 2.849657, y: 0.51500106, z: 0}
+    - {x: 3.564423, y: 1.5455546, z: 0}
+    - {x: 2.5865097, y: 1.4964871, z: 0}
+    - {x: 2.6355772, y: 0.5185737, z: 0}
+    - {x: 3.6134906, y: 0.5676413, z: 0}
+    m_current_mesh_colours:
+    - {r: 0.5658374, g: 0.9635669, b: 1, a: 1}
+    - {r: 0.5658374, g: 0.9635669, b: 1, a: 1}
+    - {r: 0.5658374, g: 0.9635669, b: 1, a: 1}
+    - {r: 0.5658374, g: 0.9635669, b: 1, a: 1}
+    - {r: 0.9772763, g: 0.9980931, b: 1, a: 1}
+    - {r: 0.9772763, g: 0.9980931, b: 1, a: 1}
+    - {r: 0.9772763, g: 0.9980931, b: 1, a: 1}
+    - {r: 0.9772763, g: 0.9980931, b: 1, a: 1}
+    - {r: 0.9576967, g: 0.99645007, b: 1, a: 1}
+    - {r: 0.9576967, g: 0.99645007, b: 1, a: 1}
+    - {r: 0.9576967, g: 0.99645007, b: 1, a: 1}
+    - {r: 0.9576967, g: 0.99645007, b: 1, a: 1}
+    - {r: 0.7529667, g: 0.97927, b: 1, a: 1}
+    - {r: 0.7529667, g: 0.97927, b: 1, a: 1}
+    - {r: 0.7529667, g: 0.97927, b: 1, a: 1}
+    - {r: 0.7529667, g: 0.97927, b: 1, a: 1}
+    - {r: 0.73776495, g: 0.9779943, b: 1, a: 1}
+    - {r: 0.73776495, g: 0.9779943, b: 1, a: 1}
+    - {r: 0.73776495, g: 0.9779943, b: 1, a: 1}
+    - {r: 0.73776495, g: 0.9779943, b: 1, a: 1}
+    - {r: 0.64101475, g: 0.96987545, b: 1, a: 1}
+    - {r: 0.64101475, g: 0.96987545, b: 1, a: 1}
+    - {r: 0.64101475, g: 0.96987545, b: 1, a: 1}
+    - {r: 0.64101475, g: 0.96987545, b: 1, a: 1}
+    - {r: 0.6950836, g: 0.9744127, b: 1, a: 1}
+    - {r: 0.6950836, g: 0.9744127, b: 1, a: 1}
+    - {r: 0.6950836, g: 0.9744127, b: 1, a: 1}
+    - {r: 0.6950836, g: 0.9744127, b: 1, a: 1}
+    - {r: 0.74920815, g: 0.9789546, b: 1, a: 1}
+    - {r: 0.74920815, g: 0.9789546, b: 1, a: 1}
+    - {r: 0.74920815, g: 0.9789546, b: 1, a: 1}
+    - {r: 0.74920815, g: 0.9789546, b: 1, a: 1}
+    - {r: 0.5471888, g: 0.962002, b: 1, a: 1}
+    - {r: 0.5471888, g: 0.962002, b: 1, a: 1}
+    - {r: 0.5471888, g: 0.962002, b: 1, a: 1}
+    - {r: 0.5471888, g: 0.962002, b: 1, a: 1}
+    m_current_text: New TextFx
+    m_num_words: 2
+    m_num_lines: 1
+    m_preset_intro:
+      m_preset_effect_settings: []
+      m_active: 0
+      m_start_action: 0
+      m_num_actions: 0
+      m_start_loop: 0
+      m_num_loops: 0
+      m_exit_pause: 0
+      m_exit_pause_duration: 1
+      m_repeat: 0
+      m_repeat_count: 0
+    m_preset_main:
+      m_preset_effect_settings:
+      - m_data_type: 15
+        m_startState: 1
+        m_setting_name: Delay Eased
+        m_animation_idx: 0
+        m_action_idx: 0
+        m_action_progress_state_override: -1
+      - m_data_type: 16
+        m_startState: 1
+        m_setting_name: Duration
+        m_animation_idx: 0
+        m_action_idx: 0
+        m_action_progress_state_override: -1
+      - m_data_type: 11
+        m_startState: 0
+        m_setting_name: End Scale
+        m_animation_idx: 0
+        m_action_idx: 0
+        m_action_progress_state_override: -1
+      - m_data_type: 7
+        m_startState: 0
+        m_setting_name: Highlight Colour
+        m_animation_idx: 0
+        m_action_idx: 0
+        m_action_progress_state_override: -1
+      - m_data_type: 20
+        m_startState: 1
+        m_setting_name: Num. Iterations
+        m_animation_idx: 0
+        m_action_idx: 0
+        m_action_progress_state_override: -1
+      m_active: 1
+      m_start_action: 0
+      m_num_actions: 1
+      m_start_loop: 0
+      m_num_loops: 1
+      m_exit_pause: 0
+      m_exit_pause_duration: 1
+      m_repeat: 0
+      m_repeat_count: 0
+    m_preset_outro:
+      m_preset_effect_settings: []
+      m_active: 0
+      m_start_action: 2
+      m_num_actions: 0
+      m_start_loop: 1
+      m_num_loops: 0
+      m_exit_pause: 0
+      m_exit_pause_duration: 1
+      m_repeat: 0
+      m_repeat_count: 0
+    m_repeat_all_sections: 0
+    m_repeat_all_sections_count: 0
+    m_preset_effect_settings:
+    - m_data_type: 15
+      m_startState: 1
+      m_setting_name: Delay Eased
+      m_animation_idx: 0
+      m_action_idx: 0
+      m_action_progress_state_override: -1
+    - m_data_type: 16
+      m_startState: 1
+      m_setting_name: Duration
+      m_animation_idx: 0
+      m_action_idx: 0
+      m_action_progress_state_override: -1
+    - m_data_type: 11
+      m_startState: 0
+      m_setting_name: End Scale
+      m_animation_idx: 0
+      m_action_idx: 0
+      m_action_progress_state_override: -1
+    - m_data_type: 7
+      m_startState: 0
+      m_setting_name: Highlight Colour
+      m_animation_idx: 0
+      m_action_idx: 0
+      m_action_progress_state_override: -1
+    - m_data_type: 20
+      m_startState: 1
+      m_setting_name: Num. Iterations
+      m_animation_idx: 0
+      m_action_idx: 0
+      m_action_progress_state_override: -1
+    m_using_quick_setup: 1
+    m_selected_intro_animation_idx: 0
+    m_selected_main_animation_idx: 2
+    m_selected_outro_animation_idx: 0
+    m_intro_animation_foldout: 0
+    m_main_animation_foldout: 0
+    m_outro_animation_foldout: 0
+    m_effect_name: 
+    m_import_as_section: 0
+  m_gameobject_reference: {fileID: 1336450569}
+  m_renderToCurve: 0
+  m_bezierCurve:
+    m_pointData:
+      m_anchor_point_1:
+        m_anchor_point: {x: 0, y: 0, z: 0}
+        m_handle_point: {x: 0, y: 0, z: 0}
+      m_anchor_point_2:
+        m_anchor_point: {x: 0, y: 0, z: 0}
+        m_handle_point: {x: 0, y: 0, z: 0}
+      m_anchor_point_3:
+        m_anchor_point: {x: 0, y: 0, z: 0}
+        m_handle_point: {x: 0, y: 0, z: 0}
+      m_anchor_point_4:
+        m_anchor_point: {x: 0, y: 0, z: 0}
+        m_handle_point: {x: 0, y: 0, z: 0}
+      m_anchor_point_5:
+        m_anchor_point: {x: 0, y: 0, z: 0}
+        m_handle_point: {x: 0, y: 0, z: 0}
+      m_numActiveCurvePoints: 0
+    m_baselineOffset: 0
+    m_editor_visible: 0
+  m_mesh_verts:
+  - {x: -2.5500002, y: 1.75, z: 0}
+  - {x: -3.65, y: 1.75, z: 0}
+  - {x: -3.65, y: 0.54999995, z: 0}
+  - {x: -2.5500002, y: 0.54999995, z: 0}
+  - {x: -1.8500003, y: 1.45, z: 0}
+  - {x: -2.7500002, y: 1.45, z: 0}
+  - {x: -2.7500002, y: 0.44999996, z: 0}
+  - {x: -1.8500003, y: 0.44999996, z: 0}
+  - {x: -2.0500002, y: 1.45, z: 0}
+  - {x: -2.0500002, y: 0.55, z: 0}
+  - {x: -0.8500004, y: 0.55, z: 0}
+  - {x: -0.8500004, y: 1.45, z: 0}
+  - {x: 0.25, y: 1.75, z: 0}
+  - {x: -0.75, y: 1.75, z: 0}
+  - {x: -0.75, y: 0.54999995, z: 0}
+  - {x: 0.25, y: 0.54999995, z: 0}
+  - {x: 0.9499998, y: 1.45, z: 0}
+  - {x: 0.049999952, y: 1.45, z: 0}
+  - {x: 0.049999952, y: 0.44999996, z: 0}
+  - {x: 0.9499998, y: 0.44999996, z: 0}
+  - {x: 1.6500001, y: 1.45, z: 0}
+  - {x: 0.75, y: 1.45, z: 0}
+  - {x: 0.75, y: 0.55, z: 0}
+  - {x: 1.6500001, y: 0.55, z: 0}
+  - {x: 2.0499997, y: 1.75, z: 0}
+  - {x: 1.4499998, y: 1.75, z: 0}
+  - {x: 1.4499998, y: 0.45000002, z: 0}
+  - {x: 2.0499997, y: 0.45000002, z: 0}
+  - {x: 2.85, y: 1.75, z: 0}
+  - {x: 1.9499998, y: 1.75, z: 0}
+  - {x: 1.9499998, y: 0.54999995, z: 0}
+  - {x: 2.85, y: 0.54999995, z: 0}
+  - {x: 3.5500002, y: 1.45, z: 0}
+  - {x: 2.65, y: 1.45, z: 0}
+  - {x: 2.65, y: 0.55, z: 0}
+  - {x: 3.5500002, y: 0.55, z: 0}
+  m_mesh_uvs:
+  - {x: 0.078125, y: 0}
+  - {x: 0.03515625, y: 0}
+  - {x: 0.03515625, y: 0.046875}
+  - {x: 0.078125, y: 0.046875}
+  - {x: 0.11328125, y: 0}
+  - {x: 0.078125, y: 0}
+  - {x: 0.078125, y: 0.0390625}
+  - {x: 0.11328125, y: 0.0390625}
+  - {x: 0.03515625, y: 0.1484375}
+  - {x: 0, y: 0.1484375}
+  - {x: 0, y: 0.1015625}
+  - {x: 0.03515625, y: 0.1015625}
+  - {x: 0.0390625, y: 0.0546875}
+  - {x: 0, y: 0.0546875}
+  - {x: 0, y: 0.1015625}
+  - {x: 0.0390625, y: 0.1015625}
+  - {x: 0.11328125, y: 0}
+  - {x: 0.078125, y: 0}
+  - {x: 0.078125, y: 0.0390625}
+  - {x: 0.11328125, y: 0.0390625}
+  - {x: 0.09765625, y: 0.046875}
+  - {x: 0.0625, y: 0.046875}
+  - {x: 0.0625, y: 0.08203125}
+  - {x: 0.09765625, y: 0.08203125}
+  - {x: 0.0625, y: 0.046875}
+  - {x: 0.0390625, y: 0.046875}
+  - {x: 0.0390625, y: 0.09765625}
+  - {x: 0.0625, y: 0.09765625}
+  - {x: 0.03515625, y: 0.0078125}
+  - {x: 0, y: 0.0078125}
+  - {x: 0, y: 0.0546875}
+  - {x: 0.03515625, y: 0.0546875}
+  - {x: 0.09765625, y: 0.046875}
+  - {x: 0.0625, y: 0.046875}
+  - {x: 0.0625, y: 0.08203125}
+  - {x: 0.09765625, y: 0.08203125}
+  m_mesh_cols:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  m_mesh_normals:
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: -1}
+  m_mesh_triangles: 0200000001000000000000000300000002000000000000000600000005000000040000000700000006000000040000000a00000009000000080000000b0000000a000000080000000e0000000d0000000c0000000f0000000e0000000c0000001200000011000000100000001300000012000000100000001600000015000000140000001700000016000000140000001a00000019000000180000001b0000001a000000180000001e0000001d0000001c0000001f0000001e0000001c000000220000002100000020000000230000002200000020000000
+  m_font_baseline: 1
+  m_current_font_data_file_name: 
+  m_current_font_name: Arial
+--- !u!23 &1336450571
+MeshRenderer:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336450569}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1336450572
+MeshFilter:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336450569}
+  m_Mesh: {fileID: 141288001}
+--- !u!4 &1336450573
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336450569}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1898540891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1898540894}
+  - component: {fileID: 1898540893}
+  - component: {fileID: 1898540892}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1898540892
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898540891}
+  m_Enabled: 1
+--- !u!20 &1898540893
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898540891}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1898540894
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898540891}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

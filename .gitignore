@@ -39,8 +39,11 @@ sysinfo.txt
 
 *.idea/
 
-
+# Mac
 .DS_STORE
+
+# folder markers
+!.folder
 
 ### FMOD Unity Integration ###
 # Never ignore DLLs in the FMOD subfolder, so make sure that the FMOD-folder is in the correct path.
@@ -51,10 +54,16 @@ sysinfo.txt
 !/[Aa}ssets/Editor Default Resources/FMOD/*
 
 # Ignore the Cache-file since it is updated locally either way
-/[Aa]ssets/**/FMODStudioCache.asset
-/[Aa]ssets/**/FMODStudioCache.asset.meta
-/[Aa]ssets/Plugins/FMOD/Cache.meta
-/[Aa]ssets/Plugins/FMOD/Cache/Editor.meta
+**/[Aa]ssets/**/FMODStudioCache.asset
+**/[Aa]ssets/**/FMODStudioCache.asset.meta
+**/[Aa]ssets/Plugins/FMOD/Cache.meta
+**/[Aa]ssets/Plugins/FMOD/Cache/Editor.meta
+.cache/
+.unsaved/
+
+**/Assets/StreamingAssets/
+**/Assets/StreamingAssets/*
+**/Assets/StreamingAssets.meta
 
 # Log-files
 fmod.log
