@@ -1,7 +1,6 @@
-﻿using System.Linq;
-using UnityEngine;
+﻿using UnityEngine;
 
-[CreateAssetMenu]
+[CreateAssetMenu(menuName = "Credits/All Credits")]
 public class AllCredits : ScriptableObject
 {
     [SerializeField] private RoleCredit[] credits;
