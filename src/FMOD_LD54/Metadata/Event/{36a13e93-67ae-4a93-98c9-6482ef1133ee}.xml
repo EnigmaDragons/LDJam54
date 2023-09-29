@@ -125,6 +125,7 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{313e13f7-0fa6-4f7b-bd4e-06e6d885cd43}">
 		<relationship name="effects">
+			<destination>{14d6afe7-b59f-41a7-bb22-bdbc9ddc5798}</destination>
 			<destination>{3ddb50b3-2275-4c63-8683-4d7c44a63faa}</destination>
 		</relationship>
 	</object>
@@ -136,6 +137,11 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{7c248ec3-1da0-4859-a844-ff7936cf2c5e}" />
+	<object class="DelayEffect" id="{14d6afe7-b59f-41a7-bb22-bdbc9ddc5798}">
+		<property name="level">
+			<value>-20.5</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{3ddb50b3-2275-4c63-8683-4d7c44a63faa}" />
 	<object class="MixerBusFader" id="{22374fcf-1c73-4241-b75e-2dad68867124}" />
 </objects>
