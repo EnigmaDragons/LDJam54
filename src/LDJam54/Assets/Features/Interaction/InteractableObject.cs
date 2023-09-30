@@ -18,11 +18,6 @@ public class InteractableObject : MonoBehaviour
     
     [field: SerializeField] public float BobbingIntensity { get; private set; } = 0.05f;
     
-    [SerializeField]
-    private int defaultLayer = 0;
-    [SerializeField]
-    private int highlightLayer = 0;
-    
     private bool _isSettingDown;
     private bool _isHeld;
     private float _setDownSpeed;
@@ -70,15 +65,21 @@ public class InteractableObject : MonoBehaviour
         _setDownSpeed = speed;
         _setDownRotationSpeed = rotationSpeed;
     }
+    
+    public void Release()
+    {
+        _isSettingDown = false;
+        _isHeld = false;
+        Body.useGravity = true;
+        Collider.enabled = true;
+    }
 
     public void Highlight()
     {
-        gameObject.layer = highlightLayer;
     }
 
     public void Unhighlight()
     {
-        gameObject.layer = defaultLayer;
     }
 
     public void PlayShippedAnimation()

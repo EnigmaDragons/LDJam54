@@ -11,7 +11,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class FirstPersonController : MonoBehaviour
 {
-    [SerializeField] private float speed = 5.0f;
+    [SerializeField]
+    private float speed = 5.0f;
     [SerializeField] private float m_lookSensitivity = 3.0f;
     private float m_MovX;
     private float m_MovY;
@@ -28,10 +29,13 @@ public class FirstPersonController : MonoBehaviour
     [Header("The Camera the player looks through")]
     public Camera m_Camera;
 
+    
+    public float Speed { get => speed; set => speed = value; }
     // Use this for initialization
     private void Start()
     {
         m_Rigid = GetComponent<Rigidbody>();
+        LockCursor();
     }
 
     // Update is called once per frame
@@ -74,9 +78,8 @@ public class FirstPersonController : MonoBehaviour
         }
 
         InternalLockUpdate();
-
     }
-
+    
     //controls the locking and unlocking of the mouse
     private void InternalLockUpdate()
     {

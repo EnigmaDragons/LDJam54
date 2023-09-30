@@ -14,7 +14,6 @@ namespace Features.Interaction
                 interactable.PlayShippedAnimation();
                 DeliverBox();
             }
-            
         }
 
         private void DeliverBox()
