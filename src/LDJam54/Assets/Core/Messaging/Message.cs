@@ -27,7 +27,7 @@ public static class Message
     public static void Unsubscribe(object owner)
     {
         Msgs.Unsubscribe(owner);
-        EventSubs.Where(x => x.Owner.Equals(owner)).ForEach(x => EventSubs.Remove(x));
+        EventSubs.Where(x => x.Owner.Equals(owner)).ToList().ForEach(x => EventSubs.Remove(x));
     }
     
     public sealed class MessageQueue

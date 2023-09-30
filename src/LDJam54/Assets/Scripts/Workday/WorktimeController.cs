@@ -1,0 +1,34 @@
+﻿using UnityEngine;
+
+public class WorktimeController : OnMessage<StartWorkdayRequested, WorkdayEnded, EndWorkdayRequested>
+{
+    private bool _worktimeIsActive;
+    private float _elapsedInCurrentDay;
+    
+    protected override void Execute(StartWorkdayRequested msg)
+    {
+        WorkdayState.InitWorkday();
+        _worktimeIsActive = true;
+        _elapsedInCurrentDay = 0f;
+    }
+
+    protected override void Execute(WorkdayEnded msg)
+    {
+        _worktimeIsActive = false;
+    }
+
+    protected override void Execute(EndWorkdayRequested msg)
+    {
+        _worktimeIsActive = false;
+        WorkdayState.SetTotalWorkdayMinutes((WorkdayConfig.END_OF_DAY - WorkdayConfig.START_OF_DAY) * 60);
+    }
+
+    private void FixedUpdate()
+    {
+        if (!_worktimeIsActive) return;
+        
+        _elapsedInCurrentDay += Time.fixedDeltaTime;
+        var totalMinutes = _elapsedInCurrentDay / WorkdayConfig.NUM_SECONDS_PER_WORK_MINUTE;
+        WorkdayState.SetTotalWorkdayMinutes((int)totalMinutes);
+    }
+}

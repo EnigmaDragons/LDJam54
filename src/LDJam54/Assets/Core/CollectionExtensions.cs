@@ -4,6 +4,9 @@ using System.Linq;
 
 public static class CollectionExtensions
 {
+    public static bool None<T>(this T[] items) => !items.AnyNonAlloc();
+    public static bool None<T>(this HashSet<T> items) => !items.AnyNonAlloc();
+    public static bool None<T>(this List<T> items) => !items.AnyNonAlloc();
     public static bool NoneNonAlloc<T>(this T[] items) => !items.AnyNonAlloc();
     public static bool NoneNonAlloc<T>(this HashSet<T> items) => !items.AnyNonAlloc();
     public static bool NoneNonAlloc<T>(this List<T> items) => !items.AnyNonAlloc();
@@ -60,4 +63,16 @@ public static class CollectionExtensions
                 return i;
         return -1;
     }
+
+    public static Maybe<T> FirstOrMaybe<T>(this IEnumerable<T> items) where T : class
+        => items.FirstOrDefault();
+    
+    public static Maybe<T> FirstOrMaybe<T>(this IEnumerable<T> items, Func<T, bool> condition) where T : class
+        => items.FirstOrDefault(condition);
+    
+    public static Maybe<T> LastOrMaybe<T>(this IEnumerable<T> items, Func<T, bool> condition) where T : class
+        => items.LastOrDefault(condition);
+    
+    public static Maybe<T> LastOrMaybe<T>(this IEnumerable<T> items) where T : class
+        => items.LastOrDefault();
 }
