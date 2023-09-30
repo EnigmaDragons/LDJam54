@@ -52,4 +52,12 @@ public static class CollectionExtensions
         foreach (var t in set)
             action(t);
     }
+    
+    public static int FirstIndexOf<T>(this List<T> array, Func<T, bool> condition)
+    {
+        for (var i = 0; i < array.Count; i++)
+            if (condition(array[i]))
+                return i;
+        return -1;
+    }
 }
