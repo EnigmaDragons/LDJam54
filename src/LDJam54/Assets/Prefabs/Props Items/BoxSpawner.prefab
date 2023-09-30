@@ -128,10 +128,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66bbd98615484018bdfc76dddeb5da74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameConfig: {fileID: 11400000, guid: dce1e495c7aa5f3468f9c51b24abda14, type: 2}
   spawnPool:
   - {fileID: 4912120177330821213, guid: 877af0e52f9f62f4fb1599e9977dc03c, type: 3}
   - {fileID: 3803422096554242640, guid: eb511f0b84b816b43b4b6d76dc29a8d9, type: 3}
   - {fileID: 7882771724172413760, guid: 4ade1f8d9f91be74ab8b540780a6ba4c, type: 3}
-  spawnInterval: 1.5
   spawnPoint: {fileID: 7551813775725355150}
   spawnType: 0

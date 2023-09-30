@@ -11,6 +11,7 @@ public class GameConfig : ScriptableObject
     
     [Header("Timing/Franticness")]
     public float ClockSpeedFactor = 1f;
+    public float BoxSpawnInterval = 1.5f;
 
     [Header("Player Movement")] 
     public float PlayerWalkSpeed = 5f;
