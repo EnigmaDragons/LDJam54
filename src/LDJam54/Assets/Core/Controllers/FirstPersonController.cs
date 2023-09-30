@@ -29,7 +29,6 @@ public class FirstPersonController : MonoBehaviour
     [Header("The Camera the player looks through")]
     public Camera m_Camera;
 
-    
     public float Speed { get => speed; set => speed = value; }
     // Use this for initialization
     private void Start()
@@ -39,15 +38,13 @@ public class FirstPersonController : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void FixedUpdate()
+    public void Update()
     {
         m_MovX = Input.GetAxis("Horizontal");
         m_MovY = Input.GetAxis("Vertical");
 
         m_moveHorizontal = transform.right * m_MovX;
         m_movVertical = transform.forward * m_MovY;
-
-        m_velocity = (m_moveHorizontal + m_movVertical).normalized * speed;
 
         //mouse movement 
         m_yRot = Input.GetAxisRaw("Mouse X");
@@ -57,13 +54,6 @@ public class FirstPersonController : MonoBehaviour
         m_cameraRotation = new Vector3(m_xRot, 0, 0) * m_lookSensitivity;
 
         //apply camera rotation
-
-        //move the actual player here
-        if (m_velocity != Vector3.zero)
-        {
-            m_Rigid.MovePosition(m_Rigid.position + m_velocity * Time.fixedDeltaTime);
-        }
-
         if (m_rotation != Vector3.zero)
         {
             //rotate the camera of the player
@@ -79,6 +69,16 @@ public class FirstPersonController : MonoBehaviour
         InternalLockUpdate();
     }
     
+    public void FixedUpdate()
+    {        
+        m_velocity = (m_moveHorizontal + m_movVertical).normalized * speed;
+        //move the actual player here
+        if (m_velocity != Vector3.zero)
+        {
+            m_Rigid.MovePosition(m_Rigid.position + m_velocity * Time.fixedDeltaTime);
+        }
+    }   
+
     //controls the locking and unlocking of the mouse
     private void InternalLockUpdate()
     {
