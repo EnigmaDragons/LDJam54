@@ -1,13 +1,33 @@
 using System;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "GameTemplate/OnlyOnce/CurrentGameState")]
-public sealed class CurrentGameState : ScriptableObject
+public sealed class CurrentGameState
 {
-    [SerializeField] private GameState gameState;
+    private static CurrentGameState instance;
+    public static CurrentGameState Instance
+    {
+        get {
+            if (instance == null)
+                InitInstance();
+            return instance;
+        }
+    }
 
-    public void Init() => gameState = new GameState();
-    public void Init(GameState initialState) => gameState = initialState;
+    public static GameState State => Instance._gameState;
+    public static void InitInstance(GameState initialState = null)
+    {
+        var cgs = new CurrentGameState();
+        if (initialState != null)
+            cgs.Init(initialState);
+        else
+            cgs.Init();
+        instance = new CurrentGameState();
+    }
+    
+    [SerializeField] private GameState _gameState;
+
+    public void Init() => _gameState = new GameState();
+    public void Init(GameState initialState) => _gameState = initialState;
     public void Subscribe(Action<GameStateChanged> onChange, object owner) => Message.Subscribe(onChange, owner);
     public void Unsubscribe(object owner) => Message.Unsubscribe(owner);
     
@@ -15,14 +35,14 @@ public sealed class CurrentGameState : ScriptableObject
     {
         UpdateState(_ =>
         {
-            apply(gameState);
-            return gameState;
+            apply(_gameState);
+            return _gameState;
         });
     }
     
     public void UpdateState(Func<GameState, GameState> apply)
     {
-        gameState = apply(gameState);
-        Message.Publish(new GameStateChanged(gameState));
+        _gameState = apply(_gameState);
+        Message.Publish(new GameStateChanged(_gameState));
     }
 }
