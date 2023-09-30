@@ -25,13 +25,13 @@ public class GameEventOrchestrator : MonoBehaviour
         if (_isFinished)
             return;
         
-        _finishedEvents = _finishedEvents.Concat(e).Distinct().ToList();
+        _finishedEvents = _finishedEvents.Concat(new [] { e }).Distinct().ToList();
         CheckForFinished();
     }
 
     void CheckForFinished()
     {
-        if (RequiredEvents.Except(_finishedEvents).None())
+        if (!RequiredEvents.Except(_finishedEvents).Any())
         {
             _isFinished = true;
             OnStepsCompleted.Publish();
