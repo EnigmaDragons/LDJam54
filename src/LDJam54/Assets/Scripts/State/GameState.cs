@@ -14,4 +14,6 @@ public sealed class GameState
     public SerializableDictionary<string, int> KPIs = new() {
         { "PlacedCorrectly", 0 }
     };
+
+    public SerializableDictionary<string, bool> CutsceneStoryStates = new();
 }

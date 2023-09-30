@@ -24,6 +24,12 @@ public sealed class CurrentGameState
         instance = cgs;
     }
     
+    public static void SetStoryState(string storyState, bool isTrue) 
+        => Instance.UpdateState(g => g.CutsceneStoryStates[storyState] = isTrue);
+    
+    public static bool StoryState(string storyState) 
+        => Instance._gameState.CutsceneStoryStates.TryGetValue(storyState, out var storyStateValue) && storyStateValue;
+
     [SerializeField] private GameState _gameState;
 
     public void Init() => _gameState = new GameState();
