@@ -177,8 +177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df0b9dcb525d4bddb411e3b3afbac67f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupSpeed: 10
-  pickupRotationSpeed: 300
+  objectSpeed: 5
+  rotationSpeed: 300
   camera: {fileID: 2898158793390414914}
 --- !u!1 &2898158793237227279
 GameObject:

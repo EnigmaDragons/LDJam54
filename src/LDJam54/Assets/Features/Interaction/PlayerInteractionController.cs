@@ -2,16 +2,18 @@
 
 public class PlayerInteractionController : MonoBehaviour
 {
-    [SerializeField] private float pickupSpeed = 1;
-    [SerializeField] private float pickupRotationSpeed = 1;
+    [SerializeField] private float objectSpeed = 10;
+    [SerializeField] private float rotationSpeed = 300;
     [SerializeField] private Camera camera;
+    
     private Maybe<InteractableObject> targetted = Maybe<InteractableObject>.Missing();
     private Maybe<InteractableObject> held = Maybe<InteractableObject>.Missing();
+    private Maybe<Transform> heldParent = Maybe<Transform>.Missing();
     
     private void Update()
     {
         UpdateTarget();
-        CheckForPickup();
+        CheckForPickupOrSetDown();
     }
 
     private void FixedUpdate()
@@ -44,22 +46,33 @@ public class PlayerInteractionController : MonoBehaviour
         }
     }
     
-    private void CheckForPickup()
+    private void CheckForPickupOrSetDown()
     {
-        if (held.IsMissing && targetted.IsPresent && targetted.Value.CanBeHeld && (Input.GetKeyDown("joystick button 0") || Input.GetMouseButtonDown(0)))
+        if (held.IsMissing && targetted.IsPresent && targetted.Value.CanBeHeld && (Input.GetKeyDown("joystick button 0") || Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0)))
         {
             held = targetted.Value;
             targetted.Value.Hold();
+            heldParent = targetted.Value.transform.parent;
             targetted.Value.transform.parent = transform;
         }
+        else if (held.IsPresent && targetted.IsPresent && targetted.Value.CanBeSetOn && (Input.GetKeyDown("joystick button 0") || Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0)))
+        {
+            if (targetted.Value.SnapToCenter)
+                held.Value.SetDown(new Vector3(targetted.Value.transform.position.x, targetted.Value.transform.position.y + targetted.Value.Collider.bounds.extents.y + held.Value.Collider.bounds.extents.y + 0.1f, targetted.Value.transform.position.z), held.Value.transform.rotation, objectSpeed, rotationSpeed);
+            else
+                held.Value.SetDown(held.Value.transform.position, held.Value.transform.rotation, objectSpeed, rotationSpeed);
+            held.Value.transform.parent = heldParent.Value;
+            held = Maybe<InteractableObject>.Missing();
+        }
     }
+
 
     private void UpdateHeldObject()
     {
         held.IfPresent(x =>
         {
-            x.Body.MoveRotation(Quaternion.RotateTowards(x.transform.rotation, transform.rotation, pickupRotationSpeed * Time.fixedDeltaTime));
-            x.Body.MovePosition(Vector3.MoveTowards(x.transform.position, transform.position + transform.forward * x.DistanceInFront + new Vector3(0, x.HeightOffset, 0), pickupSpeed * Time.fixedDeltaTime));
+            x.Body.MoveRotation(Quaternion.RotateTowards(x.transform.rotation, transform.rotation, rotationSpeed * Time.fixedDeltaTime));
+            x.Body.MovePosition(Vector3.MoveTowards(x.transform.position, transform.position + transform.forward * x.DistanceInFront + new Vector3(0, x.HeightOffset, 0), objectSpeed * Time.fixedDeltaTime));
         });
     }
 }
