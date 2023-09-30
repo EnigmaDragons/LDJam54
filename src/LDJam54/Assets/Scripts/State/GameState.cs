@@ -10,10 +10,13 @@ public sealed class GameState
 
     // All enums used in this class should have specified integer values.
     // This is necessary to preserve backwards save compatibility.
-    public string[] ActiveKPIs = new string[1] { "PlacedCorrectly" };
+    public string PlayerName = "John Doe";
+    public string[] Coworkers = new string[] { "Bruce", "Jack" };
+    public string[] ActiveKPIs = new string[] { "PlacedCorrectly", "TestKPI" };
     public SerializableDictionary<string, int> KPIs = new() {
-        { "PlacedCorrectly", 0 }
+        { "PlacedCorrectly", 0 },
+        { "TestKPI", 11}
     };
-
+    public PerformanceReview PerformanceReview = new PerformanceReview();
     public SerializableDictionary<string, bool> CutsceneStoryStates = new();
 }
