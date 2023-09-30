@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 namespace Features.Interaction
 {
@@ -8,8 +11,11 @@ namespace Features.Interaction
         [SerializeField] private float rotationSpeed = 300;
         [SerializeField] private Camera camera;
         [SerializeField] private float pickupDistance = 1f;
-        [SerializeField] private LayerMask pickupLayerMask;
-    
+        [SerializeField] private float maxThrowForce;
+        [SerializeField] private float minThrowForce;
+        [SerializeField] private float throwForceIncreaseSpeed;
+        [SerializeField] private Slider throwForceSlider;
+        
         /// <summary>
         /// The interactable object that the player is currently looking at
         /// </summary>
@@ -19,7 +25,7 @@ namespace Features.Interaction
         /// </summary>
         private Maybe<InteractableObject> held = Maybe<InteractableObject>.Missing();
         private Maybe<Transform> heldParent = Maybe<Transform>.Missing();
-    
+        
         private void Update()
         {
             UpdateTarget();
@@ -67,20 +73,64 @@ namespace Features.Interaction
         }
         private void CheckForPickupOrSetDown()
         {
-            if (held.IsMissing && targetted.IsPresent && targetted.Value.CanBeHeld && IsActionTriggered())
+            if (held.IsPresent && IsThrowActionTriggered())
+            {
+                ThrowObject();
+                return;   
+            }
+            
+            if (held.IsMissing && targetted.IsPresent && targetted.Value.CanBeHeld && IsDropActionTriggered())
             {
                 HoldObject();
+                return;
             }
-            else if (held.IsPresent && targetted.IsPresent && targetted.Value.CanBeSetOn && IsActionTriggered())
+            
+            
+            if (held.IsPresent && targetted.IsPresent && targetted.Value.CanBeSetOn && IsDropActionTriggered())
             {
                 SetObject();
+                return;
             }
-            else if (held.IsPresent && IsActionTriggered())
+            
+            if (held.IsPresent && IsDropActionTriggered())
             {
                 DropObject();
+                return;
             }
+            
         }
 
+        private void ThrowObject()
+        {
+            StartCoroutine(ThrowObjectCoroutine());
+        }
+
+        private IEnumerator ThrowObjectCoroutine()
+        {
+            //while button is held
+            var throwForce = minThrowForce;
+            
+            throwForceSlider.gameObject.SetActive(true);
+            throwForceSlider.maxValue = maxThrowForce;
+            throwForceSlider.minValue = minThrowForce;
+            throwForceSlider.value = throwForce;
+            var throwRange = maxThrowForce - minThrowForce;
+            
+            while (IsThrowActionHeld())
+            {
+                throwForce = (Mathf.Sin(Time.time * throwForceIncreaseSpeed) +1)/2 * throwRange + minThrowForce;
+                throwForceSlider.value = throwForce;
+                yield return null;
+            }
+            
+            throwForceSlider.gameObject.SetActive(false);
+
+            var lookDirection = camera.transform.forward;
+            held.Value.Throw(lookDirection, throwForce);
+            held.Value.transform.parent = heldParent.Value;
+            held = Maybe<InteractableObject>.Missing();
+        }
+        
         private void DropObject()
         {
             held.Value.Release();
@@ -114,15 +164,37 @@ namespace Features.Interaction
             held = Maybe<InteractableObject>.Missing();
         }
         
-        private bool IsActionTriggered()
+        private bool IsDropActionTriggered()
         {
             return Input.GetKeyDown("joystick button 0") 
                    || Input.GetKeyDown(KeyCode.E) 
                    || Input.GetMouseButtonDown(0);
         }
 
+        private bool IsDropActionHeld()
+        {
+            return Input.GetKey("joystick button 0") 
+                   || Input.GetKey(KeyCode.E) 
+                   || Input.GetMouseButton(0);
+        }
+        
+        private bool IsThrowActionTriggered()
+        {
+            return Input.GetKeyDown("joystick button 1") 
+                   || Input.GetKeyDown(KeyCode.Q) 
+                   || Input.GetMouseButtonDown(1);
+        }
+        
+        private bool IsThrowActionHeld()
+        {
+            return Input.GetKey("joystick button 1") 
+                   || Input.GetKey(KeyCode.Q) 
+                   || Input.GetMouseButton(1);
+        }
+
         private float bobbingTime = 0;
 
+        
         private void UpdateHeldObject()
         {
             held.IfPresent(x =>
