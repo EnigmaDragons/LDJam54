@@ -18,4 +18,5 @@ public sealed class GameState
         { "TestKPI", 11}
     };
     public PerformanceReview PerformanceReview = new PerformanceReview();
+    public SerializableDictionary<string, bool> CutsceneStoryStates = new();
 }

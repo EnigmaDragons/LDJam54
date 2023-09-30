@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b8a4c9b1e6a4c6d8a9fdd3059b487f5, type: 3}
+  m_Name: AppreciationIntro
+  m_EditorClassIdentifier: 
+  Segments:
+  - Type: 0
+    Character: 0
+    Text: Good morning employees! It's so nice to see your hard-working faces. As
+      we all know, what is best for the company is best for each one of you - and
+      so I'm sure you will be excited to hear of our new company campaign!
+  - Type: 0
+    Character: 1
+    Text: Sounds boring already
+  - Type: 0
+    Character: 2
+    Text: Maybe we'll get bonuses though. Could be good.
+  - Type: 0
+    Character: 0
+    Text: It's our October Employee Appreciation Program!
+  - Type: 0
+    Character: 0
+    Text: That's right! Finally, the recognition you deserve!  We will offer specific
+      daily objectives to track your individual successes, and then it gets really
+      spicy!
+  - Type: 0
+    Character: 0
+    Text: 'I know what you''re thinking: "What will it be? A pizza party? Employee
+      of the month pictures on the wall?"'
+  - Type: 0
+    Character: 0
+    Text: 'No! Nothing so mundane.
+
+
+      It will be like an adventous TV show where
+      each season, one of you is voted off the show!'
+  - Type: 0
+    Character: 1
+    Text: ' **drops coffee cup in shock, which breaks**'
+  - Type: 0
+    Character: 2
+    Text: That doesn't sound like appreciation, that sounds like a threat!
+  - Type: 0
+    Character: 0
+    Text: We will be starting today, and each of you who make the cut at the end
+      of each season will know that you are individually recognized and valued!
+  - Type: 0
+    Character: 1
+    Text: How long is a season?
+  - Type: 0
+    Character: 0
+    Text: 'A day!
+
+
+      Now, for today, here is the objective that I''m sure each
+      talented one of you will rise to meet!'
