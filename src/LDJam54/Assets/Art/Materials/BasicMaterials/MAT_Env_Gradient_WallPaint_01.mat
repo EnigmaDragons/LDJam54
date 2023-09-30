@@ -122,7 +122,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Opacity: 1
-    - _Origin: 0.91
+    - _Origin: -1.01
     - _Parallax: 0.02
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -130,7 +130,7 @@ Material:
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Spread: 27.1
+    - _Spread: 10.2
     - _SrcBlend: 1
     - _Surface: 0
     - _UVSec: 0
@@ -138,6 +138,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 0.39215687, g: 0.28235295, b: 0.22745098, a: 1}
+    - _BaseColor_1: {r: 0.95, g: 0.8687166, b: 0.77219254, a: 0}
     - _Color: {r: 0.39215684, g: 0.28235292, b: 0.22745094, a: 1}
     - _Color_A: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 0}
     - _Color_B: {r: 1, g: 0.8144701, b: 0, a: 0}
