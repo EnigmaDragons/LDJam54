@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 530941239}
   - component: {fileID: 530941238}
   m_Layer: 5
-  m_Name: KPI 1
+  m_Name: KPILabel1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -456,7 +456,7 @@ GameObject:
   - component: {fileID: 649723685}
   - component: {fileID: 649723684}
   m_Layer: 5
-  m_Name: KPI 3
+  m_Name: KPILabel3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -592,7 +592,7 @@ GameObject:
   - component: {fileID: 1352039823}
   - component: {fileID: 1352039822}
   m_Layer: 5
-  m_Name: KPI 2
+  m_Name: KPILabel2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -975,7 +975,7 @@ GameObject:
   - component: {fileID: 2112011139}
   - component: {fileID: 2112011138}
   m_Layer: 5
-  m_Name: KPI 4
+  m_Name: KPILabel4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
