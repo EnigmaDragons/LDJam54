@@ -51,4 +51,18 @@ public sealed class CurrentGameState
         _gameState = apply(_gameState);
         Message.Publish(new GameStateChanged(_gameState));
     }
+    
+    public void IncrementKPI(KPI kpi, int amount = 1)
+    {
+        UpdateState(g =>
+        {
+            g.KPIs[kpi] += amount;
+            return g;
+        });
+    }
+    
+    public static void IncrementKPIStatic(KPI kpi, int amount = 1)
+    {
+        Instance.IncrementKPI(kpi, amount);
+    }
 }

@@ -13,7 +13,7 @@ public static class PerformanceEvaluator
         for (var i = 0; i < numberOfKPIs; i++)
             playerKPIs[i] = state.KPIs[state.ActiveKPIs[i]];
         performanceReview.KPIsPerPerson[state.PlayerName] = playerKPIs;
-        foreach(var person in state.Coworkers)
+        foreach(var person in state.CoworkerIds)
             performanceReview.KPIsPerPerson[person] = Enumerable.Repeat(10, numberOfKPIs).ToArray();
         var playerScores = new int[performanceReview.KPIsPerPerson.Count];
 

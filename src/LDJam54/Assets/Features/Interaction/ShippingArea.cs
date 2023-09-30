@@ -21,6 +21,7 @@ namespace Features.Interaction
         {
             var message = new BoxDelivered();
             Message.Publish(message);
+            CurrentGameState.IncrementKPIStatic(KPI.BoxShipped, 1);
         }
     }
 }
