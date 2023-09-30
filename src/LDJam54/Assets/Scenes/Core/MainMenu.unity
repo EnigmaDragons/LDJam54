@@ -263,6 +263,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 105923189}
   m_CullTransparentMesh: 0
+--- !u!1 &107580167 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6438735157852827517, guid: 1711df562ba8eb547be8a5309ddf7a8f,
+    type: 3}
+  m_PrefabInstance: {fileID: 4402824031761395534}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &107580172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107580167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9ba5893e567ab40a3e6aa11a139e17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &251863198 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1866759171860415810, guid: db6e896a854233445bb472ee1f3a8324,
@@ -1083,6 +1101,7 @@ GameObject:
   - component: {fileID: 1279554867}
   - component: {fileID: 1279554866}
   - component: {fileID: 1279554869}
+  - component: {fileID: 1279554870}
   m_Layer: 5
   m_Name: OptionsButton
   m_TagString: Untagged
@@ -1151,10 +1170,34 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1279554867}
+  m_TargetGraphic: {fileID: 1909727432}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 107580172}
+        m_TargetAssemblyTypeName: FMOD_UI_Manager, Assembly-CSharp
+        m_MethodName: ClickButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 107580172}
+        m_TargetAssemblyTypeName: FMOD_UI_Manager, Assembly-CSharp
+        m_MethodName: StopHooverSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1279554867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1212,6 +1255,48 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 1
     FloatVariable: {fileID: 0}
+--- !u!114 &1279554870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279554864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd7d9335b609b9940a1ab515f8433a81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playHooverSound:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 107580172}
+        m_TargetAssemblyTypeName: FMOD_UI_Manager, Assembly-CSharp
+        m_MethodName: PlayeHooverSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  stopHooverSound:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 107580172}
+        m_TargetAssemblyTypeName: FMOD_UI_Manager, Assembly-CSharp
+        m_MethodName: StopHooverSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1611929015
 GameObject:
   m_ObjectHideFlags: 0
@@ -1431,6 +1516,7 @@ GameObject:
   - component: {fileID: 1827418396}
   - component: {fileID: 1827418395}
   - component: {fileID: 1827418398}
+  - component: {fileID: 1827418399}
   m_Layer: 5
   m_Name: CreditsButton
   m_TagString: Untagged
@@ -1499,10 +1585,34 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1827418396}
+  m_TargetGraphic: {fileID: 1909727432}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 107580172}
+        m_TargetAssemblyTypeName: FMOD_UI_Manager, Assembly-CSharp
+        m_MethodName: ClickButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 107580172}
+        m_TargetAssemblyTypeName: FMOD_UI_Manager, Assembly-CSharp
+        m_MethodName: StopHooverSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1827418396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1560,6 +1670,48 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 1
     FloatVariable: {fileID: 0}
+--- !u!114 &1827418399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827418393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd7d9335b609b9940a1ab515f8433a81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playHooverSound:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 107580172}
+        m_TargetAssemblyTypeName: FMOD_UI_Manager, Assembly-CSharp
+        m_MethodName: PlayeHooverSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  stopHooverSound:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 107580172}
+        m_TargetAssemblyTypeName: FMOD_UI_Manager, Assembly-CSharp
+        m_MethodName: StopHooverSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1909727429
 GameObject:
   m_ObjectHideFlags: 0
@@ -1573,6 +1725,7 @@ GameObject:
   - component: {fileID: 1909727432}
   - component: {fileID: 1909727431}
   - component: {fileID: 1909727434}
+  - component: {fileID: 1909727435}
   m_Layer: 5
   m_Name: StartGameButton
   m_TagString: Untagged
@@ -1644,7 +1797,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1909727432}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 107580172}
+        m_TargetAssemblyTypeName: FMOD_UI_Manager, Assembly-CSharp
+        m_MethodName: ClickButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 107580172}
+        m_TargetAssemblyTypeName: FMOD_UI_Manager, Assembly-CSharp
+        m_MethodName: StopHooverSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1909727432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1702,6 +1879,48 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 1
     FloatVariable: {fileID: 0}
+--- !u!114 &1909727435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909727429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd7d9335b609b9940a1ab515f8433a81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playHooverSound:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 107580172}
+        m_TargetAssemblyTypeName: FMOD_UI_Manager, Assembly-CSharp
+        m_MethodName: PlayeHooverSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  stopHooverSound:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 107580172}
+        m_TargetAssemblyTypeName: FMOD_UI_Manager, Assembly-CSharp
+        m_MethodName: StopHooverSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1986504512
 GameObject:
   m_ObjectHideFlags: 0
@@ -2419,6 +2638,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UiSoundEffectsPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 7318196694813104344, guid: 1711df562ba8eb547be8a5309ddf7a8f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7488076747389022399, guid: 1711df562ba8eb547be8a5309ddf7a8f,
         type: 3}
       propertyPath: m_RootOrder
@@ -2472,6 +2696,11 @@ PrefabInstance:
     - target: {fileID: 7488076747389022399, guid: 1711df562ba8eb547be8a5309ddf7a8f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343361537247501593, guid: 1711df562ba8eb547be8a5309ddf7a8f,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -121,17 +121,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8781219108090337099}
+  m_GameObject: {fileID: 7882771724172413760}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5f1da5de08e420e9178522a954dd805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Body: {fileID: -3062736390131330023}
-  Collider: {fileID: 4092598058212297708}
+  Body: {fileID: 1873852623021369461}
+  Collider: {fileID: 1174065482319283481}
   CanBeHeld: 1
-  DistanceInFront: 0.4
+  DistanceInFront: 0.8
   HeightOffset: -0.1
   CanBeSetOn: 1
   SnapToCenter: 1
-  <BobbingIntensity>k__BackingField: 0.05
+  <BobbingIntensity>k__BackingField: 0.15
