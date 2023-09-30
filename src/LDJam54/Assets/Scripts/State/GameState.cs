@@ -1,4 +1,5 @@
 using System;
+using UnityEngine.Serialization;
 
 [Serializable]
 public sealed class GameState
@@ -11,12 +12,19 @@ public sealed class GameState
     // All enums used in this class should have specified integer values.
     // This is necessary to preserve backwards save compatibility.
     public string PlayerName = "John Doe";
-    public string[] Coworkers = new string[] { "Bruce", "Jack" };
-    public string[] ActiveKPIs = new string[] { "PlacedCorrectly", "TestKPI" };
-    public SerializableDictionary<string, int> KPIs = new() {
-        { "PlacedCorrectly", 0 },
-        { "TestKPI", 11}
+    public string[] CoworkerIds = { "123456", "234567", "345678", "456789", "567890", "678901" };
+    public KPI[] ActiveKPIs = { KPI.PlacedCorrectly, KPI.BoxShipped };
+    public SerializableDictionary<KPI, int> KPIs = new() {
+        { KPI.PlacedCorrectly, 0 },
+        { KPI.BoxShipped, 0 },
     };
     public PerformanceReview PerformanceReview = new PerformanceReview();
     public SerializableDictionary<string, bool> CutsceneStoryStates = new();
+}
+
+
+public enum KPI
+{
+    PlacedCorrectly = 0,
+    BoxShipped = 1,
 }

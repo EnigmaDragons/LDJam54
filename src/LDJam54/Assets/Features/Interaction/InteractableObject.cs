@@ -1,4 +1,5 @@
 ﻿using System;
+using DG.Tweening;
 using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
@@ -13,8 +14,14 @@ public class InteractableObject : MonoBehaviour
     public bool CanBeSetOn;
     public bool SnapToCenter;
 
+    
+    
     [field: SerializeField] public float BobbingIntensity { get; private set; } = 0.05f;
     
+    [SerializeField]
+    private int defaultLayer = 0;
+    [SerializeField]
+    private int highlightLayer = 0;
     
     private bool _isSettingDown;
     private bool _isHeld;
@@ -24,6 +31,13 @@ public class InteractableObject : MonoBehaviour
     private Quaternion _setDownRotation;
     
     private float yOffset;
+    private Renderer _renderer;
+
+    private void Awake()
+    {
+        _renderer = GetComponent<Renderer>();
+    }
+
     private void FixedUpdate()
     {
         if (!_isSettingDown)
@@ -56,7 +70,45 @@ public class InteractableObject : MonoBehaviour
         _setDownSpeed = speed;
         _setDownRotationSpeed = rotationSpeed;
     }
+
+    public void Highlight()
+    {
+        gameObject.layer = highlightLayer;
+    }
+
+    public void Unhighlight()
+    {
+        gameObject.layer = defaultLayer;
+    }
+
+    public void PlayShippedAnimation()
+    {
+        //1 disable collider & rigidbody
+        Collider.enabled = false;
+        Body.isKinematic = true;
+        
+        //set the material to transparent
+        SetToTransparent();
+        
+        //move box up
+        transform.DOMoveY(transform.position.y + 0.5f, 1f);
+        //fade out
+        _renderer.material.DOColor(new Color(_renderer.material.color.r, _renderer.material.color.g, _renderer.material.color.b, 0f), 1f);
+        
+        Destroy(gameObject, 1.2f);
+    }
     
-    public void Highlight() {}
-    public void Unhighlight() {}
+    private void SetToTransparent()
+    {
+        var meshRenderer = GetComponent<MeshRenderer>();
+        Material material = new Material(meshRenderer.material);
+        material.shader = Shader.Find("Universal Render Pipeline/Lit");
+        material.SetInt("_Surface", 1); // make it transparent.
+        material.SetInt("_Blend", 0);   // set it to alpha blend
+        material.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+        material.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+        material.renderQueue = 3000;
+        material.color = new Color(material.color.r, material.color.g, material.color.b, 1f);
+        meshRenderer.material = material;
+    }
 }
