@@ -3,23 +3,45 @@ using System.Collections.Generic;
 using System.Linq;
 
 public static class CollectionExtensions
-{    
-    [Obsolete] public static bool None<T>(this IEnumerable<T> items, Func<T, bool> condition) => !items.Any(condition);
-    [Obsolete] public static void ForEach<T>(this IEnumerable<T> items, Action<T> action) => items.ToList().ForEach(action);
-    [Obsolete] public static IEnumerable<T> Concat<T>(this IEnumerable<T> items, T item) => items.Concat(item.AsArray());
-    [Obsolete] public static bool None<T>(this IEnumerable<T> items) => !items.Any();
-    [Obsolete] public static List<T> With<T>(this IEnumerable<T> list, T item) => list.Concat(new[] {item}).ToList();
-    [Obsolete] public static List<T> Without<T>(this IEnumerable<T> list, T item)
+{
+    public static bool NoneNonAlloc<T>(this T[] items) => !items.AnyNonAlloc();
+    public static bool NoneNonAlloc<T>(this HashSet<T> items) => !items.AnyNonAlloc();
+    public static bool NoneNonAlloc<T>(this List<T> items) => !items.AnyNonAlloc();
+    public static bool NoneNonAlloc<T>(this IEnumerable<T> items, Func<T, bool> condition)
     {
-        var copyList = list.ToList();
-        copyList.Remove(item);
-        return copyList;
+        foreach (var i in items)
+            if (condition(i))
+                return false;
+
+        return true;
+    }
+    
+    public static bool AnyNonAlloc<T>(this T[] items) => items.Length > 0;
+    public static bool AnyNonAlloc<T>(this List<T> items) => items.Count > 0;
+    public static bool AnyNonAlloc<T>(this Queue<T> items) => items.Count > 0;
+    public static bool AnyNonAlloc<T>(this HashSet<T> items) => items.Count > 0;
+    public static bool AnyNonAlloc<T>(this IEnumerable<T> items, Func<T, bool> condition)
+    {
+        foreach (var i in items)
+            if (condition(i))
+                return true;
+
+        return false;
+    }
+    
+    public static bool AllNonAlloc<T>(this IEnumerable<T> items, Func<T, bool> condition)
+    {
+        foreach (var i in items)
+            if (!condition(i))
+                return false;
+
+        return true;
     }
     
     public static T[] AsArray<T>(this T item) => new [] {item};
     public static TValue ValueOrDefault<TKey, TValue>(this IDictionary<TKey, TValue> d, TKey key, Func<TValue> getDefault) => d.TryGetValue(key, out var value) ? value : getDefault();
 
-    public static void ForEach<T>(this T[] arr, Action<T> action)
+    public static void ForEach<T>(this IEnumerable<T> arr, Action<T> action)
     {
         foreach (var t in arr)
             action(t);
