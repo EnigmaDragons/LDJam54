@@ -10,7 +10,13 @@ namespace Features.Interaction
         [SerializeField] private float pickupDistance = 1f;
         [SerializeField] private LayerMask pickupLayerMask;
     
+        /// <summary>
+        /// The interactable object that the player is currently looking at
+        /// </summary>
         private Maybe<InteractableObject> targetted = Maybe<InteractableObject>.Missing();
+        /// <summary>
+        /// The interactable object that the player is currently holding
+        /// </summary>
         private Maybe<InteractableObject> held = Maybe<InteractableObject>.Missing();
         private Maybe<Transform> heldParent = Maybe<Transform>.Missing();
     
@@ -28,20 +34,10 @@ namespace Features.Interaction
         private void UpdateTarget()
         {
             var ray = camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
-            if (Physics.Raycast(ray, maxDistance: pickupDistance , layerMask: pickupLayerMask, hitInfo: out var hit))
+            if (Physics.Raycast(ray, maxDistance: pickupDistance , hitInfo: out var hit))
             {
                 var interactable = hit.collider.gameObject.GetComponent<InteractableObject>();
-                if (interactable == null)
-                {
-                    targetted.IfPresent(x => x.Unhighlight());
-                    targetted = Maybe<InteractableObject>.Missing();
-                }
-                else if (interactable != targetted.Value)
-                {
-                    targetted.IfPresent(x => x.Unhighlight());
-                    targetted = interactable;
-                    interactable.Highlight();
-                }
+                HandleInteractable(interactable);
             }
             else if (targetted.IsPresent)
             {
@@ -50,24 +46,79 @@ namespace Features.Interaction
             }
         }
     
+        private void HandleInteractable(InteractableObject interactable)
+        {
+            if (interactable == null)
+            {
+                UnhighlightAndSetMissing();
+            }
+            else if (interactable != targetted.Value)
+            {
+                UnhighlightAndSetMissing();
+                interactable.Highlight();
+                targetted = interactable;
+            }
+        }
+        
+        private void UnhighlightAndSetMissing()
+        {
+            targetted.IfPresent(x => x.Unhighlight());
+            targetted = Maybe<InteractableObject>.Missing();
+        }
         private void CheckForPickupOrSetDown()
         {
-            if (held.IsMissing && targetted.IsPresent && targetted.Value.CanBeHeld && (Input.GetKeyDown("joystick button 0") || Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0)))
+            if (held.IsMissing && targetted.IsPresent && targetted.Value.CanBeHeld && IsActionTriggered())
             {
-                held = targetted.Value;
-                targetted.Value.Hold();
-                heldParent = targetted.Value.transform.parent;
-                targetted.Value.transform.parent = transform;
+                HoldObject();
             }
-            else if (held.IsPresent && targetted.IsPresent && targetted.Value.CanBeSetOn && (Input.GetKeyDown("joystick button 0") || Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0)))
+            else if (held.IsPresent && targetted.IsPresent && targetted.Value.CanBeSetOn && IsActionTriggered())
             {
-                if (targetted.Value.SnapToCenter)
-                    held.Value.SetDown(new Vector3(targetted.Value.transform.position.x, targetted.Value.transform.position.y + targetted.Value.Collider.bounds.extents.y + held.Value.Collider.bounds.extents.y + 0.1f, targetted.Value.transform.position.z), held.Value.transform.rotation, objectSpeed, rotationSpeed);
-                else
-                    held.Value.SetDown(held.Value.transform.position, held.Value.transform.rotation, objectSpeed, rotationSpeed);
-                held.Value.transform.parent = heldParent.Value;
-                held = Maybe<InteractableObject>.Missing();
+                SetObject();
             }
+            else if (held.IsPresent && IsActionTriggered())
+            {
+                DropObject();
+            }
+        }
+
+        private void DropObject()
+        {
+            held.Value.Release();
+            held.Value.transform.parent = heldParent.Value;
+            held = Maybe<InteractableObject>.Missing();
+        }
+
+        private void HoldObject()
+        {
+            held = targetted.Value;
+            targetted.Value.Hold();
+            heldParent = targetted.Value.transform.parent;
+            targetted.Value.transform.parent = transform;
+        }
+        
+        private void SetObject()
+        {
+            Vector3 position;
+            if (targetted.Value.SnapToCenter) 
+            {
+                position = new Vector3(targetted.Value.transform.position.x, targetted.Value.transform.position.y + targetted.Value.Collider.bounds.extents.y + held.Value.Collider.bounds.extents.y + 0.1f, targetted.Value.transform.position.z);
+            }
+            else 
+            {
+                position = held.Value.transform.position;
+            }
+
+            Quaternion rotation = held.Value.transform.rotation;
+            held.Value.SetDown(position, rotation, objectSpeed, rotationSpeed);
+            held.Value.transform.parent = heldParent.Value;
+            held = Maybe<InteractableObject>.Missing();
+        }
+        
+        private bool IsActionTriggered()
+        {
+            return Input.GetKeyDown("joystick button 0") 
+                   || Input.GetKeyDown(KeyCode.E) 
+                   || Input.GetMouseButtonDown(0);
         }
 
         private float bobbingTime = 0;
