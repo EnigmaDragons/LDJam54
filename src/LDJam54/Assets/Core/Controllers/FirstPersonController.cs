@@ -32,6 +32,7 @@ public class FirstPersonController : MonoBehaviour
     private void Start()
     {
         m_Rigid = GetComponent<Rigidbody>();
+        LockCursor();
     }
 
     // Update is called once per frame
