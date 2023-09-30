@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 3443147389514486661}
   - component: {fileID: 906361973967854674}
   - component: {fileID: 4334024067666689515}
-  m_Layer: 0
+  - component: {fileID: 8878470941608837985}
+  m_Layer: 6
   m_Name: SM_Box_Med
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,3 +115,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8878470941608837985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3803422096554242640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5f1da5de08e420e9178522a954dd805, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Body: {fileID: 4334024067666689515}
+  Collider: {fileID: 906361973967854674}
+  CanBeHeld: 1
+  DistanceInFront: 0.9
+  HeightOffset: -0.1
+  CanBeSetOn: 1
+  SnapToCenter: 1
+  <BobbingIntensity>k__BackingField: 0.1

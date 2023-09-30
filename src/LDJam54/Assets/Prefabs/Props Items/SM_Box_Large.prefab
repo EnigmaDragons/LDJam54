@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 6857758710680959368}
   - component: {fileID: 3339334539324336848}
   - component: {fileID: 4100261962717085205}
-  m_Layer: 0
+  - component: {fileID: 5938157863436049174}
+  m_Layer: 6
   m_Name: SM_Box_Large
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4912120177330821213}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -114,3 +115,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5938157863436049174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4912120177330821213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5f1da5de08e420e9178522a954dd805, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Body: {fileID: 4100261962717085205}
+  Collider: {fileID: 3339334539324336848}
+  CanBeHeld: 1
+  DistanceInFront: 1
+  HeightOffset: -0.05
+  CanBeSetOn: 1
+  SnapToCenter: 1
+  <BobbingIntensity>k__BackingField: 0.05
