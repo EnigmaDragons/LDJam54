@@ -8,6 +8,7 @@ namespace Features.Interaction
         [SerializeField] private float rotationSpeed = 300;
         [SerializeField] private Camera camera;
         [SerializeField] private float pickupDistance = 1f;
+        [SerializeField] private LayerMask pickupLayerMask;
     
         private Maybe<InteractableObject> targetted = Maybe<InteractableObject>.Missing();
         private Maybe<InteractableObject> held = Maybe<InteractableObject>.Missing();
@@ -27,7 +28,7 @@ namespace Features.Interaction
         private void UpdateTarget()
         {
             var ray = camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
-            if (Physics.Raycast(ray, maxDistance: pickupDistance , hitInfo: out var hit))
+            if (Physics.Raycast(ray, maxDistance: pickupDistance , layerMask: pickupLayerMask, hitInfo: out var hit))
             {
                 var interactable = hit.collider.gameObject.GetComponent<InteractableObject>();
                 if (interactable == null)

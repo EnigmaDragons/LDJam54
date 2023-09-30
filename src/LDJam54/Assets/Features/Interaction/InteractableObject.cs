@@ -13,8 +13,14 @@ public class InteractableObject : MonoBehaviour
     public bool CanBeSetOn;
     public bool SnapToCenter;
 
+    
+    
     [field: SerializeField] public float BobbingIntensity { get; private set; } = 0.05f;
     
+    [SerializeField]
+    private int defaultLayer = 0;
+    [SerializeField]
+    private int highlightLayer = 0;
     
     private bool _isSettingDown;
     private bool _isHeld;
@@ -56,7 +62,14 @@ public class InteractableObject : MonoBehaviour
         _setDownSpeed = speed;
         _setDownRotationSpeed = rotationSpeed;
     }
-    
-    public void Highlight() {}
-    public void Unhighlight() {}
+
+    public void Highlight()
+    {
+        gameObject.layer = highlightLayer;
+    }
+
+    public void Unhighlight()
+    {
+        gameObject.layer = defaultLayer;
+    }
 }
