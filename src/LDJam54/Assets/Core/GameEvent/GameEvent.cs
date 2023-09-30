@@ -10,7 +10,7 @@ public class GameEvent : ScriptableObject
 
     public void Publish()
     {
-        CleansedListeners.ForEach(l => l.OnEvent(l));
+        CleansedListeners.ToList().ForEach(l => l.OnEvent(l));
     }
 
     public void Subscribe(Action action, object subscriber) => Subscribe(new GameEventSubscription(name, x => action(), subscriber));

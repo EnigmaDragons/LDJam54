@@ -7,7 +7,11 @@ public sealed class GameState
     // Any logic or non-trivial data should be enriched in CurrentGameState.
     // Except for Save/Load Systems, everything should use CurrentGameState,
     // instead of this pure data structure.
-    
+
     // All enums used in this class should have specified integer values.
     // This is necessary to preserve backwards save compatibility.
+    public string[] ActiveKPIs = new string[1] { "PlacedCorrectly" };
+    public SerializableDictionary<string, int> KPIs = new() {
+        { "PlacedCorrectly", 0 }
+    };
 }
