@@ -56,6 +56,14 @@ public static class CollectionExtensions
             action(t);
     }
     
+    public static int FirstIndexOf<T>(this List<T> array, Func<T, bool> condition)
+    {
+        for (var i = 0; i < array.Count; i++)
+            if (condition(array[i]))
+                return i;
+        return -1;
+    }
+
     public static Maybe<T> FirstOrMaybe<T>(this IEnumerable<T> items) where T : class
         => items.FirstOrDefault();
     
