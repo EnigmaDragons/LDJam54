@@ -112,4 +112,12 @@ public class InteractableObject : MonoBehaviour
         material.color = new Color(material.color.r, material.color.g, material.color.b, 1f);
         meshRenderer.material = material;
     }
+
+    public void Throw(Vector3 throwDirection, float throwForce)
+    {
+        Release();
+        //add random rotational force
+        Body.AddTorque(new Vector3(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f)), ForceMode.Impulse);
+        Body.AddForce(throwDirection * throwForce, ForceMode.Impulse);
+    }
 }

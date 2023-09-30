@@ -11,7 +11,7 @@ public class CoworkerSetup : MonoBehaviour
         };
         CurrentGameState.State.CoworkerStandardPerformance = new() {
             { KPI.PlacedCorrectly, new CoworkerAverage() },
-            { KPI.BoxShipped, new CoworkerAverage { BaseKPI = 20, SkillBonus = 1, ExploitMultiplier = 1.25f } },
+            { KPI.BoxShipped, new CoworkerAverage { BaseKPI = 2.6f, SkillBonus = 0.2f, ExploitBaseKpi = 15f, ExploitSkillBonus = 3f  } }
         };
     }
 }

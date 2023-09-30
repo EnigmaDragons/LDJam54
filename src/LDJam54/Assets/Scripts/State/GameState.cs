@@ -17,7 +17,7 @@ public sealed class GameState
     public KPI[] ActiveKPIs = { KPI.BoxShipped };
     public SerializableDictionary<KPI, CoworkerAverage> CoworkerStandardPerformance = new() {
         { KPI.PlacedCorrectly, new CoworkerAverage() },
-        { KPI.BoxShipped, new CoworkerAverage { BaseKPI = 20, SkillBonus = 1, ExploitMultiplier = 1.25f } },
+        { KPI.BoxShipped, new CoworkerAverage { BaseKPI = 20, SkillBonus = 1, ExploitBaseKpi = 50, ExploitSkillBonus = 3 } },
     };
     public SerializableDictionary<KPI, int> KPIs = new() {
         { KPI.PlacedCorrectly, 0 },

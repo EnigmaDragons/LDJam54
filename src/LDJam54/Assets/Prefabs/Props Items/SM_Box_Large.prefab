@@ -131,7 +131,7 @@ MonoBehaviour:
   Collider: {fileID: 3339334539324336848}
   CanBeHeld: 1
   DistanceInFront: 1
-  HeightOffset: -0.05
+  HeightOffset: 0
   CanBeSetOn: 1
   SnapToCenter: 1
   <BobbingIntensity>k__BackingField: 0.05

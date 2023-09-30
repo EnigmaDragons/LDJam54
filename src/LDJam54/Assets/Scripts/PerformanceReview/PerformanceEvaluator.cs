@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 
 public static class PerformanceEvaluator
 {
@@ -24,15 +23,18 @@ public static class PerformanceEvaluator
             for(var i = 0; i < activeKPIs.Length; i++)
             {
                 var KPI = activeKPIs[i];
-                var score = standardPerformance[KPI].BaseKPI + standardPerformance[KPI].SkillBonus * person.Skill;
-                var rngFactor = Rng.Int(5);
-                if (rngFactor == 4)
-                    score++;
-                else if (rngFactor == 0)
-                    score--;
                 if (person.MasteredKPIs.Contains(KPI))
-                    score *= standardPerformance[KPI].ExploitMultiplier;
-                scores[i] = score;
+                {
+                    var score = standardPerformance[KPI].ExploitBaseKpi + standardPerformance[KPI].ExploitSkillBonus * person.Skill;
+                    score += standardPerformance[KPI].ExploitSkillBonus * (Rng.Float() + Rng.Float() + Rng.Float() - 1.5f) * 2;
+                    scores[i] = score;
+                }
+                else
+                {
+                    var score = standardPerformance[KPI].BaseKPI + standardPerformance[KPI].SkillBonus * person.Skill;
+                    score += standardPerformance[KPI].SkillBonus * (Rng.Float() + Rng.Float() + Rng.Float() - 1.5f) * 2;
+                    scores[i] = score;
+                }
             }
             if(activeKPIs.Length > 1)
             {

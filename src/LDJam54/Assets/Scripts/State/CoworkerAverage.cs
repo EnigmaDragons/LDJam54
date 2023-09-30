@@ -2,5 +2,6 @@
 {
     public float BaseKPI = 10;
     public float SkillBonus = 1;
-    public float ExploitMultiplier = 2;
+    public float ExploitBaseKpi = 20;
+    public float ExploitSkillBonus = 2; 
 }
