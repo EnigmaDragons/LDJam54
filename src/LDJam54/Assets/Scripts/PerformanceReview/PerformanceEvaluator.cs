@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -8,21 +9,46 @@ public static class PerformanceEvaluator
     {
         var state = CurrentGameState.State;
         var performanceReview = new PerformanceReview();
-        var numberOfKPIs = state.ActiveKPIs.Length;
-        var playerKPIs = new int[numberOfKPIs];
-        for (var i = 0; i < numberOfKPIs; i++)
+        var standardPerformance = state.CoworkerStandardPerformance;
+        var activeKPIs = state.ActiveKPIs;
+        var playerKPIs = new int[activeKPIs.Length];
+        for (var i = 0; i < activeKPIs.Length; i++)
             playerKPIs[i] = state.KPIs[state.ActiveKPIs[i]];
         performanceReview.KPIsPerPerson[state.PlayerName] = playerKPIs;
-        foreach(var person in state.CoworkerIds)
-            performanceReview.KPIsPerPerson[person] = Enumerable.Repeat(10, numberOfKPIs).ToArray();
-        var playerScores = new int[performanceReview.KPIsPerPerson.Count];
-
+        foreach(var person in state.Coworkers)
+        {
+            var scores = new float[activeKPIs.Length];
+            for(var i = 0; i < activeKPIs.Length; i++)
+            {
+                var KPI = activeKPIs[i];
+                var score = standardPerformance[KPI].BaseKPI + standardPerformance[KPI].SkillBonus * person.Skill;
+                var rngFactor = Rng.Int(5);
+                if (rngFactor == 4)
+                    score++;
+                else if (rngFactor == 0)
+                    score--;
+                if (person.MasteredKPIs.Contains(KPI))
+                    score = score * standardPerformance[KPI].ExploitMultiplier;
+                scores[i] = score;
+            }
+            if(activeKPIs.Length > 1)
+            {
+                var weights = new int[activeKPIs.Length];
+                for (var i = 0; i < activeKPIs.Length; i++)
+                    weights[i] = Rng.Int(10) + (person.MasteredKPIs.Contains(activeKPIs[i]) ? 4 : 1);
+                var totalWeight = weights.Sum();
+                for (var i = 0; i < activeKPIs.Length; i++)
+                    scores[i] = (1f * scores[i] * weights[i] / totalWeight) + Rng.Float();
+            }
+            performanceReview.KPIsPerPerson[person.Name] = scores.Select(s => (int)Math.Floor(s+Rng.Float())).ToArray();
+        }
+        var workerScores = new int[performanceReview.KPIsPerPerson.Count];
         for (var i = 0; i < performanceReview.KPIsPerPerson.Count; i++)
         {
             var performance = performanceReview.KPIsPerPerson.ElementAt(i);
             var name = performance.Key;
-            var placements = new int[numberOfKPIs];
-            for (var j = 0; j < numberOfKPIs; j++)
+            var placements = new int[activeKPIs.Length];
+            for (var j = 0; j < activeKPIs.Length; j++)
             {
                 var KPI = performance.Value[j];
                 var countOfBetterCoworkers = 0;
@@ -32,18 +58,18 @@ public static class PerformanceEvaluator
                 placements[j] = countOfBetterCoworkers + 1;
             }
             performanceReview.PlacementsPerPerson[name] = placements;
-            playerScores[i] = placements.Sum();
+            workerScores[i] = placements.Sum();
         }
 
         var worstScoreSoFar = 0;
         var workers = new List<string>();
-        for (var i = 0; i < playerScores.Length; i++)
-            if (playerScores[i] > worstScoreSoFar)
+        for (var i = 0; i < workerScores.Length; i++)
+            if (workerScores[i] > worstScoreSoFar)
             {
-                worstScoreSoFar = playerScores[i];
+                worstScoreSoFar = workerScores[i];
                 workers = new List<string>() { performanceReview.KPIsPerPerson.ElementAt(i).Key };
             }
-            else if (playerScores[i] == worstScoreSoFar)
+            else if (workerScores[i] == worstScoreSoFar)
                 workers.Add(performanceReview.KPIsPerPerson.ElementAt(i).Key);
 
         performanceReview.EliminatedPerson = workers.Random();

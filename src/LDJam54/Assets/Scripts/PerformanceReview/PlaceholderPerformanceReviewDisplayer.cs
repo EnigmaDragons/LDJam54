@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlaceholderPerformanceReviewDisplayer : MonoBehaviour
@@ -5,6 +6,8 @@ public class PlaceholderPerformanceReviewDisplayer : MonoBehaviour
     public void Start()
     {
         var state = CurrentGameState.State;
+        state.KPIs[KPI.BoxShipped] = 23;
+        state.Coworkers.Add(new Worker() { Name = "999", Skill = 2, MasteredKPIs = new List<KPI>() { KPI.BoxShipped } });
         PerformanceEvaluator.Evaluate();
         var review = state.PerformanceReview;
         foreach(var performance in review.KPIsPerPerson)
@@ -20,5 +23,7 @@ public class PlaceholderPerformanceReviewDisplayer : MonoBehaviour
                 Debug.Log(value);
         }
         Debug.Log(review.EliminatedPerson);
+
+
     }
 }
