@@ -7,16 +7,9 @@ namespace Features.PlayerControls
     [RequireComponent(typeof(FirstPersonController))]
     public class AdvPlayerController : MonoBehaviour
     {
+        [SerializeField] private GameConfig gameConfig;
         private FirstPersonController _fpController;
         private Rigidbody _rigidbody;
-        
-        [SerializeField]
-        private float defaultSpeed = 5.0f;
-        [SerializeField]
-        private float sprintSpeed = 10.0f;
-        
-        [SerializeField]
-        private float jumpHeight = 2.0f;
         
         [SerializeField]
         private float groundCheckDistance = 0.2f;
@@ -26,13 +19,13 @@ namespace Features.PlayerControls
             _fpController = GetComponent<FirstPersonController>();
             _rigidbody = GetComponent<Rigidbody>();
             
-            _fpController.Speed = defaultSpeed;
+            _fpController.Speed = gameConfig.PlayerWalkSpeed;
         }
         
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift)) _fpController.Speed = sprintSpeed;
-            else if (Input.GetKeyUp(KeyCode.LeftShift)) _fpController.Speed = defaultSpeed;
+            if (Input.GetKeyDown(KeyCode.LeftShift)) _fpController.Speed = gameConfig.PlayerRunSpeed;
+            else if (Input.GetKeyUp(KeyCode.LeftShift)) _fpController.Speed = gameConfig.PlayerWalkSpeed;
             
             if (IsGrounded() && Input.GetKeyDown(KeyCode.Space)) Jump();
         }
@@ -45,7 +38,7 @@ namespace Features.PlayerControls
         
         private void Jump()
         {
-            _rigidbody.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
+            _rigidbody.AddForce(Vector3.up * gameConfig.PlayerJumpForce, ForceMode.Impulse);
         }
 
         private void OnDrawGizmosSelected()
