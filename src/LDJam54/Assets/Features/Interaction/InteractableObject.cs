@@ -14,14 +14,12 @@ public class InteractableObject : MonoBehaviour
     public bool CanBeSetOn;
     public bool SnapToCenter;
 
-    
-    
     [field: SerializeField] public float BobbingIntensity { get; private set; } = 0.05f;
     
     [SerializeField]
-    private int defaultLayer = 0;
+    private int defaultLayer = 6;
     [SerializeField]
-    private int highlightLayer = 0;
+    private int highlightLayer = 7;
     
     private bool _isSettingDown;
     private bool _isHeld;
