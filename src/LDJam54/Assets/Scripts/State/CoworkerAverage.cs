@@ -1,4 +1,7 @@
-﻿public class CoworkerAverage
+﻿using System;
+
+[Serializable]
+public class CoworkerAverage
 {
     public float BaseKPI = 10;
     public float SkillBonus = 1;

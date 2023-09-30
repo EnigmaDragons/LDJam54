@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameConfig : ScriptableObject
 {
     public List<Worker> Coworkers = new List<Worker>();
-    public List<CoworkerAverage> CoworkerAverages = new List<CoworkerAverage>();
+    public CoworkerAverage BoxShippedAverage;
+    public CoworkerAverage PlacedCorrectlyAverage;
     public float ClockSpeedFactor = 1f;
 }
