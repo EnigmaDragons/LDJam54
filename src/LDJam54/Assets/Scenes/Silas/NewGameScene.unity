@@ -192,6 +192,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c1cd85eb28af73428c711c918348acb, type: 3}
+--- !u!1001 &1188817730878294613
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1188817730867579336, guid: b72ece4c541815f4ca92831130a96278,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1188817730867579336, guid: b72ece4c541815f4ca92831130a96278,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1188817730867579336, guid: b72ece4c541815f4ca92831130a96278,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1188817730867579336, guid: b72ece4c541815f4ca92831130a96278,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1188817730867579336, guid: b72ece4c541815f4ca92831130a96278,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1188817730867579336, guid: b72ece4c541815f4ca92831130a96278,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1188817730867579336, guid: b72ece4c541815f4ca92831130a96278,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1188817730867579336, guid: b72ece4c541815f4ca92831130a96278,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1188817730867579336, guid: b72ece4c541815f4ca92831130a96278,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1188817730867579336, guid: b72ece4c541815f4ca92831130a96278,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1188817730867579336, guid: b72ece4c541815f4ca92831130a96278,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1188817730867579337, guid: b72ece4c541815f4ca92831130a96278,
+        type: 3}
+      propertyPath: m_Name
+      value: SimpleDayLauncher
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b72ece4c541815f4ca92831130a96278, type: 3}
 --- !u!1001 &2480778388263544928
 PrefabInstance:
   m_ObjectHideFlags: 0
