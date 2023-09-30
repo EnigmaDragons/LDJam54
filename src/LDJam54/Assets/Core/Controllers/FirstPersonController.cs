@@ -18,7 +18,7 @@ public class FirstPersonController : MonoBehaviour
     private float m_MovY;
     private Vector3 m_moveHorizontal;
     private Vector3 m_movVertical;
-    private Vector3 m_velocity;
+    public Vector3 m_velocity;
     private Rigidbody m_Rigid;
     private float m_yRot;
     private float m_xRot;
@@ -28,6 +28,9 @@ public class FirstPersonController : MonoBehaviour
 
     [Header("The Camera the player looks through")]
     public Camera m_Camera;
+
+    [SerializeField]
+    AnimatorToSoundController animatorToSoundController;
 
     
     public float Speed { get => speed; set => speed = value; }
@@ -64,6 +67,7 @@ public class FirstPersonController : MonoBehaviour
         {
             m_Rigid.MovePosition(m_Rigid.position + m_velocity * Time.fixedDeltaTime);
         }
+      
 
         if (m_rotation != Vector3.zero)
         {

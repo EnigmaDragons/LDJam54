@@ -21,6 +21,22 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{281e7c11-1a8f-424c-b662-4ffd5984a8c3}" />
-	<object class="SFXReverbEffect" id="{f66a5506-7185-4b5c-b042-6a7f7ba96b8e}" />
+	<object class="SFXReverbEffect" id="{f66a5506-7185-4b5c-b042-6a7f7ba96b8e}">
+		<property name="decayTime">
+			<value>2800</value>
+		</property>
+		<property name="diffusion">
+			<value>49</value>
+		</property>
+		<property name="density">
+			<value>42</value>
+		</property>
+		<property name="earlyLateMix">
+			<value>83</value>
+		</property>
+		<property name="dryLevel">
+			<value>-80</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{21e6b75e-afd0-4cb7-861f-838c2131a21c}" />
 </objects>
