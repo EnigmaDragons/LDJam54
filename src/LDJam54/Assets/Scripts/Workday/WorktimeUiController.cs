@@ -2,23 +2,23 @@
 
 public class WorktimeUiController : OnMessage<WorkdayStarted, WorktimeChanged, WorkdayEnded>
 {
-    public TextMeshProUGUI label;
+    public TextMeshProUGUI Label;
 
-    private void Start() => label.enabled = false;
+    private void Start() => Label.enabled = false;
     
     protected override void Execute(WorkdayStarted msg)
     {
-        label.enabled = true;
+        Label.enabled = true;
     }
 
     protected override void Execute(WorktimeChanged msg)
     {
-        label.enabled = true;
-        label.text = $"{msg.CurrentHour}:{msg.CurrentMinute:00}";
+        Label.enabled = true;
+        Label.text = $"{msg.CurrentHour}:{msg.CurrentMinute:00}";
     }
 
     protected override void Execute(WorkdayEnded msg)
     {
-        label.enabled = false;
+        Label.enabled = false;
     }
 }
