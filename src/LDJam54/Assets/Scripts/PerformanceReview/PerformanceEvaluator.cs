@@ -28,7 +28,7 @@ public static class PerformanceEvaluator
         for (int i = 0; i < numberOfKPIs; i++)
             playerKPIs[i] = state.KPIs[state.ActiveKPIs[i]];
         
-        performanceReview.KPIsPerPerson[state.PlayerName] = playerKPIs;
+        performanceReview.KPIsPerPerson[state.PlayerID] = playerKPIs;
     }
 
     private static void UpdateCoworkerKPIs(PerformanceReview performanceReview, GameState state, int numberOfKPIs)
