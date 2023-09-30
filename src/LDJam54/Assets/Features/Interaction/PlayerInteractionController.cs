@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Features.Interaction
@@ -151,13 +150,13 @@ namespace Features.Interaction
             Vector3 position;
             if (targetted.Value.SnapToCenter) 
             {
-                position = new Vector3(targetted.Value.transform.position.x, targetted.Value.transform.position.y + targetted.Value.Collider.bounds.extents.y + held.Value.Collider.bounds.extents.y + 0.1f, targetted.Value.transform.position.z);
+                position = new Vector3(targetted.Value.transform.position.x, targetted.Value.transform.position.y + targetted.Value.Collider.bounds.extents.y + held.Value.Bounds.extents.y, targetted.Value.transform.position.z);
             }
             else 
             {
                 position = held.Value.transform.position;
             }
-
+            
             Quaternion rotation = held.Value.transform.rotation;
             held.Value.SetDown(position, rotation, objectSpeed, rotationSpeed);
             held.Value.transform.parent = heldParent.Value;
