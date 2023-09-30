@@ -300,6 +300,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 922297756, guid: 8b6abf6dc28fba24287672d8f92948d7, type: 3}
+      propertyPath: <BobbingIntensity>k__BackingField
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 8394287434875213575, guid: 8b6abf6dc28fba24287672d8f92948d7,
         type: 3}
       propertyPath: m_Name
@@ -369,6 +373,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 922297756, guid: 8b6abf6dc28fba24287672d8f92948d7, type: 3}
+      propertyPath: <BobbingIntensity>k__BackingField
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 8034003380935112402, guid: 8b6abf6dc28fba24287672d8f92948d7,
         type: 3}
       propertyPath: m_Materials.Array.size
@@ -448,6 +456,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 922297756, guid: 8b6abf6dc28fba24287672d8f92948d7, type: 3}
+      propertyPath: <BobbingIntensity>k__BackingField
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 8394287434875213575, guid: 8b6abf6dc28fba24287672d8f92948d7,
         type: 3}
       propertyPath: m_Name
@@ -821,6 +833,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 922297756, guid: 8b6abf6dc28fba24287672d8f92948d7, type: 3}
+      propertyPath: <BobbingIntensity>k__BackingField
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 8394287434875213575, guid: 8b6abf6dc28fba24287672d8f92948d7,
         type: 3}
       propertyPath: m_Name

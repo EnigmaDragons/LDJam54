@@ -13,12 +13,17 @@ public class InteractableObject : MonoBehaviour
     public bool CanBeSetOn;
     public bool SnapToCenter;
 
+    [field: SerializeField] public float BobbingIntensity { get; private set; } = 0.05f;
+    
+    
     private bool _isSettingDown;
+    private bool _isHeld;
     private float _setDownSpeed;
     private Vector3 _setDownDestination;
     private float _setDownRotationSpeed;
     private Quaternion _setDownRotation;
     
+    private float yOffset;
     private void FixedUpdate()
     {
         if (!_isSettingDown)
@@ -31,11 +36,12 @@ public class InteractableObject : MonoBehaviour
             Body.useGravity = true;
         }
     }
-    
-    
+
+
     public void Hold()
     {
         _isSettingDown = false;
+        _isHeld = true;
         Body.useGravity = false;
         Collider.enabled = false;
     }
@@ -44,6 +50,7 @@ public class InteractableObject : MonoBehaviour
     {
         Collider.enabled = true;
         _isSettingDown = true;
+        _isHeld = false;
         _setDownDestination = destination;
         _setDownRotation = rotation;
         _setDownSpeed = speed;

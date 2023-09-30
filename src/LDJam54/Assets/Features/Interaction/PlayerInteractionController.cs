@@ -69,13 +69,19 @@ namespace Features.Interaction
             }
         }
 
+        private float bobbingTime = 0;
 
         private void UpdateHeldObject()
         {
             held.IfPresent(x =>
             {
                 x.Body.MoveRotation(Quaternion.RotateTowards(x.transform.rotation, transform.rotation, rotationSpeed * Time.fixedDeltaTime));
-                x.Body.MovePosition(Vector3.MoveTowards(x.transform.position, transform.position + transform.forward * x.DistanceInFront + new Vector3(0, x.HeightOffset, 0), objectSpeed * Time.fixedDeltaTime));
+                
+                var isMoving = Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0;
+                if (isMoving) bobbingTime += Time.fixedDeltaTime;
+                var yoffset = Mathf.Sin(bobbingTime*10) * x.BobbingIntensity;
+                var targetPosition = transform.position + transform.forward * x.DistanceInFront + new Vector3(0, x.HeightOffset, 0) + new Vector3(0, yoffset, 0);
+                x.Body.MovePosition(Vector3.MoveTowards(x.transform.position, targetPosition, objectSpeed * Time.fixedDeltaTime));
             });
         }
     }
