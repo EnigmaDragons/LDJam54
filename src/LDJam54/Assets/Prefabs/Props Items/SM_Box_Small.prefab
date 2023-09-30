@@ -127,11 +127,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5f1da5de08e420e9178522a954dd805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  renderer: {fileID: 8531444346101557909}
   Body: {fileID: 1873852623021369461}
   Collider: {fileID: 1174065482319283481}
   CanBeHeld: 1
   DistanceInFront: 0.8
-  HeightOffset: 0.4
+  HeightOffset: 0.1
+  <BobbingIntensity>k__BackingField: 0.1
   CanBeSetOn: 1
   SnapToCenter: 1
-  <BobbingIntensity>k__BackingField: 0.15
+  bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}

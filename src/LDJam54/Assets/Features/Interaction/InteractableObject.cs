@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
+    [SerializeField] private Renderer renderer;
+    
     public Rigidbody Body;
     public Collider Collider;
     //Hold Details
     public bool CanBeHeld;
     public float DistanceInFront;
     public float HeightOffset;
+    [field: SerializeField] public float BobbingIntensity { get; private set; } = 0.05f;
     //Set On Details
     public bool CanBeSetOn;
     public bool SnapToCenter;
-
     
-    
-    [field: SerializeField] public float BobbingIntensity { get; private set; } = 0.05f;
-    
+    public Bounds Bounds => _bounds;
+    private Bounds _bounds;
     private bool _isSettingDown;
     private bool _isHeld;
     private float _setDownSpeed;
@@ -26,23 +27,20 @@ public class InteractableObject : MonoBehaviour
     private Quaternion _setDownRotation;
     
     private float yOffset;
-    private Renderer _renderer;
-
-    private void Awake()
-    {
-        _renderer = GetComponent<Renderer>();
-    }
+    
+    private void Start() => _bounds = Collider.bounds;
 
     private void FixedUpdate()
     {
         if (!_isSettingDown)
             return;
-        Body.MoveRotation(Quaternion.RotateTowards(transform.rotation, _setDownRotation, _setDownRotationSpeed * Time.fixedDeltaTime));
+        transform.rotation = Quaternion.Lerp(transform.rotation, _setDownRotation, _setDownRotationSpeed * Time.fixedDeltaTime);
         Body.MovePosition(Vector3.MoveTowards(transform.position, _setDownDestination, _setDownSpeed * Time.fixedDeltaTime));
-        if (Vector3.Distance(Body.position, _setDownDestination) < 0.01f)
+        if (Vector3.Distance(Body.position, _setDownDestination) < 0.01f && Mathf.Abs(Mathf.Abs(Quaternion.Dot(transform.rotation, _setDownRotation) - 1)) < 0.05f)
         {
             _isSettingDown = false;
             Body.useGravity = true;
+            Collider.enabled = true;
         }
     }
 
@@ -57,7 +55,6 @@ public class InteractableObject : MonoBehaviour
 
     public void SetDown(Vector3 destination, Quaternion rotation, float speed, float rotationSpeed)
     {
-        Collider.enabled = true;
         _isSettingDown = true;
         _isHeld = false;
         _setDownDestination = destination;
@@ -94,7 +91,7 @@ public class InteractableObject : MonoBehaviour
         //move box up
         transform.DOMoveY(transform.position.y + 0.5f, 1f);
         //fade out
-        _renderer.material.DOColor(new Color(_renderer.material.color.r, _renderer.material.color.g, _renderer.material.color.b, 0f), 1f);
+        renderer.material.DOColor(new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, 0f), 1f);
         
         Destroy(gameObject, 1.2f);
     }
