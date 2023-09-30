@@ -7,7 +7,7 @@ public class PlaceholderPerformanceReviewDisplayer : MonoBehaviour
     {
         var state = CurrentGameState.State;
         state.KPIs[KPI.BoxShipped] = 23;
-        state.Coworkers.Add(new Worker() { Name = "999", Skill = 2, MasteredKPIs = new List<KPI>() { KPI.BoxShipped } });
+        state.Coworkers.Add(new Worker() { Name = "999", Skill = 2, MasteredKpis = new List<KPI>() { KPI.BoxShipped } });
         PerformanceEvaluator.Evaluate();
         var review = state.PerformanceReview;
         foreach(var performance in review.KPIsPerPerson)

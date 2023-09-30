@@ -23,7 +23,7 @@ public static class PerformanceEvaluator
             for(var i = 0; i < activeKPIs.Length; i++)
             {
                 var KPI = activeKPIs[i];
-                if (person.MasteredKPIs.Contains(KPI))
+                if (person.MasteredKpis.Contains(KPI))
                 {
                     var score = standardPerformance[KPI].ExploitBaseKpi + standardPerformance[KPI].ExploitSkillBonus * person.Skill;
                     score += standardPerformance[KPI].ExploitSkillBonus * (Rng.Float() + Rng.Float() + Rng.Float() - 1.5f) * 2;
@@ -40,7 +40,7 @@ public static class PerformanceEvaluator
             {
                 var weights = new int[activeKPIs.Length];
                 for (var i = 0; i < activeKPIs.Length; i++)
-                    weights[i] = Rng.Int(10) + (person.MasteredKPIs.Contains(activeKPIs[i]) ? 4 : 1);
+                    weights[i] = Rng.Int(10) + (person.MasteredKpis.Contains(activeKPIs[i]) ? 4 : 1);
                 var totalWeight = weights.Sum();
                 for (var i = 0; i < activeKPIs.Length; i++)
                     scores[i] = (1f * scores[i] * weights[i] / totalWeight) + Rng.Float();
