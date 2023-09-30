@@ -21,7 +21,7 @@ public sealed class CurrentGameState
             cgs.Init(initialState);
         else
             cgs.Init();
-        instance = new CurrentGameState();
+        instance = cgs;
     }
     
     [SerializeField] private GameState _gameState;
