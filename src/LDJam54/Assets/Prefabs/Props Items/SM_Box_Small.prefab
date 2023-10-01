@@ -595,8 +595,10 @@ MonoBehaviour:
   - {fileID: 1410546841192214189}
   - {fileID: 1300829822028710360}
   - {fileID: 3962154559015193632}
+  objectType: 1
   Body: {fileID: 8372350687640090253}
   CanBeHeld: 1
+  DropSize: 0
   DistanceInFront: 0.8
   HeightOffset: 0.1
   <BobbingIntensity>k__BackingField: 0.1

@@ -66,10 +66,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 'Employee: #464947'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d04ba47e14e113449a93f846fb5549f6, type: 2}
-  m_sharedMaterial: {fileID: 3488009994728427998, guid: d04ba47e14e113449a93f846fb5549f6,
+  m_fontAsset: {fileID: 11400000, guid: ab0ce5b62abd0ce4fa1710a3e98e53f1, type: 2}
+  m_sharedMaterial: {fileID: -8365509778644770462, guid: ab0ce5b62abd0ce4fa1710a3e98e53f1,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}

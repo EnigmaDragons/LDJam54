@@ -494,6 +494,7 @@ MonoBehaviour:
   - {fileID: 3718990509529292645}
   - {fileID: 3368048521762030699}
   - {fileID: 5355712435228793211}
+  objectType: 1
   Body: {fileID: 4100261962717085205}
   CanBeHeld: 1
   DropSize: 2

@@ -1,6 +1,4 @@
-﻿using System;
-using DG.Tweening;
-using JetBrains.Annotations;
+﻿using DG.Tweening;
 using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
@@ -8,6 +6,7 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] private Renderer renderer;
     [SerializeField] private Collider collider;
     [SerializeField] private Collider[] colliders;
+    [SerializeField] private ObjectType objectType;
     public Rigidbody Body;
     //Hold Details
     public bool CanBeHeld;
@@ -59,6 +58,7 @@ public class InteractableObject : MonoBehaviour
         _isSettingDown = false;
         _isHeld = true;
         Body.useGravity = false;
+        Message.Publish(new ObjectPickedUp(transform, objectType));
         SetColliders(false);
     }
 
@@ -70,6 +70,7 @@ public class InteractableObject : MonoBehaviour
         _setDownRotation = rotation;
         _setDownSpeed = speed;
         _setDownRotationSpeed = rotationSpeed;
+        Message.Publish(new ObjectSetDown(transform, objectType));
     }
     
     public void Release()
@@ -78,6 +79,7 @@ public class InteractableObject : MonoBehaviour
         _isHeld = false;
         Body.useGravity = true;
         SetColliders(true);
+        Message.Publish(new ObjectSetDown(transform, objectType));
     }
 
     public void Highlight()
