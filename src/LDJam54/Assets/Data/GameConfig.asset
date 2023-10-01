@@ -37,9 +37,9 @@ MonoBehaviour:
   BoxUnsortedFixedScore: 20
   ClockSpeedFactor: 1
   BoxSpawnInterval: 7.5
-  PlayerWalkSpeed: 3.5
-  PlayerRunSpeed: 8
-  PlayerJumpForce: 4.5
+  PlayerWalkSpeed: 3.8
+  PlayerRunSpeed: 8.5
+  PlayerJumpForce: 7
   TotalPlayableDays: 2
   Days:
   - {fileID: 11400000, guid: dbfc957d9fd28cc4e8689c085bd1c91d, type: 2}
