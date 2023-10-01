@@ -63,6 +63,22 @@ public static class PerformanceEvaluator
             workerScores[i] = placements.Sum();
         }
 
+        for (var i = 0; i < performanceReview.KPIsPerPerson.Count; i++)
+        {
+            var performance = performanceReview.KPIsPerPerson.ElementAt(i);
+            var name = performance.Key;
+            var placements = performanceReview.PlacementsPerPerson[name];
+            var scores = new int[activeKPIs.Length];
+            for (var j = 0; j < activeKPIs.Length; j++)
+            {
+                var kpiValue = performance.Value[j];
+                var placement = placements[j];
+                var score = 100 - (int)Math.Floor(100f * (placement - 1) / (performanceReview.KPIsPerPerson.Count - 1)) + (kpiValue / 2);
+                scores[j] = score;
+            }
+            performanceReview.FinalKpisPerPerson[name] = scores;
+        }
+        
         var worstPlacements = workerScores.Max();
         var worstWorkers = new List<string>();
         for (var i = 0; i < performanceReview.KPIsPerPerson.Count; i++)

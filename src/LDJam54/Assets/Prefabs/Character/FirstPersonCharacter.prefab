@@ -329,9 +329,12 @@ GameObject:
   - component: {fileID: 9091737075486870113}
   - component: {fileID: 234349515}
   - component: {fileID: 234349514}
+  - component: {fileID: 7796648117273613700}
+  - component: {fileID: 8853198413499347901}
+  - component: {fileID: 6734994764199642646}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -446,7 +449,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.4
   m_lookSensitivity: 3
+  m_velocity: {x: 0, y: 0, z: 0}
   m_Camera: {fileID: 2898158793390414914}
+  animatorToSoundController: {fileID: 6734994764199642646}
 --- !u!114 &9091737075486870113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,7 +498,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameConfig: {fileID: 11400000, guid: dce1e495c7aa5f3468f9c51b24abda14, type: 2}
+  animatorToSoundController: {fileID: 6734994764199642646}
+  waitTime: 0
+  footStepManager: {fileID: 8853198413499347901}
   groundCheckDistance: 1.2
+--- !u!95 &7796648117273613700
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2898158793064833443}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c965f55893980a744a711076ccdde292, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8853198413499347901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2898158793064833443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f91b7baa75c9e084ab88592f9373f602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6734994764199642646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2898158793064833443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a957a63ac147574bbc0546a7f523d31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSpeed: 1
+  runSpeed: 1.5
 --- !u!1 &2898158793237227279
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,6 +593,7 @@ GameObject:
   - component: {fileID: 2898158793390414914}
   - component: {fileID: 2898158793390414917}
   - component: {fileID: 1221715474}
+  - component: {fileID: 8349793429167414320}
   m_Layer: 0
   m_Name: Eyes
   m_TagString: Untagged
@@ -644,6 +700,19 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &8349793429167414320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2898158793390414919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1001 &1632221828110583927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -760,6 +829,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FirstPersonCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2508742654645338070, guid: e46abde266c66af46a71dce7bfc4ed59,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e46abde266c66af46a71dce7bfc4ed59, type: 3}

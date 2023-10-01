@@ -176,12 +176,14 @@ namespace Features.Interaction
             held = Maybe<InteractableObject>.Missing();
         }
         
-        private bool IsDropActionTriggered()
+        public static bool InteractActionTriggered()
         {
             return Input.GetKeyDown("joystick button 0") 
                    || Input.GetKeyDown(KeyCode.E) 
                    || Input.GetMouseButtonDown(0);
         }
+
+        public static bool IsDropActionTriggered() => InteractActionTriggered();
 
         private bool IsDropActionHeld()
         {
@@ -190,14 +192,14 @@ namespace Features.Interaction
                    || Input.GetMouseButton(0);
         }
         
-        private bool IsThrowActionTriggered()
+        public static bool IsThrowActionTriggered()
         {
             return Input.GetKeyDown("joystick button 1") 
                    || Input.GetKeyDown(KeyCode.Q) 
                    || Input.GetMouseButtonDown(1);
         }
         
-        private bool IsThrowActionHeld()
+        public static bool IsThrowActionHeld()
         {
             return Input.GetKey("joystick button 1") 
                    || Input.GetKey(KeyCode.Q) 
@@ -205,7 +207,6 @@ namespace Features.Interaction
         }
 
         private float bobbingTime = 0;
-
         
         private void UpdateHeldObject()
         {
