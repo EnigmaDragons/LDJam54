@@ -25,6 +25,10 @@ public class PerformanceReviewUiController : MonoBehaviour
         Debug.Log("Eliminated: " + firedId);
         if (firedId.Equals(CurrentGameState.State.PlayerID)) 
             this.ExecuteAfterDelay(() => Message.Publish(new WasFired()), delayBeforeGameOver);
+        else
+        {
+            CurrentGameState.FireCoworker(firedId);
+        }
     }
 }
 
