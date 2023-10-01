@@ -79,7 +79,7 @@
 			<value>91.488</value>
 		</property>
 		<property name="volume">
-			<value>-12</value>
+			<value>-9</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{fb57c3d1-27b3-428b-874a-10dd155e32a4}</destination>
