@@ -9,6 +9,7 @@ namespace Features.PlayerControls
     [RequireComponent(typeof(FirstPersonController))]
     public class AdvPlayerController : MonoBehaviour
     {
+        [SerializeField] private GameConfig gameConfig;
         private FirstPersonController _fpController;
         private Rigidbody _rigidbody;
         [SerializeField] AnimatorToSoundController animatorToSoundController;
@@ -17,14 +18,6 @@ namespace Features.PlayerControls
         [SerializeField] FMOD_FootStepManager footStepManager;
 
         [SerializeField]
-        private float defaultSpeed = 5.0f;
-        [SerializeField]
-        private float sprintSpeed = 10.0f;
-        
-        [SerializeField]
-        private float jumpHeight = 2.0f;
-        
-        [SerializeField]
         private float groundCheckDistance = 0.2f;
         
         private void Awake()    
@@ -32,7 +25,7 @@ namespace Features.PlayerControls
             _fpController = GetComponent<FirstPersonController>();
             _rigidbody = GetComponent<Rigidbody>();
             
-            _fpController.Speed = defaultSpeed;
+            _fpController.Speed = gameConfig.PlayerWalkSpeed;
             isJumping = false;
         }
         
@@ -40,13 +33,13 @@ namespace Features.PlayerControls
         {
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
-                _fpController.Speed = sprintSpeed;
+                _fpController.Speed = gameConfig.PlayerRunSpeed;
                 animatorToSoundController.StartRunning();
                 footStepManager.SetFootstepRunningLength();
             }
             else if (Input.GetKeyUp(KeyCode.LeftShift))
             {
-                _fpController.Speed = defaultSpeed;
+                _fpController.Speed = gameConfig.PlayerWalkSpeed;
                 animatorToSoundController.StopRunning();
                 footStepManager.SetFootstepWalkLength();
             }
@@ -73,7 +66,7 @@ namespace Features.PlayerControls
         
         private void Jump()
         {
-            _rigidbody.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
+            _rigidbody.AddForce(Vector3.up * gameConfig.PlayerJumpForce, ForceMode.Impulse);
             animatorToSoundController.WalkAnimationStop();
             footStepManager.JumpSound(); 
             isJumping = true;

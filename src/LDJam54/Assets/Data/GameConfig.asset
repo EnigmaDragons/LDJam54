@@ -17,4 +17,17 @@ MonoBehaviour:
     Skill: 0
     MasteredKpis: 00000000
     PotentialKpis: 01000000
+  BoxShippedAverage:
+    BaseKPI: 2.6
+    SkillBonus: 0.2
+    ExploitBaseKpi: 15
+    ExploitSkillBonus: 3
+  PlacedCorrectlyAverage:
+    BaseKPI: 10
+    SkillBonus: 1
+    ExploitBaseKpi: 20
+    ExploitSkillBonus: 2
   ClockSpeedFactor: 1
+  PlayerWalkSpeed: 5
+  PlayerRunSpeed: 10
+  PlayerJumpForce: 10
