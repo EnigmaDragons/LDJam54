@@ -8,7 +8,7 @@ public class WorkerKpiPresenter : MonoBehaviour
 
     public void Init(string id, string kpi)
     {
-        idLabel.text = id;
+        idLabel.text = "#" + id;
         kpiLabel.text = kpi;
     }
 }
