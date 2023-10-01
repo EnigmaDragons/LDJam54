@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{af03b2e9-6009-4523-a95f-aa8e5043b6de}">
 		<property name="assetPath">
-			<value>Footsteps/Jumps/JumpStarts_Gravel_02.wav</value>
+			<value>Player Char/Footsteps/Jumps/JumpStarts_Gravel_02.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
