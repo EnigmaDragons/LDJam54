@@ -20,6 +20,7 @@ namespace Features.Interaction
         {
             var message = new BoxDelivered(color);
             Message.Publish(message);
+            Message.Publish(new TeleporterActivated(transform.position));
             CurrentGameState.IncrementKPIStatic(KPI.BoxesShipped, 1);
         }
     }
