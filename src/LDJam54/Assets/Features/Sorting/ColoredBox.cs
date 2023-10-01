@@ -7,9 +7,20 @@ public class ColoredBox : MonoBehaviour
     [SerializeField] private MeshRenderer renderer;
     [SerializeField] private SerializableDictionary<SortingColor, Material> colorToMaterial;
 
-    public SortingColor Color;
-    public SortingColor ColorLocation;
+    private SortingColor _color;
+    private SortingColor _colorLocation;
 
+    public SortingColor Color => _color;
+    public SortingColor ColorLocation => _colorLocation;
+
+    public void SetColor(SortingColor color) => SetColor(color, color);
+    public void SetColor(SortingColor color, SortingColor colorLocation)
+    {
+        _color = color;
+        _colorLocation = colorLocation;
+        renderer.materials = new[] { colorToMaterial[color] };
+    }
+    
     private void Awake()
     {
         renderer.materials = new[] { colorToMaterial[Color] };
@@ -21,13 +32,13 @@ public class ColoredBox : MonoBehaviour
     {
         if (IsMisplaced)
         {
-            ColorLocation = color;
+            _colorLocation = color;
             if (!IsMisplaced)
                 CurrentGameState.DecrementKPIStatic(KPI.BoxesUnsorted);
         }
         else
         {
-            ColorLocation = color;
+            _colorLocation = color;
             if (IsMisplaced)
                 CurrentGameState.IncrementKPIStatic(KPI.BoxesUnsorted);
         }

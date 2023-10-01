@@ -40,13 +40,11 @@ public class PalletRandomizer : MonoBehaviour
         foreach (var target in sizedTargets)
         {
             var box = Instantiate(boxPrefab, target.GetLocation(yExtent), rotation);
-            box.Color = Color;
-            box.ColorLocation = ColorLocation;
+            box.SetColor(Color, ColorLocation);
             for (var i = 1; i < stack; i++)
             {
                 box = Instantiate(boxPrefab, target.GetLocation(yExtent) + new Vector3(0, yExtent * i * 2 + 0.01f * i, 0), rotation);
-                box.Color = Color;
-                box.ColorLocation = ColorLocation;
+                box.SetColor(Color, ColorLocation);
             }
         }
     }
