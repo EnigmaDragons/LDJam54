@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1861563341700640563}
-  - component: {fileID: 1861563341700640562}
   m_Layer: 0
   m_Name: ConveyorStraight
   m_TagString: Untagged
@@ -25,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1861563341700640560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 0.5, z: -27}
+  m_LocalPosition: {x: 2, y: 0.5, z: -26.52}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -33,19 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1861563341700640562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1861563341700640560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a22a51c126ab4cbebe4508ec22a6de75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  topCollider: {fileID: 1861563342511679838}
 --- !u!1 &1861563342511679837
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,7 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1861563342511679836}
   - component: {fileID: 1861563342511679839}
-  - component: {fileID: 1861563342511679838}
+  - component: {fileID: 5270470961790795299}
   m_Layer: 11
   m_Name: ConveyorCollider
   m_TagString: Untagged
@@ -71,14 +57,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1861563342511679837}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0539999, y: -0.139, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0.04, y: 0.38, z: -0.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7513870442208801001}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!65 &1861563342511679839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -90,9 +76,9 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0429162, y: 0.1346581, z: 2.6484165}
-  m_Center: {x: -0.00989753, y: 0.5425035, z: -0.7404089}
---- !u!114 &1861563342511679838
+  m_Size: {x: 1, y: 0.1, z: 2.6}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5270470961790795299
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,9 +87,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1861563342511679837}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94da2edfca8044288bffac1e8b460513, type: 3}
+  m_Script: {fileID: 11500000, guid: fd9b595c704e45e1a2fa446e8963b613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  force:
+    UseConstant: 0
+    ConstantValue: 0
+    FloatVariable: {fileID: 11400000, guid: 8bd0c2b6617501f489af369d0bdc3e7f, type: 2}
 --- !u!1 &2685981246277067239
 GameObject:
   m_ObjectHideFlags: 0

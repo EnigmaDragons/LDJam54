@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8881992365127780452}
   - component: {fileID: 8881992365127780455}
-  - component: {fileID: 8881992365127780454}
+  - component: {fileID: 6413369621568658517}
   m_Layer: 11
   m_Name: ConveyorCollider
   m_TagString: Untagged
@@ -25,14 +25,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8881992365127780453}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0539999, y: -0.139, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0.04, y: 0.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5131744476909897388}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!65 &8881992365127780455
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44,9 +44,9 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0429162, y: 0.1346581, z: 0.81428146}
-  m_Center: {x: -0.00989753, y: 0.5425035, z: 0.009754181}
---- !u!114 &8881992365127780454
+  m_Size: {x: 1, y: 0.1, z: 0.8}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6413369621568658517
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,9 +55,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8881992365127780453}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94da2edfca8044288bffac1e8b460513, type: 3}
+  m_Script: {fileID: 11500000, guid: fd9b595c704e45e1a2fa446e8963b613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  force:
+    UseConstant: 0
+    ConstantValue: 0
+    FloatVariable: {fileID: 11400000, guid: 8bd0c2b6617501f489af369d0bdc3e7f, type: 2}
 --- !u!1 &8881992365923159560
 GameObject:
   m_ObjectHideFlags: 0
@@ -67,7 +71,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8881992365923159563}
-  - component: {fileID: 8881992365923159562}
   m_Layer: 0
   m_Name: ConveyorBeltStart
   m_TagString: Untagged
@@ -91,19 +94,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8881992365923159562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8881992365923159560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a22a51c126ab4cbebe4508ec22a6de75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  topCollider: {fileID: 8881992365127780454}
 --- !u!1 &9022359972428160544
 GameObject:
   m_ObjectHideFlags: 0
