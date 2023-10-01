@@ -169,9 +169,7 @@ namespace Features.Interaction
         
         private void SetObject()
         {
-            var dropTargetTransform = dropTarget.Value.TopmostDropTarget.transform;
-            Vector3 position = new Vector3(dropTargetTransform.position.x, dropTargetTransform.position.y + held.Value.Bounds.extents.y + 0.1f, dropTargetTransform.position.z);
-            held.Value.SetDown(position, dropTargetTransform.rotation, objectSpeed, rotationSpeed);
+            held.Value.SetDown(dropTarget.Value.TopmostDropTarget.GetLocation(held.Value.Bounds.extents.y), dropTarget.Value.TopmostDropTarget.transform.rotation, objectSpeed, rotationSpeed);
             held.Value.transform.parent = heldParent.Value;
             held = Maybe<InteractableObject>.Missing();
         }

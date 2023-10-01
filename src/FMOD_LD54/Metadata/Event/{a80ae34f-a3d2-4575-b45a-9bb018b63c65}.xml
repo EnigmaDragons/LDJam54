@@ -53,7 +53,7 @@
 			<destination>{7cf0c652-ceca-4a53-bef0-2acbf21cb528}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{c9fdca57-5f3b-4035-aa37-2b795f9ff268}</destination>
+			<destination>{6f88c158-c898-40b3-92a6-4b4ab646b3c7}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{dff6848c-08a7-4586-9b48-6e2865411eca}" />
@@ -77,6 +77,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{731ed40e-456b-44d6-ac90-07f03ea3aafe}">
+		<property name="volume">
+			<value>-5.5</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{d9a4a57c-6074-46d7-bf4e-1e46c2c349b6}</destination>
 		</relationship>
@@ -149,6 +152,7 @@
 	<object class="MixerBusEffectChain" id="{d9a4a57c-6074-46d7-bf4e-1e46c2c349b6}">
 		<relationship name="effects">
 			<destination>{bf28e279-d9a1-4216-b6a3-8aa3f72a6d5c}</destination>
+			<destination>{a2e30fbf-037d-4c55-bfc4-21ac14d93398}</destination>
 			<destination>{5f60cc45-22c1-4d95-9a49-db7c8786f193}</destination>
 		</relationship>
 	</object>
@@ -196,6 +200,14 @@
 			<destination>{a060fb8e-f094-4588-90ea-1a485f4c8ab5}</destination>
 		</relationship>
 	</object>
+	<object class="MultibandEqEffect" id="{a2e30fbf-037d-4c55-bfc4-21ac14d93398}">
+		<property name="frequencyA">
+			<value>2600</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{943daed8-7211-4f8c-8a86-f395a298dcb8}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{5f60cc45-22c1-4d95-9a49-db7c8786f193}" />
 	<object class="AutomationPoint" id="{5cb816bf-05e0-4578-9ddc-19d3b2305d98}">
 		<property name="position">
@@ -226,6 +238,17 @@
 		</property>
 		<property name="depth">
 			<value>75.5</value>
+		</property>
+	</object>
+	<object class="LFOModulator" id="{943daed8-7211-4f8c-8a86-f395a298dcb8}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>frequencyA</value>
+		</property>
+		<property name="rate">
+			<value>0.379999995</value>
+		</property>
+		<property name="depth">
+			<value>10</value>
 		</property>
 	</object>
 </objects>

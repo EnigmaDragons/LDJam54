@@ -8,19 +8,20 @@ TagManager:
   - UiSounds
   - Loader
   - AppInfra
+  - RaycastInteract
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Interactable
   - Water
   - UI
-  - Interactable
-  - InteractableOutline
-  - FloorOutlineMask
-  - 
-  - 
-  - 
+  - DropTarget
+  - SmallDropTarget
+  - MediumDropTarget
+  - LargeDropTarget
+  - PalletDropLayer
+  - ConveyorBelt
   - 
   - 
   - 

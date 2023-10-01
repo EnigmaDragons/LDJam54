@@ -107,9 +107,9 @@ MonoBehaviour:
     outlineScale: 1
     depthThreshold: 2
     robertsCrossMultiplier: 25
-    normalThreshold: 0.5
-    steepAngleThreshold: 0.42
-    steepAngleMultiplier: 1
+    normalThreshold: 0.606
+    steepAngleThreshold: 0
+    steepAngleMultiplier: 185
   viewSpaceNormalsTextureSettings:
     colorFormat: 0
     depthBufferBits: 16

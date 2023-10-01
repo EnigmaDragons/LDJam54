@@ -1,13 +1,29 @@
-using TMPro;
+﻿using System.Linq;
 using UnityEngine;
 
-public class PerformanceReviewUIController : MonoBehaviour
+public class PerformanceReviewUiController : MonoBehaviour
 {
-    public TextMeshProUGUI label;
+    public WorkerKpiPresenter[] workers;
+    public float delayBeforeGameOver = 10f;
 
-    public void Start()
+    private void Start()
     {
-        Debug.Log("Eliminated: " + CurrentGameState.State.PerformanceReview.EliminatedPerson);
-        label.text = CurrentGameState.State.PerformanceReview.EliminatedPerson;
+        var perfReview = CurrentGameState.State.PerformanceReview;
+        var kpisOrdered = perfReview.ScorePerPerson.OrderByDescending(x => x.Value).ToList();
+        for (var i = 0; i < workers.Length; i++)
+        {
+            if (kpisOrdered.Count > i)
+            {
+                workers[i].Init(kpisOrdered[i].Key, kpisOrdered[i].Value.ToString());
+                workers[i].gameObject.SetActive(true);
+            }
+            else 
+                workers[i].gameObject.SetActive(false);
+        }
+        
+        var firedId = perfReview.EliminatedPerson;
+        Debug.Log("Eliminated: " + firedId);
+        if (firedId.Equals(CurrentGameState.State.PlayerID)) 
+            this.ExecuteAfterDelay(() => Message.Publish(new WasFired()), delayBeforeGameOver);
     }
 }

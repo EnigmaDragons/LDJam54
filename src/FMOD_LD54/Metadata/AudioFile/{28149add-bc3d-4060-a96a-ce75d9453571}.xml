@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{28149add-bc3d-4060-a96a-ce75d9453571}">
 		<property name="assetPath">
-			<value>Cutscene_Placeholder.mp3</value>
+			<value>Music/Cutscene_Placeholder.mp3</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

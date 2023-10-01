@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7614453690891140962}
   - component: {fileID: 3495626656865305546}
   - component: {fileID: 5440379722259151861}
-  - component: {fileID: 6013445711406718260}
   - component: {fileID: 6580172400463306339}
+  - component: {fileID: 9147591142769378786}
   m_Layer: 6
   m_Name: DropTarget (4)
   m_TagString: Untagged
@@ -85,20 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6013445711406718260
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 394948951320090654}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &6580172400463306339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,6 +103,21 @@ MonoBehaviour:
   - {fileID: 3107019861287788904}
   - {fileID: 927118708984813441}
   - {fileID: 3120967843111075040}
+  OverlappingDropTargets: []
+  Size: 1
+--- !u!65 &9147591142769378786
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394948951320090654}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 0.001, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &911302378066537122
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,8 +129,8 @@ GameObject:
   - component: {fileID: 7388341838914173785}
   - component: {fileID: 4855486652323733334}
   - component: {fileID: 2309616927561181040}
-  - component: {fileID: 326532917177695901}
   - component: {fileID: 927118708984813441}
+  - component: {fileID: 5184875556099154942}
   m_Layer: 6
   m_Name: DropTarget (3)
   m_TagString: Untagged
@@ -202,20 +203,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &326532917177695901
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911302378066537122}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &927118708984813441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,6 +221,21 @@ MonoBehaviour:
   - {fileID: 3107019861287788904}
   - {fileID: 6580172400463306339}
   - {fileID: 3120967843111075040}
+  OverlappingDropTargets: []
+  Size: 1
+--- !u!65 &5184875556099154942
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911302378066537122}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 0.001, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2999076551249339329
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,8 +247,8 @@ GameObject:
   - component: {fileID: 2005609592373054611}
   - component: {fileID: 1198940861665157666}
   - component: {fileID: 3998781531791221621}
-  - component: {fileID: 7751874384243379788}
   - component: {fileID: 3120967843111075040}
+  - component: {fileID: 4850662064323912309}
   m_Layer: 6
   m_Name: DropTarget (5)
   m_TagString: Untagged
@@ -319,20 +321,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7751874384243379788
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2999076551249339329}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &3120967843111075040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,6 +339,21 @@ MonoBehaviour:
   - {fileID: 3107019861287788904}
   - {fileID: 927118708984813441}
   - {fileID: 6580172400463306339}
+  OverlappingDropTargets: []
+  Size: 1
+--- !u!65 &4850662064323912309
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2999076551249339329}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 0.001, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3803422096554242640
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,6 +368,7 @@ GameObject:
   - component: {fileID: 906361973967854674}
   - component: {fileID: 4334024067666689515}
   - component: {fileID: 8878470941608837985}
+  - component: {fileID: 4186213697863101710}
   m_Layer: 3
   m_Name: SM_Box_Med
   m_TagString: Untagged
@@ -487,12 +491,12 @@ MonoBehaviour:
   renderer: {fileID: 3443147389514486661}
   collider: {fileID: 906361973967854674}
   colliders:
-  - {fileID: 2618039445007588416}
-  - {fileID: 5198467798887468230}
-  - {fileID: 4746089037223850611}
-  - {fileID: 326532917177695901}
-  - {fileID: 6013445711406718260}
-  - {fileID: 7751874384243379788}
+  - {fileID: 1127197006812793094}
+  - {fileID: 7469309927092674680}
+  - {fileID: 5943130563362124658}
+  - {fileID: 5184875556099154942}
+  - {fileID: 9147591142769378786}
+  - {fileID: 4850662064323912309}
   objectType: 1
   Body: {fileID: 4334024067666689515}
   CanBeHeld: 1
@@ -500,6 +504,31 @@ MonoBehaviour:
   DistanceInFront: 0.9
   HeightOffset: -0.1
   <BobbingIntensity>k__BackingField: 0.1
+--- !u!114 &4186213697863101710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3803422096554242640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 439648b89e9343d78aabbb2780d74db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MeshFilter: {fileID: 588972125436766031}
+  renderer: {fileID: 3443147389514486661}
+  colorToMaterial:
+    keys: 000000000100000002000000030000000400000005000000
+    values:
+    - {fileID: 2100000, guid: 09319e0950f814747a994b8b04b93aff, type: 2}
+    - {fileID: 2100000, guid: 0595f674c2da5684babd6b505cf62d00, type: 2}
+    - {fileID: 2100000, guid: d98cfac055b1408498c95514790f3e3e, type: 2}
+    - {fileID: 2100000, guid: 306b276fabb6f334d8502b6c42304cff, type: 2}
+    - {fileID: 2100000, guid: bb908ada15a7418469ac48825ea1cc0a, type: 2}
+    - {fileID: 2100000, guid: c71bd9d743d6a6542bcd252401d2a5c2, type: 2}
+  Color: 0
+  ColorLocation: 0
 --- !u!1 &4097918896966899943
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,8 +540,8 @@ GameObject:
   - component: {fileID: 7512614595259269004}
   - component: {fileID: 8149370296620882559}
   - component: {fileID: 8095047715253111064}
-  - component: {fileID: 4746089037223850611}
   - component: {fileID: 3107019861287788904}
+  - component: {fileID: 5943130563362124658}
   m_Layer: 6
   m_Name: DropTarget (2)
   m_TagString: Untagged
@@ -585,20 +614,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4746089037223850611
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4097918896966899943}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &3107019861287788904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,6 +632,21 @@ MonoBehaviour:
   - {fileID: 927118708984813441}
   - {fileID: 6580172400463306339}
   - {fileID: 3120967843111075040}
+  OverlappingDropTargets: []
+  Size: 1
+--- !u!65 &5943130563362124658
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4097918896966899943}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 0.001, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4209505408456794252
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,8 +658,8 @@ GameObject:
   - component: {fileID: 1493990518226169100}
   - component: {fileID: 1977868614537031076}
   - component: {fileID: 6696526616101864870}
-  - component: {fileID: 5198467798887468230}
   - component: {fileID: 721080224657186871}
+  - component: {fileID: 7469309927092674680}
   m_Layer: 6
   m_Name: DropTarget (1)
   m_TagString: Untagged
@@ -702,20 +732,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5198467798887468230
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4209505408456794252}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &721080224657186871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -734,6 +750,21 @@ MonoBehaviour:
   - {fileID: 927118708984813441}
   - {fileID: 6580172400463306339}
   - {fileID: 3120967843111075040}
+  OverlappingDropTargets: []
+  Size: 1
+--- !u!65 &7469309927092674680
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4209505408456794252}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 0.001, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5749143609933002577
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,8 +776,8 @@ GameObject:
   - component: {fileID: 8929732680195192107}
   - component: {fileID: 1263440550690959587}
   - component: {fileID: 4609219283152192572}
-  - component: {fileID: 2618039445007588416}
   - component: {fileID: 1240267999879588882}
+  - component: {fileID: 1127197006812793094}
   m_Layer: 6
   m_Name: DropTarget
   m_TagString: Untagged
@@ -819,20 +850,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &2618039445007588416
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5749143609933002577}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &1240267999879588882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -851,3 +868,18 @@ MonoBehaviour:
   - {fileID: 927118708984813441}
   - {fileID: 6580172400463306339}
   - {fileID: 3120967843111075040}
+  OverlappingDropTargets: []
+  Size: 1
+--- !u!65 &1127197006812793094
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5749143609933002577}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 0.001, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
