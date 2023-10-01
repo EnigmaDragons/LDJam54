@@ -58,14 +58,6 @@ public class FirstPersonController : MonoBehaviour
         m_cameraRotation = new Vector3(m_xRot, 0, 0) * m_lookSensitivity;
 
         //apply camera rotation
-
-        //move the actual player here
-        if (m_velocity != Vector3.zero)
-        {
-            m_Rigid.MovePosition(m_Rigid.position + m_velocity * Time.fixedDeltaTime);
-        }
-      
-
         if (m_rotation != Vector3.zero)
         {
             //rotate the camera of the player

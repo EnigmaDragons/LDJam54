@@ -1040,7 +1040,7 @@ ParticleSystem:
     enabled: 1
     type: 8
     angle: 16.792065
-    length: 50
+    length: 70
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
@@ -5452,7 +5452,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 50
+  far clip plane: 70
   field of view: 33.58413
   orthographic: 0
   orthographic size: 0
@@ -6167,7 +6167,7 @@ ParticleSystem:
     enabled: 1
     type: 8
     angle: 16.792065
-    length: 50
+    length: 70
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
@@ -10991,7 +10991,7 @@ ParticleSystem:
     enabled: 1
     type: 8
     angle: 16.792065
-    length: 50
+    length: 70
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
@@ -15398,7 +15398,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.58739763, g: 0.70104855, b: 0.754717, a: 1}
   m_Intensity: 1
-  m_Range: 50
+  m_Range: 70
   m_SpotAngle: 33.58413
   m_InnerSpotAngle: 33.58413
   m_CookieSize: 10
@@ -15462,19 +15462,19 @@ MonoBehaviour:
   profileSync: 1
   useCustomBounds: 0
   bounds:
-    m_Center: {x: 963.9162, y: 775.3573, z: 39.399075}
-    m_Extent: {x: 21.637985, y: 28.574436, z: 17.79418}
+    m_Center: {x: 966.08844, y: 778.4656, z: 39.830227}
+    m_Extent: {x: 30.29318, y: 40.00421, z: 24.911854}
   boundsInLocalSpace: 0
   profile: {fileID: 11400000, guid: 3e70dc98a35814213a019aae5440e2b7, type: 2}
-  customRange: 50
+  customRange: 70
   targetCamera: {fileID: 0}
   useCustomSize: 0
   areaWidth: 1
   areaHeight: 1
-  generatedRange: 50
+  generatedRange: 70
   generatedTipRadius: 0.1
   generatedSpotAngle: 33.58413
-  generatedBaseRadius: 15.088335
+  generatedBaseRadius: 21.123669
   generatedAreaWidth: 0
   generatedAreaHeight: 0
   generatedAreaFrustumAngle: 0
@@ -15788,7 +15788,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 50
+  far clip plane: 70
   field of view: 33.58413
   orthographic: 0
   orthographic size: 0
@@ -16091,7 +16091,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 50
+  far clip plane: 70
   field of view: 33.58413
   orthographic: 0
   orthographic size: 0
@@ -16297,7 +16297,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 50
+  far clip plane: 70
   field of view: 33.58413
   orthographic: 0
   orthographic size: 0
@@ -16498,7 +16498,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.58739763, g: 0.70104855, b: 0.754717, a: 1}
   m_Intensity: 1
-  m_Range: 50
+  m_Range: 70
   m_SpotAngle: 33.58413
   m_InnerSpotAngle: 33.58413
   m_CookieSize: 10
@@ -16562,19 +16562,19 @@ MonoBehaviour:
   profileSync: 1
   useCustomBounds: 0
   bounds:
-    m_Center: {x: 965.01624, y: 775.3573, z: 84.099075}
-    m_Extent: {x: 21.637985, y: 28.574436, z: 17.79418}
+    m_Center: {x: 967.1885, y: 778.4656, z: 84.530235}
+    m_Extent: {x: 30.29318, y: 40.00421, z: 24.911854}
   boundsInLocalSpace: 0
   profile: {fileID: 11400000, guid: 3e70dc98a35814213a019aae5440e2b7, type: 2}
-  customRange: 50
+  customRange: 70
   targetCamera: {fileID: 0}
   useCustomSize: 0
   areaWidth: 1
   areaHeight: 1
-  generatedRange: 50
+  generatedRange: 70
   generatedTipRadius: 0.1
   generatedSpotAngle: 33.58413
-  generatedBaseRadius: 15.088335
+  generatedBaseRadius: 21.123669
   generatedAreaWidth: 0
   generatedAreaHeight: 0
   generatedAreaFrustumAngle: 0
@@ -17688,7 +17688,7 @@ ParticleSystem:
     enabled: 1
     type: 8
     angle: 16.792065
-    length: 50
+    length: 70
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
@@ -21906,7 +21906,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 50
+  far clip plane: 70
   field of view: 33.58413
   orthographic: 0
   orthographic size: 0
@@ -22718,7 +22718,7 @@ ParticleSystem:
     enabled: 1
     type: 8
     angle: 16.792065
-    length: 50
+    length: 70
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
@@ -27033,7 +27033,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 50
+  far clip plane: 70
   field of view: 33.58413
   orthographic: 0
   orthographic size: 0
@@ -27748,7 +27748,7 @@ ParticleSystem:
     enabled: 1
     type: 8
     angle: 16.792065
-    length: 50
+    length: 70
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
@@ -31961,7 +31961,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.58739763, g: 0.70104855, b: 0.754717, a: 1}
   m_Intensity: 1
-  m_Range: 50
+  m_Range: 70
   m_SpotAngle: 33.58413
   m_InnerSpotAngle: 33.58413
   m_CookieSize: 10
@@ -32025,19 +32025,19 @@ MonoBehaviour:
   profileSync: 1
   useCustomBounds: 0
   bounds:
-    m_Center: {x: 965.3162, y: 775.3573, z: 6.299075}
-    m_Extent: {x: 21.637985, y: 28.574436, z: 17.79418}
+    m_Center: {x: 967.48846, y: 778.4656, z: 6.7302284}
+    m_Extent: {x: 30.29318, y: 40.00421, z: 24.911854}
   boundsInLocalSpace: 0
   profile: {fileID: 11400000, guid: 3e70dc98a35814213a019aae5440e2b7, type: 2}
-  customRange: 50
+  customRange: 70
   targetCamera: {fileID: 0}
   useCustomSize: 0
   areaWidth: 1
   areaHeight: 1
-  generatedRange: 50
+  generatedRange: 70
   generatedTipRadius: 0.1
   generatedSpotAngle: 33.58413
-  generatedBaseRadius: 15.088335
+  generatedBaseRadius: 21.123669
   generatedAreaWidth: 0
   generatedAreaHeight: 0
   generatedAreaFrustumAngle: 0
@@ -32577,7 +32577,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.58739763, g: 0.70104855, b: 0.754717, a: 1}
   m_Intensity: 1
-  m_Range: 50
+  m_Range: 70
   m_SpotAngle: 33.58413
   m_InnerSpotAngle: 33.58413
   m_CookieSize: 10
@@ -32641,19 +32641,19 @@ MonoBehaviour:
   profileSync: 1
   useCustomBounds: 0
   bounds:
-    m_Center: {x: 985.8994, y: 775.43695, z: 34.899075}
-    m_Extent: {x: 19.666336, y: 27.097086, z: 17.794178}
+    m_Center: {x: 984.70496, y: 778.3779, z: 35.330227}
+    m_Extent: {x: 27.53287, y: 37.93592, z: 24.91185}
   boundsInLocalSpace: 0
   profile: {fileID: 11400000, guid: 3e70dc98a35814213a019aae5440e2b7, type: 2}
-  customRange: 50
+  customRange: 70
   targetCamera: {fileID: 0}
   useCustomSize: 0
   areaWidth: 1
   areaHeight: 1
-  generatedRange: 50
+  generatedRange: 70
   generatedTipRadius: 0.1
   generatedSpotAngle: 33.58413
-  generatedBaseRadius: 15.088335
+  generatedBaseRadius: 21.123669
   generatedAreaWidth: 0
   generatedAreaHeight: 0
   generatedAreaFrustumAngle: 0
@@ -32962,7 +32962,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.58739763, g: 0.70104855, b: 0.754717, a: 1}
   m_Intensity: 1
-  m_Range: 50
+  m_Range: 70
   m_SpotAngle: 33.58413
   m_InnerSpotAngle: 33.58413
   m_CookieSize: 10
@@ -33026,19 +33026,19 @@ MonoBehaviour:
   profileSync: 1
   useCustomBounds: 0
   bounds:
-    m_Center: {x: 985.0994, y: 775.43695, z: 85.29907}
-    m_Extent: {x: 19.666336, y: 27.097086, z: 17.794178}
+    m_Center: {x: 983.90497, y: 778.3779, z: 85.730225}
+    m_Extent: {x: 27.53287, y: 37.93592, z: 24.91185}
   boundsInLocalSpace: 0
   profile: {fileID: 11400000, guid: 3e70dc98a35814213a019aae5440e2b7, type: 2}
-  customRange: 50
+  customRange: 70
   targetCamera: {fileID: 0}
   useCustomSize: 0
   areaWidth: 1
   areaHeight: 1
-  generatedRange: 50
+  generatedRange: 70
   generatedTipRadius: 0.1
   generatedSpotAngle: 33.58413
-  generatedBaseRadius: 15.088335
+  generatedBaseRadius: 21.123669
   generatedAreaWidth: 0
   generatedAreaHeight: 0
   generatedAreaFrustumAngle: 0
@@ -33250,7 +33250,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.58739763, g: 0.70104855, b: 0.754717, a: 1}
   m_Intensity: 1
-  m_Range: 50
+  m_Range: 70
   m_SpotAngle: 33.58413
   m_InnerSpotAngle: 33.58413
   m_CookieSize: 10
@@ -33314,19 +33314,19 @@ MonoBehaviour:
   profileSync: 1
   useCustomBounds: 0
   bounds:
-    m_Center: {x: 985.3994, y: 775.43695, z: 19.699074}
-    m_Extent: {x: 19.666336, y: 27.097086, z: 17.794178}
+    m_Center: {x: 984.20496, y: 778.3779, z: 20.130226}
+    m_Extent: {x: 27.53287, y: 37.93592, z: 24.91185}
   boundsInLocalSpace: 0
   profile: {fileID: 11400000, guid: 3e70dc98a35814213a019aae5440e2b7, type: 2}
-  customRange: 50
+  customRange: 70
   targetCamera: {fileID: 0}
   useCustomSize: 0
   areaWidth: 1
   areaHeight: 1
-  generatedRange: 50
+  generatedRange: 70
   generatedTipRadius: 0.1
   generatedSpotAngle: 33.58413
-  generatedBaseRadius: 15.088335
+  generatedBaseRadius: 21.123669
   generatedAreaWidth: 0
   generatedAreaHeight: 0
   generatedAreaFrustumAngle: 0
