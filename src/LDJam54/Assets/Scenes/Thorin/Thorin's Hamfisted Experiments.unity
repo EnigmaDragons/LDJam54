@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 1
   m_FogColor: {r: 0.3882353, g: 0.3368034, b: 0.30980393, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.05
+  m_FogDensity: 0.025
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 2, g: 1.3400002, b: 0.95, a: 1}
@@ -7459,7 +7459,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b91d9c4a30603fe4eb97ee881fc31a41,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.08824277
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b91d9c4a30603fe4eb97ee881fc31a41,
         type: 3}
@@ -12677,7 +12677,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1e0b0106a2c4a974985765a315431fa4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.08824253
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e0b0106a2c4a974985765a315431fa4,
         type: 3}
@@ -23880,8 +23880,7 @@ Material:
   - VL_PHYSICAL_ATTEN
   - VL_SHADOWS
   - VL_SPOT
-  m_InvalidKeywords:
-  - _FLIPBOOKBLENDING_OFF
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -30173,6 +30172,11 @@ PrefabInstance:
         type: 3}
       propertyPath: orthographic size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 852972033866146848, guid: 50c3063daaa070149a30772650caae22,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 852972033866146848, guid: 50c3063daaa070149a30772650caae22,
         type: 3}

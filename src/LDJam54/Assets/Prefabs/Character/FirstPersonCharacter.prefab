@@ -332,7 +332,7 @@ GameObject:
   - component: {fileID: 7796648117273613700}
   - component: {fileID: 8853198413499347901}
   - component: {fileID: 6734994764199642646}
-  - component: {fileID: 6315238212724274894}
+  - component: {fileID: 1588996060304919099}
   m_Layer: 0
   m_Name: Body
   m_TagString: Player
@@ -465,7 +465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df0b9dcb525d4bddb411e3b3afbac67f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectSpeed: 5
+  objectSpeed: 10
   rotationSpeed: 300
   camera: {fileID: 2898158793390414914}
   pickupDistance: 4
@@ -550,7 +550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 1
   runSpeed: 1.5
---- !u!114 &6315238212724274894
+--- !u!114 &1588996060304919099
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -559,12 +559,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2898158793064833443}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e042fd7ddfb4c2b92fb433c224748fd, type: 3}
+  m_Script: {fileID: 11500000, guid: ed3464c306864b0c8d0b3b09a0dd608d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
-  direction: {x: 0, y: 0, z: 0}
-  directions: []
+  body: {fileID: 2898158793064833454}
 --- !u!1 &2898158793237227279
 GameObject:
   m_ObjectHideFlags: 0

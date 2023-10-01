@@ -1,4 +1,4 @@
-﻿using UnityEditor.VersionControl;
+﻿using TMPro;
 using UnityEngine;
 using Input = UnityEngine.Input;
 
@@ -9,15 +9,17 @@ public class Door : MonoBehaviour {
 	public bool isAutomatic = false;
 	public bool AutoClose = false;
 	public bool DoubleSidesOpen = false;
-	public string PlayerColliderTag = "MainCamera";
+	public string PlayerColliderTag = "Player";
 	public string OpenForwardAnimName = "Door_anim";
-	public string OpenBackwardAnimName = "DoorBack_anim";
+	public string OpenBackwardAnimName = "Door_anim";
 	private string _animName;
 	private bool inTrigger = false;
 	private bool isOpen = false;
 	private Vector3 relativePos;
 	public GameObject lockedVisual;
 	public GameObject unlockedVisual;
+	public TextMeshPro forwardLabel;
+	public TextMeshPro backwardLabel;
 	
 	private const bool DEBUG_LOG = false;
 	private bool _lockedInitialized = false;
@@ -39,6 +41,14 @@ public class Door : MonoBehaviour {
 			SetLocked(false);
 	}
 
+	public void SetLabels(string forwardText, string backwardText)
+	{
+		if (forwardLabel != null)
+			forwardLabel.text = forwardText;
+		if (backwardLabel != null)
+			backwardLabel.text = backwardText;
+	}
+	
 	public void SetLocked(bool isLocked)
 	{
 		_lockedInitialized = true;

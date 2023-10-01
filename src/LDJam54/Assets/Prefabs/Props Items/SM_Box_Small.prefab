@@ -487,7 +487,7 @@ GameObject:
   - component: {fileID: 6110233034013764601}
   - component: {fileID: 8372350687640090253}
   - component: {fileID: 3226344016882167739}
-  - component: {fileID: -3363437952724165343}
+  - component: {fileID: 1036086634228876136}
   m_Layer: 3
   m_Name: SM_Box_Small
   m_TagString: Untagged
@@ -646,9 +646,7 @@ MonoBehaviour:
     - {fileID: 2100000, guid: 306b276fabb6f334d8502b6c42304cff, type: 2}
     - {fileID: 2100000, guid: bb908ada15a7418469ac48825ea1cc0a, type: 2}
     - {fileID: 2100000, guid: c71bd9d743d6a6542bcd252401d2a5c2, type: 2}
-  Color: 0
-  ColorLocation: 0
---- !u!114 &-3363437952724165343
+--- !u!114 &1036086634228876136
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -657,12 +655,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7882771724172413760}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e042fd7ddfb4c2b92fb433c224748fd, type: 3}
+  m_Script: {fileID: 11500000, guid: ed3464c306864b0c8d0b3b09a0dd608d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
-  direction: {x: 0, y: 0, z: 0}
-  directions: []
+  body: {fileID: 8372350687640090253}
 --- !u!1 &8217823572327597116
 GameObject:
   m_ObjectHideFlags: 0
