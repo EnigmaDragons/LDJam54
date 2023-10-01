@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class ColoredBox : MonoBehaviour
 {
+    public MeshFilter MeshFilter;
     [SerializeField] private MeshRenderer renderer;
     [SerializeField] private SerializableDictionary<SortingColor, Material> colorToMaterial;
 
