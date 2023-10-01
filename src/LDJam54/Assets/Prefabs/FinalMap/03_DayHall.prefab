@@ -112,6 +112,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3598451549960839019, guid: af4119c8b4eb72c4290a04b439f28e47,
+        type: 3}
+      propertyPath: m_Name
+      value: Day1D
+      objectReference: {fileID: 0}
     - target: {fileID: 4843492251600219421, guid: af4119c8b4eb72c4290a04b439f28e47,
         type: 3}
       propertyPath: m_Name
@@ -121,6 +126,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5269259780748029957, guid: af4119c8b4eb72c4290a04b439f28e47,
+        type: 3}
+      propertyPath: m_Name
+      value: Day1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4119c8b4eb72c4290a04b439f28e47, type: 3}
@@ -192,6 +202,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3598451549960839019, guid: af4119c8b4eb72c4290a04b439f28e47,
+        type: 3}
+      propertyPath: m_Name
+      value: Day3D
+      objectReference: {fileID: 0}
     - target: {fileID: 4843492251600219421, guid: af4119c8b4eb72c4290a04b439f28e47,
         type: 3}
       propertyPath: m_Name
@@ -201,6 +216,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5269259780748029957, guid: af4119c8b4eb72c4290a04b439f28e47,
+        type: 3}
+      propertyPath: m_Name
+      value: Day3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4119c8b4eb72c4290a04b439f28e47, type: 3}
@@ -887,6 +907,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3598451549960839019, guid: af4119c8b4eb72c4290a04b439f28e47,
+        type: 3}
+      propertyPath: m_Name
+      value: Day5D
+      objectReference: {fileID: 0}
     - target: {fileID: 4843492251600219421, guid: af4119c8b4eb72c4290a04b439f28e47,
         type: 3}
       propertyPath: m_Name
@@ -896,6 +921,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5269259780748029957, guid: af4119c8b4eb72c4290a04b439f28e47,
+        type: 3}
+      propertyPath: m_Name
+      value: Day5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4119c8b4eb72c4290a04b439f28e47, type: 3}
@@ -1342,6 +1372,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3598451549960839019, guid: af4119c8b4eb72c4290a04b439f28e47,
+        type: 3}
+      propertyPath: m_Name
+      value: Day4D
+      objectReference: {fileID: 0}
     - target: {fileID: 4843492251600219421, guid: af4119c8b4eb72c4290a04b439f28e47,
         type: 3}
       propertyPath: m_Name
@@ -1351,6 +1386,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5269259780748029957, guid: af4119c8b4eb72c4290a04b439f28e47,
+        type: 3}
+      propertyPath: m_Name
+      value: Day4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4119c8b4eb72c4290a04b439f28e47, type: 3}
@@ -1497,6 +1537,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3598451549960839019, guid: af4119c8b4eb72c4290a04b439f28e47,
+        type: 3}
+      propertyPath: m_Name
+      value: Day2D
+      objectReference: {fileID: 0}
     - target: {fileID: 4843492251600219421, guid: af4119c8b4eb72c4290a04b439f28e47,
         type: 3}
       propertyPath: m_Name
@@ -1506,6 +1551,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5269259780748029957, guid: af4119c8b4eb72c4290a04b439f28e47,
+        type: 3}
+      propertyPath: m_Name
+      value: Day2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4119c8b4eb72c4290a04b439f28e47, type: 3}
