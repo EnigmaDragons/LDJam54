@@ -65,31 +65,12 @@ PrefabInstance:
     - target: {fileID: 7882771724172413760, guid: 4ade1f8d9f91be74ab8b540780a6ba4c,
         type: 3}
       propertyPath: m_Name
-      value: SM_BoxColored_Smalll_Yellow
+      value: SM_BoxColored_Smalll_Green
       objectReference: {fileID: 0}
     - target: {fileID: 8531444346101557909, guid: 4ade1f8d9f91be74ab8b540780a6ba4c,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bb908ada15a7418469ac48825ea1cc0a, type: 2}
+      objectReference: {fileID: 2100000, guid: 306b276fabb6f334d8502b6c42304cff, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ade1f8d9f91be74ab8b540780a6ba4c, type: 3}
---- !u!1 &5253487148479673076 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7882771724172413760, guid: 4ade1f8d9f91be74ab8b540780a6ba4c,
-    type: 3}
-  m_PrefabInstance: {fileID: 2705847144996125108}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8044556289381865427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5253487148479673076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 439648b89e9343d78aabbb2780d74db9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Color: 4

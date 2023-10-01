@@ -487,6 +487,7 @@ GameObject:
   - component: {fileID: 6110233034013764601}
   - component: {fileID: 8372350687640090253}
   - component: {fileID: 3226344016882167739}
+  - component: {fileID: -3363437952724165343}
   m_Layer: 3
   m_Name: SM_Box_Small
   m_TagString: Untagged
@@ -647,6 +648,21 @@ MonoBehaviour:
     - {fileID: 2100000, guid: c71bd9d743d6a6542bcd252401d2a5c2, type: 2}
   Color: 0
   ColorLocation: 0
+--- !u!114 &-3363437952724165343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7882771724172413760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e042fd7ddfb4c2b92fb433c224748fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.5
+  direction: {x: 0, y: 0, z: 0}
+  directions: []
 --- !u!1 &8217823572327597116
 GameObject:
   m_ObjectHideFlags: 0
