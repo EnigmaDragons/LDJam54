@@ -7,10 +7,10 @@ namespace Features.Environment
 {
     public class ObjectSpawner : MonoBehaviour
     {
+        [SerializeField] private GameConfig gameConfig;
+        
         [SerializeField]
         private List<GameObject> spawnPool = new List<GameObject>();
-        [SerializeField]
-        private float spawnInterval = 1.0f;
         [SerializeField]
         private Transform spawnPoint;
         [SerializeField] 
@@ -32,7 +32,7 @@ namespace Features.Environment
 
         private void Start()
         {
-            InvokeRepeating(nameof(SpawnObject), 0.0f, spawnInterval);
+            InvokeRepeating(nameof(SpawnObject), 0.0f, gameConfig.BoxSpawnInterval);
         }
         
         private void SpawnObject()
