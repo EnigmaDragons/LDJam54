@@ -23,4 +23,8 @@ public class GameConfig : ScriptableObject
     public float PlayerWalkSpeed = 5f;
     public float PlayerRunSpeed = 10f;
     public float PlayerJumpForce = 2f;
+
+    [Header("Days")]
+    public int TotalPlayableDays = 1;
+    public DayConfig[] Days;
 }

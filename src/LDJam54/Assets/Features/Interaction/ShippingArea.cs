@@ -22,7 +22,7 @@ namespace Features.Interaction
         {
             var message = new BoxDelivered(color);
             Message.Publish(message);
-            CurrentGameState.IncrementKPIStatic(KPI.BoxShipped, 1);
+            CurrentGameState.IncrementKPIStatic(KPI.BoxesShipped, 1);
         }
     }
 }

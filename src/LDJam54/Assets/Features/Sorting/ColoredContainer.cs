@@ -21,7 +21,7 @@ public class ColoredContainer : MonoBehaviour
             return;
         component.SetColorLocation(color);
         if (component.Color == color)
-            CurrentGameState.IncrementKPIStatic(KPI.PlacedCorrectly);
+            CurrentGameState.IncrementKPIStatic(KPI.BoxesShelvedCorrectly);
     }
 
     private void OnTriggerExit(Collider other)

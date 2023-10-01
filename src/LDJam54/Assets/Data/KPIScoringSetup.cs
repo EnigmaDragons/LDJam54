@@ -10,9 +10,9 @@ public class KPIScoringSetup : MonoBehaviour
     {
         CurrentGameState.State.KPIScoring = new()
         {
-            { KPI.PlacedCorrectly, gameConfig.PlacedCorrectlyScore },
-            { KPI.BoxShipped, gameConfig.BoxShippingScore },
-            { KPI.BoxUnsorted, gameConfig.BoxUnsortedFixedScore }
+            { KPI.BoxesShelvedCorrectly, gameConfig.PlacedCorrectlyScore },
+            { KPI.BoxesShipped, gameConfig.BoxShippingScore },
+            { KPI.BoxesUnsorted, gameConfig.BoxUnsortedFixedScore }
         };
     }
 }

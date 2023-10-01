@@ -13,37 +13,37 @@ public sealed class GameState
     // This is necessary to preserve backwards save compatibility.
 
     public string PlayerID = "464947";
+
+    // Performance Review
     public List<Worker> Coworkers = new() { new Worker() { Name = "23472" } };
     public float ClockSpeedFactor = 1f;
-    public KPI[] ActiveKPIs = { KPI.BoxShipped };
+    public KPI[] ActiveKPIs = { KPI.BoxesShipped };
     public int[] FlowActiveKPIs = { 0 };
     public SerializableDictionary<KPI, CoworkerAverage> CoworkerStandardPerformance = new() {
-        { KPI.PlacedCorrectly, new CoworkerAverage() },
-        { KPI.BoxShipped, new CoworkerAverage { BaseKPI = 20, SkillBonus = 1, ExploitBaseKpi = 50, ExploitSkillBonus = 3 } },
-        { KPI.BoxUnsorted, new CoworkerAverage() },
+        { KPI.BoxesShelvedCorrectly, new CoworkerAverage() },
+        { KPI.BoxesShipped, new CoworkerAverage { BaseKPI = 20, SkillBonus = 1, ExploitBaseKpi = 50, ExploitSkillBonus = 3 } },
+        { KPI.BoxesUnsorted, new CoworkerAverage() },
+        //{ KPI.BoxesUnloaded, new CoworkerAverage() },
     };
     public SerializableDictionary<KPI, int> KPIScoring = new()
     {
-        { KPI.PlacedCorrectly, 20 },
-        { KPI.BoxShipped, 20 },
-        { KPI.BoxUnsorted, 20 },
+        { KPI.BoxesShelvedCorrectly, 20 },
+        { KPI.BoxesShipped, 20 },
+        { KPI.BoxesUnsorted, 20 },
+        //{ KPI.BoxesUnloaded, 20 },
     };
     public SerializableDictionary<KPI, int> KPIs = new() {
-        { KPI.PlacedCorrectly, 0 },
-        { KPI.BoxShipped, 0 },
-        { KPI.BoxUnsorted, 0 },
+        { KPI.BoxesShelvedCorrectly, 0 },
+        { KPI.BoxesShipped, 0 },
+        { KPI.BoxesUnsorted, 0 },
+        //{ KPI.BoxesUnloaded, 0 },
     };
     public PerformanceReview PerformanceReview = new PerformanceReview();
-    public SerializableDictionary<string, bool> CutsceneStoryStates = new();
-
+    
+    // Days
     public int CurrentDayNumber = 1;
     public int TotalDays = 1;
-}
-
-
-public enum KPI
-{
-    PlacedCorrectly = 0,
-    BoxShipped = 1,
-    BoxUnsorted = 2,
+    
+    // Cutscene Stuff - Probably Not Needed
+    public SerializableDictionary<string, bool> CutsceneStoryStates = new();
 }
