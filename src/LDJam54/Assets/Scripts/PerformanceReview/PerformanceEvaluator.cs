@@ -3,87 +3,43 @@ using System.Collections.Generic;
 using System.Linq;
 
 public static class PerformanceEvaluator
-{
-    public static void Evaluate() => UpdatePerformanceReview();
-    
-    public static void UpdatePerformanceReview()
+{   
+    public static void Evaluate()
     {
         var state = CurrentGameState.State;
         var performanceReview = new PerformanceReview();
         var activeKPIs = state.ActiveKPIs;
         var standardPerformance = state.CoworkerStandardPerformance;
-        var playerKPIs = new int[activeKPIs.Length];
+        var playerScores = new int[activeKPIs.Length];
         for (var i = 0; i < activeKPIs.Length; i++)
-            playerKPIs[i] = state.KPIs[state.ActiveKPIs[i]];
-        performanceReview.KPIsPerPerson[state.PlayerID] = playerKPIs;
-
+            playerScores[i] = state.KPIs[state.ActiveKPIs[i]] * state.KPIScoring[state.ActiveKPIs[i]];
+        performanceReview.ScorePerPerson[state.PlayerID] = playerScores.Min();
+        
         foreach(var person in state.Coworkers)
         {
-            var scores = new float[activeKPIs.Length];
-            for(var i = 0; i < activeKPIs.Length; i++)
+            var score = 1 / state.ClockSpeedFactor;
+            var KPIspeeds = new float[activeKPIs.Length];
+            var focusWeights = new float[activeKPIs.Length];
+            for (var i = 0; i < activeKPIs.Length; i++)
             {
-                var KPI = activeKPIs[i];
-                if (person.MasteredKpis.Contains(KPI))
-                {
-                    var score = standardPerformance[KPI].ExploitBaseKpi + standardPerformance[KPI].ExploitSkillBonus * person.Skill;
-                    score += standardPerformance[KPI].ExploitSkillBonus * (Rng.Float() + Rng.Float() + Rng.Float() - 1.5f) * 2;
-                    scores[i] = score;
-                }
+                var standard = standardPerformance[activeKPIs[i]];
+                if (person.MasteredKpis.Contains(activeKPIs[i]))
+                    KPIspeeds[i] = standard.ExploitBaseKpi + standard.ExploitSkillBonus * person.Skill;
                 else
-                {
-                    var score = standardPerformance[KPI].BaseKPI + standardPerformance[KPI].SkillBonus * person.Skill;
-                    score += standardPerformance[KPI].SkillBonus * (Rng.Float() + Rng.Float() + Rng.Float() - 1.5f) * 2;
-                    scores[i] = score;
-                }
+                    KPIspeeds[i] = standard.BaseKPI + standard.SkillBonus * person.Skill;
+                focusWeights[i] = 1 / KPIspeeds[i] / state.KPIScoring[activeKPIs[i]];
+                score -= state.FlowActiveKPIs[i] / KPIspeeds[i];
             }
-            if(activeKPIs.Length > 1)
-            {
-                var weights = new int[activeKPIs.Length];
-                for (var i = 0; i < activeKPIs.Length; i++)
-                    weights[i] = Rng.Int(10) + (person.MasteredKpis.Contains(activeKPIs[i]) ? 4 : 1);
-                var totalWeight = weights.Sum();
-                for (var i = 0; i < activeKPIs.Length; i++)
-                    scores[i] = (1f * scores[i] * weights[i] / totalWeight) + Rng.Float();
-            }
-            performanceReview.KPIsPerPerson[person.Name] = scores.Select(s => (int)Math.Floor(s+Rng.Float())).ToArray();
+            score *= 1/focusWeights[0] * (focusWeights[0] / focusWeights.Sum());
+            var finalScore = (int)Math.Floor(score);
+            performanceReview.ScorePerPerson[person.Name] = state.ActiveKPIs.Select(kpi => finalScore - finalScore % state.KPIScoring[kpi]).Max();
         }
 
-        var workerScores = new int[performanceReview.KPIsPerPerson.Count];
-        for (var i = 0; i < performanceReview.KPIsPerPerson.Count; i++)
-        {
-            var performance = performanceReview.KPIsPerPerson.ElementAt(i);
-            var name = performance.Key;
-            var placements = new int[activeKPIs.Length];
-            for (var j = 0; j < activeKPIs.Length; j++)
-            {
-                var KPI = performance.Value[j];
-                placements[j] = performanceReview.KPIsPerPerson.Count(coworkerPerformance => coworkerPerformance.Value[j] > KPI) + 1;
-            }
-            performanceReview.PlacementsPerPerson[name] = placements;
-            workerScores[i] = placements.Sum();
-        }
-
-        for (var i = 0; i < performanceReview.KPIsPerPerson.Count; i++)
-        {
-            var performance = performanceReview.KPIsPerPerson.ElementAt(i);
-            var name = performance.Key;
-            var placements = performanceReview.PlacementsPerPerson[name];
-            var scores = new int[activeKPIs.Length];
-            for (var j = 0; j < activeKPIs.Length; j++)
-            {
-                var kpiValue = performance.Value[j];
-                var placement = placements[j];
-                var score = 100 - (int)Math.Floor(100f * (placement - 1) / (performanceReview.KPIsPerPerson.Count - 1)) + (kpiValue / 2);
-                scores[j] = score;
-            }
-            performanceReview.FinalKpisPerPerson[name] = scores.Sum();
-        }
-        
-        var worstPlacements = workerScores.Max();
+        var worstScore = performanceReview.ScorePerPerson.Values.Min();
         var worstWorkers = new List<string>();
-        for (var i = 0; i < performanceReview.KPIsPerPerson.Count; i++)
-            if(workerScores[i] == worstPlacements)
-                worstWorkers.Add(performanceReview.KPIsPerPerson.ElementAt(i).Key);
+        for (var i = 0; i < performanceReview.ScorePerPerson.Count; i++)
+            if (performanceReview.ScorePerPerson.ElementAt(i).Value == worstScore)
+                worstWorkers.Add(performanceReview.ScorePerPerson.ElementAt(i).Key);
         performanceReview.EliminatedPerson = worstWorkers.Random();
         state.PerformanceReview = performanceReview;
     }

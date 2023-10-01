@@ -27,6 +27,14 @@ MonoBehaviour:
     SkillBonus: 1
     ExploitBaseKpi: 20
     ExploitSkillBonus: 2
+  BoxUnsortedFixedAverage:
+    BaseKPI: 10
+    SkillBonus: 1
+    ExploitBaseKpi: 20
+    ExploitSkillBonus: 2
+  BoxShippingScore: 20
+  PlacedCorrectlyScore: 20
+  BoxUnsortedFixedScore: 20
   ClockSpeedFactor: 1
   BoxSpawnInterval: 7.5
   PlayerWalkSpeed: 3.5

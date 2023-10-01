@@ -7,10 +7,32 @@ public class PlaceholderPerformanceReviewDisplayer : MonoBehaviour
     {
         var state = CurrentGameState.State;
         state.KPIs[KPI.BoxShipped] = 23;
-        state.Coworkers.Add(new Worker() { Name = "999", Skill = 2, MasteredKpis = new List<KPI>() { KPI.BoxShipped } });
+        state.KPIs[KPI.BoxUnsorted] = 15;
+        state.Coworkers = new() {
+            new Worker() { Name = "1" },
+            new Worker() { Name = "2", Skill = 2 },
+            new Worker() { Name = "3", MasteredKpis = { KPI.BoxShipped } },
+            new Worker() { Name = "4", Skill = 2, MasteredKpis = { KPI.BoxUnsorted } }
+        };
+        state.ClockSpeedFactor = 1f;
+        state.ActiveKPIs = new KPI[] { KPI.BoxShipped, KPI.BoxUnsorted };
+        state.FlowActiveKPIs = new int[] { 0, 5 };
+        state.CoworkerStandardPerformance = new() {
+            { KPI.PlacedCorrectly, new CoworkerAverage() },
+            { KPI.BoxShipped, new CoworkerAverage { BaseKPI = 20, SkillBonus = 1, ExploitBaseKpi = 50, ExploitSkillBonus = 3 } },
+            { KPI.BoxUnsorted, new CoworkerAverage { BaseKPI = 15, SkillBonus = 1, ExploitBaseKpi = 45, ExploitSkillBonus = 2 } }
+        };
+        state.KPIScoring = new() {
+            { KPI.PlacedCorrectly, 20 },
+            { KPI.BoxShipped, 19 },
+            { KPI.BoxUnsorted, 20 }
+        };
+
         PerformanceEvaluator.Evaluate();
         var review = state.PerformanceReview;
-        foreach(var performance in review.KPIsPerPerson)
+        foreach (var score in review.ScorePerPerson)
+            Debug.Log(score.Key + ": " + score.Value);
+        /*foreach(var performance in review.KPIsPerPerson)
         {
             Debug.Log(performance.Key);
             foreach(var value in performance.Value)
@@ -21,7 +43,7 @@ public class PlaceholderPerformanceReviewDisplayer : MonoBehaviour
             Debug.Log(placement.Key);
             foreach (var value in placement.Value)
                 Debug.Log(value);
-        }
+        }*/
         Debug.Log(review.EliminatedPerson);
 
 
