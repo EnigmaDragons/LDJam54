@@ -117,6 +117,8 @@ MonoBehaviour:
   - {fileID: 3107019861287788904}
   - {fileID: 927118708984813441}
   - {fileID: 3120967843111075040}
+  OverlappingDropTargets: []
+  Size: 1
 --- !u!1 &911302378066537122
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,6 +236,8 @@ MonoBehaviour:
   - {fileID: 3107019861287788904}
   - {fileID: 6580172400463306339}
   - {fileID: 3120967843111075040}
+  OverlappingDropTargets: []
+  Size: 1
 --- !u!1 &2999076551249339329
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,6 +355,8 @@ MonoBehaviour:
   - {fileID: 3107019861287788904}
   - {fileID: 927118708984813441}
   - {fileID: 6580172400463306339}
+  OverlappingDropTargets: []
+  Size: 1
 --- !u!1 &3803422096554242640
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,6 +371,7 @@ GameObject:
   - component: {fileID: 906361973967854674}
   - component: {fileID: 4334024067666689515}
   - component: {fileID: 8878470941608837985}
+  - component: {fileID: 4186213697863101710}
   m_Layer: 3
   m_Name: SM_Box_Med
   m_TagString: Untagged
@@ -500,6 +507,30 @@ MonoBehaviour:
   DistanceInFront: 0.9
   HeightOffset: -0.1
   <BobbingIntensity>k__BackingField: 0.1
+--- !u!114 &4186213697863101710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3803422096554242640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 439648b89e9343d78aabbb2780d74db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderer: {fileID: 3443147389514486661}
+  colorToMaterial:
+    keys: 000000000100000002000000030000000400000005000000
+    values:
+    - {fileID: 2100000, guid: 09319e0950f814747a994b8b04b93aff, type: 2}
+    - {fileID: 2100000, guid: 0595f674c2da5684babd6b505cf62d00, type: 2}
+    - {fileID: 2100000, guid: d98cfac055b1408498c95514790f3e3e, type: 2}
+    - {fileID: 2100000, guid: 306b276fabb6f334d8502b6c42304cff, type: 2}
+    - {fileID: 2100000, guid: bb908ada15a7418469ac48825ea1cc0a, type: 2}
+    - {fileID: 2100000, guid: c71bd9d743d6a6542bcd252401d2a5c2, type: 2}
+  Color: 0
+  ColorLocation: 0
 --- !u!1 &4097918896966899943
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,6 +648,8 @@ MonoBehaviour:
   - {fileID: 927118708984813441}
   - {fileID: 6580172400463306339}
   - {fileID: 3120967843111075040}
+  OverlappingDropTargets: []
+  Size: 1
 --- !u!1 &4209505408456794252
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,6 +767,8 @@ MonoBehaviour:
   - {fileID: 927118708984813441}
   - {fileID: 6580172400463306339}
   - {fileID: 3120967843111075040}
+  OverlappingDropTargets: []
+  Size: 1
 --- !u!1 &5749143609933002577
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,3 +886,5 @@ MonoBehaviour:
   - {fileID: 927118708984813441}
   - {fileID: 6580172400463306339}
   - {fileID: 3120967843111075040}
+  OverlappingDropTargets: []
+  Size: 1
