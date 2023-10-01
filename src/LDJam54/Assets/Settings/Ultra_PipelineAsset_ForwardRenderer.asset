@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: ScreenSpaceOutlines
   m_EditorClassIdentifier: 
   m_Active: 1
-  renderPassEvent: 450
+  renderPassEvent: 350
   outlinesLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -103,11 +103,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 288
   outlineSettings:
-    outlineColor: {r: 0, g: 0, b: 0, a: 1}
-    outlineScale: 0.75
+    outlineColor: {r: 0, g: 0, b: 0, a: 0.74509805}
+    outlineScale: 1
     depthThreshold: 2
-    robertsCrossMultiplier: 25
-    normalThreshold: 0.606
+    robertsCrossMultiplier: 20
+    normalThreshold: 0.725
     steepAngleThreshold: 0
     steepAngleMultiplier: 185
   viewSpaceNormalsTextureSettings:
