@@ -107,7 +107,7 @@ namespace Features.Interaction
                 return;
             }
             
-            if (held.IsPresent && dropTarget.IsPresent && IsDropActionTriggered() && Mathf.Abs(Mathf.Abs(Quaternion.Dot(dropTarget.Value.TopmostDropTarget.transform.rotation, Quaternion.identity)) - 1) <= 0.1 && !Physics.Raycast(dropTarget.Value.TopmostDropTarget.transform.position + Vector3.down * 0.1f, Vector3.up, out var _, held.Value.Bounds.size.y, interactableLayer))
+            if (held.IsPresent && dropTarget.IsPresent && IsDropActionTriggered() && !Physics.Raycast(dropTarget.Value.TopmostDropTarget.transform.position + Vector3.down * 0.1f, Vector3.up, out var _, held.Value.Bounds.size.y, interactableLayer))
             {
                 SetObject();
                 return;
