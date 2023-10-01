@@ -492,9 +492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1aec54ddef4f38afa51f7649c71e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSpeed: 0.5
-  sprintSpeed: 0.8
-  jumpHeight: 8
+  gameConfig: {fileID: 11400000, guid: dce1e495c7aa5f3468f9c51b24abda14, type: 2}
   groundCheckDistance: 1.2
 --- !u!1 &2898158793237227279
 GameObject:
