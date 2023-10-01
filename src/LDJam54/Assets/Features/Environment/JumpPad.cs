@@ -11,9 +11,10 @@ namespace Features.Environment
         private float jumpForce = 10.0f;
         private void OnCollisionEnter(Collision other)
         {
-            if(!other.gameObject.HasComponent<Rigidbody>()) return;
-            
-            other.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            if(!other.gameObject.TryGetComponent(out Rigidbody rb)) return;
+
+            rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             PlayAnimation();
         }
         
