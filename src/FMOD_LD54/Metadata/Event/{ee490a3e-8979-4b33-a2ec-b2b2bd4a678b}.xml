@@ -227,9 +227,6 @@
 		</relationship>
 	</object>
 	<object class="MixerSend" id="{9cd1aec5-5f65-478e-81ef-665f98689d39}">
-		<property name="level">
-			<value>-12</value>
-		</property>
 		<property name="inputFormat">
 			<value>0</value>
 		</property>

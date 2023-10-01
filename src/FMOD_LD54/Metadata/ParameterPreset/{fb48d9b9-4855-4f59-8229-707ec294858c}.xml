@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="ParameterPreset" id="{fb48d9b9-4855-4f59-8229-707ec294858c}">
 		<property name="name">
-			<value>ForkLift</value>
+			<value>ForkLiftDriveStages</value>
 		</property>
 		<relationship name="folder">
 			<destination>{7977dbd2-1a94-43e6-adee-f080e672f887}</destination>
@@ -22,7 +22,7 @@
 			<value>ForkIdle</value>
 			<value>ToForkRevUp</value>
 			<value>ToForkLifting</value>
-			<value>ToForkLiftEnd</value>
+			<value>ToForkLiftingEnd</value>
 			<value>ToForkRevDown</value>
 		</property>
 		<property name="initialValue">
