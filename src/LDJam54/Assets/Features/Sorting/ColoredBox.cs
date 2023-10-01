@@ -14,21 +14,21 @@ public class ColoredBox : MonoBehaviour
         {
             _colorLocation = color;
             if (!IsMisplaced)
-                CurrentGameState.State.KPIs[KPI.BoxUnsorted]--;
+                CurrentGameState.DecrementKPIStatic(KPI.BoxUnsorted);
         }
         else
         {
             _colorLocation = color;
             if (IsMisplaced)
-                CurrentGameState.State.KPIs[KPI.BoxUnsorted]++;
+                CurrentGameState.IncrementKPIStatic(KPI.BoxUnsorted);
         }
     }
 
-    private void OnEnable() => CurrentGameState.State.KPIs[KPI.BoxUnsorted]++;
+    private void OnEnable() => CurrentGameState.IncrementKPIStatic(KPI.BoxUnsorted);
 
     private void OnDisable()
     {
         if (IsMisplaced)
-            CurrentGameState.State.KPIs[KPI.BoxUnsorted]--;
+            CurrentGameState.DecrementKPIStatic(KPI.BoxUnsorted);
     }
 }

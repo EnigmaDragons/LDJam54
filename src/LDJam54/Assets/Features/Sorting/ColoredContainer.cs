@@ -4,17 +4,17 @@ public class ColoredContainer : MonoBehaviour
 {
     [SerializeField] private SortingColor color;
     
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         var component = other.gameObject.GetComponent<ColoredBox>();
         if (component == null)
             return;
         component.SetColorLocation(color);
         if (component.Color == color)
-            CurrentGameState.State.KPIs[KPI.PlacedCorrectly]++;
+            CurrentGameState.IncrementKPIStatic(KPI.PlacedCorrectly);
     }
 
-    private void OnCollisionExit(Collision other)
+    private void OnTriggerExit(Collider other)
     {
         var component = other.gameObject.GetComponent<ColoredBox>();
         if (component == null)

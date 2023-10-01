@@ -487,7 +487,6 @@ MonoBehaviour:
   renderer: {fileID: 6857758710680959368}
   collider: {fileID: 3339334539324336848}
   colliders:
-  - {fileID: 3339334539324336848}
   - {fileID: 2557974576023644760}
   - {fileID: 7578663294545034716}
   - {fileID: 8006028050372275416}
