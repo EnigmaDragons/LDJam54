@@ -369,6 +369,7 @@ GameObject:
   - component: {fileID: 4334024067666689515}
   - component: {fileID: 8878470941608837985}
   - component: {fileID: 4186213697863101710}
+  - component: {fileID: -3178403753335947712}
   m_Layer: 3
   m_Name: SM_Box_Med
   m_TagString: Untagged
@@ -529,6 +530,21 @@ MonoBehaviour:
     - {fileID: 2100000, guid: c71bd9d743d6a6542bcd252401d2a5c2, type: 2}
   Color: 0
   ColorLocation: 0
+--- !u!114 &-3178403753335947712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3803422096554242640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e042fd7ddfb4c2b92fb433c224748fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.5
+  direction: {x: 0, y: 0, z: 0}
+  directions: []
 --- !u!1 &4097918896966899943
 GameObject:
   m_ObjectHideFlags: 0

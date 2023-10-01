@@ -8,8 +8,6 @@ namespace Features.Environment
     {
         [SerializeField] 
         private ColliderWrapper topCollider;
-        [SerializeField]
-        private float speed = 1.0f;
         private void Awake()
         {
             topCollider.OnTriggerEnterAction += OnTriggerEnter;
@@ -18,14 +16,14 @@ namespace Features.Environment
 
         private void OnTriggerEnter(Collider obj)
         {
-            if(!obj.gameObject.HasComponent<Rigidbody>()) return;
-            obj.gameObject.AddComponent<ObjectOnConveyor>().velocity = transform.forward * -speed;
+            if(obj.TryGetComponent(out ObjectOnConveyor objectOnConveyor))
+                objectOnConveyor.directions.Add(-transform.forward);
         }
 
         private void OnTriggerExit(Collider obj)
         {
-            if(!obj.gameObject.HasComponent<Rigidbody>()) return;
-            Destroy(obj.gameObject.GetComponent<ObjectOnConveyor>());
+            if(obj.TryGetComponent(out ObjectOnConveyor objectOnConveyor))
+                objectOnConveyor.directions.Remove(-transform.forward);
         }
     }
 }
