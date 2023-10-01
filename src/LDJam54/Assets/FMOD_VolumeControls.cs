@@ -15,14 +15,8 @@ public class FMOD_VolumeControls : MonoBehaviour
     Bus musicVol;
     Bus sfxVol;
     Bus uiVol;
-
-
-    private void Update()
-    {
-        GetFMODBusMusic();
-        GetFMODBusSFX();
-        GetFMODBusUI();
-    }
+    
+  
     public void GetFMODBusMusic()
     {
         musicVol = RuntimeManager.GetBus("bus:/Music");

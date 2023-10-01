@@ -17,7 +17,7 @@ public sealed class MixerVolumeSlider : MonoBehaviour
         slider.value = PlayerPrefs.GetFloat(valueName, 0.5f);
         slider.onValueChanged.AddListener(SetLevel);
     }
-    
+     
     public void SetLevel(float sliderValue)
     {
         var mixerVolume = (Mathf.Log10(sliderValue) * 20) - reductionDb;
@@ -26,7 +26,6 @@ public sealed class MixerVolumeSlider : MonoBehaviour
         Message.Publish(new MixerVolumeChanged(valueName));
         fmodVol = sliderValue;
 
-        RuntimeManager.GetBus(valueName).setVolume(fmodVol); 
-        
+        RuntimeManager.GetBus(valueName).setVolume(fmodVol);      
     }
 }
