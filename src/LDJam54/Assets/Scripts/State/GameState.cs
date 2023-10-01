@@ -15,7 +15,7 @@ public sealed class GameState
     public string PlayerID = "464947";
 
     public float ClockSpeedFactor = 1f;
-    public float BoxSpawnInterval = 1f;
+    public float BoxSpawnInterval = 1.5f;
     // Performance Review
     public List<string> Coworkers = new List<string>() { "38295" };
     public int[] CoworkerScores = new int[] { 20 };
