@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 111732093932804822}
   - component: {fileID: 65314791708262648}
   - component: {fileID: 64421229947635136}
-  - component: {fileID: 114625168362617642}
+  - component: {fileID: 431700032152683089}
   m_Layer: 0
   m_Name: DoorB
   m_TagString: RaycastInteract
@@ -313,7 +313,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 636cd1b8c5f081547aea1200c45fb61c, type: 3}
---- !u!114 &114625168362617642
+--- !u!114 &431700032152683089
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -322,14 +322,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1809509974182650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1199b3e4a287ec7449bd43c03a8f4878, type: 3}
+  m_Script: {fileID: 11500000, guid: dc654a8e417749c996a7be82fbfd81fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   OpenSpeed: 1
   CloseSpeed: 1
   isAutomatic: 0
   AutoClose: 0
-  DoubleSidesOpen: 1
+  DoubleSidesOpen: 0
   PlayerColliderTag: Player
   OpenForwardAnimName: Door_anim
   OpenBackwardAnimName: DoorBack_anim
