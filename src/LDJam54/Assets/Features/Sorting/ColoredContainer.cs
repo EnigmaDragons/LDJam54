@@ -2,7 +2,14 @@
 
 public class ColoredContainer : MonoBehaviour
 {
-    [SerializeField] private SortingColor color;
+    public SortingColor color;
+    [SerializeField] private MeshRenderer renderer;
+    [SerializeField] private SerializableDictionary<SortingColor, Material> colorToMaterial;
+
+    private void Awake()
+    {
+        renderer.materials = new[] {colorToMaterial[color]};
+    }
     
     private void OnTriggerEnter(Collider other)
     {

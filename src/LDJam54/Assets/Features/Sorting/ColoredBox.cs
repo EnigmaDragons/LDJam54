@@ -3,28 +3,40 @@ using UnityEngine;
 
 public class ColoredBox : MonoBehaviour
 {
+    [SerializeField] private MeshRenderer renderer;
+    [SerializeField] private SerializableDictionary<SortingColor, Material> colorToMaterial;
+
     public SortingColor Color;
+    public SortingColor ColorLocation;
+
+    private void Awake()
+    {
+        renderer.materials = new[] { colorToMaterial[Color] };
+    }
     
-    private SortingColor _colorLocation = SortingColor.None;
-    private bool IsMisplaced => Color != _colorLocation;
+    private bool IsMisplaced => Color != ColorLocation;
 
     public void SetColorLocation(SortingColor color)
     {
         if (IsMisplaced)
         {
-            _colorLocation = color;
+            ColorLocation = color;
             if (!IsMisplaced)
                 CurrentGameState.DecrementKPIStatic(KPI.BoxUnsorted);
         }
         else
         {
-            _colorLocation = color;
+            ColorLocation = color;
             if (IsMisplaced)
                 CurrentGameState.IncrementKPIStatic(KPI.BoxUnsorted);
         }
     }
 
-    private void OnEnable() => CurrentGameState.IncrementKPIStatic(KPI.BoxUnsorted);
+    private void OnEnable()
+    {
+        if (IsMisplaced)
+            CurrentGameState.IncrementKPIStatic(KPI.BoxUnsorted);
+    } 
 
     private void OnDisable()
     {

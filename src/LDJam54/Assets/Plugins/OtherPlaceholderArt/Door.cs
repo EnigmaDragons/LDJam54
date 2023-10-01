@@ -15,8 +15,14 @@ public class Door : MonoBehaviour {
 	private bool inTrigger = false;
 	private bool isOpen = false;
 	private Vector3 relativePos;
+	public GameObject lockedVisual;
+	public GameObject unlockedVisual;
 	
 	private const bool DEBUG_LOG = false;
+	private bool _lockedInitialized = false;
+	private bool _isLocked;
+	
+	public bool Locked => _isLocked;
 
 	void Log(string msg)
 	{
@@ -24,12 +30,24 @@ public class Door : MonoBehaviour {
 			Debug.Log(msg);
 	}
 	
-	void Start () 
+	void Start() 
 	{
 		anim = GetComponent<Animation> ();
 		_animName = anim.clip.name;
+		if (!_lockedInitialized)
+			SetLocked(false);
 	}
-	
+
+	public void SetLocked(bool isLocked)
+	{
+		_lockedInitialized = true;
+		_isLocked = isLocked;
+		if (lockedVisual != null)
+			lockedVisual.SetActive(isLocked);
+		if (unlockedVisual != null)
+			unlockedVisual.SetActive(!isLocked);
+	}
+
 	// Update is called once per frame
 	void Update () 
 	{
@@ -39,11 +57,19 @@ public class Door : MonoBehaviour {
 			if(Input.GetKeyDown(KeyCode.E) && !isAutomatic){
 				if (!isOpen) {
 					Debug.Log("Requested Door Open");
-					isOpen = true;
-					OpenDoor ();
+					if (_isLocked)
+					{
+						Log("Door is locked");
+					}
+					else
+					{
+						isOpen = true;
+						Log("Opening Door");
+						OpenDoor();
+					}
 				} else {
-					Debug.Log("Requested Door Close");
 					isOpen = false;
+					Log("Closing Door");
 					CloseDoor ();
 				}
 			}
