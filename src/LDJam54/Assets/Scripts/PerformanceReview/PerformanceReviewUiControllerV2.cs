@@ -4,6 +4,7 @@ using UnityEngine;
 public class PerformanceReviewUiControllerV2 : MonoBehaviour
 {
     public WorkerKpiPresenter[] workers;
+    public float delayBeforeGameOver = 10f;
 
     private void Start()
     {
@@ -19,5 +20,10 @@ public class PerformanceReviewUiControllerV2 : MonoBehaviour
             else 
                 workers[i].gameObject.SetActive(false);
         }
+        
+        var firedId = perfReview.EliminatedPerson;
+        Debug.Log("Eliminated: " + firedId);
+        if (firedId.Equals(CurrentGameState.State.PlayerID)) 
+            this.ExecuteAfterDelay(() => Message.Publish(new WasFired()), delayBeforeGameOver);
     }
 }
