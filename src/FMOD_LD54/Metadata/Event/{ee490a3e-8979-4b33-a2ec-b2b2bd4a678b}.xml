@@ -168,7 +168,6 @@
 		<relationship name="effects">
 			<destination>{29053300-3a33-4a5b-88f3-c923870b3431}</destination>
 			<destination>{6287f4c3-a555-4f46-ade5-079490dbc1c9}</destination>
-			<destination>{9cd1aec5-5f65-478e-81ef-665f98689d39}</destination>
 			<destination>{78e6db99-deae-4bb8-941f-af25c977def5}</destination>
 		</relationship>
 	</object>
@@ -224,14 +223,6 @@
 		</property>
 		<relationship name="modulators">
 			<destination>{4d3f0912-7776-4de9-90bb-a1ebb02ab70d}</destination>
-		</relationship>
-	</object>
-	<object class="MixerSend" id="{9cd1aec5-5f65-478e-81ef-665f98689d39}">
-		<property name="inputFormat">
-			<value>0</value>
-		</property>
-		<relationship name="mixerReturn">
-			<destination>{cd33114c-983b-4026-9100-4589b6d46f4f}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{78e6db99-deae-4bb8-941f-af25c977def5}" />

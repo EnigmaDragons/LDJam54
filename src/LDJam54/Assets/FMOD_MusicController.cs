@@ -8,7 +8,6 @@ public class FMOD_MusicController : MonoBehaviour
 {
 
     EventInstance menuMusic;
-    int musicTrackNumber; 
 
     private void Start()
     {
@@ -22,8 +21,4 @@ public class FMOD_MusicController : MonoBehaviour
         menuMusic.release();
     }
 
-    public void SelectMusic()
-    {
-        menuMusic.setParameterByName("", musicTrackNumber);
-    }
 }
