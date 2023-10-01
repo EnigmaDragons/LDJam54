@@ -6,6 +6,12 @@ namespace Features.Interaction
 {
     public class PlayerInteractionController : MonoBehaviour
     {
+        private static int interactableLayer = 1 << 3;
+        private static int dropLayer = 1 << 6;
+        private static int smallDropLayer = 1 << 7;
+        private static int mediumDropLayer = 1 << 8;
+        private static int largeDropLayer = 1 << 9;
+        
         [SerializeField] private float objectSpeed = 10;
         [SerializeField] private float rotationSpeed = 300;
         [SerializeField] private Camera camera;
@@ -24,6 +30,10 @@ namespace Features.Interaction
         /// </summary>
         private Maybe<InteractableObject> held = Maybe<InteractableObject>.Missing();
         private Maybe<Transform> heldParent = Maybe<Transform>.Missing();
+        /// <summary>
+        /// The interactable object that the player is currently looking at
+        /// </summary>
+        private Maybe<DropTarget> dropTarget = Maybe<DropTarget>.Missing();
         
         private void Update()
         {
@@ -39,7 +49,8 @@ namespace Features.Interaction
         private void UpdateTarget()
         {
             var ray = camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
-            if (Physics.Raycast(ray, maxDistance: pickupDistance , hitInfo: out var hit))
+            RaycastHit hit;
+            if (Physics.Raycast(ray, maxDistance: pickupDistance , hitInfo: out hit, layerMask: interactableLayer))
             {
                 var interactable = hit.collider.gameObject.GetComponent<InteractableObject>();
                 HandleInteractable(interactable);
@@ -49,6 +60,18 @@ namespace Features.Interaction
                 targetted.Value.Unhighlight();
                 targetted = Maybe<InteractableObject>.Missing();
             }
+
+            if (held.IsMissing)
+                return;
+            var sizeLayer = held.Value.DropSize == DropSize.Small
+                ? smallDropLayer
+                : held.Value.DropSize == DropSize.Medium
+                    ? mediumDropLayer
+                    : largeDropLayer;
+            if (Physics.Raycast(ray, maxDistance: pickupDistance, hitInfo: out hit, layerMask: dropLayer | sizeLayer))
+                dropTarget = hit.collider.GetComponent<DropTarget>();
+            else
+                dropTarget = Maybe<DropTarget>.Missing();
         }
     
         private void HandleInteractable(InteractableObject interactable)
@@ -84,8 +107,7 @@ namespace Features.Interaction
                 return;
             }
             
-            
-            if (held.IsPresent && targetted.IsPresent && targetted.Value.CanBeSetOn && IsDropActionTriggered())
+            if (held.IsPresent && dropTarget.IsPresent && IsDropActionTriggered() && !Physics.Raycast(dropTarget.Value.TopmostDropTarget.transform.position + Vector3.down * 0.1f, Vector3.up, out var _, held.Value.Bounds.size.y, interactableLayer))
             {
                 SetObject();
                 return;
@@ -147,18 +169,9 @@ namespace Features.Interaction
         
         private void SetObject()
         {
-            Vector3 position;
-            if (targetted.Value.SnapToCenter) 
-            {
-                position = new Vector3(targetted.Value.transform.position.x, targetted.Value.transform.position.y + targetted.Value.Collider.bounds.extents.y + held.Value.Bounds.extents.y, targetted.Value.transform.position.z);
-            }
-            else 
-            {
-                position = held.Value.transform.position;
-            }
-            
-            Quaternion rotation = held.Value.transform.rotation;
-            held.Value.SetDown(position, rotation, objectSpeed, rotationSpeed);
+            var dropTargetTransform = dropTarget.Value.TopmostDropTarget.transform;
+            Vector3 position = new Vector3(dropTargetTransform.position.x, dropTargetTransform.position.y + held.Value.Bounds.extents.y + 0.1f, dropTargetTransform.position.z);
+            held.Value.SetDown(position, dropTargetTransform.rotation, objectSpeed, rotationSpeed);
             held.Value.transform.parent = heldParent.Value;
             held = Maybe<InteractableObject>.Missing();
         }

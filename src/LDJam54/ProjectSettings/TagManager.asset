@@ -12,13 +12,13 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Interaction
   - Water
   - UI
-  - Interactable
-  - InteractableOutline
-  - 
-  - 
+  - DropTarget
+  - SmallDropTarget
+  - MedDropTarget
+  - LargeDropTarget
   - 
   - 
   - 
