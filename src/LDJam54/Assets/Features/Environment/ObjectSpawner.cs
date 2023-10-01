@@ -32,7 +32,7 @@ namespace Features.Environment
 
         private void Start()
         {
-            InvokeRepeating(nameof(SpawnObject), 0.0f, gameConfig.BoxSpawnInterval);
+            InvokeRepeating(nameof(SpawnObject), 0.0f, CurrentGameState.State.BoxSpawnInterval);
         }
         
         private void SpawnObject()

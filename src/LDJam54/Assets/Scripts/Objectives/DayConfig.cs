@@ -1,8 +1,10 @@
-﻿using UnityEngine;
+﻿using System;
 
-[CreateAssetMenu]
-public class DayConfig : ScriptableObject
+[Serializable]
+public class DayConfig
 {
-    public KPI Kpi;
-    public int Target;
+    public KPI[] ActiveKPIs;
+    public int[] CoworkerScores;
+    public float BoxSpawnInterval;
+    public float ClockSpeedFactor;
 }

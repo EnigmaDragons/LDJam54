@@ -14,17 +14,12 @@ public sealed class GameState
 
     public string PlayerID = "464947";
 
-    // Performance Review
-    public List<Worker> Coworkers = new() { new Worker() { Name = "23472" } };
     public float ClockSpeedFactor = 1f;
+    public float BoxSpawnInterval = 1f;
+    // Performance Review
+    public List<string> Coworkers = new List<string>() { "38295" };
+    public int[] CoworkerScores = new int[] { 20 };
     public KPI[] ActiveKPIs = { KPI.BoxesShipped };
-    public int[] FlowActiveKPIs = { 0 };
-    public SerializableDictionary<KPI, CoworkerAverage> CoworkerStandardPerformance = new() {
-        { KPI.BoxesShelvedCorrectly, new CoworkerAverage() },
-        { KPI.BoxesShipped, new CoworkerAverage { BaseKPI = 20, SkillBonus = 1, ExploitBaseKpi = 50, ExploitSkillBonus = 3 } },
-        { KPI.BoxesUnsorted, new CoworkerAverage() },
-        //{ KPI.BoxesUnloaded, new CoworkerAverage() },
-    };
     public SerializableDictionary<KPI, int> KPIScoring = new()
     {
         { KPI.BoxesShelvedCorrectly, 20 },
