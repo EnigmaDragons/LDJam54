@@ -148,4 +148,6 @@ MonoBehaviour:
   spawnTarget: {fileID: 6011636834584918618}
   startWorkdayPrefab: {fileID: 2716246298702262401, guid: 181542d3a2a6dd34486ecde71c92a805,
     type: 3}
-  endWorkdayPrefab: {fileID: 0}
+  endWorkdayPrefab: {fileID: 7014302373890346282, guid: aa0de71c4d4c43a4db57a2f96a0097b2,
+    type: 3}
+  displayTime: 3

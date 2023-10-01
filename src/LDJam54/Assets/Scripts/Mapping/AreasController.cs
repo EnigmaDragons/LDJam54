@@ -10,11 +10,13 @@ public class AreasController : OnMessage<GameStateChanged>
     public GameObject[] day6;
     public GameObject[] day7;
     public Door[] doors;
+    public Door[] doorsToStartLocked;
 
     private void Awake()
     {
         for (var i = 0; i < doors.Length; i++)
             doors[i].SetLabels("Meeting Room", "Room " + (i + 1));
+        doorsToStartLocked.ForEach(d => d.SetLocked(true));
     }
 
     private void Start() => Refresh(CurrentGameState.State);
@@ -31,6 +33,6 @@ public class AreasController : OnMessage<GameStateChanged>
         day6.ForEach(g => g.SetActive(gs.CurrentDayNumber == 6));
         day7.ForEach(g => g.SetActive(gs.CurrentDayNumber == 7));
         for (var i = 0; i < doors.Length; i++) 
-            doors[i].SetLocked(gs.CurrentDayNumber == i + 1);
+            doors[i].SetLocked(gs.CurrentDayNumber != i + 1);
     }
 }

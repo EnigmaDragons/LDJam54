@@ -17,7 +17,7 @@ public sealed class GameState
     // Performance Review
     public List<Worker> Coworkers = new() { new Worker() { Name = "23472" } };
     public float ClockSpeedFactor = 1f;
-    public KPI[] ActiveKPIs = { KPI.BoxesShipped };
+    public KPI[] ActiveKPIs = { KPI.BoxesShelvedCorrectly };
     public int[] FlowActiveKPIs = { 0 };
     public SerializableDictionary<KPI, CoworkerAverage> CoworkerStandardPerformance = new() {
         { KPI.BoxesShelvedCorrectly, new CoworkerAverage() },
@@ -43,6 +43,7 @@ public sealed class GameState
     // Days
     public int CurrentDayNumber = 1;
     public int TotalDays = 1;
+    public bool CurrentWorkdayEnded = false;
     public MeetingTime MeetingTime = MeetingTime.Morning;
 
     // Cutscene Stuff - Probably Not Needed

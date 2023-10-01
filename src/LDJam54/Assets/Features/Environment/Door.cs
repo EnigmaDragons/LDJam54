@@ -20,6 +20,8 @@ public class Door : MonoBehaviour {
 	public GameObject unlockedVisual;
 	public TextMeshPro forwardLabel;
 	public TextMeshPro backwardLabel;
+	public string initialForwardText;
+	public string initialBackwardText;
 	
 	private const bool DEBUG_LOG = false;
 	private bool _lockedInitialized = false;
@@ -39,6 +41,10 @@ public class Door : MonoBehaviour {
 		_animName = anim.clip.name;
 		if (!_lockedInitialized)
 			SetLocked(false);
+		if (forwardLabel.text == "")
+			forwardLabel.text = initialForwardText;
+		if (backwardLabel.text == "")
+			backwardLabel.text = initialBackwardText;
 	}
 
 	public void SetLabels(string forwardText, string backwardText)
