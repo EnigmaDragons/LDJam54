@@ -29,6 +29,9 @@ public sealed class CurrentGameState
     
     public static bool StoryState(string storyState) 
         => Instance._gameState.CutsceneStoryStates.TryGetValue(storyState, out var storyStateValue) && storyStateValue;
+    
+    public static void AdvanceToNextDay() => Instance.UpdateState(g => g.CurrentDayNumber++);
+    public static void FireCoworker(string id) => Instance.UpdateState(g => g.Coworkers.RemoveAll(c => c.Name == id));
 
     [SerializeField] private GameState _gameState;
 

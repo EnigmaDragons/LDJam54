@@ -4,6 +4,7 @@ using UnityEngine;
 public class ColoredBox : MonoBehaviour
 {
     public MeshFilter MeshFilter;
+    [SerializeField] private SortingColor _initialColor;
     [SerializeField] private MeshRenderer renderer;
     [SerializeField] private SerializableDictionary<SortingColor, Material> colorToMaterial;
 
@@ -24,6 +25,7 @@ public class ColoredBox : MonoBehaviour
     private void Awake()
     {
         renderer.materials = new[] { colorToMaterial[Color] };
+        SetColor(_initialColor);
     }
     
     private bool IsMisplaced => Color != ColorLocation;

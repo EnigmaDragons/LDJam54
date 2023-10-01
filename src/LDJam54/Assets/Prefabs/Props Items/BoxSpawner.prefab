@@ -135,3 +135,4 @@ MonoBehaviour:
   - {fileID: 7882771724172413760, guid: 4ade1f8d9f91be74ab8b540780a6ba4c, type: 3}
   spawnPoint: {fileID: 7551813775725355150}
   spawnType: 0
+  colors: 63000000

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{f4b288d9-8f2c-4ea5-9b53-99a64310aedc}">
+		<property name="name">
+			<value>WorkDayNearOver</value>
+		</property>
+		<relationship name="folder">
+			<destination>{7977dbd2-1a94-43e6-adee-f080e672f887}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{897a401a-6a3d-4257-8bc1-4d715220fb1a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{897a401a-6a3d-4257-8bc1-4d715220fb1a}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

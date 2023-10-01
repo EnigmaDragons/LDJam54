@@ -13,6 +13,8 @@ public class ColoredBoxSpawner : MonoBehaviour
     private Transform spawnPoint;
     [SerializeField] 
     private SpawnType spawnType;
+
+    [SerializeField] private SortingColor[] colors;
     
     private GameObject GetRandomObject()
     {
@@ -45,8 +47,10 @@ public class ColoredBoxSpawner : MonoBehaviour
         var go = Instantiate(toSpawn, spawnPoint.position, Quaternion.identity);
         if (go.TryGetComponent(out ColoredBox box))
         {
-            var color = SortingColors.All.Random();
-            box.SetColor(color);
+            var spawnColor = colors.Random();
+            if (spawnColor == SortingColor.All)
+                spawnColor = SortingColors.All.Random();
+            box.SetColor(spawnColor);
         }
     }
 

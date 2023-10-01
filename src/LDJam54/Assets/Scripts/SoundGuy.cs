@@ -17,7 +17,30 @@ public class SoundGuy : MonoBehaviour
         Message.Subscribe<ObjectSetDown>(OnObjectSetDown, this);
         Message.Subscribe<WorkdayStarted>(OnWorkdayStarted, this);
         Message.Subscribe<WorkdayNearlyOver>(OnWorkdayNearlyOver, this);
+        Message.Subscribe<WasFired>(OnWasFired, this);
         Message.Subscribe<DoorOpened>(OnDoorOpened, this);
+        Message.Subscribe<DoorClosed>(OnDoorClosed, this);
+        Message.Subscribe<TeleporterActivated>(OnTeleporterActivated, this);
+        Message.Subscribe<JumpPadUsed>(OnJumpPadUsed, this);
+    }
+
+    private void OnWasFired(WasFired obj)
+    {
+        
+    }
+
+    private void OnJumpPadUsed(JumpPadUsed obj)
+    {
+        
+    }
+
+    private void OnTeleporterActivated(TeleporterActivated obj)
+    {
+        
+    }
+
+    private void OnDoorClosed(DoorClosed obj)
+    {
     }
 
     private void OnDoorOpened(DoorOpened obj)
