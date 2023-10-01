@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -33,7 +34,7 @@ namespace Features.PlayerControls
 
         private bool IsGrounded()
         {
-            return Physics.Raycast(transform.position, Vector3.down, groundCheckDistance);
+            return Physics.RaycastAll(transform.position, Vector3.down, groundCheckDistance).Any(o => o.collider.gameObject != gameObject);
         }
         
         private void Jump()
