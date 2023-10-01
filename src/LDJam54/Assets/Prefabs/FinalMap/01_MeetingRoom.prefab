@@ -659,6 +659,7 @@ GameObject:
   - component: {fileID: 2465473815958424227}
   - component: {fileID: 218396802663449490}
   - component: {fileID: 8508366745379009183}
+  - component: {fileID: 4584285031083821132}
   m_Layer: 0
   m_Name: PerformanceReviewRoom
   m_TagString: Untagged
@@ -683,6 +684,7 @@ Transform:
   - {fileID: 2465473815476325168}
   - {fileID: 2465473815559748942}
   - {fileID: 2465473815930789789}
+  - {fileID: 3512252779848568632}
   m_Father: {fileID: 8185112099351934491}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -724,8 +726,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a09986c1c84358afeba4b574ba6cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameWinDoor: {fileID: 0}
-  nextDayDoor: {fileID: 0}
+  gameWinDoor: {fileID: 2254688045119110811}
+  nextDayDoor: {fileID: 6649539779210882143}
+--- !u!114 &4584285031083821132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2465473815958424226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e58407231dd4ff8a3bcd7bd00ceeefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eveningElement: {fileID: 2465473815930789788}
+  morningElement: {fileID: 4204470022138861508}
 --- !u!1 &3638037551520584799
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,6 +915,37 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 8801817750817775409}
   m_maskType: 0
+--- !u!1 &4204470022138861508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3512252779848568632}
+  m_Layer: 0
+  m_Name: MorningKpiDisplay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3512252779848568632
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4204470022138861508}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2465473815958424227}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8185112099351934490
 GameObject:
   m_ObjectHideFlags: 0
@@ -928,8 +975,40 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2465473815958424227}
+  - {fileID: 1813777578380735618}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8866726817970243020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1813777578380735618}
+  m_Layer: 0
+  m_Name: DaySpawnPoint
+  m_TagString: Respawn
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1813777578380735618
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8866726817970243020}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.47, y: 0, z: 10.07}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8185112099351934491}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2284779648528995642
 PrefabInstance:
@@ -942,6 +1021,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PerfBoard
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432163958908521126, guid: f3dca2102be5f6b418fe487388512f07,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4432163958908521127, guid: f3dca2102be5f6b418fe487388512f07,
         type: 3}
@@ -1144,6 +1228,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23f7ad123d640148c033dd0e9d74a9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2465473815930789788 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4432163958908521126, guid: f3dca2102be5f6b418fe487388512f07,
+    type: 3}
+  m_PrefabInstance: {fileID: 2284779648528995642}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2465473815930789789 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4432163958908521127, guid: f3dca2102be5f6b418fe487388512f07,
@@ -2614,6 +2704,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 917907659447871400, guid: 3c9f115cd2e6a944e97c3c63569042cc,
         type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 917907659447871400, guid: 3c9f115cd2e6a944e97c3c63569042cc,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 0}
@@ -3341,6 +3436,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TargetTexture
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 917907659447871400, guid: 3c9f115cd2e6a944e97c3c63569042cc,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 917907659447871400, guid: 3c9f115cd2e6a944e97c3c63569042cc,
         type: 3}
@@ -4221,6 +4321,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TargetTexture
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 917907659447871400, guid: 3c9f115cd2e6a944e97c3c63569042cc,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 917907659447871400, guid: 3c9f115cd2e6a944e97c3c63569042cc,
         type: 3}
@@ -5320,6 +5425,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3117017691001235803}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2254688045119110811 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3750264595124082624, guid: af4119c8b4eb72c4290a04b439f28e47,
+    type: 3}
+  m_PrefabInstance: {fileID: 3117017691001235803}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc654a8e417749c996a7be82fbfd81fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4210783277485939165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5327,6 +5444,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2465473814576937919}
     m_Modifications:
+    - target: {fileID: 832175641887544930, guid: 7ba582a2a28d25a4ca3edba61bc43e80,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5629419662762327743, guid: 7ba582a2a28d25a4ca3edba61bc43e80,
         type: 3}
       propertyPath: m_Name
@@ -5386,6 +5508,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7985746489781470704, guid: 7ba582a2a28d25a4ca3edba61bc43e80,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ba582a2a28d25a4ca3edba61bc43e80, type: 3}
@@ -5475,3 +5602,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7515510474959092639}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6649539779210882143 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3750264595124082624, guid: af4119c8b4eb72c4290a04b439f28e47,
+    type: 3}
+  m_PrefabInstance: {fileID: 7515510474959092639}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc654a8e417749c996a7be82fbfd81fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

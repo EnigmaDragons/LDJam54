@@ -809,8 +809,7 @@ Material:
   - VL_PHYSICAL_ATTEN
   - VL_SHADOWS
   - VL_SPOT
-  m_InvalidKeywords:
-  - _FLIPBOOKBLENDING_OFF
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -1204,8 +1203,7 @@ Material:
   - VL_PHYSICAL_ATTEN
   - VL_SHADOWS
   - VL_SPOT
-  m_InvalidKeywords:
-  - _FLIPBOOKBLENDING_OFF
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -1618,6 +1616,16 @@ PrefabInstance:
       propertyPath: nextDayDoor
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5389833772957555839, guid: 791a7a1527b447245ba6b354f53c8174,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 5389833772957555839, guid: 791a7a1527b447245ba6b354f53c8174,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.52
+      objectReference: {fileID: 0}
     - target: {fileID: 7947108917786354473, guid: 791a7a1527b447245ba6b354f53c8174,
         type: 3}
       propertyPath: m_Enabled
@@ -1651,7 +1659,7 @@ PrefabInstance:
     - target: {fileID: 7947108918345380497, guid: 791a7a1527b447245ba6b354f53c8174,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7947108918345380497, guid: 791a7a1527b447245ba6b354f53c8174,
         type: 3}
@@ -1686,7 +1694,7 @@ PrefabInstance:
     - target: {fileID: 7947108918992831538, guid: 791a7a1527b447245ba6b354f53c8174,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7947108918992831538, guid: 791a7a1527b447245ba6b354f53c8174,
         type: 3}
