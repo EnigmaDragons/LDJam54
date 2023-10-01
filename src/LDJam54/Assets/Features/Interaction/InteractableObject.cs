@@ -1,23 +1,31 @@
 ﻿using System;
 using DG.Tweening;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
     [SerializeField] private Renderer renderer;
-    
+    [SerializeField] private Collider collider;
+    [SerializeField] private Collider[] colliders;
     public Rigidbody Body;
-    public Collider Collider;
     //Hold Details
     public bool CanBeHeld;
+    public DropSize DropSize;
     public float DistanceInFront;
     public float HeightOffset;
     [field: SerializeField] public float BobbingIntensity { get; private set; } = 0.05f;
-    //Set On Details
-    public bool CanBeSetOn;
-    public bool SnapToCenter;
-    
-    public Bounds Bounds => _bounds;
+
+    public Bounds Bounds
+    {
+        get
+        {
+            if (!_isHeld && !_isSettingDown)
+                _bounds = collider.bounds;
+            return _bounds;
+        }
+
+    }
     private Bounds _bounds;
     private bool _isSettingDown;
     private bool _isHeld;
@@ -28,7 +36,7 @@ public class InteractableObject : MonoBehaviour
     
     private float yOffset;
     
-    private void Start() => _bounds = Collider.bounds;
+    private void Start() => _bounds = collider.bounds;
 
     private void FixedUpdate()
     {
@@ -36,11 +44,12 @@ public class InteractableObject : MonoBehaviour
             return;
         transform.rotation = Quaternion.Lerp(transform.rotation, _setDownRotation, _setDownRotationSpeed * Time.fixedDeltaTime);
         Body.MovePosition(Vector3.MoveTowards(transform.position, _setDownDestination, _setDownSpeed * Time.fixedDeltaTime));
-        if (Vector3.Distance(Body.position, _setDownDestination) < 0.01f && Mathf.Abs(Mathf.Abs(Quaternion.Dot(transform.rotation, _setDownRotation) - 1)) < 0.05f)
+        if (Vector3.Distance(Body.position, _setDownDestination) < 0.01f && Mathf.Abs(Mathf.Abs(Quaternion.Dot(transform.rotation, _setDownRotation)) - 1) < 0.05f)
         {
+            transform.rotation = _setDownRotation;
             _isSettingDown = false;
             Body.useGravity = true;
-            Collider.enabled = true;
+            SetColliders(true);
         }
     }
 
@@ -50,7 +59,7 @@ public class InteractableObject : MonoBehaviour
         _isSettingDown = false;
         _isHeld = true;
         Body.useGravity = false;
-        Collider.enabled = false;
+        SetColliders(false);
     }
 
     public void SetDown(Vector3 destination, Quaternion rotation, float speed, float rotationSpeed)
@@ -68,7 +77,7 @@ public class InteractableObject : MonoBehaviour
         _isSettingDown = false;
         _isHeld = false;
         Body.useGravity = true;
-        Collider.enabled = true;
+        SetColliders(true);
     }
 
     public void Highlight()
@@ -82,7 +91,7 @@ public class InteractableObject : MonoBehaviour
     public void PlayShippedAnimation()
     {
         //1 disable collider & rigidbody
-        Collider.enabled = false;
+        SetColliders(false);
         Body.isKinematic = true;
         
         //set the material to transparent
@@ -117,4 +126,6 @@ public class InteractableObject : MonoBehaviour
         Body.AddTorque(new Vector3(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f)), ForceMode.Impulse);
         Body.AddForce(throwDirection * throwForce, ForceMode.Impulse);
     }
+
+    private void SetColliders(bool isEnabled) => colliders.ForEach(x => x.enabled = isEnabled);
 }
