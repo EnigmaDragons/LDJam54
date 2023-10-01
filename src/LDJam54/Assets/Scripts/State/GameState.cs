@@ -14,11 +14,19 @@ public sealed class GameState
 
     public string PlayerID = "464947";
     public List<Worker> Coworkers = new() { new Worker() { Name = "23472" } };
+    public float ClockSpeedFactor = 1f;
     public KPI[] ActiveKPIs = { KPI.BoxShipped };
+    public int[] FlowActiveKPIs = { 0 };
     public SerializableDictionary<KPI, CoworkerAverage> CoworkerStandardPerformance = new() {
         { KPI.PlacedCorrectly, new CoworkerAverage() },
         { KPI.BoxShipped, new CoworkerAverage { BaseKPI = 20, SkillBonus = 1, ExploitBaseKpi = 50, ExploitSkillBonus = 3 } },
         { KPI.BoxUnsorted, new CoworkerAverage() },
+    };
+    public SerializableDictionary<KPI, int> KPIScoring = new()
+    {
+        { KPI.PlacedCorrectly, 20 },
+        { KPI.BoxShipped, 20 },
+        { KPI.BoxUnsorted, 20 },
     };
     public SerializableDictionary<KPI, int> KPIs = new() {
         { KPI.PlacedCorrectly, 0 },
