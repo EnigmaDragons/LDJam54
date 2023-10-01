@@ -61,8 +61,22 @@ public sealed class CurrentGameState
         });
     }
     
+    public void DecrementKPI(KPI kpi, int amount = 1)
+    {
+        UpdateState(g =>
+        {
+            g.KPIs[kpi] -= amount;
+            return g;
+        });
+    }
+    
     public static void IncrementKPIStatic(KPI kpi, int amount = 1)
     {
         Instance.IncrementKPI(kpi, amount);
+    }
+    
+    public static void DecrementKPIStatic(KPI kpi, int amount = 1)
+    {
+        Instance.DecrementKPI(kpi, amount);
     }
 }

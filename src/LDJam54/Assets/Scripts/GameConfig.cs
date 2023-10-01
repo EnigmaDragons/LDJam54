@@ -8,6 +8,7 @@ public class GameConfig : ScriptableObject
     public List<Worker> Coworkers = new List<Worker>();
     public CoworkerAverage BoxShippedAverage;
     public CoworkerAverage PlacedCorrectlyAverage;
+    public CoworkerAverage BoxUnsortedAverage;
     
     [Header("Timing/Franticness")]
     public float ClockSpeedFactor = 1f;

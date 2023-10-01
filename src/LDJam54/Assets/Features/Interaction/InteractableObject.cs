@@ -129,5 +129,9 @@ public class InteractableObject : MonoBehaviour
         Body.AddForce(throwDirection * throwForce, ForceMode.Impulse);
     }
 
-    private void SetColliders(bool isEnabled) => colliders.ForEach(x => x.enabled = isEnabled);
+    private void SetColliders(bool isEnabled)
+    {
+        colliders.ForEach(x => x.enabled = isEnabled);
+        collider.isTrigger = !isEnabled;
+    }
 }
