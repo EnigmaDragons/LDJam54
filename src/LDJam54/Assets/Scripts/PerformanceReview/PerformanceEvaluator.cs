@@ -76,7 +76,7 @@ public static class PerformanceEvaluator
                 var score = 100 - (int)Math.Floor(100f * (placement - 1) / (performanceReview.KPIsPerPerson.Count - 1)) + (kpiValue / 2);
                 scores[j] = score;
             }
-            performanceReview.FinalKpisPerPerson[name] = scores;
+            performanceReview.FinalKpisPerPerson[name] = scores.Sum();
         }
         
         var worstPlacements = workerScores.Max();
