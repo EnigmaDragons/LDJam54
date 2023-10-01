@@ -25,6 +25,9 @@ public sealed class GameState
     };
     public PerformanceReview PerformanceReview = new PerformanceReview();
     public SerializableDictionary<string, bool> CutsceneStoryStates = new();
+
+    public int CurrentDayNumber = 1;
+    public int TotalDays = 1;
 }
 
 
