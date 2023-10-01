@@ -5,7 +5,7 @@
 			<value>Boss_KPI_Shelving</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{e4d2e4d6-0a11-46ad-b41d-43421f541c11}</destination>
@@ -76,10 +76,10 @@
 	</object>
 	<object class="SingleSound" id="{e73b9251-6491-46ee-a11f-b5ead75cec67}">
 		<property name="length">
-			<value>17.580408163265307</value>
+			<value>18.580416666666668</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{3a811529-4aad-4f08-8299-bfa61ebc792f}</destination>
+			<destination>{247ce137-8340-4232-ae69-cbd738ce6613}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{5c501b14-08d8-49dd-9513-c4e15391dcdc}">
@@ -90,10 +90,25 @@
 	<object class="MixerBusPanner" id="{089af8ab-5492-4e8f-be0a-8b235e4399a0}" />
 	<object class="MixerBusEffectChain" id="{9808a114-7c6a-4344-9cab-4eb4cd627c4c}">
 		<relationship name="effects">
+			<destination>{09db1c71-c35b-442b-af05-d0661133a79f}</destination>
 			<destination>{9f6cec27-a4a6-4ae1-910e-a0bd1534b9fa}</destination>
+			<destination>{8b79cf10-dd2a-4b43-a385-e68d0ab5f2e1}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{41880b2c-310c-4f27-b877-727feba14e8e}" />
 	<object class="MixerBusFader" id="{3b8fadc2-772b-4ed4-93e4-4e4abeb11900}" />
+	<object class="DelayEffect" id="{09db1c71-c35b-442b-af05-d0661133a79f}">
+		<property name="delay">
+			<value>240</value>
+		</property>
+		<property name="level">
+			<value>-13</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{9f6cec27-a4a6-4ae1-910e-a0bd1534b9fa}" />
+	<object class="SpatialiserEffect" id="{8b79cf10-dd2a-4b43-a385-e68d0ab5f2e1}">
+		<property name="overrideRange">
+			<value>true</value>
+		</property>
+	</object>
 </objects>
