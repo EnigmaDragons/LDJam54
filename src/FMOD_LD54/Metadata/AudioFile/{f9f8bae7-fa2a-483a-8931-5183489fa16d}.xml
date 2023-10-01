@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{d216a12a-3440-4071-ad9b-75e7cfe25a4d}">
+	<object class="AudioFile" id="{f9f8bae7-fa2a-483a-8931-5183489fa16d}">
 		<property name="assetPath">
-			<value>Footsteps/Stone/Footstep_Stone_Decay_09.wav</value>
+			<value>Footsteps/Jumps/JumpStarts_Gravel_01.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
 		</property>
 		<property name="channelCount">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<property name="length">
-			<value>0.265125</value>
+			<value>0.42420833333333335</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{a1961438-bdc9-4db6-8e5e-89924b8aa068}</destination>
