@@ -11,9 +11,15 @@ public class ShelfRandomizer : MonoBehaviour
     [SerializeField] private ColoredBox smallBox;
     [SerializeField] private ColoredBox medBox;
     [SerializeField] private ColoredBox largeBox;
+    [SerializeField] private float delay;
 
-    private void Start()
+    private float _t;
+    
+    private void Awake()
     {
+        coloredContainer.IgnoreCollision = true;
+        _t = delay;
+        
         var randomTargets = targets.Shuffled();
         while (randomTargets.Count > 0)
         {
@@ -41,5 +47,14 @@ public class ShelfRandomizer : MonoBehaviour
             }
             randomTargets.RemoveAt(0);
         }
+    }
+
+    private void Update()
+    {
+        if (_t <= 0)
+            return;
+        _t -= Time.deltaTime;
+        if (_t <= 0)
+            coloredContainer.IgnoreCollision = false;
     }
 }

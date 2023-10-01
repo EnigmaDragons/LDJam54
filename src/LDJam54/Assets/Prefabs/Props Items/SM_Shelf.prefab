@@ -4439,6 +4439,7 @@ MonoBehaviour:
     - {fileID: 2100000, guid: b153a0e571122da4586cd683196e859a, type: 2}
     - {fileID: 2100000, guid: 2a38f9bbfc938ac46942f461bb9124f3, type: 2}
     - {fileID: 2100000, guid: b5afa45eddcf42d4d87b61045a3b5116, type: 2}
+  IgnoreCollision: 0
 --- !u!1 &5417368685462191899
 GameObject:
   m_ObjectHideFlags: 0
@@ -5751,6 +5752,7 @@ MonoBehaviour:
   medBox: {fileID: 4186213697863101710, guid: eb511f0b84b816b43b4b6d76dc29a8d9, type: 3}
   largeBox: {fileID: 1109256900267637362, guid: 877af0e52f9f62f4fb1599e9977dc03c,
     type: 3}
+  delay: 5
 --- !u!1 &6743073051183008153
 GameObject:
   m_ObjectHideFlags: 0
