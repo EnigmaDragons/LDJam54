@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{ac693a53-b53e-4653-a802-c9f6575538ec}">
+	<object class="AudioFile" id="{163175d7-b8bc-4584-8094-ec391839f608}">
 		<property name="assetPath">
-			<value>Soundly Voice Designer, Guy 1.wav</value>
+			<value>Interactables/Doors/DoorLockCombo_1.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
 		</property>
 		<property name="channelCount">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<property name="length">
-			<value>1.37825</value>
+			<value>0.69170833333333337</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{a1961438-bdc9-4db6-8e5e-89924b8aa068}</destination>
