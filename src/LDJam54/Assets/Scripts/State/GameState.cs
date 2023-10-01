@@ -18,10 +18,12 @@ public sealed class GameState
     public SerializableDictionary<KPI, CoworkerAverage> CoworkerStandardPerformance = new() {
         { KPI.PlacedCorrectly, new CoworkerAverage() },
         { KPI.BoxShipped, new CoworkerAverage { BaseKPI = 20, SkillBonus = 1, ExploitBaseKpi = 50, ExploitSkillBonus = 3 } },
+        { KPI.BoxUnsorted, new CoworkerAverage() },
     };
     public SerializableDictionary<KPI, int> KPIs = new() {
         { KPI.PlacedCorrectly, 0 },
         { KPI.BoxShipped, 0 },
+        { KPI.BoxUnsorted, 0 },
     };
     public PerformanceReview PerformanceReview = new PerformanceReview();
     public SerializableDictionary<string, bool> CutsceneStoryStates = new();
@@ -35,4 +37,5 @@ public enum KPI
 {
     PlacedCorrectly = 0,
     BoxShipped = 1,
+    BoxUnsorted = 2,
 }
