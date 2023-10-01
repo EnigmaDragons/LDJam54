@@ -453,3 +453,72 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4119c8b4eb72c4290a04b439f28e47, type: 3}
+--- !u!1001 &7684705530317503997
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2939250689827294906, guid: f0970fabce279a1418dee92b8d62659b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939250689827294906, guid: f0970fabce279a1418dee92b8d62659b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939250689827294906, guid: f0970fabce279a1418dee92b8d62659b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939250689827294906, guid: f0970fabce279a1418dee92b8d62659b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939250689827294906, guid: f0970fabce279a1418dee92b8d62659b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939250689827294906, guid: f0970fabce279a1418dee92b8d62659b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939250689827294906, guid: f0970fabce279a1418dee92b8d62659b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939250689827294906, guid: f0970fabce279a1418dee92b8d62659b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939250689827294906, guid: f0970fabce279a1418dee92b8d62659b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939250689827294906, guid: f0970fabce279a1418dee92b8d62659b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939250689827294906, guid: f0970fabce279a1418dee92b8d62659b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7104967872240950885, guid: f0970fabce279a1418dee92b8d62659b,
+        type: 3}
+      propertyPath: m_Name
+      value: Warehouse_Wall_DoubleSided_6Height
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f0970fabce279a1418dee92b8d62659b, type: 3}

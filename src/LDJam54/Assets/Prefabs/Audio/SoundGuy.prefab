@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7176852665970988953}
   - component: {fileID: 8138817844838655752}
+  - component: {fileID: 8895141721937899204}
   m_Layer: 0
   m_Name: SoundGuy
   m_TagString: Untagged
@@ -50,11 +51,23 @@ MonoBehaviour:
       Data2: 1280470008
       Data3: -1752361833
       Data4: -1933694390
-    Path: event:/Boxes/BoxPickUp
+    Path: event:/ENVIRONMENT/Boxes/BoxPickUp
   boxSetDown:
     Guid:
       Data1: 26751881
       Data2: 1270295353
       Data3: -2017328720
       Data4: -1503951190
-    Path: event:/Boxes/BoxSetDown
+    Path: event:/ENVIRONMENT/Boxes/BoxSetDown
+--- !u!114 &8895141721937899204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8941218086166663801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9ad07a1d2493440b3b76db1dc0ff7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
