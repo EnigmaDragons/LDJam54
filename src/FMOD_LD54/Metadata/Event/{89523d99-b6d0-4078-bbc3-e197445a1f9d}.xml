@@ -39,7 +39,7 @@
 	</object>
 	<object class="MasterTrack" id="{21b286f1-4e22-429e-bf47-f08b2163d535}">
 		<relationship name="modules">
-			<destination>{587e66c5-617b-43fa-9c08-afcc9ee8285b}</destination>
+			<destination>{37dac6ef-6e9f-44c3-bcb7-8b7a9252d1f2}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{0254cf01-4433-4a1d-9a19-16cc8dce7752}</destination>
@@ -60,7 +60,7 @@
 	<object class="MarkerTrack" id="{ab6aef44-5b57-4d6c-89b6-a2f3d0369a4d}" />
 	<object class="Timeline" id="{28ecb5fe-9cc8-4b73-a98c-fb0e089cd64e}">
 		<relationship name="modules">
-			<destination>{587e66c5-617b-43fa-9c08-afcc9ee8285b}</destination>
+			<destination>{37dac6ef-6e9f-44c3-bcb7-8b7a9252d1f2}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{0254cf01-4433-4a1d-9a19-16cc8dce7752}">
@@ -74,7 +74,7 @@
 			<destination>{be13ec4f-b4da-44b7-aaff-ac5291635edb}</destination>
 		</relationship>
 	</object>
-	<object class="SingleSound" id="{587e66c5-617b-43fa-9c08-afcc9ee8285b}">
+	<object class="SingleSound" id="{37dac6ef-6e9f-44c3-bcb7-8b7a9252d1f2}">
 		<property name="length">
 			<value>20.644083333333334</value>
 		</property>
@@ -103,12 +103,12 @@
 			<value>240</value>
 		</property>
 		<property name="level">
-			<value>-13</value>
+			<value>-21</value>
 		</property>
 	</object>
 	<object class="ThreeEQEffect" id="{85034ac7-05b4-40a9-bd95-2e2fe2feb207}">
 		<property name="lowGain">
-			<value>-6.5</value>
+			<value>-2</value>
 		</property>
 		<property name="midGain">
 			<value>4.5</value>
@@ -121,6 +121,9 @@
 		</property>
 		<property name="overrideRange">
 			<value>true</value>
+		</property>
+		<property name="panBlend">
+			<value>0.429999977</value>
 		</property>
 	</object>
 </objects>

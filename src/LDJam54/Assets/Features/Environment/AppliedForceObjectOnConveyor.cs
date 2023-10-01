@@ -13,8 +13,6 @@ public class AppliedForceObjectOnConveyor : MonoBehaviour
     {
         if (body.useGravity && !body.isKinematic && forceSources.Count > 0)
             body.gameObject.transform.position += forceSources[0].Item2 * Time.deltaTime; //body.AddForce(forceSources[0].Item2, ForceMode.VelocityChange);
-        else if (forceSources.Count > 0)
-            forceSources.Clear();
     }
 
     public void AddForce(Vector3 force, GameObject owner)

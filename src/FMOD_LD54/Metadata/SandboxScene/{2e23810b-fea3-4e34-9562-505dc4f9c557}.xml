@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="SandboxScene" id="{2e23810b-fea3-4e34-9562-505dc4f9c557}">
+		<property name="name">
+			<value>DX sidechain</value>
+		</property>
+		<relationship name="folder">
+			<destination>{4d41994e-966a-4091-a3d6-9ea093de8224}</destination>
+		</relationship>
+		<relationship name="markerTracks">
+			<destination>{5375434a-bdf6-4aaa-a6d1-fff18fc94e83}</destination>
+		</relationship>
+		<relationship name="timeline">
+			<destination>{d6800dcb-f3d2-4eef-81f2-64dfd2df21f8}</destination>
+		</relationship>
+		<relationship name="listeners">
+			<destination>{29695dca-0f95-4a0d-805f-176e32a02290}</destination>
+		</relationship>
+		<relationship name="emitters">
+			<destination>{79136083-1d7b-4fae-afa3-f7b6c38271a8}</destination>
+			<destination>{b23b0f6b-9367-4f72-a28c-177dc98f19ad}</destination>
+		</relationship>
+	</object>
+	<object class="MarkerTrack" id="{5375434a-bdf6-4aaa-a6d1-fff18fc94e83}" />
+	<object class="Timeline" id="{d6800dcb-f3d2-4eef-81f2-64dfd2df21f8}" />
+	<object class="SandboxListener" id="{29695dca-0f95-4a0d-805f-176e32a02290}">
+		<property name="positionX">
+			<value>-4.27499962</value>
+		</property>
+		<property name="positionZ">
+			<value>3.47500014</value>
+		</property>
+		<property name="rotationY">
+			<value>159.301163</value>
+		</property>
+	</object>
+	<object class="SandboxEmitter" id="{79136083-1d7b-4fae-afa3-f7b6c38271a8}">
+		<property name="positionX">
+			<value>-6.12500048</value>
+		</property>
+		<property name="positionZ">
+			<value>5.5250001</value>
+		</property>
+		<property name="rotationY">
+			<value>93.1022644</value>
+		</property>
+		<relationship name="event">
+			<destination>{b7d43e99-3576-4d1c-b783-4e782424a4ac}</destination>
+		</relationship>
+	</object>
+	<object class="SandboxEmitter" id="{b23b0f6b-9367-4f72-a28c-177dc98f19ad}">
+		<property name="positionX">
+			<value>-2.875</value>
+		</property>
+		<property name="positionZ">
+			<value>5.67500019</value>
+		</property>
+		<relationship name="event">
+			<destination>{2e308e76-d415-4277-85db-2109a1132a11}</destination>
+		</relationship>
+	</object>
+</objects>
