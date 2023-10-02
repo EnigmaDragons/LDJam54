@@ -329,8 +329,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OpenSpeed: 1
   CloseSpeed: 1
-  isAutomatic: 0
-  AutoClose: 0
+  isAutomatic: 1
+  AutoClose: 1
   DoubleSidesOpen: 0
   PlayerColliderTag: Player
   OpenForwardAnimName: Door_anim
