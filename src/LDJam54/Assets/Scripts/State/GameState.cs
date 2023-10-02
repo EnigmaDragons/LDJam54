@@ -13,6 +13,7 @@ public sealed class GameState
     // This is necessary to preserve backwards save compatibility.
 
     public string PlayerID = "464947";
+    public bool PlayerIsFired = false;
 
     public float ClockSpeedFactor = 1f;
     public float BoxSpawnInterval = 1.5f;
