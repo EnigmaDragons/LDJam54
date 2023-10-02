@@ -34,7 +34,7 @@ Transform:
   - {fileID: 4427940988088578}
   m_Father: {fileID: 4865092467320516}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -13.504196, z: 0}
 --- !u!33 &33215362653550792
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -130,7 +130,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4262289174566130}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.1550045}
 --- !u!33 &33700108657604134
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -284,6 +284,7 @@ Animation:
   m_Animation: {fileID: 7400000, guid: dc411aa635104884d8f2f2344f5ab700, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: dc411aa635104884d8f2f2344f5ab700, type: 2}
+  - {fileID: 7400000, guid: d095dde54af1f4a43a0ff34203aeef18, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -331,9 +332,9 @@ MonoBehaviour:
   CloseSpeed: 1
   isAutomatic: 1
   AutoClose: 1
-  DoubleSidesOpen: 0
+  DoubleSidesOpen: 1
   PlayerColliderTag: Player
-  OpenForwardAnimName: Door_anim
+  OpenForwardAnimName: Door_anim_backwards
   OpenBackwardAnimName: Door_anim
   startedLocked: 0
   lockedVisual: {fileID: 8322088160096003736}
