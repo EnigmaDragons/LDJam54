@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using Util;
 
 namespace Features.Environment
@@ -9,7 +8,10 @@ namespace Features.Environment
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.HasComponent<InteractableObject>())
+            {
+                Message.Publish(new IncineratorUsed(other.transform.position));
                 Destroy(other.gameObject);
+            }
         }
     }
 }

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Linq;
-using UnityEditor.Experimental.GraphView;
+﻿using System.Linq;
 using UnityEngine;
-using UnityEngine.Serialization;
 using System.Collections;
 
 namespace Features.PlayerControls
@@ -78,7 +75,6 @@ namespace Features.PlayerControls
         {
             _rigidbody.AddForce(Vector3.up * gameConfig.PlayerJumpForce, ForceMode.Impulse);
             animatorToSoundController.WalkAnimationStop();
-            footStepManager.JumpSound(); 
             isJumping = true;
             StartCoroutine(JumpIsOver());
         }
@@ -93,10 +89,11 @@ namespace Features.PlayerControls
         private IEnumerator JumpIsOver()
         {
            while (isJumping)
-            {
-                yield return new WaitForSeconds(waitTime);
-                isJumping = false;
-            }
+           {
+               yield return new WaitForSeconds(waitTime);
+               isJumping = false;
+               footStepManager.JumpSound(); 
+           }
         }
     }
 }

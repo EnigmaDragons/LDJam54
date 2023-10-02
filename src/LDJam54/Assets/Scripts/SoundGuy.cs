@@ -8,9 +8,12 @@ public class SoundGuy : MonoBehaviour
 {
     [SerializeField] private EventReference boxLifted; 
     [SerializeField] private EventReference boxSetDown;
+    [SerializeField] private EventReference incineratorUsed;
     [SerializeField] private EventReference doorOpened;
     [SerializeField] private EventReference doorClosed;
     [SerializeField] private EventReference workingMusic;
+    [SerializeField] private EventReference workingMusicDay2;
+    [SerializeField] private EventReference gameOverMusic;
     [SerializeField] private EventReference jumpPad;
     [SerializeField] private EventReference shippingTeleporter;
     [SerializeField] private EventReference happyBossComment;
@@ -23,14 +26,21 @@ public class SoundGuy : MonoBehaviour
     {
         Message.Subscribe<ObjectPickedUp>(OnObjectPickedUp, this);
         Message.Subscribe<ObjectSetDown>(OnObjectSetDown, this);
+        Message.Subscribe<IncineratorUsed>(OnIncineratorUsed, this);
         Message.Subscribe<WorkdayStarted>(OnWorkdayStarted, this);
         Message.Subscribe<WorkdayNearlyOver>(OnWorkdayNearlyOver, this);
+        Message.Subscribe<WorkdayEnded>(OnWorkdayEnded, this);
         Message.Subscribe<WasFired>(OnWasFired, this);
         Message.Subscribe<DoorOpened>(OnDoorOpened, this);
         Message.Subscribe<DoorClosed>(OnDoorClosed, this);
         Message.Subscribe<TeleporterActivated>(OnTeleporterActivated, this);
         Message.Subscribe<JumpPadUsed>(OnJumpPadUsed, this);
         Message.Subscribe<PlayBossComment>(OnBossComment, this);
+    }
+
+    private void OnIncineratorUsed(IncineratorUsed obj)
+    {
+        PlayOneShot(incineratorUsed, obj.Position);
     }
 
     private void OnBossComment(PlayBossComment obj)
@@ -45,7 +55,9 @@ public class SoundGuy : MonoBehaviour
 
     private void OnWasFired(WasFired obj)
     {
-        
+        _currentMusic.stop(STOP_MODE.ALLOWFADEOUT);
+        _currentMusic = RuntimeManager.CreateInstance(gameOverMusic);
+        _currentMusic.start(); 
     }
 
     private void OnJumpPadUsed(JumpPadUsed obj)
@@ -75,10 +87,26 @@ public class SoundGuy : MonoBehaviour
 
     private void OnWorkdayStarted(WorkdayStarted obj)
     {
+        var currentDay = CurrentGameState.State.CurrentDayNumber;
+        if(currentDay == 1)
+        {
+            _currentMusic.stop(STOP_MODE.ALLOWFADEOUT);
+            _currentMusic = RuntimeManager.CreateInstance(workingMusic);
+            _currentMusic.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject));
+            _currentMusic.start();
+        }
+
+        if (currentDay == 2)
+        {
+            _currentMusic.stop(STOP_MODE.ALLOWFADEOUT);
+            _currentMusic = RuntimeManager.CreateInstance(workingMusic);
+            _currentMusic.start();
+        }
+    }
+
+    private void OnWorkdayEnded(WorkdayEnded obj)
+    {
         _currentMusic.stop(STOP_MODE.ALLOWFADEOUT);
-        _currentMusic = RuntimeManager.CreateInstance(workingMusic);
-        _currentMusic.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
-        _currentMusic.start();
     }
 
     private void OnDisable() => Message.Unsubscribe(this);

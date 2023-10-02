@@ -59,6 +59,13 @@ MonoBehaviour:
       Data3: -2017328720
       Data4: -1503951190
     Path: event:/ENVIRONMENT/Boxes/BoxSetDown
+  incineratorUsed:
+    Guid:
+      Data1: 880391554
+      Data2: 1293718566
+      Data3: -741713758
+      Data4: 1679674561
+    Path: event:/ENVIRONMENT/Boxes/BoxBurn
   doorOpened:
     Guid:
       Data1: -1592427143
@@ -80,6 +87,13 @@ MonoBehaviour:
       Data3: 153213829
       Data4: 287970209
     Path: event:/MUSIC/WorkBossa_Level_1
+  workingMusicDay2:
+    Guid:
+      Data1: 1933653943
+      Data2: 1233456103
+      Data3: -463524967
+      Data4: -1218756534
+    Path: event:/MUSIC/WorkBossa_Level_2
   jumpPad:
     Guid:
       Data1: 1283234616
