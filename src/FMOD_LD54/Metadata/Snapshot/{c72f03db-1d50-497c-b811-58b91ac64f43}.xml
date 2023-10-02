@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="Snapshot" id="{c72f03db-1d50-497c-b811-58b91ac64f43}">
+		<property name="name">
+			<value>ReverbZoneLevels</value>
+		</property>
+		<relationship name="mixer">
+			<destination>{3739977e-35d8-49c1-9f24-ddccf5407f43}</destination>
+		</relationship>
+		<relationship name="automatableProperties">
+			<destination>{e01e5416-7cad-4d57-8138-31fa8ef47491}</destination>
+		</relationship>
+		<relationship name="markerTracks">
+			<destination>{6d793b9c-9052-4470-b17e-59cbd7f4c223}</destination>
+		</relationship>
+		<relationship name="timeline">
+			<destination>{f69a69e9-1f52-46af-9f9b-042978cd3331}</destination>
+		</relationship>
+		<relationship name="snapshotMasterTrack">
+			<destination>{7ef2140c-eb2c-45ea-b6e2-e2cc8f1bba79}</destination>
+		</relationship>
+		<relationship name="snapshotProperties">
+			<destination>{c7d05b83-1d6c-4ea3-b627-91b5006b6f65}</destination>
+			<destination>{1ae33b66-1c7f-4d4c-a424-b5179a393f6e}</destination>
+		</relationship>
+		<relationship name="snapshotTracks">
+			<destination>{b55ac3b4-572c-46fb-9a0e-d4ae45619f6c}</destination>
+		</relationship>
+	</object>
+	<object class="EventAutomatableProperties" id="{e01e5416-7cad-4d57-8138-31fa8ef47491}" />
+	<object class="MarkerTrack" id="{6d793b9c-9052-4470-b17e-59cbd7f4c223}" />
+	<object class="Timeline" id="{f69a69e9-1f52-46af-9f9b-042978cd3331}" />
+	<object class="SnapshotMasterTrack" id="{7ef2140c-eb2c-45ea-b6e2-e2cc8f1bba79}" />
+	<object class="SnapshotProperty" id="{c7d05b83-1d6c-4ea3-b627-91b5006b6f65}">
+		<property name="propertyName">
+			<value>level</value>
+		</property>
+		<property name="value">
+			<value>-8.5</value>
+		</property>
+		<relationship name="automatableObject">
+			<destination>{e75d89ea-2bb3-4d3e-bae0-37da177fd5d3}</destination>
+		</relationship>
+	</object>
+	<object class="SnapshotProperty" id="{1ae33b66-1c7f-4d4c-a424-b5179a393f6e}">
+		<property name="propertyName">
+			<value>level</value>
+		</property>
+		<property name="value">
+			<value>-24.5</value>
+		</property>
+		<relationship name="automatableObject">
+			<destination>{41cf8cac-5ca2-44f7-b841-cd5e1a105590}</destination>
+		</relationship>
+	</object>
+	<object class="SnapshotTrack" id="{b55ac3b4-572c-46fb-9a0e-d4ae45619f6c}">
+		<relationship name="mixerStrip">
+			<destination>{d0857701-35e6-463b-bbbd-da93baa5b2c2}</destination>
+		</relationship>
+	</object>
+</objects>

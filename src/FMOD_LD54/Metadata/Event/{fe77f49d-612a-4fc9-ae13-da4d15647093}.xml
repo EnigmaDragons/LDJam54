@@ -61,7 +61,7 @@
 	</object>
 	<object class="EventAutomatableProperties" id="{25b0ce20-d9ac-4d33-be89-ba2a18d4d6d2}">
 		<property name="maxVoices">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<property name="voiceStealing">
 			<value>1</value>
@@ -338,11 +338,7 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{40c07af8-6f6b-4e6d-8439-c14824776510}" />
-	<object class="SpatialiserEffect" id="{b73b0a4e-2d56-4891-97a5-8edf3967143c}">
-		<property name="overrideRange">
-			<value>true</value>
-		</property>
-	</object>
+	<object class="SpatialiserEffect" id="{b73b0a4e-2d56-4891-97a5-8edf3967143c}" />
 	<object class="MixerBusFader" id="{ff28783d-f339-4d0d-8aa3-77028abd9f6f}" />
 	<object class="MixerBusFader" id="{bf6c83ab-4c8e-448d-9d68-3d79739de4e8}" />
 	<object class="MixerBusFader" id="{ea037a96-dbf1-4d20-840e-2399216f3055}" />
