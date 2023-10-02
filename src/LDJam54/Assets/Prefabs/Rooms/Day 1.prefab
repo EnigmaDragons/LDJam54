@@ -2074,6 +2074,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8589372410794136952, guid: 062a9e604a08260438a02a3ab084bc9a,
+        type: 3}
+      propertyPath: initialForwardText
+      value: Meeting Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589372410794136952, guid: 062a9e604a08260438a02a3ab084bc9a,
+        type: 3}
+      propertyPath: initialBackwardText
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 062a9e604a08260438a02a3ab084bc9a, type: 3}
 --- !u!4 &5834059362180281676 stripped

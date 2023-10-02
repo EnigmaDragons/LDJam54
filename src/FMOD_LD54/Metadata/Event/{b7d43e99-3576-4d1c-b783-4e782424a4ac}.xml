@@ -39,7 +39,7 @@
 	</object>
 	<object class="MasterTrack" id="{25b217e2-bb24-451e-b3bc-e424786e258d}">
 		<relationship name="modules">
-			<destination>{e73b9251-6491-46ee-a11f-b5ead75cec67}</destination>
+			<destination>{b0a3ba81-b218-4cbd-a8e1-9c93ec78b691}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{b7293dcb-2969-4a3e-bc5b-b3488e336f51}</destination>
@@ -60,7 +60,7 @@
 	<object class="MarkerTrack" id="{05da4bcb-7b43-449e-8a81-fed04bf59899}" />
 	<object class="Timeline" id="{f03cd4e1-15d4-4615-83a3-b70f6a37e84a}">
 		<relationship name="modules">
-			<destination>{e73b9251-6491-46ee-a11f-b5ead75cec67}</destination>
+			<destination>{b0a3ba81-b218-4cbd-a8e1-9c93ec78b691}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{b7293dcb-2969-4a3e-bc5b-b3488e336f51}">
@@ -74,7 +74,7 @@
 			<destination>{d5206e7c-4765-4021-8417-54999838dce0}</destination>
 		</relationship>
 	</object>
-	<object class="SingleSound" id="{e73b9251-6491-46ee-a11f-b5ead75cec67}">
+	<object class="SingleSound" id="{b0a3ba81-b218-4cbd-a8e1-9c93ec78b691}">
 		<property name="length">
 			<value>18.580416666666668</value>
 		</property>
@@ -91,6 +91,7 @@
 	<object class="MixerBusEffectChain" id="{9808a114-7c6a-4344-9cab-4eb4cd627c4c}">
 		<relationship name="effects">
 			<destination>{09db1c71-c35b-442b-af05-d0661133a79f}</destination>
+			<destination>{bc5c7f26-d28c-4231-acad-1ca089f07eba}</destination>
 			<destination>{9f6cec27-a4a6-4ae1-910e-a0bd1534b9fa}</destination>
 			<destination>{8b79cf10-dd2a-4b43-a385-e68d0ab5f2e1}</destination>
 		</relationship>
@@ -102,13 +103,24 @@
 			<value>240</value>
 		</property>
 		<property name="level">
-			<value>-13</value>
+			<value>-19.5</value>
+		</property>
+	</object>
+	<object class="ThreeEQEffect" id="{bc5c7f26-d28c-4231-acad-1ca089f07eba}">
+		<property name="lowGain">
+			<value>-2</value>
+		</property>
+		<property name="midGain">
+			<value>4.5</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{9f6cec27-a4a6-4ae1-910e-a0bd1534b9fa}" />
 	<object class="SpatialiserEffect" id="{8b79cf10-dd2a-4b43-a385-e68d0ab5f2e1}">
 		<property name="overrideRange">
 			<value>true</value>
+		</property>
+		<property name="panBlend">
+			<value>0.479999989</value>
 		</property>
 	</object>
 </objects>
