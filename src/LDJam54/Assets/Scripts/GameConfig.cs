@@ -11,6 +11,7 @@ public class GameConfig : ScriptableObject
     public int BoxShippingScore;
     public int PlacedCorrectlyScore;
     public int BoxUnsortedFixedScore;
+    public int BoxUnloadedFixedScore;
 
     [Header("Player Movement")] 
     public float PlayerWalkSpeed = 5f;

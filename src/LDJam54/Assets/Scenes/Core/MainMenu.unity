@@ -155,13 +155,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 105923189}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 977845828}
-  m_RootOrder: 1
+  m_Father: {fileID: 2081213677}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.1, y: 0.7}
   m_AnchorMax: {x: 0.9, y: 0.7}
@@ -610,7 +610,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 977845828}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -908,7 +908,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2081213677}
-  - {fileID: 105923190}
   - {fileID: 2037739262}
   - {fileID: 776589808}
   - {fileID: 251863199}
@@ -1190,7 +1189,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1909727432}
+  m_TargetGraphic: {fileID: 1279554867}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -1516,6 +1515,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8051298164315304975, guid: 8c1cd85eb28af73428c711c918348acb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9065897193292904404, guid: 8c1cd85eb28af73428c711c918348acb,
         type: 3}
       propertyPath: m_Name
@@ -1605,7 +1609,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1909727432}
+  m_TargetGraphic: {fileID: 1827418396}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -2176,7 +2180,7 @@ RectTransform:
   - {fileID: 1279554865}
   - {fileID: 1827418394}
   m_Father: {fileID: 977845828}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.1, y: 0.05}
   m_AnchorMax: {x: 0.9, y: 0.6}
@@ -2276,7 +2280,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 105923190}
   m_Father: {fileID: 977845828}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2472,7 +2477,7 @@ PrefabInstance:
     - target: {fileID: 1866759171860415811, guid: db6e896a854233445bb472ee1f3a8324,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1866759171860415811, guid: db6e896a854233445bb472ee1f3a8324,
         type: 3}
