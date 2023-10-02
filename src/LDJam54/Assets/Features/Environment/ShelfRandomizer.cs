@@ -35,11 +35,11 @@ public class ShelfRandomizer : MonoBehaviour
                 else if (target.Size == DropSize.Large)
                     box = largeBox;
                 var yExtents = box.MeshFilter.sharedMesh.bounds.extents.y;
-                var instBox = Instantiate(box, target.GetLocation(yExtents), transform.rotation);
+                var instBox = Instantiate(box, target.GetLocation(yExtents), transform.rotation, transform.parent);
                 instBox.SetColor(coloredContainer.color);
                 if (Rng.Chance(chanceOfStack) && target.Size != DropSize.Large)
                 {
-                    var stackedBox = Instantiate(box, target.GetLocation(yExtents) + new Vector3(0, yExtents * 2f + 0.01f, 0), transform.rotation);
+                    var stackedBox = Instantiate(box, target.GetLocation(yExtents) + new Vector3(0, yExtents * 2f + 0.01f, 0), transform.rotation, transform.parent);
                     stackedBox.SetColor(coloredContainer.color);
                 }
             }

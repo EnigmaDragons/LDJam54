@@ -4,4 +4,5 @@
     BoxesShipped = 1,
     BoxesUnsorted = 2,
     BoxesUnloaded = 3,
+    BoxShippingMistakes = 4,
 }

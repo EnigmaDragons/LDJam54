@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace Features.Interaction
 {
-    public class PlayerInteractionController : MonoBehaviour
+    public class PlayerInteractionController : OnMessage<ObjectTeleported>
     {
         private static int interactableLayer = 1 << 3;
         private static int dropLayer = 1 << 6;
@@ -268,6 +268,15 @@ namespace Features.Interaction
                 var targetPosition = transform.position + transform.forward * x.DistanceInFront + new Vector3(0, x.HeightOffset, 0) + new Vector3(0, yoffset, 0);
                 x.Body.MovePosition(Vector3.MoveTowards(x.transform.position, targetPosition, objectSpeed * Time.fixedDeltaTime));
             });
+        }
+
+        protected override void Execute(ObjectTeleported msg)
+        {
+            if (msg.Obj == held.Value)
+            {
+                held.Value.transform.parent = heldParent.Value;
+                held = Maybe<InteractableObject>.Missing();
+            }
         }
     }
 }
