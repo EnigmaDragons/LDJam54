@@ -98,7 +98,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{d4608700-6b9f-43af-91bb-483d0744ca5a}">
 		<property name="volume">
-			<value>-12</value>
+			<value>-3.5</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{cca832e6-db89-475f-a8d7-cc78012fa8bf}</destination>
@@ -159,7 +159,7 @@
 			<value>true</value>
 		</property>
 		<property name="triggerProbability">
-			<value>39</value>
+			<value>68</value>
 		</property>
 		<property name="start">
 			<value>0.57999999999999996</value>
@@ -303,7 +303,7 @@
 	<object class="MixerBusPanner" id="{e2eb6a82-1782-4c85-8c87-a046f5517a41}" />
 	<object class="MixerSend" id="{5f84f243-e210-4296-8782-2655b8b00122}">
 		<property name="level">
-			<value>-27</value>
+			<value>-13.5</value>
 		</property>
 		<property name="inputFormat">
 			<value>0</value>
