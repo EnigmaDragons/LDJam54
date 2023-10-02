@@ -9,13 +9,15 @@ public static class PerformanceEvaluator
         var state = CurrentGameState.State;
         var performanceReview = new PerformanceReview();
         var activeKPIs = state.ActiveKPIs;
-        var standardPerformance = state.CoworkerStandardPerformance;
+        //var standardPerformance = state.CoworkerStandardPerformance;
         var playerScores = new int[activeKPIs.Length];
         for (var i = 0; i < activeKPIs.Length; i++)
             playerScores[i] = state.KPIs[state.ActiveKPIs[i]] * state.KPIScoring[state.ActiveKPIs[i]];
         performanceReview.ScorePerPerson[state.PlayerID] = playerScores.Min();
-        
-        foreach(var person in state.Coworkers)
+        for (var i = 0; i < state.CoworkerScores.Length; i++)
+            performanceReview.ScorePerPerson[state.Coworkers[i]] = state.CoworkerScores[i];
+
+        /*foreach(var person in state.Coworkers)
         {
             var score = 1 / state.ClockSpeedFactor;
             var KPIspeeds = new float[activeKPIs.Length];
@@ -33,7 +35,7 @@ public static class PerformanceEvaluator
             score *= 1/focusWeights[0] * (focusWeights[0] / focusWeights.Sum());
             var finalScore = (int)Math.Floor(score);
             performanceReview.ScorePerPerson[person.Name] = state.ActiveKPIs.Select(kpi => finalScore - finalScore % state.KPIScoring[kpi]).Max();
-        }
+        }*/
 
         var worstScore = performanceReview.ScorePerPerson.Values.Min();
         var worstWorkers = new List<string>();

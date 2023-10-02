@@ -4,9 +4,7 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class ColoredBoxSpawner : MonoBehaviour
-{
-    [SerializeField] private GameConfig gameConfig;
-    
+{   
     [SerializeField]
     private List<GameObject> spawnPool = new List<GameObject>();
     [SerializeField]
@@ -32,7 +30,7 @@ public class ColoredBoxSpawner : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating(nameof(SpawnObject), 0.0f, gameConfig.BoxSpawnInterval);
+        InvokeRepeating(nameof(SpawnObject), 0.0f, CurrentGameState.State.BoxSpawnInterval);
     }
     
     private void SpawnObject()
