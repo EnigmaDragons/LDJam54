@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{9dc31efb-9230-47c6-bf49-75aa229cc28b}">
+		<property name="assetPath">
+			<value>BossVoice/Boss_KPI_Unloading_V2.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>23.066122448979591</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a1961438-bdc9-4db6-8e5e-89924b8aa068}</destination>
+		</relationship>
+	</object>
+</objects>
