@@ -77,6 +77,7 @@ public class SoundGuy : MonoBehaviour
     {
         _currentMusic.stop(STOP_MODE.ALLOWFADEOUT);
         _currentMusic = RuntimeManager.CreateInstance(workingMusic);
+        _currentMusic.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         _currentMusic.start();
     }
 
