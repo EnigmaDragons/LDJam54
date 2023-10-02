@@ -26,6 +26,7 @@ public class FirstPersonController : MonoBehaviour
     private Vector3 m_rotation;
     private Vector3 m_cameraRotation;
     private bool m_cursorIsLocked = true;
+    private bool debug_camera = true;
 
     [Header("The Camera the player looks through")]
     public Camera m_Camera;
@@ -41,8 +42,15 @@ public class FirstPersonController : MonoBehaviour
         m_Rigid = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        if (debug_camera)
+            InvokeRepeating(nameof(LogCamera), 1, 1);
     }
 
+    private void LogCamera()
+    {
+        Debug.Log("Camera: " + m_Camera.transform.eulerAngles);
+    }
 
     // Update is called once per frame
     public void Update()
@@ -77,9 +85,11 @@ public class FirstPersonController : MonoBehaviour
             Vector3 cameraRotation = m_Camera.transform.eulerAngles;
             if (cameraRotation.z > 1)
             {
+                Debug.Log("Camera Clamping from: " + cameraRotation);
                 cameraRotation.x = cameraRotation.x > 270 ? 270.01f : 89.99f;
                 cameraRotation.y = (cameraRotation.y + 180) % 360;
                 cameraRotation.z = 0;
+                Debug.Log("to: " + cameraRotation);
                 m_Camera.transform.eulerAngles = cameraRotation;
             }
         }
