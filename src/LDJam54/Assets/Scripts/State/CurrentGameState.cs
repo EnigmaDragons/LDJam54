@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using UnityEngine;
 
 public sealed class CurrentGameState
@@ -90,5 +91,13 @@ public sealed class CurrentGameState
     public static void DecrementKPIStatic(KPI kpi, int amount = 1)
     {
         Instance.DecrementKPI(kpi, amount);
+    }
+
+    public static float GetPace()
+    {
+        var fractionOfDayCompleted = ((WorkdayState.CurrentHour - WorkdayConfig.START_OF_DAY) * 60 + WorkdayState.CurrentMinute) / ((WorkdayConfig.END_OF_DAY - WorkdayConfig.START_OF_DAY) * 60f);
+        var lowestScoreForDay = State.CoworkerScores.Min();
+        var playerScores = State.ActiveKPIs.Select(kpi => State.KPIs[kpi] * State.KPIScoring[kpi]).Min();
+        return 1f * playerScores / lowestScoreForDay / fractionOfDayCompleted;
     }
 }
