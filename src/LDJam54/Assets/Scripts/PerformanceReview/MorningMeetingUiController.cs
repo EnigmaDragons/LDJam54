@@ -32,14 +32,14 @@ public class MorningMeetingUiController : OnMessage<StartKpiMeetingRequested>
         if (kpis.Length == 1)
         {
             singleKpi.gameObject.SetActive(true);
-            singleKpi.Set(kpis[0].ToString().WithSpaceBetweenWords(), "");
+            singleKpi.Set(kpis[0].ToString().WithSpaceBetweenWords(), CurrentGameState.State.KPIDescriptions[kpis[0]]);
         }
         else if (kpis.Length == 2)
         {
             leftKpi.gameObject.SetActive(true);
             rightKpi.gameObject.SetActive(true);
-            leftKpi.Set(kpis[0].ToString().WithSpaceBetweenWords(), "");
-            rightKpi.Set(kpis[1].ToString().WithSpaceBetweenWords(), "");
+            leftKpi.Set(kpis[0].ToString().WithSpaceBetweenWords(), CurrentGameState.State.KPIDescriptions[kpis[0]]);
+            rightKpi.Set(kpis[1].ToString().WithSpaceBetweenWords(), CurrentGameState.State.KPIDescriptions[kpis[1]]);
         }
         else
         {

@@ -115,6 +115,13 @@ MonoBehaviour:
       Data3: -2025171829
       Data4: 1679170894
     Path: event:/MUSIC/WorkAssessmentMusic
+  sleepMusic:
+    Guid:
+      Data1: -231768799
+      Data2: 1153705871
+      Data3: 773625748
+      Data4: 2055720802
+    Path: event:/MUSIC/SleepMusic
   jumpPad:
     Guid:
       Data1: 1283234616
