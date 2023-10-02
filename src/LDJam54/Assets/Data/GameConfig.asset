@@ -27,33 +27,180 @@ MonoBehaviour:
   PlayerRunSpeed: 8.5
   PlayerJumpForce: 7
   StartingDay: 1
-  TotalPlayableDays: 1
+  TotalPlayableDays: 3
   Days:
   - ActiveKPIs: 00000000
     CoworkerScores: 7c010000a40100002003000048030000
     BoxSpawnInterval: 1
     ClockSpeedFactor: 1
+    MorningSpeech:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    KpiSpeech:
+      Guid:
+        Data1: -1210827111
+        Data2: 1293694326
+        Data3: 2018411447
+        Data4: -1398528988
+      Path: event:/Boss/Boss_KPI_Shelving
+    AfternoonSpeech:
+      Guid:
+        Data1: 1255079508
+        Data2: 1092791246
+        Data3: 263388804
+        Data4: 1172679509
+      Path: event:/Boss/Boss_Afternoon_1
   - ActiveKPIs: 03000000
-    CoworkerScores: 90010000
+    CoworkerScores: 680100000802000084030000d0020000
     BoxSpawnInterval: 1
     ClockSpeedFactor: 1
+    MorningSpeech:
+      Guid:
+        Data1: 1342291855
+        Data2: 1165579388
+        Data3: -1627696472
+        Data4: -1419187260
+      Path: event:/Boss/Boss_Morning_2
+    KpiSpeech:
+      Guid:
+        Data1: -1298683509
+        Data2: 1187186770
+        Data3: -1279618415
+        Data4: 1131679038
+      Path: event:/Boss/Boss_KPI_Unloading
+    AfternoonSpeech:
+      Guid:
+        Data1: 1151219284
+        Data2: 1322867899
+        Data3: -1784833358
+        Data4: -1888312029
+      Path: event:/Boss/Boss_Afternoon_2
   - ActiveKPIs: 01000000
-    CoworkerScores: 
+    CoworkerScores: 7c010000cc01000038040000b8010000
     BoxSpawnInterval: 0
     ClockSpeedFactor: 0
+    MorningSpeech:
+      Guid:
+        Data1: 297620147
+        Data2: 1075168849
+        Data3: -799965022
+        Data4: 1535702670
+      Path: event:/Boss/Boss_Morning_3
+    KpiSpeech:
+      Guid:
+        Data1: -1991098983
+        Data2: 1081652944
+        Data3: -1746811973
+        Data4: -1658889660
+      Path: event:/Boss/Boss_KPI_Shipping
+    AfternoonSpeech:
+      Guid:
+        Data1: 129227255
+        Data2: 1252267538
+        Data3: 1388001983
+        Data4: -560012331
+      Path: event:/Boss/Boss_Afternoon_3
+  - ActiveKPIs: 0100000000000000
+    CoworkerScores: 44020000c4040000a8020000
+    BoxSpawnInterval: 1
+    ClockSpeedFactor: 1
+    MorningSpeech:
+      Guid:
+        Data1: 246127331
+        Data2: 1261075635
+        Data3: -1898297942
+        Data4: -458608951
+      Path: event:/Boss/Boss_Morning_4
+    KpiSpeech:
+      Guid:
+        Data1: 887351918
+        Data2: 1075415908
+        Data3: -517331295
+        Data4: -656958503
+      Path: event:/Boss/Boss_KPI_ShelvingAndShipping
+    AfternoonSpeech:
+      Guid:
+        Data1: 1395775988
+        Data2: 1302725504
+        Data3: -1822351705
+        Data4: 1464219147
+      Path: event:/Boss/Boss_Afternoon_4
+  - ActiveKPIs: 
+    CoworkerScores: 
+    BoxSpawnInterval: 1
+    ClockSpeedFactor: 1
+    MorningSpeech:
+      Guid:
+        Data1: 1704374131
+        Data2: 1262727054
+        Data3: -486745424
+        Data4: 1457409981
+      Path: event:/Boss/Boss_Morning_5
+    KpiSpeech:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    AfternoonSpeech:
+      Guid:
+        Data1: 1927221162
+        Data2: 1276035917
+        Data3: -1506218098
+        Data4: -363764729
+      Path: event:/Boss/Boss_Afternoon_5
   - ActiveKPIs: 
     CoworkerScores: 
     BoxSpawnInterval: 0
-    ClockSpeedFactor: 0
+    ClockSpeedFactor: 1
+    MorningSpeech:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    KpiSpeech:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    AfternoonSpeech:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
   - ActiveKPIs: 
     CoworkerScores: 
     BoxSpawnInterval: 0
-    ClockSpeedFactor: 0
-  - ActiveKPIs: 
-    CoworkerScores: 
-    BoxSpawnInterval: 0
-    ClockSpeedFactor: 0
-  - ActiveKPIs: 
-    CoworkerScores: 
-    BoxSpawnInterval: 0
-    ClockSpeedFactor: 0
+    ClockSpeedFactor: 1
+    MorningSpeech:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    KpiSpeech:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    AfternoonSpeech:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 

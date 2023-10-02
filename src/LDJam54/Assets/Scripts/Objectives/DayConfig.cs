@@ -10,5 +10,5 @@ public class DayConfig
     public float ClockSpeedFactor;
     public EventReference MorningSpeech;
     public EventReference KpiSpeech;
-    public EventReference EventSpeech;
+    public EventReference AfternoonSpeech;
 }
