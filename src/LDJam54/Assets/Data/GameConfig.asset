@@ -60,8 +60,8 @@ MonoBehaviour:
         Data4: 1172679509
       Path: event:/Boss/Boss_Afternoon_1
   - ActiveKPIs: 03000000
-    CoworkerScores: 680100000802000084030000d0020000
-    BoxSpawnInterval: 7.5
+    CoworkerScores: 6801000008020000e402000084030000
+    BoxSpawnInterval: 5
     ClockSpeedFactor: 0.75
     MorningSpeech:
       Guid:
@@ -109,9 +109,9 @@ MonoBehaviour:
         Data3: 1388001983
         Data4: -560012331
       Path: event:/Boss/Boss_Afternoon_3
-  - ActiveKPIs: 01000000
-    CoworkerScores: 44020000c4040000a8020000
-    BoxSpawnInterval: 3
+  - ActiveKPIs: 00000000
+    CoworkerScores: 80020000a8020000
+    BoxSpawnInterval: 3.5
     ClockSpeedFactor: 0.5
     MorningSpeech:
       Guid:
@@ -135,7 +135,7 @@ MonoBehaviour:
         Data4: 1464219147
       Path: event:/Boss/Boss_Afternoon_4
   - ActiveKPIs: 0000000001000000
-    CoworkerScores: 
+    CoworkerScores: aa000000
     BoxSpawnInterval: 3
     ClockSpeedFactor: 0.25
     MorningSpeech:
