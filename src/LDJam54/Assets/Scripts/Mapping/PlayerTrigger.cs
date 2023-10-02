@@ -5,6 +5,8 @@ public abstract class PlayerTrigger : MonoBehaviour
     public bool CanTriggerRepeatedly = false;
     
     private bool _triggered;
+
+    private void Awake() => _triggered = false;
     
     private void OnTriggerEnter(Collider other)
     {
