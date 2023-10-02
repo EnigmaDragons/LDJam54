@@ -27,11 +27,11 @@ MonoBehaviour:
   TotalPlayableDays: 1
   Days:
   - ActiveKPIs: 00000000
-    CoworkerScores: 
+    CoworkerScores: 7c010000a40100002003000048030000
     BoxSpawnInterval: 1
     ClockSpeedFactor: 1
   - ActiveKPIs: 01000000
-    CoworkerScores: 12000000d20000004400000026000000
+    CoworkerScores: 90010000
     BoxSpawnInterval: 1
     ClockSpeedFactor: 1
   - ActiveKPIs: 
