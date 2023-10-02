@@ -32,6 +32,9 @@ public sealed class CurrentGameState
     
     public static void AdvanceToNextDay() => Instance.UpdateState(g => g.CurrentDayNumber++);
     public static void FireCoworker(string id) => Instance.UpdateState(g => g.Coworkers.RemoveAll(c => c.Name == id));
+    
+    public static void Update(Action<GameState> apply) => Instance.UpdateState(apply);
+    public static void Update(Func<GameState, GameState> apply) => Instance.UpdateState(apply);
 
     [SerializeField] private GameState _gameState;
 
@@ -57,6 +60,9 @@ public sealed class CurrentGameState
     
     public void IncrementKPI(KPI kpi, int amount = 1)
     {
+        if (_gameState.CurrentWorkdayEnded)
+            return;
+        
         UpdateState(g =>
         {
             g.KPIs[kpi] += amount;
@@ -66,6 +72,9 @@ public sealed class CurrentGameState
     
     public void DecrementKPI(KPI kpi, int amount = 1)
     {
+        if (_gameState.CurrentWorkdayEnded)
+            return;
+        
         UpdateState(g =>
         {
             g.KPIs[kpi] -= amount;

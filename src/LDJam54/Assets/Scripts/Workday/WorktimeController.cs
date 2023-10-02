@@ -17,7 +17,11 @@ public class WorktimeController : OnMessage<StartWorkdayRequested, WorkdayEnded,
     protected override void Execute(WorkdayEnded msg)
     {
         _worktimeIsActive = false;
-        CurrentGameState.Instance.UpdateState(g => g.MeetingTime = MeetingTime.Evening);
+        CurrentGameState.Update(g =>
+        {
+            g.MeetingTime = MeetingTime.Evening;
+            g.CurrentWorkdayEnded = true;
+        });
     }
 
     protected override void Execute(EndWorkdayRequested msg)
