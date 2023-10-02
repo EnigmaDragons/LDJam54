@@ -26,13 +26,13 @@ public sealed class GameState
         { KPI.BoxesShelvedCorrectly, 20 },
         { KPI.BoxesShipped, 20 },
         { KPI.BoxesUnsorted, 20 },
-        //{ KPI.BoxesUnloaded, 20 },
+        { KPI.BoxesUnloaded, 20 },
     };
     public SerializableDictionary<KPI, int> KPIs = new() {
         { KPI.BoxesShelvedCorrectly, 0 },
         { KPI.BoxesShipped, 0 },
         { KPI.BoxesUnsorted, 0 },
-        //{ KPI.BoxesUnloaded, 0 },
+        { KPI.BoxesUnloaded, 0 },
     };
     public PerformanceReview PerformanceReview = new PerformanceReview();
     
