@@ -127,7 +127,7 @@ public class Door : MonoBehaviour {
 				_animName = OpenBackwardAnimName;
 			}
 			}
-			if (isAutomatic) {
+			if (isAutomatic && !_isLocked) {
 				OpenDoor ();
 			}
 

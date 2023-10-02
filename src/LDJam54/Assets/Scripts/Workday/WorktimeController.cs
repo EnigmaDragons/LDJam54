@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
-public class WorktimeController : OnMessage<StartWorkdayRequested, WorkdayEnded, EndWorkdayRequested, DayChanged>
+public class WorktimeController : OnMessage<StartWorkdayRequested, WorkdayEnded, EndWorkdayRequested, DayChanged, InstaWinDayRequested>
 {   
     private bool _worktimeIsActive;
     private float _elapsedInCurrentDay;
@@ -15,6 +16,11 @@ public class WorktimeController : OnMessage<StartWorkdayRequested, WorkdayEnded,
     }
 
     protected override void Execute(WorkdayEnded msg)
+    {
+        EndWorkday();
+    }
+
+    private void EndWorkday()
     {
         _worktimeIsActive = false;
         CurrentGameState.Update(g =>
@@ -33,6 +39,15 @@ public class WorktimeController : OnMessage<StartWorkdayRequested, WorkdayEnded,
     protected override void Execute(DayChanged msg)
     {
         WorkdayState.InitWorkday();
+    }
+
+    protected override void Execute(InstaWinDayRequested msg)
+    {
+        CurrentGameState.Update(g =>
+        {
+            g.KPIs.ToList().ForEach(k => g.KPIs[k.Key] = 1000);
+        });
+        Message.Publish(new WorkdayEnded());
     }
 
     private void FixedUpdate()
