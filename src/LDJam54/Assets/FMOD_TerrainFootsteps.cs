@@ -10,7 +10,7 @@ public class FMOD_TerrainFootsteps : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            footstepManager.SetTerrainMetal(); 
+            footstepManager.SetTerrainMetal();
         }
     }
 }

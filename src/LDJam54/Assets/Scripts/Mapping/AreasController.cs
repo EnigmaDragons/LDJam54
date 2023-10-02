@@ -19,12 +19,24 @@ public class AreasController : OnMessage<GameStateChanged, DayChanged>
         for (var i = 0; i < doors.Length; i++)
             doors[i].SetLabels("Meeting Room", "Room " + (i + 1));
         doorsToStartLocked.ForEach(d => d.SetLocked(true));
+        Refresh(CurrentGameState.State);
     }
 
     private void Start() => Refresh(CurrentGameState.State);
     
     protected override void Execute(GameStateChanged msg) => Refresh(msg.State);
     protected override void Execute(DayChanged msg)
+    {
+        RefreshRoom(CurrentGameState.State);
+    }
+
+    private void Refresh(GameState gs)
+    {
+        for (var i = 0; i < doors.Length; i++) 
+            doors[i].SetLocked(gs.CurrentDayNumber != i + 1);
+    }
+
+    private void RefreshRoom(GameState gs)
     {
         if (_currentDayPrefab != null)
         {
@@ -45,11 +57,5 @@ public class AreasController : OnMessage<GameStateChanged, DayChanged>
             _currentDayPrefab = Instantiate(day6Prefab, transform);
         if (CurrentGameState.State.CurrentDayNumber == 7 && day7Prefab != null)
             _currentDayPrefab = Instantiate(day7Prefab, transform);
-    }
-
-    private void Refresh(GameState gs)
-    {
-        for (var i = 0; i < doors.Length; i++) 
-            doors[i].SetLocked(gs.CurrentDayNumber != i + 1);
     }
 }

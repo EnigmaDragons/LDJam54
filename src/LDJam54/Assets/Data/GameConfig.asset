@@ -18,13 +18,13 @@ MonoBehaviour:
   - 123161
   - 729421
   - 891231
-  BoxShippingKPIDescription: Test1
-  PlacedCorrectlyKPIDescription: Test2
-  BoxUnsortedFixedKPIDescription: Test3
-  BoxUnloadedKPIDescription: Test4
-  BoxShippingMistakesKPIDescription: Test5
-  BoxShippingScore: 20
-  PlacedCorrectlyScore: 20
+  BoxShippingKPIDescription: Move the specified boxes to any shipping teleporter
+  PlacedCorrectlyKPIDescription: Move boxes to corresponding colored shelving
+  BoxUnsortedFixedKPIDescription: Placeholder Unsorted
+  BoxUnloadedKPIDescription: Move boxes from the conveyor belt area
+  BoxShippingMistakesKPIDescription: Placerhold Shipping Mistakes
+  BoxShippingScore: 47
+  PlacedCorrectlyScore: 17
   BoxUnsortedFixedScore: 20
   BoxUnloadedScore: 20
   BoxShippingMistakesScore: 20
@@ -35,8 +35,8 @@ MonoBehaviour:
   TotalPlayableDays: 3
   Days:
   - ActiveKPIs: 00000000
-    CoworkerScores: 7c010000a40100002003000048030000
-    BoxSpawnInterval: 3
+    CoworkerScores: 100100006501000053020000a4060000370d0000
+    BoxSpawnInterval: 2
     ClockSpeedFactor: 1
     MorningSpeech:
       Guid:
@@ -62,7 +62,7 @@ MonoBehaviour:
   - ActiveKPIs: 03000000
     CoworkerScores: 680100000802000084030000d0020000
     BoxSpawnInterval: 7.5
-    ClockSpeedFactor: 1
+    ClockSpeedFactor: 0.75
     MorningSpeech:
       Guid:
         Data1: 1342291855
@@ -85,9 +85,9 @@ MonoBehaviour:
         Data4: -1888312029
       Path: event:/Boss/Boss_Afternoon_2
   - ActiveKPIs: 01000000
-    CoworkerScores: 7c010000cc01000038040000b8010000
+    CoworkerScores: c10200003904000053050000
     BoxSpawnInterval: 90
-    ClockSpeedFactor: 1
+    ClockSpeedFactor: 0.5
     MorningSpeech:
       Guid:
         Data1: 297620147
@@ -109,10 +109,10 @@ MonoBehaviour:
         Data3: 1388001983
         Data4: -560012331
       Path: event:/Boss/Boss_Afternoon_3
-  - ActiveKPIs: 0100000000000000
+  - ActiveKPIs: 01000000
     CoworkerScores: 44020000c4040000a8020000
-    BoxSpawnInterval: 4
-    ClockSpeedFactor: 1
+    BoxSpawnInterval: 3
+    ClockSpeedFactor: 0.5
     MorningSpeech:
       Guid:
         Data1: 246127331
@@ -134,10 +134,10 @@ MonoBehaviour:
         Data3: -1822351705
         Data4: 1464219147
       Path: event:/Boss/Boss_Afternoon_4
-  - ActiveKPIs: 
+  - ActiveKPIs: 0000000001000000
     CoworkerScores: 
-    BoxSpawnInterval: 1
-    ClockSpeedFactor: 1
+    BoxSpawnInterval: 3
+    ClockSpeedFactor: 0.25
     MorningSpeech:
       Guid:
         Data1: 1704374131
