@@ -87,6 +87,13 @@ MonoBehaviour:
       Data3: 1547927432
       Data4: -430710698
     Path: event:/ENVIRONMENT/JumpPad
+  shippingTeleporter:
+    Guid:
+      Data1: 520595019
+      Data2: 1100662542
+      Data3: -267749232
+      Data4: 1644119724
+    Path: event:/ENVIRONMENT/ShippingTeleporter
   happyBossComment:
     Guid:
       Data1: 1407088393

@@ -12,6 +12,7 @@ public class SoundGuy : MonoBehaviour
     [SerializeField] private EventReference doorClosed;
     [SerializeField] private EventReference workingMusic;
     [SerializeField] private EventReference jumpPad;
+    [SerializeField] private EventReference shippingTeleporter;
     [SerializeField] private EventReference happyBossComment;
     [SerializeField] private EventReference unhappyBossComment;
     [SerializeField] private EventReference neutralBossComment;
@@ -54,7 +55,7 @@ public class SoundGuy : MonoBehaviour
 
     private void OnTeleporterActivated(TeleporterActivated obj)
     {
-        
+        PlayOneShot(shippingTeleporter, obj.Position);
     }
 
     private void OnDoorClosed(DoorClosed obj)
