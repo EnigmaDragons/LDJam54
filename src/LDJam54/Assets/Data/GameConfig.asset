@@ -18,11 +18,11 @@ MonoBehaviour:
   - 123161
   - 729421
   - 891231
-  BoxShippingKPIDescription: Test1
-  PlacedCorrectlyKPIDescription: Test2
-  BoxUnsortedFixedKPIDescription: Test3
-  BoxUnloadedKPIDescription: Test4
-  BoxShippingMistakesKPIDescription: Test5
+  BoxShippingKPIDescription: Move the specified boxes to any shipping teleporter
+  PlacedCorrectlyKPIDescription: Move boxes to corresponding colored shelving
+  BoxUnsortedFixedKPIDescription: Placeholder Unsorted
+  BoxUnloadedKPIDescription: Move boxes from the conveyor belt area
+  BoxShippingMistakesKPIDescription: Placerhold Shipping Mistakes
   BoxShippingScore: 47
   PlacedCorrectlyScore: 17
   BoxUnsortedFixedScore: 20
@@ -85,7 +85,7 @@ MonoBehaviour:
         Data4: -1888312029
       Path: event:/Boss/Boss_Afternoon_2
   - ActiveKPIs: 01000000
-    CoworkerScores: 4e0300003904000053050000
+    CoworkerScores: c10200003904000053050000
     BoxSpawnInterval: 90
     ClockSpeedFactor: 0.5
     MorningSpeech:
