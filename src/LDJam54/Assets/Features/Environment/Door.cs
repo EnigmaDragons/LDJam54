@@ -120,12 +120,12 @@ public class Door : MonoBehaviour {
 		
 		if(other.GetComponent<Collider>().CompareTag(PlayerColliderTag)){
 			if(DoubleSidesOpen){
-			relativePos = gameObject.transform.InverseTransformPoint (other.transform.position);
-			if (relativePos.z > 0) {
-				_animName = OpenForwardAnimName;
-			} else {
-				_animName = OpenBackwardAnimName;
-			}
+				relativePos = gameObject.transform.InverseTransformPoint(other.transform.position);
+				if (relativePos.z > 0) {
+					_animName = OpenForwardAnimName;
+				} else {
+					_animName = OpenBackwardAnimName;
+				}
 			}
 			if (isAutomatic && !_isLocked) {
 				OpenDoor ();
