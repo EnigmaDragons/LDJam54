@@ -21,7 +21,7 @@
 		<property name="enumerationLabels">
 			<value>Concrete</value>
 			<value>Carpet</value>
-			<value>Value C</value>
+			<value>Metal</value>
 		</property>
 		<property name="initialValue">
 			<value>0</value>
