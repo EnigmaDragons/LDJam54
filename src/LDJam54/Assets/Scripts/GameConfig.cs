@@ -31,5 +31,5 @@ public class GameConfig : ScriptableObject
     public int TotalPlayableDays = 1;
     public DayConfig[] Days;
 
-    public DayConfig CurrentDayConfig => Days[CurrentGameState.State.CurrentDayNumber];
+    public DayConfig CurrentDayConfig => Days[CurrentGameState.State.CurrentDayNumber-1];
 }
