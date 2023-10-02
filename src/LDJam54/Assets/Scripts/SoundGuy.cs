@@ -13,6 +13,7 @@ public class SoundGuy : MonoBehaviour
     [SerializeField] private EventReference doorClosed;
     [SerializeField] private EventReference workingMusic;
     [SerializeField] private EventReference workingMusicDay2;
+    [SerializeField] private EventReference gameOverMusic;
     [SerializeField] private EventReference jumpPad;
     [SerializeField] private EventReference shippingTeleporter;
     [SerializeField] private EventReference happyBossComment;
@@ -54,7 +55,9 @@ public class SoundGuy : MonoBehaviour
 
     private void OnWasFired(WasFired obj)
     {
-        
+        _currentMusic.stop(STOP_MODE.ALLOWFADEOUT);
+        _currentMusic = RuntimeManager.CreateInstance(gameOverMusic);
+        _currentMusic.start(); 
     }
 
     private void OnJumpPadUsed(JumpPadUsed obj)
@@ -99,7 +102,6 @@ public class SoundGuy : MonoBehaviour
             _currentMusic = RuntimeManager.CreateInstance(workingMusic);
             _currentMusic.start();
         }
-
     }
 
     private void OnWorkdayEnded(WorkdayEnded obj)
