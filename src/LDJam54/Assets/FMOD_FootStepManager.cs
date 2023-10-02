@@ -30,5 +30,10 @@ public class FMOD_FootStepManager : MonoBehaviour
     {
         footstep.setParameterByName("FootStepLength", 0f);
     }
+
+    public void SetTerrainMetal()
+    {
+        footstep.setParameterByName("Terrain", 2);
+    }
     
 }
