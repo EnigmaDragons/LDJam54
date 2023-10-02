@@ -32,7 +32,7 @@ MonoBehaviour:
   PlayerRunSpeed: 8.5
   PlayerJumpForce: 7
   StartingDay: 1
-  TotalPlayableDays: 3
+  TotalPlayableDays: 5
   Days:
   - ActiveKPIs: 00000000
     CoworkerScores: 100100006501000053020000a4060000370d0000

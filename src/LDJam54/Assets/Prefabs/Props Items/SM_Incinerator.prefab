@@ -178,6 +178,7 @@ GameObject:
   - component: {fileID: 2802125905706081820}
   - component: {fileID: 2950120861813297286}
   - component: {fileID: 6312471020237794895}
+  - component: {fileID: 5200297697032625791}
   m_Layer: 0
   m_Name: SM_Incinerator
   m_TagString: Untagged
@@ -345,6 +346,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.7, y: 0.35, z: 3.89}
   m_Center: {x: -0.6, y: 0.52, z: 0}
+--- !u!114 &5200297697032625791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6583384663796185455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 758aa1ca188146a3bf611cfaeacdb4bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8104927601550707321
 GameObject:
   m_ObjectHideFlags: 0
