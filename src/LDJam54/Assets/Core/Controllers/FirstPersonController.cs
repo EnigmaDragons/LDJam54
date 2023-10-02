@@ -26,7 +26,7 @@ public class FirstPersonController : MonoBehaviour
     private Vector3 m_rotation;
     private Vector3 m_cameraRotation;
     private bool m_cursorIsLocked = true;
-    private bool debug_camera = false;
+    private bool debug_camera = true;
 
     [Header("The Camera the player looks through")]
     public Camera m_Camera;

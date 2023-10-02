@@ -20,6 +20,8 @@ namespace Features.PlayerControls
 
         [SerializeField]
         private float groundCheckDistance = 0.2f;
+
+        public bool IsCurrentlyGrounded = true;
         
         private void Awake()    
         {
@@ -68,7 +70,8 @@ namespace Features.PlayerControls
         
         private bool IsGrounded()
         {
-            return Physics.RaycastAll(transform.position, Vector3.down, groundCheckDistance).Any(o => o.collider.gameObject != gameObject);
+            IsCurrentlyGrounded = Physics.RaycastAll(transform.position, Vector3.down, groundCheckDistance).Any(o => o.collider.gameObject != gameObject);
+            return IsCurrentlyGrounded;
         }
         
         private void Jump()

@@ -44,8 +44,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.5156775, y: 1, z: 8.659414}
-  m_Center: {x: -1.369823, y: 0, z: 1.4628658}
+  m_Size: {x: 12.12499, y: 1, z: 9.708867}
+  m_Center: {x: -3.6744776, y: 0, z: 0.93813944}
 --- !u!114 &3626153177566649805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
     Path: event:/Boss/Boss_Intro
   Event: 
   PlayEvent: 3
-  StopEvent: 0
+  StopEvent: 4
   AllowFadeout: 1
   TriggerOnce: 1
   Preload: 0
