@@ -87,6 +87,13 @@ MonoBehaviour:
       Data3: 153213829
       Data4: 287970209
     Path: event:/MUSIC/WorkBossa_Level_1
+  workingMusicDay2:
+    Guid:
+      Data1: 1933653943
+      Data2: 1233456103
+      Data3: -463524967
+      Data4: -1218756534
+    Path: event:/MUSIC/WorkBossa_Level_2
   jumpPad:
     Guid:
       Data1: 1283234616

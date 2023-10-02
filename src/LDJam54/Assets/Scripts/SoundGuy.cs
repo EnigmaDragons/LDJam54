@@ -12,6 +12,7 @@ public class SoundGuy : MonoBehaviour
     [SerializeField] private EventReference doorOpened;
     [SerializeField] private EventReference doorClosed;
     [SerializeField] private EventReference workingMusic;
+    [SerializeField] private EventReference workingMusicDay2;
     [SerializeField] private EventReference jumpPad;
     [SerializeField] private EventReference shippingTeleporter;
     [SerializeField] private EventReference happyBossComment;
@@ -84,10 +85,21 @@ public class SoundGuy : MonoBehaviour
     private void OnWorkdayStarted(WorkdayStarted obj)
     {
         var currentDay = CurrentGameState.State.CurrentDayNumber;
-        _currentMusic.stop(STOP_MODE.ALLOWFADEOUT);
-        _currentMusic = RuntimeManager.CreateInstance(workingMusic);
-        _currentMusic.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject));
-        _currentMusic.start();
+        if(currentDay == 1)
+        {
+            _currentMusic.stop(STOP_MODE.ALLOWFADEOUT);
+            _currentMusic = RuntimeManager.CreateInstance(workingMusic);
+            _currentMusic.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject));
+            _currentMusic.start();
+        }
+
+        if (currentDay == 2)
+        {
+            _currentMusic.stop(STOP_MODE.ALLOWFADEOUT);
+            _currentMusic = RuntimeManager.CreateInstance(workingMusic);
+            _currentMusic.start();
+        }
+
     }
 
     private void OnWorkdayEnded(WorkdayEnded obj)
