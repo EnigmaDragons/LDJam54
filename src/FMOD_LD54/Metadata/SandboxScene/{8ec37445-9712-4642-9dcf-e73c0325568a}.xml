@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="SandboxScene" id="{8ec37445-9712-4642-9dcf-e73c0325568a}">
+		<property name="name">
+			<value>ReverbZones</value>
+		</property>
+		<relationship name="folder">
+			<destination>{4d41994e-966a-4091-a3d6-9ea093de8224}</destination>
+		</relationship>
+		<relationship name="markerTracks">
+			<destination>{58a91ee7-eaad-43ff-a565-de90bbd72afd}</destination>
+		</relationship>
+		<relationship name="timeline">
+			<destination>{7c5be67f-be7c-4aed-874f-4fbf444c9339}</destination>
+		</relationship>
+		<relationship name="emitters">
+			<destination>{80f0f148-c528-4e2f-9d9d-e7c90628b428}</destination>
+			<destination>{1cabf56d-d408-4a65-b8ee-30de3a8c4379}</destination>
+		</relationship>
+	</object>
+	<object class="MarkerTrack" id="{58a91ee7-eaad-43ff-a565-de90bbd72afd}" />
+	<object class="Timeline" id="{7c5be67f-be7c-4aed-874f-4fbf444c9339}" />
+	<object class="SandboxEmitter" id="{80f0f148-c528-4e2f-9d9d-e7c90628b428}">
+		<property name="positionX">
+			<value>-10.4499998</value>
+		</property>
+		<property name="positionZ">
+			<value>7.125</value>
+		</property>
+		<relationship name="event">
+			<destination>{033de374-e406-4367-8ceb-96d13dc9df90}</destination>
+		</relationship>
+	</object>
+	<object class="SandboxEmitter" id="{1cabf56d-d408-4a65-b8ee-30de3a8c4379}">
+		<property name="positionX">
+			<value>-4.25</value>
+		</property>
+		<property name="positionZ">
+			<value>7.42500019</value>
+		</property>
+		<relationship name="event">
+			<destination>{e099c506-da01-4996-b336-fe092f5e4459}</destination>
+		</relationship>
+	</object>
+</objects>
