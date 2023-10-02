@@ -7,10 +7,5 @@ public class CoworkerSetup : MonoBehaviour
     public void Start()
     {
         CurrentGameState.State.Coworkers = gameConfig.Coworkers;
-        CurrentGameState.State.CoworkerStandardPerformance = new() {
-            { KPI.BoxesShelvedCorrectly, gameConfig.PlacedCorrectlyAverage },
-            { KPI.BoxesShipped, gameConfig.BoxShippedAverage },
-            { KPI.BoxesUnsorted, gameConfig.BoxUnsortedFixedAverage }
-        };
     }
 }

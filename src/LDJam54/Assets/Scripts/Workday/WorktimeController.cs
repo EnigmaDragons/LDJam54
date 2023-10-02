@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 
 public class WorktimeController : OnMessage<StartWorkdayRequested, WorkdayEnded, EndWorkdayRequested>
-{
-    [SerializeField] private GameConfig config;
-    
+{   
     private bool _worktimeIsActive;
     private float _elapsedInCurrentDay;
     
@@ -35,7 +33,7 @@ public class WorktimeController : OnMessage<StartWorkdayRequested, WorkdayEnded,
         if (!_worktimeIsActive) return;
         
         _elapsedInCurrentDay += Time.fixedDeltaTime;
-        var totalMinutes = (_elapsedInCurrentDay / WorkdayConfig.NUM_SECONDS_PER_WORK_MINUTE) * config.ClockSpeedFactor;
+        var totalMinutes = (_elapsedInCurrentDay / WorkdayConfig.NUM_SECONDS_PER_WORK_MINUTE) * CurrentGameState.State.ClockSpeedFactor;
         WorkdayState.SetTotalWorkdayMinutes((int)totalMinutes);
     }
 }

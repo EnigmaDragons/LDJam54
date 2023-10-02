@@ -5,19 +5,12 @@ using UnityEngine;
 public class GameConfig : ScriptableObject
 {
     [Header("Coworkers")]
-    public List<Worker> Coworkers = new List<Worker>();
-    public CoworkerAverage BoxShippedAverage;
-    public CoworkerAverage PlacedCorrectlyAverage;
-    public CoworkerAverage BoxUnsortedFixedAverage;
+    public List<string> Coworkers = new List<string>();
 
     [Header("KPI Scoring")]
     public int BoxShippingScore;
     public int PlacedCorrectlyScore;
     public int BoxUnsortedFixedScore;
-    
-    [Header("Timing/Franticness")]
-    public float ClockSpeedFactor = 1f;
-    public float BoxSpawnInterval = 1.5f;
 
     [Header("Player Movement")] 
     public float PlayerWalkSpeed = 5f;
@@ -25,6 +18,7 @@ public class GameConfig : ScriptableObject
     public float PlayerJumpForce = 2f;
 
     [Header("Days")]
+    public int StartingDay = 1;
     public int TotalPlayableDays = 1;
     public DayConfig[] Days;
 }
