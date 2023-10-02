@@ -30,3 +30,27 @@ MonoBehaviour:
     CoworkerScores: 13000000250000007700000033000000
     BoxSpawnInterval: 1
     ClockSpeedFactor: 1
+  - ActiveKPIs: 01000000
+    CoworkerScores: 12000000d20000004400000026000000
+    BoxSpawnInterval: 1
+    ClockSpeedFactor: 1
+  - ActiveKPIs: 
+    CoworkerScores: 
+    BoxSpawnInterval: 0
+    ClockSpeedFactor: 0
+  - ActiveKPIs: 
+    CoworkerScores: 
+    BoxSpawnInterval: 0
+    ClockSpeedFactor: 0
+  - ActiveKPIs: 
+    CoworkerScores: 
+    BoxSpawnInterval: 0
+    ClockSpeedFactor: 0
+  - ActiveKPIs: 
+    CoworkerScores: 
+    BoxSpawnInterval: 0
+    ClockSpeedFactor: 0
+  - ActiveKPIs: 
+    CoworkerScores: 
+    BoxSpawnInterval: 0
+    ClockSpeedFactor: 0
