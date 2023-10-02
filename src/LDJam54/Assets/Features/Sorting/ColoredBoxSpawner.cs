@@ -14,6 +14,16 @@ public class ColoredBoxSpawner : OnMessage<WorkdayStarted, WorkdayEnded>
 
     [SerializeField] private SortingColor[] colors;
     
+    [Header("Decoration Settings")]
+    public float SpawnIntervalOverride;
+    public bool BeginAutomatically;
+
+    protected override void AfterEnable()
+    {
+        if (BeginAutomatically)
+            StartSpawning();
+    }
+    
     private GameObject GetRandomObject()
     {
         return spawnPool[Random.Range(0, spawnPool.Count)];
@@ -49,7 +59,14 @@ public class ColoredBoxSpawner : OnMessage<WorkdayStarted, WorkdayEnded>
 
     protected override void Execute(WorkdayStarted msg)
     {
-        InvokeRepeating(nameof(SpawnObject), 0.0f, CurrentGameState.State.BoxSpawnInterval);
+        StartSpawning();
+    }
+
+    private void StartSpawning()
+    {
+        InvokeRepeating(nameof(SpawnObject), 0.0f, SpawnIntervalOverride > 0f
+            ? SpawnIntervalOverride
+            : CurrentGameState.State.BoxSpawnInterval);
     }
 
     protected override void Execute(WorkdayEnded msg)
