@@ -31,7 +31,9 @@ public class PerformanceReviewUiController : OnMessage<StartPerformanceMeetingRe
         var firedId = perfReview.EliminatedPerson;
         Debug.Log("Eliminated: " + firedId);
         if (firedId.Equals(CurrentGameState.State.PlayerID))
-            this.ExecuteAfterDelay(() => Message.Publish(new WasFired()), delayBeforeGameOver);
+        {
+            CurrentGameState.Update(g => g.PlayerIsFired = true);
+        }
         else
         {
             CurrentGameState.FireCoworker(firedId);

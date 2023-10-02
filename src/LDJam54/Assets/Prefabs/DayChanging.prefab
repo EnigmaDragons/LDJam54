@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 860078174982736853}
   - component: {fileID: -514402306725180756}
+  - component: {fileID: 5861898319487839681}
   m_Layer: 0
   m_Name: DayChanging
   m_TagString: Untagged
@@ -44,4 +45,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376bd6154a42c3f449796706fb63601b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameConfig: {fileID: 0}
+  gameConfig: {fileID: 11400000, guid: dce1e495c7aa5f3468f9c51b24abda14, type: 2}
+--- !u!114 &5861898319487839681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4078084926599211930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 169a8832f3a247b18e676cd02e36e4f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
