@@ -74,14 +74,14 @@ public class FirstPersonController : MonoBehaviour
             //negate this value so it rotates like a FPS not like a plane
             m_Camera.transform.Rotate(-m_cameraRotation);
 
-            Vector3 cameraRotation = m_Camera.transform.eulerAngles;
-            if (cameraRotation.z > 1)
-            {
-                cameraRotation.x = cameraRotation.x > 270 ? 270.01f : 89.99f;
-                cameraRotation.y = (cameraRotation.y + 180) % 360;
-                cameraRotation.z = 0;
-                m_Camera.transform.eulerAngles = cameraRotation;
-            }
+            // Vector3 cameraRotation = m_Camera.transform.eulerAngles;
+            // if (cameraRotation.z > 1)
+            // {
+            //     cameraRotation.x = cameraRotation.x > 270 ? 270.01f : 89.99f;
+            //     cameraRotation.y = (cameraRotation.y + 180) % 360;
+            //     cameraRotation.z = 0;
+            //     m_Camera.transform.eulerAngles = cameraRotation;
+            // }
         }
 
         InternalLockUpdate();
