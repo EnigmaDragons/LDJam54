@@ -59,9 +59,9 @@ MonoBehaviour:
     type: 3}
   day3Prefab: {fileID: 5262778727843088787, guid: 5177cccdbee045544bf7d5df13c6aee2,
     type: 3}
-  day4Prefab: {fileID: 1606186742531320460, guid: 33f9fbcd9f940b64192bd96dbbef8b16,
+  day4Prefab: {fileID: 4438840110569359468, guid: 93adc48d658fbc0449435e8796067b0a,
     type: 3}
-  day5Prefab: {fileID: 4438840110569359468, guid: 93adc48d658fbc0449435e8796067b0a,
+  day5Prefab: {fileID: 1606186742531320460, guid: 33f9fbcd9f940b64192bd96dbbef8b16,
     type: 3}
   day6Prefab: {fileID: 0}
   day7Prefab: {fileID: 0}
