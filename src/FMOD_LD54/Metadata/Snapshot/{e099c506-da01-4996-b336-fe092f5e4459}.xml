@@ -26,11 +26,13 @@
 			<destination>{afd98aa6-ed9f-4678-b348-913164e730c9}</destination>
 			<destination>{e2bf9a28-c786-47a4-a9a9-fa82d257e99d}</destination>
 			<destination>{de10ce7f-2c69-4012-bf01-af87f4d8c7cb}</destination>
+			<destination>{571a08d6-212b-40c6-8976-c9a7bd1161c6}</destination>
 		</relationship>
 		<relationship name="snapshotTracks">
 			<destination>{18521042-61cc-4603-a627-3078454eea04}</destination>
 			<destination>{ddf65ee7-96e3-4487-8975-e8e4cd498ac8}</destination>
 			<destination>{e7a1afca-74e2-4bed-a52e-a35e87550625}</destination>
+			<destination>{b6525858-4605-45f2-b668-ccb6c0fb3e89}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{7ab9eaab-ff68-4258-b6d4-6d92a584941d}">
@@ -79,7 +81,7 @@
 			<value>volume</value>
 		</property>
 		<property name="value">
-			<value>-2.5</value>
+			<value>-5</value>
 		</property>
 		<relationship name="automatableObject">
 			<destination>{6cb92906-aa60-48df-a791-76f2614377eb}</destination>
@@ -107,6 +109,17 @@
 			<destination>{c3b1f604-e7da-4445-9d7e-128da0c9bc76}</destination>
 		</relationship>
 	</object>
+	<object class="SnapshotProperty" id="{571a08d6-212b-40c6-8976-c9a7bd1161c6}">
+		<property name="propertyName">
+			<value>level</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+		<relationship name="automatableObject">
+			<destination>{e75d89ea-2bb3-4d3e-bae0-37da177fd5d3}</destination>
+		</relationship>
+	</object>
 	<object class="SnapshotTrack" id="{18521042-61cc-4603-a627-3078454eea04}">
 		<relationship name="mixerStrip">
 			<destination>{3478dc8c-4553-49ea-bdd7-83d6a3d737a1}</destination>
@@ -120,6 +133,11 @@
 	<object class="SnapshotTrack" id="{e7a1afca-74e2-4bed-a52e-a35e87550625}">
 		<relationship name="mixerStrip">
 			<destination>{6cb92906-aa60-48df-a791-76f2614377eb}</destination>
+		</relationship>
+	</object>
+	<object class="SnapshotTrack" id="{b6525858-4605-45f2-b668-ccb6c0fb3e89}">
+		<relationship name="mixerStrip">
+			<destination>{d0857701-35e6-463b-bbbd-da93baa5b2c2}</destination>
 		</relationship>
 	</object>
 	<object class="ADSRModulator" id="{af558831-5487-47f5-87af-d1cebbf5ca76}">
