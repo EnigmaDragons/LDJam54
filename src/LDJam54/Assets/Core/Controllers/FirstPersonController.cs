@@ -50,7 +50,6 @@ public class FirstPersonController : MonoBehaviour
         m_moveHorizontal = transform.right * m_MovX;
         m_movVertical = transform.forward * m_MovY;
 
-        //mouse movement 
         m_yRot = Input.GetAxisRaw("Mouse X");
         m_rotation = new Vector3(0, m_yRot, 0) * m_lookSensitivity;
 
