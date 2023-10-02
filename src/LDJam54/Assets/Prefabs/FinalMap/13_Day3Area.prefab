@@ -374,6 +374,66 @@ PrefabInstance:
       propertyPath: m_text
       value: Meeting Room
       objectReference: {fileID: 0}
+    - target: {fileID: 5273595379227915239, guid: 0b166d34a325a474cbef3b50fdbd687c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273595379227915239, guid: 0b166d34a325a474cbef3b50fdbd687c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273595379817156187, guid: 0b166d34a325a474cbef3b50fdbd687c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273595379817156187, guid: 0b166d34a325a474cbef3b50fdbd687c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273595379986330719, guid: 0b166d34a325a474cbef3b50fdbd687c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273595379986330719, guid: 0b166d34a325a474cbef3b50fdbd687c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273595380146805592, guid: 0b166d34a325a474cbef3b50fdbd687c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273595380146805592, guid: 0b166d34a325a474cbef3b50fdbd687c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273595381106083508, guid: 0b166d34a325a474cbef3b50fdbd687c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273595381106083508, guid: 0b166d34a325a474cbef3b50fdbd687c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273595381153281291, guid: 0b166d34a325a474cbef3b50fdbd687c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273595381153281291, guid: 0b166d34a325a474cbef3b50fdbd687c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.99
+      objectReference: {fileID: 0}
     - target: {fileID: 7054259772259144342, guid: 0b166d34a325a474cbef3b50fdbd687c,
         type: 3}
       propertyPath: m_Name
