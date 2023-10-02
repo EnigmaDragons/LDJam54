@@ -12,7 +12,8 @@ public class KPIScoringSetup : MonoBehaviour
         {
             { KPI.BoxesShelvedCorrectly, gameConfig.PlacedCorrectlyScore },
             { KPI.BoxesShipped, gameConfig.BoxShippingScore },
-            { KPI.BoxesUnsorted, gameConfig.BoxUnsortedFixedScore }
+            { KPI.BoxesUnsorted, gameConfig.BoxUnsortedFixedScore },
+            { KPI.BoxesUnloaded, gameConfig.BoxUnloadedFixedScore }
         };
     }
 }
