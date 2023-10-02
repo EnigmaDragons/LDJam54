@@ -26,7 +26,7 @@ public class FirstPersonController : MonoBehaviour
     private Vector3 m_rotation;
     private Vector3 m_cameraRotation;
     private bool m_cursorIsLocked = true;
-    private bool debug_camera = true;
+    private bool debug_camera = false;
 
     [Header("The Camera the player looks through")]
     public Camera m_Camera;
@@ -83,7 +83,7 @@ public class FirstPersonController : MonoBehaviour
             m_Camera.transform.Rotate(-m_cameraRotation);
 
             Vector3 cameraRotation = m_Camera.transform.eulerAngles;
-            if (cameraRotation.z > 1)
+            if (cameraRotation.z > 1 && cameraRotation.z < 359)
             {
                 Debug.Log("Camera Clamping from: " + cameraRotation);
                 cameraRotation.x = cameraRotation.x > 270 ? 270.01f : 89.99f;
