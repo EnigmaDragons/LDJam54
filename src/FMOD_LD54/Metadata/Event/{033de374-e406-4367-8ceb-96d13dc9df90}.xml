@@ -158,7 +158,7 @@
 			<value>2</value>
 		</property>
 		<property name="volume">
-			<value>-5</value>
+			<value>10</value>
 		</property>
 		<relationship name="sounds">
 			<destination>{d80a1fa4-bd02-48d8-a11e-7afa8082f8f0}</destination>
@@ -207,6 +207,9 @@
 	<object class="EventSound" id="{027ed03e-f8d8-410a-86cd-0c7f844d6395}">
 		<property name="start">
 			<value>2</value>
+		</property>
+		<property name="volume">
+			<value>-8.5</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{e4b2f601-07b0-4086-8f14-5a10890cf7da}</destination>
