@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{73988ccf-d428-4ec9-b877-e9a838a24453}">
+		<property name="assetPath">
+			<value>Player Char/Footsteps/Metal/MetalStep_Sneakers_ 06.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.35999999999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a1961438-bdc9-4db6-8e5e-89924b8aa068}</destination>
+		</relationship>
+	</object>
+</objects>
