@@ -1,7 +1,9 @@
+using System.Linq;
 using TMPro;
 
 public class KPIUIController : OnMessage<GameStateChanged>
 {
+    public TextMeshProUGUI ScoreLabel;
     public TextMeshProUGUI[] KPILabels;
 
     public void Start() => Render(CurrentGameState.State);
@@ -9,6 +11,7 @@ public class KPIUIController : OnMessage<GameStateChanged>
 
     private void Render(GameState gs)
     {
+        ScoreLabel.text = "Score: " + (gs.ActiveKPIs.Select(kpi => gs.KPIs[kpi] * gs.KPIScoring[kpi]).Min());
         var activeKPIs = gs.ActiveKPIs;
         var KPIs = gs.KPIs;
         for (var i = 0; i < activeKPIs.Length; i++)
