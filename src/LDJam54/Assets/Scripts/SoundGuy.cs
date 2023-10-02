@@ -41,6 +41,7 @@ public class SoundGuy : MonoBehaviour
         Message.Subscribe<PlayBossComment>(OnBossComment, this);
         Message.Subscribe<StartKpiMeetingRequested>(OnMorningMeetingStarted, this);
         Message.Subscribe<SleepTimeout>(OnSleepTimeOut , this);
+  
     }
 
     private void OnMorningMeetingStarted(StartKpiMeetingRequested obj)
