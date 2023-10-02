@@ -27,6 +27,7 @@ public class SoundGuy : MonoBehaviour
         Message.Subscribe<IncineratorUsed>(OnIncineratorUsed, this);
         Message.Subscribe<WorkdayStarted>(OnWorkdayStarted, this);
         Message.Subscribe<WorkdayNearlyOver>(OnWorkdayNearlyOver, this);
+        Message.Subscribe<WorkdayEnded>(OnWorkdayEnded, this);
         Message.Subscribe<WasFired>(OnWasFired, this);
         Message.Subscribe<DoorOpened>(OnDoorOpened, this);
         Message.Subscribe<DoorClosed>(OnDoorClosed, this);
@@ -87,6 +88,11 @@ public class SoundGuy : MonoBehaviour
         _currentMusic = RuntimeManager.CreateInstance(workingMusic);
         _currentMusic.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject));
         _currentMusic.start();
+    }
+
+    private void OnWorkdayEnded(WorkdayEnded obj)
+    {
+        _currentMusic.stop(STOP_MODE.ALLOWFADEOUT);
     }
 
     private void OnDisable() => Message.Unsubscribe(this);
