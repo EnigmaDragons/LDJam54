@@ -80,6 +80,13 @@ MonoBehaviour:
       Data3: -2025171829
       Data4: 1679170894
     Path: event:/Music-Raw/MUSIC/WorkAssessmentMusic
+  jumpPad:
+    Guid:
+      Data1: 1283234616
+      Data2: 1192818228
+      Data3: 1547927432
+      Data4: -430710698
+    Path: event:/ENVIRONMENT/JumpPad
 --- !u!114 &8895141721937899204
 MonoBehaviour:
   m_ObjectHideFlags: 0
