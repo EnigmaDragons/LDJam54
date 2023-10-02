@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{7ffb0458-8d60-45d9-989b-c08edbf174ee}">
+		<property name="color">
+			<value>Yellow Light 1</value>
+		</property>
 		<property name="assetPath">
 			<value>BossVoice/Boss_Work_Good_1.wav</value>
 		</property>

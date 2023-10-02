@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="MixerReturn" id="{97d8cc31-ef19-4277-8ce2-08c9db2645a2}">
+		<property name="color">
+			<value>Blue</value>
+		</property>
+		<property name="name">
+			<value>Delay</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{2a9d96e9-a974-4b80-ae87-d64ac802a8fa}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{7568b3a2-ce40-4595-8344-939c7a5504c3}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{c9fdca57-5f3b-4035-aa37-2b795f9ff268}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{2a9d96e9-a974-4b80-ae87-d64ac802a8fa}">
+		<relationship name="effects">
+			<destination>{623ad2d1-c6a3-4c94-b850-6714993e9b0b}</destination>
+			<destination>{0c00b4e4-173b-43ff-a195-5c981d107c38}</destination>
+			<destination>{6de1cbbf-6a24-4009-ac98-bc2ba81403d1}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{7568b3a2-ce40-4595-8344-939c7a5504c3}" />
+	<object class="DelayEffect" id="{623ad2d1-c6a3-4c94-b850-6714993e9b0b}">
+		<property name="delay">
+			<value>280</value>
+		</property>
+		<property name="dryLevel">
+			<value>-80</value>
+		</property>
+	</object>
+	<object class="ThreeEQEffect" id="{0c00b4e4-173b-43ff-a195-5c981d107c38}">
+		<property name="highGain">
+			<value>-13</value>
+		</property>
+	</object>
+	<object class="MixerBusFader" id="{6de1cbbf-6a24-4009-ac98-bc2ba81403d1}" />
+</objects>

@@ -27,7 +27,7 @@
 			<value>-16.5</value>
 		</property>
 		<property name="inputFormat">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<relationship name="mixerReturn">
 			<destination>{cd33114c-983b-4026-9100-4589b6d46f4f}</destination>
@@ -35,7 +35,7 @@
 	</object>
 	<object class="MixerSend" id="{edc5a715-8113-4f80-b141-51f18e5064af}">
 		<property name="inputFormat">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<relationship name="mixerReturn">
 			<destination>{219af533-f623-4985-bfa1-10b16dff7d08}</destination>

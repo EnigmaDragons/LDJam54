@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{59e7332e-da31-4077-9f6e-cda0b67fe4e3}">
+		<property name="assetPath">
+			<value>Boss_DX_Reverb/Boss_Firing_1_rev.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>27.409791666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a1961438-bdc9-4db6-8e5e-89924b8aa068}</destination>
+		</relationship>
+	</object>
+</objects>

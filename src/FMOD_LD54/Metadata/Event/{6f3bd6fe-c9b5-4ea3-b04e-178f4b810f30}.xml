@@ -75,11 +75,20 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{dcad1fac-9684-43fc-9a81-66e2f9be5d91}">
-		<property name="length">
-			<value>44.878367346938774</value>
+		<property name="isAsync">
+			<value>true</value>
 		</property>
+		<property name="length">
+			<value>46.950812499999998</value>
+		</property>
+		<property name="volume">
+			<value>4.5</value>
+		</property>
+		<relationship name="triggerConditions">
+			<destination>{af28c6fe-1602-40d2-a3dc-74bba7bba08f}</destination>
+		</relationship>
 		<relationship name="audioFile">
-			<destination>{82a8718b-8a05-4ca9-b909-6353a8554bed}</destination>
+			<destination>{eb515310-4554-4e9f-bf1b-05c349efcc9b}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{80b40115-c041-4379-924c-2b2d071407c2}">
@@ -94,6 +103,7 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{5ce39b63-2456-4958-afe9-f9471fb9582f}" />
+	<object class="EventCondition" id="{af28c6fe-1602-40d2-a3dc-74bba7bba08f}" />
 	<object class="MixerBusFader" id="{52313ff3-9ac6-4cf2-95e6-130fc8603928}" />
 	<object class="MixerBusFader" id="{b1b79bef-9a20-45d1-aef6-486b30741927}" />
 </objects>

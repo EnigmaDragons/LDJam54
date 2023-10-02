@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{b7f4c655-a6f6-472a-b14f-885aef42e1f0}">
+		<property name="assetPath">
+			<value>Boss_DX_Reverb/Boss_Work_Good_4_rev.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>6.2767291666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a1961438-bdc9-4db6-8e5e-89924b8aa068}</destination>
+		</relationship>
+	</object>
+</objects>

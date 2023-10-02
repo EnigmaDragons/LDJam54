@@ -114,37 +114,37 @@
 	<object class="MixerBusFader" id="{28b6709a-4967-4f5b-8eb2-814d94ea80cd}" />
 	<object class="SingleSound" id="{15183e49-68ef-46db-8456-918234f2fbc2}">
 		<relationship name="audioFile">
-			<destination>{2544be5b-dccd-4374-9588-0ef0d7e68774}</destination>
+			<destination>{be13a1b2-7eba-494b-986d-f7633a1d8ef3}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{fc22d1a7-7a69-42d2-b17f-e1d9d1eef88a}">
 		<relationship name="audioFile">
-			<destination>{6a19442f-f5f2-4f98-a96e-f0a3c4adf747}</destination>
+			<destination>{8be30f3f-36bf-4464-be29-8a3e21bce279}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{f5cc05ae-30b4-4554-a7d3-f0e56a7665d9}">
 		<relationship name="audioFile">
-			<destination>{e6cf37b7-6755-4137-9783-67b0139fbc00}</destination>
+			<destination>{13c18892-15c8-4ab2-b230-09ffcfebf689}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{5cb2c9b3-c5bc-4d36-94c9-22222f03865f}">
 		<relationship name="audioFile">
-			<destination>{85d48288-7974-455e-b225-729d6d513b24}</destination>
+			<destination>{1037215c-0959-4170-83a1-fb1912df5ca2}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{5ba59777-ccc5-48df-b31f-b0ec00294492}">
 		<relationship name="audioFile">
-			<destination>{6ba46b26-3e1a-40d7-a2fb-64437374eb6f}</destination>
+			<destination>{752f5c10-eaeb-480c-bf40-17034ca26595}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{ae48417a-1844-44dd-964b-f4b9bef2652e}">
 		<relationship name="audioFile">
-			<destination>{b9bbf182-44ac-4f88-9b5e-0fc8bb87ba0a}</destination>
+			<destination>{8870cfa2-60b4-4569-a81a-142e88826265}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{3503a8c5-c839-4bf1-aa19-192f5301453f}">
 		<relationship name="audioFile">
-			<destination>{e6f64a0c-d47e-4675-a026-b3bfc9bbd28f}</destination>
+			<destination>{7c8646b2-a75e-4e4f-b987-533ed041f3e1}</destination>
 		</relationship>
 	</object>
 </objects>

@@ -21,9 +21,12 @@
 		</relationship>
 		<relationship name="snapshotProperties">
 			<destination>{9e62e4b5-d0d0-42cd-b6be-5d4b8fcba574}</destination>
+			<destination>{46000519-256d-4510-9e1f-9f8416a1354b}</destination>
+			<destination>{e56b5ace-a793-4aaf-8b62-5a331a481525}</destination>
 		</relationship>
 		<relationship name="snapshotTracks">
 			<destination>{18521042-61cc-4603-a627-3078454eea04}</destination>
+			<destination>{ddf65ee7-96e3-4487-8975-e8e4cd498ac8}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{7ab9eaab-ff68-4258-b6d4-6d92a584941d}">
@@ -45,9 +48,36 @@
 			<destination>{edc5a715-8113-4f80-b141-51f18e5064af}</destination>
 		</relationship>
 	</object>
+	<object class="SnapshotProperty" id="{46000519-256d-4510-9e1f-9f8416a1354b}">
+		<property name="propertyName">
+			<value>level</value>
+		</property>
+		<property name="value">
+			<value>-10</value>
+		</property>
+		<relationship name="automatableObject">
+			<destination>{a0622af0-aed1-46de-b1c5-149f7f8e56eb}</destination>
+		</relationship>
+	</object>
+	<object class="SnapshotProperty" id="{e56b5ace-a793-4aaf-8b62-5a331a481525}">
+		<property name="propertyName">
+			<value>level</value>
+		</property>
+		<property name="value">
+			<value>-11.5</value>
+		</property>
+		<relationship name="automatableObject">
+			<destination>{4da10463-d85a-4f1b-acef-6ae17491c515}</destination>
+		</relationship>
+	</object>
 	<object class="SnapshotTrack" id="{18521042-61cc-4603-a627-3078454eea04}">
 		<relationship name="mixerStrip">
 			<destination>{3478dc8c-4553-49ea-bdd7-83d6a3d737a1}</destination>
+		</relationship>
+	</object>
+	<object class="SnapshotTrack" id="{ddf65ee7-96e3-4487-8975-e8e4cd498ac8}">
+		<relationship name="mixerStrip">
+			<destination>{b83998c9-2a13-440e-a666-94186bd8c468}</destination>
 		</relationship>
 	</object>
 	<object class="ADSRModulator" id="{af558831-5487-47f5-87af-d1cebbf5ca76}">
@@ -64,7 +94,7 @@
 			<value>100</value>
 		</property>
 		<property name="releaseTime">
-			<value>860</value>
+			<value>595</value>
 		</property>
 	</object>
 </objects>
