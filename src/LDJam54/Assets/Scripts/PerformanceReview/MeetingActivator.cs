@@ -1,5 +1,5 @@
 ﻿
-public class PerformanceReviewMeetings : OnMessage<WorkdayEnded>
+public class MeetingActivator : OnMessage<WorkdayEnded>
 {
     protected override void Execute(WorkdayEnded msg)
     {

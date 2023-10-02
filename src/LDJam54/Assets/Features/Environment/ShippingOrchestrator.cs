@@ -5,11 +5,9 @@ using UnityEngine;
 public class ShippingOrchestrator : OnMessage<BoxShipped, ColoredBoxAppeared, ColoredBoxDisappeared>
 {
     [SerializeField] private ShipmentWanted shipment;
-
-    private bool _showingShipping;
+    
     private void Start()
     {
-        _showingShipping = false;
         RandomizeBoxWanted();
     }
 

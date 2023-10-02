@@ -38,6 +38,12 @@ public class SoundGuy : MonoBehaviour
         Message.Subscribe<TeleporterActivated>(OnTeleporterActivated, this);
         Message.Subscribe<JumpPadUsed>(OnJumpPadUsed, this);
         Message.Subscribe<PlayBossComment>(OnBossComment, this);
+        Message.Subscribe<StartKpiMeetingRequested>(OnMorningMeetingStarted, this);
+    }
+
+    private void OnMorningMeetingStarted(StartKpiMeetingRequested obj)
+    {
+        
     }
 
     private void OnIncineratorUsed(IncineratorUsed obj)
