@@ -7,12 +7,20 @@ using FMOD.Studio;
 public class FMOD_FootStepManager : MonoBehaviour
 {
 
-    EventInstance footstep; 
-    
-    public void FootStepDown()
+    EventInstance footstep;
+
+    private void Start()
     {
         footstep = RuntimeManager.CreateInstance("event:/CHAR/FootSteps");
+    }
+
+    public void FootStepDown()
+    {
         footstep.start();
+    }
+
+    private void OnDestroy()
+    {
         footstep.release();
     }
 
@@ -30,5 +38,9 @@ public class FMOD_FootStepManager : MonoBehaviour
     {
         footstep.setParameterByName("FootStepLength", 0f);
     }
-    
+
+    public void SetTerrainMetal()
+    {
+        footstep.setParameterByName("Terrain", 2);
+    }   
 }
