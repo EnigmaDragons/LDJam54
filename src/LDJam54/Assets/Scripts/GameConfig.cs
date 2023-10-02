@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameConfig : ScriptableObject
 {
     [Header("Coworkers")]
-    public List<string> Coworkers = new List<string>();
+    public string[] Coworkers = new string[0];
 
     [Header("KPI Scoring")]
     public int BoxShippingScore;
