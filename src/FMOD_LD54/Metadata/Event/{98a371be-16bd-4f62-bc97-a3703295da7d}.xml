@@ -127,7 +127,7 @@
 	</object>
 	<object class="SilenceSound" id="{06892409-dadf-415b-86bb-c89bc80ee6df}">
 		<property name="duration">
-			<value>700</value>
+			<value>600</value>
 		</property>
 	</object>
 	<object class="MultiSound" id="{e9f4192a-6f69-4f58-82fa-38ed9d707162}">
