@@ -61,6 +61,8 @@ GameObject:
   - component: {fileID: 6313352512723380754}
   - component: {fileID: 2790175614362121121}
   - component: {fileID: 2802125905706081820}
+  - component: {fileID: 2950120861813297286}
+  - component: {fileID: 6312471020237794895}
   m_Layer: 0
   m_Name: SM_Incinerator
   m_TagString: Untagged
@@ -200,6 +202,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.65, y: 3, z: 3.65}
   m_Center: {x: 0, y: 4.33, z: 0}
+--- !u!65 &2950120861813297286
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6583384663796185455}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.514883, y: 0.4, z: 6.7454324}
+  m_Center: {x: -0.14871264, y: 0.17, z: 0}
+--- !u!65 &6312471020237794895
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6583384663796185455}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.7, y: 0.35, z: 3.89}
+  m_Center: {x: -0.6, y: 0.52, z: 0}
 --- !u!1 &8104927601550707321
 GameObject:
   m_ObjectHideFlags: 0
