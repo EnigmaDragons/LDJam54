@@ -473,6 +473,9 @@ MonoBehaviour:
   minThrowForce: 5
   throwForceIncreaseSpeed: 5
   throwForceSlider: {fileID: 296860113}
+  _isThrowing: 0
+  _interactText: 
+  _canThrow: 0
 --- !u!65 &234349515
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -574,7 +577,7 @@ GameObject:
   - component: {fileID: 2898158793237227276}
   m_Layer: 0
   m_Name: Scaler
-  m_TagString: Untagged
+  m_TagString: PlayerParent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -847,7 +850,22 @@ PrefabInstance:
     - target: {fileID: 2508742654645338070, guid: e46abde266c66af46a71dce7bfc4ed59,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233573611447882018, guid: e46abde266c66af46a71dce7bfc4ed59,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5102345054628743568, guid: e46abde266c66af46a71dce7bfc4ed59,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440123509611832072, guid: e46abde266c66af46a71dce7bfc4ed59,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e46abde266c66af46a71dce7bfc4ed59, type: 3}

@@ -2,6 +2,7 @@
 using FMOD.Studio;
 using FMODUnity;
 using UnityEngine;
+using STOP_MODE = FMOD.Studio.STOP_MODE;
 
 public class SoundGuy : MonoBehaviour
 {
@@ -25,7 +26,6 @@ public class SoundGuy : MonoBehaviour
         Message.Subscribe<DoorClosed>(OnDoorClosed, this);
         Message.Subscribe<TeleporterActivated>(OnTeleporterActivated, this);
         Message.Subscribe<JumpPadUsed>(OnJumpPadUsed, this);
-      
     }
 
     private void OnWasFired(WasFired obj)
@@ -60,6 +60,7 @@ public class SoundGuy : MonoBehaviour
 
     private void OnWorkdayStarted(WorkdayStarted obj)
     {
+        _currentMusic.stop(STOP_MODE.ALLOWFADEOUT);
         _currentMusic = RuntimeManager.CreateInstance(workingMusic);
         _currentMusic.start();
     }

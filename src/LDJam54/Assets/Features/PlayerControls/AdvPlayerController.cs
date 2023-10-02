@@ -33,8 +33,11 @@ namespace Features.PlayerControls
         private void Update()
         {
             if (!FirstPersonInteractionStatus.IsEnabled)
+            {
+                animatorToSoundController.WalkAnimationStop();
                 return;
-            
+            }
+
             if (Input.GetKeyDown(KeyCode.LeftShift) || ControllerChecker.IsLeftStickDown())
             {
                 _fpController.Speed = gameConfig.PlayerRunSpeed;
@@ -51,7 +54,7 @@ namespace Features.PlayerControls
             if ((Input.GetKeyDown(KeyCode.Space) || ControllerChecker.IsA()) && IsGrounded())
             {
                 Jump();    
-            } 
+            }
             
             if(_fpController.m_velocity != Vector3.zero && IsGrounded() && !isJumping) 
             {
