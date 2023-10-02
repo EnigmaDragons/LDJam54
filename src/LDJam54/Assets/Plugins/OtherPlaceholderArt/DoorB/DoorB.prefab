@@ -330,11 +330,12 @@ MonoBehaviour:
   OpenSpeed: 1
   CloseSpeed: 1
   isAutomatic: 0
-  AutoClose: 0
+  AutoClose: 1
   DoubleSidesOpen: 0
   PlayerColliderTag: Player
   OpenForwardAnimName: Door_anim
   OpenBackwardAnimName: Door_anim
+  startedLocked: 0
   lockedVisual: {fileID: 8322088160096003736}
   unlockedVisual: {fileID: 4194311186873840095}
   forwardLabel: {fileID: 3697295467803805277}
