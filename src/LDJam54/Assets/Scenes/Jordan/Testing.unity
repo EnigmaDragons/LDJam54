@@ -2805,6 +2805,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2912861062256710585, guid: 48b5ca30813f55049b2ef6189aacd5d2,
+        type: 3}
+      propertyPath: m_Range
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912861062256710585, guid: 48b5ca30813f55049b2ef6189aacd5d2,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.39045176
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912861062256710585, guid: 48b5ca30813f55049b2ef6189aacd5d2,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 5771136234837713877, guid: 48b5ca30813f55049b2ef6189aacd5d2,
         type: 3}
       propertyPath: m_RootOrder
@@ -2864,6 +2879,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Incinerator
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580834993255453706, guid: 48b5ca30813f55049b2ef6189aacd5d2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.884
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580834993255453706, guid: 48b5ca30813f55049b2ef6189aacd5d2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.184
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48b5ca30813f55049b2ef6189aacd5d2, type: 3}
