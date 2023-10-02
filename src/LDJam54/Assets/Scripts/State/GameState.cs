@@ -30,6 +30,14 @@ public sealed class GameState
     public List<string> Coworkers = new List<string>() { "38295" };
     public int[] CoworkerScores = new int[] { 20 };
     public KPI[] ActiveKPIs = { KPI.BoxesShipped };
+    public SerializableDictionary<KPI, string> KPIDescriptions = new()
+    {
+        { KPI.BoxesShelvedCorrectly, "Shelved" },
+        { KPI.BoxesShipped, "Shipped" },
+        { KPI.BoxesUnsorted, "Unsorted" },
+        { KPI.BoxesUnloaded, "Unloaded" },
+        { KPI.BoxShippingMistakes, "Shipping Mistake" },
+    };
     public SerializableDictionary<KPI, int> KPIScoring = EmptyKpis();
     public SerializableDictionary<KPI, int> KPIs = new() {
         { KPI.BoxesShelvedCorrectly, 0 },
@@ -48,4 +56,12 @@ public sealed class GameState
 
     // Cutscene Stuff - Probably Not Needed
     public SerializableDictionary<string, bool> CutsceneStoryStates = new();
+    
+    public void ResetKpi() => KPIs = new() {
+        { KPI.BoxesShelvedCorrectly, 0 },
+        { KPI.BoxesShipped, 0 },
+        { KPI.BoxesUnsorted, 0 },
+        { KPI.BoxesUnloaded, 0 },
+        { KPI.BoxShippingMistakes, 0 },
+    };
 }

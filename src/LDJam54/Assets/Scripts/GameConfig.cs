@@ -7,12 +7,19 @@ public class GameConfig : ScriptableObject
     [Header("Coworkers")]
     public string[] Coworkers = new string[0];
 
+    [Header("KPI Descriptions")]
+    public string BoxShippingKPIDescription;
+    public string PlacedCorrectlyKPIDescription;
+    public string BoxUnsortedFixedKPIDescription;
+    public string BoxUnloadedKPIDescription;
+    public string BoxShippingMistakesKPIDescription;
+
     [Header("KPI Scoring")]
     public int BoxShippingScore;
     public int PlacedCorrectlyScore;
     public int BoxUnsortedFixedScore;
-    public int BoxUnloadedFixedScore;
-    public int BoxShippingMistakesFixedScore;
+    public int BoxUnloadedScore;
+    public int BoxShippingMistakesScore;
 
     [Header("Player Movement")] 
     public float PlayerWalkSpeed = 5f;
@@ -23,6 +30,6 @@ public class GameConfig : ScriptableObject
     public int StartingDay = 1;
     public int TotalPlayableDays = 1;
     public DayConfig[] Days;
-    
+
     public DayConfig CurrentDayConfig => Days[CurrentGameState.State.CurrentDayNumber];
 }

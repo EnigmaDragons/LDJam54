@@ -1,22 +1,21 @@
 ﻿using UnityEngine;
 
-public class AreasController : OnMessage<GameStateChanged>
+public class AreasController : OnMessage<GameStateChanged, DayChanged>
 {
-    public GameObject[] day1;
-    public GameObject[] day2;
-    public GameObject[] day3;
-    public GameObject[] day4;
-    public GameObject[] day5;
-    public GameObject[] day6;
-    public GameObject[] day7;
+    public GameObject day1Prefab;
+    public GameObject day2Prefab;
+    public GameObject day3Prefab;
+    public GameObject day4Prefab;
+    public GameObject day5Prefab;
+    public GameObject day6Prefab;
+    public GameObject day7Prefab;
     public Door[] doors;
     public Door[] doorsToStartLocked;
 
-    private int _lastDaySeen;
+    private GameObject _currentDayPrefab;
     
     private void Awake()
     {
-        _lastDaySeen = -1;
         for (var i = 0; i < doors.Length; i++)
             doors[i].SetLabels("Meeting Room", "Room " + (i + 1));
         doorsToStartLocked.ForEach(d => d.SetLocked(true));
@@ -25,19 +24,31 @@ public class AreasController : OnMessage<GameStateChanged>
     private void Start() => Refresh(CurrentGameState.State);
     
     protected override void Execute(GameStateChanged msg) => Refresh(msg.State);
+    protected override void Execute(DayChanged msg)
+    {
+        if (_currentDayPrefab != null)
+        {
+            Destroy(_currentDayPrefab);
+            _currentDayPrefab = null;
+        }
+        if (CurrentGameState.State.CurrentDayNumber == 1 && day1Prefab != null)
+            _currentDayPrefab = Instantiate(day1Prefab, transform);
+        if (CurrentGameState.State.CurrentDayNumber == 2 && day2Prefab != null)
+            _currentDayPrefab = Instantiate(day2Prefab, transform);
+        if (CurrentGameState.State.CurrentDayNumber == 3 && day3Prefab != null)
+            _currentDayPrefab = Instantiate(day3Prefab, transform);
+        if (CurrentGameState.State.CurrentDayNumber == 4 && day4Prefab != null)
+            _currentDayPrefab = Instantiate(day4Prefab, transform);
+        if (CurrentGameState.State.CurrentDayNumber == 5 && day5Prefab != null)
+            _currentDayPrefab = Instantiate(day5Prefab, transform);
+        if (CurrentGameState.State.CurrentDayNumber == 6 && day6Prefab != null)
+            _currentDayPrefab = Instantiate(day6Prefab, transform);
+        if (CurrentGameState.State.CurrentDayNumber == 7 && day7Prefab != null)
+            _currentDayPrefab = Instantiate(day7Prefab, transform);
+    }
 
     private void Refresh(GameState gs)
     {
-        if (_lastDaySeen == gs.CurrentDayNumber)
-            return;
-        _lastDaySeen = gs.CurrentDayNumber;
-        day1.ForEach(g => g.SetActive(gs.CurrentDayNumber == 1));
-        day2.ForEach(g => g.SetActive(gs.CurrentDayNumber == 2));
-        day3.ForEach(g => g.SetActive(gs.CurrentDayNumber == 3));
-        day4.ForEach(g => g.SetActive(gs.CurrentDayNumber == 4));
-        day5.ForEach(g => g.SetActive(gs.CurrentDayNumber == 5));
-        day6.ForEach(g => g.SetActive(gs.CurrentDayNumber == 6));
-        day7.ForEach(g => g.SetActive(gs.CurrentDayNumber == 7));
         for (var i = 0; i < doors.Length; i++) 
             doors[i].SetLocked(gs.CurrentDayNumber != i + 1);
     }

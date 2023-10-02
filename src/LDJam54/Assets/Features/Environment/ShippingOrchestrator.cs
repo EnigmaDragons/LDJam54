@@ -49,7 +49,7 @@ public class ShippingOrchestrator : OnMessage<BoxShipped, ColoredBoxAppeared, Co
         }
         else if (_boxes.Any(x => x.Size != shipment.Size))
         {
-            shipment.Size = _boxes.Where(x => x.Size == shipment.Size).Select(x => x.Size).Distinct().TakeRandom(1)[0];
+            shipment.Size = _boxes.Where(x => x.Size != shipment.Size).Select(x => x.Size).Distinct().TakeRandom(1)[0];
         }
         Message.Publish(new ShipmentWantedUpdated());
     }

@@ -18,11 +18,16 @@ MonoBehaviour:
   - 123161
   - 729421
   - 891231
+  BoxShippingKPIDescription: Test1
+  PlacedCorrectlyKPIDescription: Test2
+  BoxUnsortedFixedKPIDescription: Test3
+  BoxUnloadedKPIDescription: Test4
+  BoxShippingMistakesKPIDescription: Test5
   BoxShippingScore: 20
   PlacedCorrectlyScore: 20
   BoxUnsortedFixedScore: 20
-  BoxUnloadedFixedScore: 0
-  BoxShippingMistakesFixedScore: 0
+  BoxUnloadedScore: 20
+  BoxShippingMistakesScore: 20
   PlayerWalkSpeed: 3.8
   PlayerRunSpeed: 8.5
   PlayerJumpForce: 7
