@@ -299,8 +299,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.4626315, y: 2.123, z: 5.895957}
-  m_Center: {x: -0.09324824, y: 1.0615, z: 0.28910908}
+  m_Size: {x: 1.1018806, y: 2.123, z: 3.4580455}
+  m_Center: {x: -0.002257824, y: 1.0615, z: 0.0028513074}
 --- !u!64 &64421229947635136
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -330,7 +330,7 @@ MonoBehaviour:
   OpenSpeed: 1
   CloseSpeed: 1
   isAutomatic: 0
-  AutoClose: 1
+  AutoClose: 0
   DoubleSidesOpen: 0
   PlayerColliderTag: Player
   OpenForwardAnimName: Door_anim
