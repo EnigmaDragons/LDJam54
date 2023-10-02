@@ -1,5 +1,5 @@
 ﻿
-public class NextDayHandler : OnMessage<StartNextDayRequested>
+public class NextDayHandler : OnMessage<StartNextDayRequested, RestartDayRequested>
 {
     protected override void Execute(StartNextDayRequested msg)
     {
@@ -15,6 +15,17 @@ public class NextDayHandler : OnMessage<StartNextDayRequested>
             g.MeetingTime = MeetingTime.Morning;
         });
         
+        Message.Publish(new DayChanged());
+    }
+
+    protected override void Execute(RestartDayRequested msg)
+    {
+        Log.Info("Restarting Day");
+        CurrentGameState.Update(g =>
+        {
+            g.MeetingTime = MeetingTime.Morning;
+        });
+        WorkdayFadeController.TeleportPlayerToHome();
         Message.Publish(new DayChanged());
     }
 }

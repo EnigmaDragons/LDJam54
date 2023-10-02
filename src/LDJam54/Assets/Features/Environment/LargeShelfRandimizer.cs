@@ -19,7 +19,7 @@ public class LargeShelfRandimizer : MonoBehaviour
         
         foreach (var target in palletDropTargets.Where(x => Rng.Chance(chanceOfPallet)))
         {
-            var pallet = Instantiate(palletPrefab, target.GetLocation(yExtent), transform.rotation);
+            var pallet = Instantiate(palletPrefab, target.GetLocation(yExtent), transform.rotation, transform.parent);
             pallet.Color = coloredContainer.color;
             pallet.ColorLocation = coloredContainer.color;
         }

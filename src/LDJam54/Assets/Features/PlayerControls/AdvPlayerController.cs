@@ -20,6 +20,8 @@ namespace Features.PlayerControls
 
         [SerializeField]
         private float groundCheckDistance = 0.2f;
+
+        public bool IsCurrentlyGrounded = true;
         
         private void Awake()    
         {
@@ -33,8 +35,11 @@ namespace Features.PlayerControls
         private void Update()
         {
             if (!FirstPersonInteractionStatus.IsEnabled)
+            {
+                animatorToSoundController.WalkAnimationStop();
                 return;
-            
+            }
+
             if (Input.GetKeyDown(KeyCode.LeftShift) || ControllerChecker.IsLeftStickDown())
             {
                 _fpController.Speed = gameConfig.PlayerRunSpeed;
@@ -51,7 +56,7 @@ namespace Features.PlayerControls
             if ((Input.GetKeyDown(KeyCode.Space) || ControllerChecker.IsA()) && IsGrounded())
             {
                 Jump();    
-            } 
+            }
             
             if(_fpController.m_velocity != Vector3.zero && IsGrounded() && !isJumping) 
             {
@@ -65,7 +70,8 @@ namespace Features.PlayerControls
         
         private bool IsGrounded()
         {
-            return Physics.RaycastAll(transform.position, Vector3.down, groundCheckDistance).Any(o => o.collider.gameObject != gameObject);
+            IsCurrentlyGrounded = Physics.RaycastAll(transform.position, Vector3.down, groundCheckDistance).Any(o => o.collider.gameObject != gameObject);
+            return IsCurrentlyGrounded;
         }
         
         private void Jump()

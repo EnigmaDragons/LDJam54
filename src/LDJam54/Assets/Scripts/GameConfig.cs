@@ -5,12 +5,14 @@ using UnityEngine;
 public class GameConfig : ScriptableObject
 {
     [Header("Coworkers")]
-    public List<string> Coworkers = new List<string>();
+    public string[] Coworkers = new string[0];
 
     [Header("KPI Scoring")]
     public int BoxShippingScore;
     public int PlacedCorrectlyScore;
     public int BoxUnsortedFixedScore;
+    public int BoxUnloadedFixedScore;
+    public int BoxShippingMistakesFixedScore;
 
     [Header("Player Movement")] 
     public float PlayerWalkSpeed = 5f;
@@ -21,4 +23,6 @@ public class GameConfig : ScriptableObject
     public int StartingDay = 1;
     public int TotalPlayableDays = 1;
     public DayConfig[] Days;
+    
+    public DayConfig CurrentDayConfig => Days[CurrentGameState.State.CurrentDayNumber];
 }

@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 public class CoworkerSetup : MonoBehaviour
@@ -6,6 +7,6 @@ public class CoworkerSetup : MonoBehaviour
     
     public void Start()
     {
-        CurrentGameState.State.Coworkers = gameConfig.Coworkers;
+        CurrentGameState.State.Coworkers = gameConfig.Coworkers.ToList();
     }
 }

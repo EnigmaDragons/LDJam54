@@ -45,12 +45,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e81936958de343299c10e690f967104d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxPickUp:
+  boxLifted:
     Guid:
-      Data1: 8228099
-      Data2: 1280470008
-      Data3: -1752361833
-      Data4: -1933694390
+      Data1: -1010624890
+      Data2: 1173792516
+      Data3: 1040986505
+      Data4: 1933196839
     Path: event:/ENVIRONMENT/Boxes/BoxPickUp
   boxSetDown:
     Guid:
@@ -86,7 +86,35 @@ MonoBehaviour:
       Data2: 1192818228
       Data3: 1547927432
       Data4: -430710698
-    Path: event:/JumpPad
+    Path: event:/ENVIRONMENT/JumpPad
+  shippingTeleporter:
+    Guid:
+      Data1: 520595019
+      Data2: 1100662542
+      Data3: -267749232
+      Data4: 1644119724
+    Path: event:/ENVIRONMENT/ShippingTeleporter
+  happyBossComment:
+    Guid:
+      Data1: 1407088393
+      Data2: 1316730097
+      Data3: 1273326010
+      Data4: 409981963
+    Path: event:/Boss/Boss_Work_Good
+  unhappyBossComment:
+    Guid:
+      Data1: -320653480
+      Data2: 1236785011
+      Data3: 743744427
+      Data4: -773866777
+    Path: event:/Boss/Boss_Work_Bad
+  neutralBossComment:
+    Guid:
+      Data1: 1412219655
+      Data2: 1249358250
+      Data3: 347565696
+      Data4: 943178528
+    Path: event:/Boss/Boss_Work_Neutral
 --- !u!114 &8895141721937899204
 MonoBehaviour:
   m_ObjectHideFlags: 0

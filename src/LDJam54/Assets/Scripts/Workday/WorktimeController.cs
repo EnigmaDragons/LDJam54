@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class WorktimeController : OnMessage<StartWorkdayRequested, WorkdayEnded, EndWorkdayRequested>
+public class WorktimeController : OnMessage<StartWorkdayRequested, WorkdayEnded, EndWorkdayRequested, DayChanged>
 {   
     private bool _worktimeIsActive;
     private float _elapsedInCurrentDay;
@@ -27,6 +27,11 @@ public class WorktimeController : OnMessage<StartWorkdayRequested, WorkdayEnded,
     {
         _worktimeIsActive = false;
         WorkdayState.SetTotalWorkdayMinutes((WorkdayConfig.END_OF_DAY - WorkdayConfig.START_OF_DAY) * 60);
+    }
+
+    protected override void Execute(DayChanged msg)
+    {
+        WorkdayState.InitWorkday();
     }
 
     private void FixedUpdate()

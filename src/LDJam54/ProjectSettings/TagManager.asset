@@ -9,6 +9,7 @@ TagManager:
   - Loader
   - AppInfra
   - RaycastInteract
+  - PlayerParent
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - LargeDropTarget
   - PalletDropLayer
   - ConveyorBelt
-  - 
+  - RenderTextures
   - 
   - 
   - 
