@@ -9,6 +9,7 @@ TagManager:
   - Loader
   - AppInfra
   - RaycastInteract
+  - PlayerParent
   layers:
   - Default
   - TransparentFX
