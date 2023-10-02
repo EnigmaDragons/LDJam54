@@ -111,6 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29c1e37233d24532a5e5b6165ea31bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CanTriggerRepeatedly: 0
   target: {fileID: 691651298146709733}
 --- !u!114 &3596930704480977805
 MonoBehaviour:
@@ -247,6 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e1b0fb63ba410c8ab0dc5bd6b0224c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CanTriggerRepeatedly: 1
 --- !u!1 &1324491369096105872
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,6 +394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eee6473656d47a6942cc86c97c8f6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CanTriggerRepeatedly: 0
   target: {fileID: 691651298146709733}
 --- !u!114 &3715712317764655277
 MonoBehaviour:
