@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: GameConfig
   m_EditorClassIdentifier: 
   Coworkers:
-  - 34982
+  - 349822
+  - 654512
+  - 123161
+  - 729421
   BoxShippingScore: 20
   PlacedCorrectlyScore: 20
   BoxUnsortedFixedScore: 20
@@ -24,6 +27,6 @@ MonoBehaviour:
   TotalPlayableDays: 1
   Days:
   - ActiveKPIs: 00000000
-    CoworkerScores: 13000000
-    BoxSpawnInterval: 0
+    CoworkerScores: 13000000250000007700000033000000
+    BoxSpawnInterval: 1
     ClockSpeedFactor: 1
