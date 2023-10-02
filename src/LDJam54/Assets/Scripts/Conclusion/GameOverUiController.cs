@@ -15,5 +15,6 @@ public class GameOverUiController : OnMessage<WasFired>
     protected override void Execute(WasFired msg)
     {
         target.SetActive(true);
+        FirstPersonInteractionStatus.IsEnabled = false;
     }
 }

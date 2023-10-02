@@ -3,6 +3,7 @@
 public class WorkdayFadeController : OnMessage<StartNextDayRequested>
 {
     public float fadeTime = 2.4f;
+    public float asleepTime = 1.5f;
     public CanvasGroup group;
 
     private Mode _mode;
@@ -15,6 +16,7 @@ public class WorkdayFadeController : OnMessage<StartNextDayRequested>
 
         _remainingFadeTime = fadeTime;
         _mode = Mode.FadeOut;
+        FirstPersonInteractionStatus.IsEnabled = false;
     }
 
     private void Update()
@@ -29,12 +31,17 @@ public class WorkdayFadeController : OnMessage<StartNextDayRequested>
             if (_mode == Mode.FadeIn)
             {
                 _mode = Mode.Idle;
+                FirstPersonInteractionStatus.IsEnabled = true;
             }
-            if (_mode == Mode.FadeOut)
+            else if (_mode == Mode.FadeOut)
             {
                 _mode = Mode.Teleport;
+                _remainingFadeTime = asleepTime;
                 TeleportPlayer();
                 Message.Publish(new DayChanged());
+            }
+            else if (_mode == Mode.Teleport)
+            {
                 _remainingFadeTime = fadeTime;
                 _mode = Mode.FadeIn;
             }
@@ -42,7 +49,8 @@ public class WorkdayFadeController : OnMessage<StartNextDayRequested>
             return;
         }
         
-        group.alpha = Mathf.Lerp(_mode == Mode.FadeOut ? 1 : 0,  _mode == Mode.FadeOut ? 0 : 1, _remainingFadeTime / fadeTime);
+        if (_mode != Mode.Teleport)
+            group.alpha = Mathf.Lerp(_mode == Mode.FadeOut ? 1 : 0,  _mode == Mode.FadeOut ? 0 : 1, _remainingFadeTime / fadeTime);
     }
 
     private void TeleportPlayer()

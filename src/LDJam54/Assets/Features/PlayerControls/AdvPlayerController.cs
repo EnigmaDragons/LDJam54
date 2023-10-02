@@ -32,6 +32,9 @@ namespace Features.PlayerControls
         
         private void Update()
         {
+            if (!FirstPersonInteractionStatus.IsEnabled)
+                return;
+            
             if (Input.GetKeyDown(KeyCode.LeftShift) || ControllerChecker.IsLeftStickDown())
             {
                 _fpController.Speed = gameConfig.PlayerRunSpeed;

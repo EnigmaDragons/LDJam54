@@ -44,6 +44,9 @@ public class FirstPersonController : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
+        if (!FirstPersonInteractionStatus.IsEnabled)
+            return;
+        
         m_MovX = Input.GetAxis("Horizontal");
         m_MovY = Input.GetAxis("Vertical");
 
@@ -74,6 +77,9 @@ public class FirstPersonController : MonoBehaviour
     
     public void FixedUpdate()
     {        
+        if (!FirstPersonInteractionStatus.IsEnabled)
+            return;
+        
         m_velocity = (m_moveHorizontal + m_movVertical).normalized * speed;
         //move the actual player here
         if (m_velocity != Vector3.zero)
