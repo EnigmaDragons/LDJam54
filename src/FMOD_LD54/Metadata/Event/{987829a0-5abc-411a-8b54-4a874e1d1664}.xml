@@ -561,9 +561,6 @@
 		<property name="position">
 			<value>26.305084745762716</value>
 		</property>
-		<property name="triggerProbabilityEnabled">
-			<value>true</value>
-		</property>
 		<relationship name="timeline">
 			<destination>{a5e88e83-5c5e-43b1-a66c-a50c6632effd}</destination>
 		</relationship>
