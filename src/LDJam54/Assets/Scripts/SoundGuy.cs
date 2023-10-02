@@ -149,7 +149,6 @@ public class SoundGuy : MonoBehaviour
         _currentMusic.stop(STOP_MODE.ALLOWFADEOUT);
         _currentMusic = RuntimeManager.CreateInstance(sleepMusic);
         _currentMusic.start();
-        Debug.Log("Sleep?");
     }
     
     private void OnDisable() => Message.Unsubscribe(this);
