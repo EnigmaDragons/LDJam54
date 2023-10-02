@@ -5,7 +5,7 @@ public class PlaceholderPerformanceReviewDisplayer : MonoBehaviour
 {
     public void Start()
     {
-        var state = CurrentGameState.State;
+        /*var state = CurrentGameState.State;
         state.KPIs[KPI.BoxesShipped] = 23;
         state.KPIs[KPI.BoxesUnsorted] = 15;
         state.Coworkers = new() {
@@ -31,7 +31,7 @@ public class PlaceholderPerformanceReviewDisplayer : MonoBehaviour
         PerformanceEvaluator.Evaluate();
         var review = state.PerformanceReview;
         foreach (var score in review.ScorePerPerson)
-            Debug.Log(score.Key + ": " + score.Value);
+            Debug.Log(score.Key + ": " + score.Value);*/
         /*foreach(var performance in review.KPIsPerPerson)
         {
             Debug.Log(performance.Key);
@@ -44,7 +44,7 @@ public class PlaceholderPerformanceReviewDisplayer : MonoBehaviour
             foreach (var value in placement.Value)
                 Debug.Log(value);
         }*/
-        Debug.Log(review.EliminatedPerson);
+        //Debug.Log(review.EliminatedPerson);
 
 
     }

@@ -32,20 +32,23 @@ namespace Features.PlayerControls
         
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            if (!FirstPersonInteractionStatus.IsEnabled)
+                return;
+            
+            if (Input.GetKeyDown(KeyCode.LeftShift) || ControllerChecker.IsLeftStickDown())
             {
                 _fpController.Speed = gameConfig.PlayerRunSpeed;
                 animatorToSoundController.StartRunning();
                 footStepManager.SetFootstepRunningLength();
             }
-            else if (Input.GetKeyUp(KeyCode.LeftShift))
+            else if (Input.GetKeyUp(KeyCode.LeftShift) || ControllerChecker.IsLeftStickUp())
             {
                 _fpController.Speed = gameConfig.PlayerWalkSpeed;
                 animatorToSoundController.StopRunning();
                 footStepManager.SetFootstepWalkLength();
             }
 
-            if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
+            if ((Input.GetKeyDown(KeyCode.Space) || ControllerChecker.IsA()) && IsGrounded())
             {
                 Jump();    
             } 

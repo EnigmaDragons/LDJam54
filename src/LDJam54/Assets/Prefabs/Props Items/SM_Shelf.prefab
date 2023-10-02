@@ -119,8 +119,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 1, z: 10}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 10, y: 0.8, z: 10}
+  m_Center: {x: 0, y: 0.4, z: 0}
 --- !u!1 &124338976269798312
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,8 +234,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &604700365295155898
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,8 +349,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &679168759939004355
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,8 +464,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &859011147369261077
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,8 +585,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 1, z: 10}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 10, y: 0.8, z: 10}
+  m_Center: {x: 0, y: 0.4, z: 0}
 --- !u!1 &925791831546846365
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,8 +701,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &933671315881185899
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,8 +819,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &1320535824247498752
 GameObject:
   m_ObjectHideFlags: 0
@@ -934,8 +934,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &1326422165990830921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,8 +1055,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 1, z: 10}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 10, y: 0.8, z: 10}
+  m_Center: {x: 0, y: 0.4, z: 0}
 --- !u!1 &1380677210866391903
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,8 +1170,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &1446631983508408253
 GameObject:
   m_ObjectHideFlags: 0
@@ -1288,8 +1288,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &1677382529810620974
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,8 +1404,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &1730863405849967426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1519,8 +1519,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &1930486910634202176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1637,8 +1637,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &2220530684616979336
 GameObject:
   m_ObjectHideFlags: 0
@@ -1752,8 +1752,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &2252492161383036246
 GameObject:
   m_ObjectHideFlags: 0
@@ -1869,8 +1869,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &2397391586734446872
 GameObject:
   m_ObjectHideFlags: 0
@@ -1985,8 +1985,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &2702910409674970392
 GameObject:
   m_ObjectHideFlags: 0
@@ -2100,8 +2100,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &2709796309514126482
 GameObject:
   m_ObjectHideFlags: 0
@@ -2218,8 +2218,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &2767635476444401498
 GameObject:
   m_ObjectHideFlags: 0
@@ -2334,8 +2334,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &3033050816504001998
 GameObject:
   m_ObjectHideFlags: 0
@@ -2452,8 +2452,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &3187351683696535150
 GameObject:
   m_ObjectHideFlags: 0
@@ -2570,8 +2570,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &3317312652372156875
 GameObject:
   m_ObjectHideFlags: 0
@@ -2685,8 +2685,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &3461044872379094894
 GameObject:
   m_ObjectHideFlags: 0
@@ -2802,8 +2802,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &3474489482652849976
 GameObject:
   m_ObjectHideFlags: 0
@@ -2920,8 +2920,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &3505030660135102345
 GameObject:
   m_ObjectHideFlags: 0
@@ -3038,8 +3038,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &3725863737203570592
 GameObject:
   m_ObjectHideFlags: 0
@@ -3154,8 +3154,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &3802636299895678904
 GameObject:
   m_ObjectHideFlags: 0
@@ -3272,8 +3272,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &4184169461927163674
 GameObject:
   m_ObjectHideFlags: 0
@@ -3387,8 +3387,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &4361140888027201814
 GameObject:
   m_ObjectHideFlags: 0
@@ -3508,8 +3508,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 1, z: 10}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 10, y: 0.8, z: 10}
+  m_Center: {x: 0, y: 0.4, z: 0}
 --- !u!1 &4482110214298684151
 GameObject:
   m_ObjectHideFlags: 0
@@ -3625,8 +3625,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &4651077869491120700
 GameObject:
   m_ObjectHideFlags: 0
@@ -3743,8 +3743,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &4680927336083132348
 GameObject:
   m_ObjectHideFlags: 0
@@ -3864,8 +3864,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 1, z: 10}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 10, y: 0.8, z: 10}
+  m_Center: {x: 0, y: 0.4, z: 0}
 --- !u!1 &4700933451872930766
 GameObject:
   m_ObjectHideFlags: 0
@@ -3980,8 +3980,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &4839893064938657905
 GameObject:
   m_ObjectHideFlags: 0
@@ -4097,8 +4097,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &4931193014844537406
 GameObject:
   m_ObjectHideFlags: 0
@@ -4214,8 +4214,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &4981077049647462769
 GameObject:
   m_ObjectHideFlags: 0
@@ -4331,8 +4331,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &5015095223333394033
 GameObject:
   m_ObjectHideFlags: 0
@@ -4519,8 +4519,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &5585327358287446042
 GameObject:
   m_ObjectHideFlags: 0
@@ -4635,8 +4635,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &6111920002220857178
 GameObject:
   m_ObjectHideFlags: 0
@@ -4750,8 +4750,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &6154589313106237080
 GameObject:
   m_ObjectHideFlags: 0
@@ -4871,8 +4871,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 1, z: 10}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 10, y: 0.8, z: 10}
+  m_Center: {x: 0, y: 0.4, z: 0}
 --- !u!1 &6188635654132722435
 GameObject:
   m_ObjectHideFlags: 0
@@ -4989,8 +4989,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &6341014111399592679
 GameObject:
   m_ObjectHideFlags: 0
@@ -5110,8 +5110,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 1, z: 10}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 10, y: 0.8, z: 10}
+  m_Center: {x: 0, y: 0.4, z: 0}
 --- !u!1 &6402220583797919289
 GameObject:
   m_ObjectHideFlags: 0
@@ -5226,8 +5226,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &6497342697571505039
 GameObject:
   m_ObjectHideFlags: 0
@@ -5342,8 +5342,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &6514623363808895202
 GameObject:
   m_ObjectHideFlags: 0
@@ -5824,8 +5824,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &6864342296453857200
 GameObject:
   m_ObjectHideFlags: 0
@@ -5939,8 +5939,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &7048358436340081443
 GameObject:
   m_ObjectHideFlags: 0
@@ -6054,8 +6054,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &7122788870906250067
 GameObject:
   m_ObjectHideFlags: 0
@@ -6171,8 +6171,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &7220837945380510683
 GameObject:
   m_ObjectHideFlags: 0
@@ -6287,8 +6287,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &7696496812081862099
 GameObject:
   m_ObjectHideFlags: 0
@@ -6402,8 +6402,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &7927478022202772240
 GameObject:
   m_ObjectHideFlags: 0
@@ -6520,8 +6520,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &7943252941415775024
 GameObject:
   m_ObjectHideFlags: 0
@@ -6638,8 +6638,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &7960518065208034511
 GameObject:
   m_ObjectHideFlags: 0
@@ -6754,8 +6754,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &8225565502652848256
 GameObject:
   m_ObjectHideFlags: 0
@@ -6870,8 +6870,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &8253589476556561732
 GameObject:
   m_ObjectHideFlags: 0
@@ -6988,8 +6988,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &8430686104885770310
 GameObject:
   m_ObjectHideFlags: 0
@@ -7104,8 +7104,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &8755977865425802743
 GameObject:
   m_ObjectHideFlags: 0
@@ -7219,8 +7219,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &8764372674237180293
 GameObject:
   m_ObjectHideFlags: 0
@@ -7335,8 +7335,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &8795116306260216236
 GameObject:
   m_ObjectHideFlags: 0
@@ -7456,8 +7456,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 1, z: 10}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 10, y: 0.8, z: 10}
+  m_Center: {x: 0, y: 0.4, z: 0}
 --- !u!1 &8836999032252377957
 GameObject:
   m_ObjectHideFlags: 0
@@ -7572,8 +7572,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &8900516962396424711
 GameObject:
   m_ObjectHideFlags: 0
@@ -7688,8 +7688,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &8931213778182188158
 GameObject:
   m_ObjectHideFlags: 0
@@ -7805,8 +7805,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &9178214874236098722
 GameObject:
   m_ObjectHideFlags: 0
@@ -7920,5 +7920,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5, z: 10}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 10, y: 0.4, z: 10}
+  m_Center: {x: 0, y: 0.2, z: 0}

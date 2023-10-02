@@ -13,39 +13,44 @@ MonoBehaviour:
   m_Name: GameConfig
   m_EditorClassIdentifier: 
   Coworkers:
-  - Name: 23472
-    Skill: 0
-    MasteredKpis: 00000000
-    PotentialKpis: 01000000
-  BoxShippedAverage:
-    BaseKPI: 2.6
-    SkillBonus: 0.2
-    ExploitBaseKpi: 15
-    ExploitSkillBonus: 3
-  PlacedCorrectlyAverage:
-    BaseKPI: 10
-    SkillBonus: 1
-    ExploitBaseKpi: 20
-    ExploitSkillBonus: 2
-  BoxUnsortedFixedAverage:
-    BaseKPI: 10
-    SkillBonus: 1
-    ExploitBaseKpi: 20
-    ExploitSkillBonus: 2
+  - 349822
+  - 654512
+  - 123161
+  - 729421
   BoxShippingScore: 20
   PlacedCorrectlyScore: 20
   BoxUnsortedFixedScore: 20
-  ClockSpeedFactor: 1
-  BoxSpawnInterval: 7.5
   PlayerWalkSpeed: 3.8
   PlayerRunSpeed: 8.5
   PlayerJumpForce: 7
-  TotalPlayableDays: 2
+  StartingDay: 1
+  TotalPlayableDays: 1
   Days:
-  - {fileID: 11400000, guid: dbfc957d9fd28cc4e8689c085bd1c91d, type: 2}
-  - {fileID: 11400000, guid: 0f14da22d9cefc04cb4b0aa2c9e315ce, type: 2}
-  - {fileID: 11400000, guid: 3564d58a040ca334bb371c116bbff298, type: 2}
-  - {fileID: 11400000, guid: 024986543602d6b4bad956ba824c8219, type: 2}
-  - {fileID: 11400000, guid: d1ec0a2d2bbfb884bad2d648e730637b, type: 2}
-  - {fileID: 11400000, guid: 466923d1f34f7ac4e9494db87aac8110, type: 2}
-  - {fileID: 11400000, guid: 2ea06cf16a9ef5e49a0bc53abc415e38, type: 2}
+  - ActiveKPIs: 00000000
+    CoworkerScores: 
+    BoxSpawnInterval: 1
+    ClockSpeedFactor: 1
+  - ActiveKPIs: 01000000
+    CoworkerScores: 12000000d20000004400000026000000
+    BoxSpawnInterval: 1
+    ClockSpeedFactor: 1
+  - ActiveKPIs: 
+    CoworkerScores: 
+    BoxSpawnInterval: 0
+    ClockSpeedFactor: 0
+  - ActiveKPIs: 
+    CoworkerScores: 
+    BoxSpawnInterval: 0
+    ClockSpeedFactor: 0
+  - ActiveKPIs: 
+    CoworkerScores: 
+    BoxSpawnInterval: 0
+    ClockSpeedFactor: 0
+  - ActiveKPIs: 
+    CoworkerScores: 
+    BoxSpawnInterval: 0
+    ClockSpeedFactor: 0
+  - ActiveKPIs: 
+    CoworkerScores: 
+    BoxSpawnInterval: 0
+    ClockSpeedFactor: 0

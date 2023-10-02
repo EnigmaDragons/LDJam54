@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class ColoredBoxSpawner : MonoBehaviour
-{
-    [SerializeField] private GameConfig gameConfig;
-    
+public class ColoredBoxSpawner : OnMessage<WorkdayStarted, WorkdayEnded>
+{   
     [SerializeField]
     private List<GameObject> spawnPool = new List<GameObject>();
     [SerializeField]
@@ -30,11 +28,6 @@ public class ColoredBoxSpawner : MonoBehaviour
         return obj;
     }
 
-    private void Start()
-    {
-        InvokeRepeating(nameof(SpawnObject), 0.0f, gameConfig.BoxSpawnInterval);
-    }
-    
     private void SpawnObject()
     {
         GameObject toSpawn = spawnType switch
@@ -54,6 +47,15 @@ public class ColoredBoxSpawner : MonoBehaviour
         }
     }
 
+    protected override void Execute(WorkdayStarted msg)
+    {
+        InvokeRepeating(nameof(SpawnObject), 0.0f, CurrentGameState.State.BoxSpawnInterval);
+    }
+
+    protected override void Execute(WorkdayEnded msg)
+    {
+        CancelInvoke();
+    }
 
     private enum SpawnType
     {
