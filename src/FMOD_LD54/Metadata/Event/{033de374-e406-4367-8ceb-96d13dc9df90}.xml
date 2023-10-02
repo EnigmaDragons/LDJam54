@@ -467,7 +467,7 @@
 	<object class="DistortionEffect" id="{4b0c6e4d-9d84-4210-9baa-ae7f321c46f9}" />
 	<object class="MixerSend" id="{1f3ab0dc-c037-46df-a925-da7cea854cb2}">
 		<property name="level">
-			<value>-10.5</value>
+			<value>-8.5</value>
 		</property>
 		<property name="inputFormat">
 			<value>0</value>

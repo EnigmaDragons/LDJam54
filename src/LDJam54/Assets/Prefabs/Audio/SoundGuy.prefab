@@ -94,6 +94,27 @@ MonoBehaviour:
       Data3: -463524967
       Data4: -1218756534
     Path: event:/MUSIC/WorkBossa_Level_2
+  franticMusic:
+    Guid:
+      Data1: -929876137
+      Data2: 1092621173
+      Data3: 929488285
+      Data4: -303084788
+    Path: event:/MUSIC/Working-Frantic-1
+  gameOverMusic:
+    Guid:
+      Data1: -1270888810
+      Data2: 1184129338
+      Data3: -776509026
+      Data4: -1224408882
+    Path: event:/MUSIC/GameOverMusic
+  workAssesmentMusic:
+    Guid:
+      Data1: -1736955488
+      Data2: 1092246204
+      Data3: -2025171829
+      Data4: 1679170894
+    Path: event:/MUSIC/WorkAssessmentMusic
   jumpPad:
     Guid:
       Data1: 1283234616
