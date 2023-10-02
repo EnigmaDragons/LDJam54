@@ -1,18 +1,18 @@
 ﻿using System.Collections.Generic;
 using FMODUnity;
 
-public class OnPlayerEnterStartMeetingSpeech : PlayerTrigger
+public class OnPlayerEnterStartMeeting : PlayerTrigger
 {
     public GameConfig cfg;
     public EventReference youAreFiredSpeech;
 
     private HashSet<int> _eveningMeetingSpeechesPlayed = new ();
-    private HashSet<int> _morningMeetingSpeechesPlayed = new ();
+    private HashSet<int> _morningMeetingStarted = new ();
 
     private void ClearHistory()
     {
         _eveningMeetingSpeechesPlayed.Clear();
-        _morningMeetingSpeechesPlayed.Clear();
+        _morningMeetingStarted.Clear();
     }
     
     private void OnEnable()
@@ -31,11 +31,21 @@ public class OnPlayerEnterStartMeetingSpeech : PlayerTrigger
         Log.Info($"Player entered start meeting speech trigger at {meetingTime}");
         if (meetingTime == MeetingTime.Morning)
         {
+            TriggerMorningMeeting();
         }
         else
         {
             TriggerEveningMeeting();
         }
+    }
+
+    private void TriggerMorningMeeting()
+    {
+        if (_morningMeetingStarted.Contains(CurrentGameState.State.CurrentDayNumber))
+            return;
+        
+        _morningMeetingStarted.Add(CurrentGameState.State.CurrentDayNumber);
+        Message.Publish(new StartKpiMeetingRequested());
     }
 
     private void TriggerEveningMeeting()
