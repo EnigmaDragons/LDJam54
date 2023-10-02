@@ -56,4 +56,12 @@ public sealed class GameState
 
     // Cutscene Stuff - Probably Not Needed
     public SerializableDictionary<string, bool> CutsceneStoryStates = new();
+    
+    public void ResetKpi() => KPIs = new() {
+        { KPI.BoxesShelvedCorrectly, 0 },
+        { KPI.BoxesShipped, 0 },
+        { KPI.BoxesUnsorted, 0 },
+        { KPI.BoxesUnloaded, 0 },
+        { KPI.BoxShippingMistakes, 0 },
+    };
 }
