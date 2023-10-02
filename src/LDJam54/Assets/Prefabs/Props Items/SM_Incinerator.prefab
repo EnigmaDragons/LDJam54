@@ -84,6 +84,7 @@ Transform:
   m_Children:
   - {fileID: 4720089052843433710}
   - {fileID: 8361533694980468623}
+  - {fileID: 9021221600124058030}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -273,3 +274,78 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.75, y: 1, z: 0.4}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &5777797102289222756
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5771136234837713877}
+    m_Modifications:
+    - target: {fileID: 3251329436951463370, guid: 00e45b9bc63d52844ac633ade74053f1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251329436951463370, guid: 00e45b9bc63d52844ac633ade74053f1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.786
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251329436951463370, guid: 00e45b9bc63d52844ac633ade74053f1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.772
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251329436951463370, guid: 00e45b9bc63d52844ac633ade74053f1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.281
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251329436951463370, guid: 00e45b9bc63d52844ac633ade74053f1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251329436951463370, guid: 00e45b9bc63d52844ac633ade74053f1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251329436951463370, guid: 00e45b9bc63d52844ac633ade74053f1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251329436951463370, guid: 00e45b9bc63d52844ac633ade74053f1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251329436951463370, guid: 00e45b9bc63d52844ac633ade74053f1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251329436951463370, guid: 00e45b9bc63d52844ac633ade74053f1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251329436951463370, guid: 00e45b9bc63d52844ac633ade74053f1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6099858031851687597, guid: 00e45b9bc63d52844ac633ade74053f1,
+        type: 3}
+      propertyPath: m_Name
+      value: IncineratorFX
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 00e45b9bc63d52844ac633ade74053f1, type: 3}
+--- !u!4 &9021221600124058030 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3251329436951463370, guid: 00e45b9bc63d52844ac633ade74053f1,
+    type: 3}
+  m_PrefabInstance: {fileID: 5777797102289222756}
+  m_PrefabAsset: {fileID: 0}
