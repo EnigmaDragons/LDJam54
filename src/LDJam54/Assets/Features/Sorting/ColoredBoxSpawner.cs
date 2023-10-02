@@ -37,7 +37,7 @@ public class ColoredBoxSpawner : OnMessage<WorkdayStarted, WorkdayEnded>
             _ => throw new ArgumentOutOfRangeException()
         };
         
-        var go = Instantiate(toSpawn, spawnPoint.position, Quaternion.identity);
+        var go = Instantiate(toSpawn, spawnPoint.position, Quaternion.identity, transform.parent);
         if (go.TryGetComponent(out ColoredBox box))
         {
             var spawnColor = colors.Random();
