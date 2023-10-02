@@ -38,6 +38,7 @@ public sealed class GameState
     // Days
     public int CurrentDayNumber = 1;
     public int TotalDays = 1;
+    public bool CurrentWorkdayEnded = false;
     public MeetingTime MeetingTime = MeetingTime.Morning;
 
     // Cutscene Stuff - Probably Not Needed

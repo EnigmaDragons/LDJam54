@@ -672,6 +672,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3598451549960839019, guid: af4119c8b4eb72c4290a04b439f28e47,
+        type: 3}
+      propertyPath: m_Name
+      value: EndOfHallDoor
+      objectReference: {fileID: 0}
     - target: {fileID: 4843492251600219421, guid: af4119c8b4eb72c4290a04b439f28e47,
         type: 3}
       propertyPath: m_Name
