@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 289948822795335460}
   - component: {fileID: 289948822795335463}
   - component: {fileID: 289948822795335462}
+  - component: {fileID: 7231114897209240700}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -68,6 +69,24 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
+--- !u!114 &7231114897209240700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289948822795335465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d39c3b457c1e4387b4b487255b438448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overridenControlType: 0
+  shouldOverride: 0
+  minimumMovementBeforeDirectionCounted:
+    UseConstant: 1
+    ConstantValue: 0
+    FloatVariable: {fileID: 0}
 --- !u!1 &9065897193292904404
 GameObject:
   m_ObjectHideFlags: 0

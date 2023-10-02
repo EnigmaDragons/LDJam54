@@ -1,4 +1,5 @@
-﻿using FMOD.Studio;
+﻿using Features.Environment;
+using FMOD.Studio;
 using FMODUnity;
 using UnityEngine;
 
@@ -7,7 +8,9 @@ public class SoundGuy : MonoBehaviour
     [SerializeField] private EventReference boxPickUp;
     [SerializeField] private EventReference boxSetDown;
     [SerializeField] private EventReference doorOpened;
+    [SerializeField] private EventReference doorClosed;
     [SerializeField] private EventReference workingMusic;
+    [SerializeField] private EventReference jumpPad;
 
     private EventInstance _currentMusic;
     
@@ -22,6 +25,7 @@ public class SoundGuy : MonoBehaviour
         Message.Subscribe<DoorClosed>(OnDoorClosed, this);
         Message.Subscribe<TeleporterActivated>(OnTeleporterActivated, this);
         Message.Subscribe<JumpPadUsed>(OnJumpPadUsed, this);
+      
     }
 
     private void OnWasFired(WasFired obj)
@@ -31,7 +35,7 @@ public class SoundGuy : MonoBehaviour
 
     private void OnJumpPadUsed(JumpPadUsed obj)
     {
-        
+        PlayOneShot(jumpPad, obj.Position);
     }
 
     private void OnTeleporterActivated(TeleporterActivated obj)
@@ -41,6 +45,7 @@ public class SoundGuy : MonoBehaviour
 
     private void OnDoorClosed(DoorClosed obj)
     {
+        PlayOneShot(doorClosed, obj.Position);
     }
 
     private void OnDoorOpened(DoorOpened obj)
