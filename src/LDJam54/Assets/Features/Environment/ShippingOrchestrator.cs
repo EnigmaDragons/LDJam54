@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShippingOrchestrator : OnMessage<BoxShipped, ColoredBoxAppeared, ColoredBoxDisappeared>
 {
     [SerializeField] private ShipmentWanted shipment;
-
+    
     private void Start()
     {
         RandomizeBoxWanted();
@@ -36,14 +36,21 @@ public class ShippingOrchestrator : OnMessage<BoxShipped, ColoredBoxAppeared, Co
     protected override void Execute(ColoredBoxDisappeared msg)
     {
         _boxes.RemoveAll(x => x == msg.Box);
+        if (msg.Box.Color == shipment.Color && msg.Box.Size == shipment.Size && !_boxes.Any(x => x.Color != shipment.Color && x.Size != shipment.Size))
+            RandomizeBoxWanted();
     }
 
     private void RandomizeBoxWanted()
     {
-        if (!_boxes.Any(x => x.Color != shipment.Color))
-            return;
-        shipment.Color = _boxes.Where(x => x.Color != shipment.Color).Select(x => x.Color).Distinct().TakeRandom(1)[0];
-        shipment.Size = _boxes.Where(x => x.Color == shipment.Color).Select(x => x.Size).Distinct().TakeRandom(1)[0];
+        if (_boxes.Any(x => x.Color != shipment.Color))
+        {
+            shipment.Color = _boxes.Where(x => x.Color != shipment.Color).Select(x => x.Color).Distinct().TakeRandom(1)[0];
+            shipment.Size = _boxes.Where(x => x.Color == shipment.Color).Select(x => x.Size).Distinct().TakeRandom(1)[0];
+        }
+        else if (_boxes.Any(x => x.Size != shipment.Size))
+        {
+            shipment.Size = _boxes.Where(x => x.Size == shipment.Size).Select(x => x.Size).Distinct().TakeRandom(1)[0];
+        }
         Message.Publish(new ShipmentWantedUpdated());
     }
 }

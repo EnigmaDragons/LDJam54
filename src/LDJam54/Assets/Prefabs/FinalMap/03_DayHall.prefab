@@ -442,6 +442,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4287945953591594798, guid: 35439c4cf6d1d6645b234e5cc81554f5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7747005354999391282, guid: 35439c4cf6d1d6645b234e5cc81554f5,
         type: 3}
       propertyPath: m_Name
@@ -920,12 +925,12 @@ PrefabInstance:
     - target: {fileID: 3598451549960839019, guid: af4119c8b4eb72c4290a04b439f28e47,
         type: 3}
       propertyPath: m_Name
-      value: Day5D
+      value: Day4D
       objectReference: {fileID: 0}
     - target: {fileID: 4843492251600219421, guid: af4119c8b4eb72c4290a04b439f28e47,
         type: 3}
       propertyPath: m_Name
-      value: Day5Door
+      value: Day4Door
       objectReference: {fileID: 0}
     - target: {fileID: 4843492251600219421, guid: af4119c8b4eb72c4290a04b439f28e47,
         type: 3}
@@ -935,7 +940,7 @@ PrefabInstance:
     - target: {fileID: 5269259780748029957, guid: af4119c8b4eb72c4290a04b439f28e47,
         type: 3}
       propertyPath: m_Name
-      value: Day5
+      value: Day4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4119c8b4eb72c4290a04b439f28e47, type: 3}
@@ -1390,12 +1395,12 @@ PrefabInstance:
     - target: {fileID: 3598451549960839019, guid: af4119c8b4eb72c4290a04b439f28e47,
         type: 3}
       propertyPath: m_Name
-      value: Day4D
+      value: Day5D
       objectReference: {fileID: 0}
     - target: {fileID: 4843492251600219421, guid: af4119c8b4eb72c4290a04b439f28e47,
         type: 3}
       propertyPath: m_Name
-      value: Day4Door
+      value: Day5Door
       objectReference: {fileID: 0}
     - target: {fileID: 4843492251600219421, guid: af4119c8b4eb72c4290a04b439f28e47,
         type: 3}

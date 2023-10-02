@@ -12,8 +12,11 @@ public class AreasController : OnMessage<GameStateChanged>
     public Door[] doors;
     public Door[] doorsToStartLocked;
 
+    private int _lastDaySeen;
+    
     private void Awake()
     {
+        _lastDaySeen = -1;
         for (var i = 0; i < doors.Length; i++)
             doors[i].SetLabels("Meeting Room", "Room " + (i + 1));
         doorsToStartLocked.ForEach(d => d.SetLocked(true));
@@ -25,6 +28,9 @@ public class AreasController : OnMessage<GameStateChanged>
 
     private void Refresh(GameState gs)
     {
+        if (_lastDaySeen == gs.CurrentDayNumber)
+            return;
+        _lastDaySeen = gs.CurrentDayNumber;
         day1.ForEach(g => g.SetActive(gs.CurrentDayNumber == 1));
         day2.ForEach(g => g.SetActive(gs.CurrentDayNumber == 2));
         day3.ForEach(g => g.SetActive(gs.CurrentDayNumber == 3));

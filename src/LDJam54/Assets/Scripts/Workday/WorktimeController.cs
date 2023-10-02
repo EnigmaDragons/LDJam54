@@ -10,6 +10,7 @@ public class WorktimeController : OnMessage<StartWorkdayRequested, WorkdayEnded,
         WorkdayState.InitWorkday();
         _worktimeIsActive = true;
         _elapsedInCurrentDay = 0f;
+        CurrentGameState.Update(g => g.CurrentWorkdayEnded = false);
         Message.Publish(new WorkdayStarted());
     }
 

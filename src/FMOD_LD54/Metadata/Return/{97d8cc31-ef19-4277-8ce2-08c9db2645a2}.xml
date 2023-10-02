@@ -34,6 +34,9 @@
 		</property>
 	</object>
 	<object class="ThreeEQEffect" id="{0c00b4e4-173b-43ff-a195-5c981d107c38}">
+		<property name="midGain">
+			<value>-8.5</value>
+		</property>
 		<property name="highGain">
 			<value>-13</value>
 		</property>

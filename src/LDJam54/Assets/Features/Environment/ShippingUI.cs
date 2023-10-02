@@ -8,6 +8,8 @@ public class ShippingUI : OnMessage<ShipmentWantedUpdated, GameStateChanged>
     [SerializeField] private GameObject shippingScreen;
     [SerializeField] private TextMeshProUGUI size;
 
+    private void Start() => shippingScreen.SetActive(CurrentGameState.State.ActiveKPIs.Contains(KPI.BoxesShipped));
+    
     protected override void Execute(ShipmentWantedUpdated msg)
     {
         size.text = $"{shipment.Size.ToString()} {shipment.Color.ToString()} Box";
