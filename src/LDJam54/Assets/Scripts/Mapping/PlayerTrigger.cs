@@ -2,6 +2,8 @@
 
 public abstract class PlayerTrigger : MonoBehaviour
 {
+    public bool CanTriggerRepeatedly = false;
+    
     private bool _triggered;
     
     private void OnTriggerEnter(Collider other)
@@ -12,8 +14,11 @@ public abstract class PlayerTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             OnTriggered();
-            _triggered = true;
-            enabled = false;
+            if (!CanTriggerRepeatedly)
+            {
+                _triggered = true;
+                enabled = false;
+            }
         }
     }
 
