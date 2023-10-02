@@ -22,6 +22,7 @@ MonoBehaviour:
   PlacedCorrectlyScore: 20
   BoxUnsortedFixedScore: 20
   BoxUnloadedFixedScore: 0
+  BoxShippingMistakesFixedScore: 0
   PlayerWalkSpeed: 3.8
   PlayerRunSpeed: 8.5
   PlayerJumpForce: 7
@@ -36,7 +37,7 @@ MonoBehaviour:
     CoworkerScores: 90010000
     BoxSpawnInterval: 1
     ClockSpeedFactor: 1
-  - ActiveKPIs: 
+  - ActiveKPIs: 01000000
     CoworkerScores: 
     BoxSpawnInterval: 0
     ClockSpeedFactor: 0
