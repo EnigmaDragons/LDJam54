@@ -34,10 +34,12 @@ namespace Features.Interaction
         /// The interactable object that the player is currently looking at
         /// </summary>
         private Maybe<DropTarget> dropTarget = Maybe<DropTarget>.Missing();
+        private bool somethingOnDropTarget;
         
         private void Update()
         {
             UpdateTarget();
+            UpdateControlsShown();
             CheckForPickupOrSetDown();
         }
 
@@ -69,9 +71,50 @@ namespace Features.Interaction
                     ? mediumDropLayer
                     : largeDropLayer;
             if (Physics.Raycast(ray, maxDistance: pickupDistance, hitInfo: out hit, layerMask: dropLayer | sizeLayer))
+            {
                 dropTarget = hit.collider.GetComponent<DropTarget>();
+                somethingOnDropTarget = Physics.Raycast(dropTarget.Value.TopmostDropTarget.transform.position + Vector3.down * 0.1f, Vector3.up, out var _, held.Value.Bounds.size.y, interactableLayer);
+            }
             else
                 dropTarget = Maybe<DropTarget>.Missing();
+        }
+
+        public bool _isThrowing;
+        public string _interactText;
+        public bool _canThrow;
+        public void UpdateControlsShown()
+        {
+            if (!_isThrowing && held.IsMissing && targetted.IsPresent && targetted.Value.CanBeHeld && _interactText != "Pickup")
+            {
+                _interactText = "Pickup";
+                Message.Publish(new UpdateInteractControl(_interactText));   
+            }
+            else if (((held.IsMissing && targetted.IsMissing) || _isThrowing) && _interactText != "")
+            {
+                _interactText = "";
+                Message.Publish(new UpdateInteractControl(_interactText)); 
+            }
+            else if (!_isThrowing && CanSetDown() && _interactText != "Place")
+            {
+                _interactText = "Place";
+                Message.Publish(new UpdateInteractControl(_interactText)); 
+            }
+            else if (!_isThrowing && held.IsPresent && !CanSetDown() && _interactText != "Drop")
+            {
+                _interactText = "Drop";
+                Message.Publish(new UpdateInteractControl(_interactText)); 
+            }
+
+            if (_canThrow && (held.IsMissing || _isThrowing))
+            {
+                _canThrow = false;
+                Message.Publish(new SetCanThrow(_canThrow)); 
+            }
+            else if (!_canThrow && held.IsPresent && !_isThrowing)
+            {
+                _canThrow = true;
+                Message.Publish(new SetCanThrow(_canThrow)); 
+            }
         }
     
         private void HandleInteractable(InteractableObject interactable)
@@ -107,7 +150,7 @@ namespace Features.Interaction
                 return;
             }
             
-            if (held.IsPresent && dropTarget.IsPresent && IsDropActionTriggered() && !Physics.Raycast(dropTarget.Value.TopmostDropTarget.transform.position + Vector3.down * 0.1f, Vector3.up, out var _, held.Value.Bounds.size.y, interactableLayer))
+            if (CanSetDown() && IsDropActionTriggered())
             {
                 SetObject();
                 return;
@@ -121,6 +164,11 @@ namespace Features.Interaction
             
         }
 
+        private bool CanSetDown()
+        {
+            return held.IsPresent && dropTarget.IsPresent && !somethingOnDropTarget;
+        }
+
         private void ThrowObject()
         {
             StartCoroutine(ThrowObjectCoroutine());
@@ -128,6 +176,7 @@ namespace Features.Interaction
 
         private IEnumerator ThrowObjectCoroutine()
         {
+            _isThrowing = true;
             //while button is held
             var throwForce = minThrowForce;
             
@@ -150,6 +199,7 @@ namespace Features.Interaction
             held.Value.Throw(lookDirection, throwForce);
             held.Value.transform.parent = heldParent.Value;
             held = Maybe<InteractableObject>.Missing();
+            _isThrowing = false;
         }
         
         private void DropObject()
@@ -176,7 +226,7 @@ namespace Features.Interaction
         
         public static bool InteractActionTriggered()
         {
-            return Input.GetKeyDown("joystick button 0") 
+            return ControllerChecker.IsX() 
                    || Input.GetKeyDown(KeyCode.E) 
                    || Input.GetMouseButtonDown(0);
         }
@@ -192,14 +242,14 @@ namespace Features.Interaction
         
         public static bool IsThrowActionTriggered()
         {
-            return Input.GetKeyDown("joystick button 1") 
+            return ControllerChecker.IsB() 
                    || Input.GetKeyDown(KeyCode.Q) 
                    || Input.GetMouseButtonDown(1);
         }
         
         public static bool IsThrowActionHeld()
         {
-            return Input.GetKey("joystick button 1") 
+            return ControllerChecker.IsBHeld()
                    || Input.GetKey(KeyCode.Q) 
                    || Input.GetMouseButton(1);
         }
