@@ -125,6 +125,7 @@ Transform:
   - {fileID: 1939847864842603703}
   - {fileID: 5731111450589481389}
   - {fileID: 1225089088443224757}
+  - {fileID: 1531092856322979126}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -141,6 +142,81 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueTag: AppInfra
+--- !u!1001 &132347128187464140
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6808941996322390590}
+    m_Modifications:
+    - target: {fileID: 1506939871353953530, guid: d095aa50405178440a7d535cc1b8d80c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506939871353953530, guid: d095aa50405178440a7d535cc1b8d80c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506939871353953530, guid: d095aa50405178440a7d535cc1b8d80c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506939871353953530, guid: d095aa50405178440a7d535cc1b8d80c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506939871353953530, guid: d095aa50405178440a7d535cc1b8d80c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506939871353953530, guid: d095aa50405178440a7d535cc1b8d80c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506939871353953530, guid: d095aa50405178440a7d535cc1b8d80c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506939871353953530, guid: d095aa50405178440a7d535cc1b8d80c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506939871353953530, guid: d095aa50405178440a7d535cc1b8d80c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506939871353953530, guid: d095aa50405178440a7d535cc1b8d80c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506939871353953530, guid: d095aa50405178440a7d535cc1b8d80c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7584957270422056153, guid: d095aa50405178440a7d535cc1b8d80c,
+        type: 3}
+      propertyPath: m_Name
+      value: Boss
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d095aa50405178440a7d535cc1b8d80c, type: 3}
+--- !u!4 &1531092856322979126 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1506939871353953530, guid: d095aa50405178440a7d535cc1b8d80c,
+    type: 3}
+  m_PrefabInstance: {fileID: 132347128187464140}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &262466606952639790
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -423,482 +499,482 @@ PrefabInstance:
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[0].x
-      value: -378.8496
+      value: -192.09114
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[0].y
-      value: 180.55565
+      value: 30.11006
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[1].x
-      value: -378.84952
+      value: -192.09114
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[1].y
-      value: 779.44183
+      value: 149.8873
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[2].x
-      value: 88.04654
+      value: -98.71193
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[2].y
-      value: 779.4418
+      value: 149.8873
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[3].x
-      value: 88.04645
+      value: -98.71193
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[3].y
-      value: 180.55559
+      value: 30.11006
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[4].x
-      value: -286.6347
+      value: -100.287415
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[4].y
-      value: 180.14444
+      value: 30.110058
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[5].x
-      value: -286.63458
+      value: -100.287415
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[5].y
-      value: 780.0586
+      value: 150.0929
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[6].x
-      value: 179.23347
+      value: -7.1138
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[6].y
-      value: 780.0586
+      value: 150.0929
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[7].x
-      value: 179.23338
+      value: -7.1138
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[7].y
-      value: 180.14438
+      value: 30.110058
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[8].x
-      value: -223.84692
+      value: -8.689285
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[8].y
-      value: 180.55568
+      value: 30.11006
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[9].x
-      value: -223.8468
+      value: -8.689285
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[9].y
-      value: 779.44183
+      value: 149.8873
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[10].x
-      value: 314.04712
+      value: 98.889496
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[10].y
-      value: 779.4417
+      value: 149.8873
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[11].x
-      value: 314.047
+      value: 98.889496
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[11].y
-      value: 180.55556
+      value: 30.11006
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[12].x
-      value: -79.850174
+      value: 97.313995
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[12].y
-      value: 180.55565
+      value: 30.11006
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[13].x
-      value: -79.85008
+      value: 97.313995
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[13].y
-      value: 779.44183
+      value: 149.8873
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[14].x
-      value: 363.06024
+      value: 185.89606
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[14].y
-      value: 779.4418
+      value: 149.8873
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[15].x
-      value: 363.06012
+      value: 185.89606
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[15].y
-      value: 180.55559
+      value: 30.11006
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[16].x
-      value: -368.83728
+      value: -182.49
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[16].y
-      value: -5.422577
+      value: -155.48434
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[17].x
-      value: -368.8372
+      value: -182.49
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[17].y
-      value: 594.4231
+      value: -35.515213
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[18].x
-      value: 97.03088
+      value: -89.31639
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[18].y
-      value: 594.423
+      value: -35.515213
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[19].x
-      value: 97.03079
+      value: -89.31639
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[19].y
-      value: -5.422638
+      value: -155.48434
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[20].x
-      value: -266.45242
+      value: -90.49439
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[20].y
-      value: -5.6555176
+      value: -155.68993
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[21].x
-      value: -266.45233
+      value: -90.49439
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[21].y
-      value: 594.2586
+      value: -35.7071
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[22].x
-      value: 173.44264
+      value: -2.515396
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[22].y
-      value: 594.25854
+      value: -35.7071
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[23].x
-      value: 173.44255
+      value: -2.515396
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[23].y
-      value: -5.6555786
+      value: -155.68993
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[24].x
-      value: -181.25505
+      value: -4.0908813
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[24].y
-      value: -5.2443542
+      value: -155.68993
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[25].x
-      value: -181.25496
+      value: -4.0908813
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[25].y
-      value: 593.64185
+      value: -35.91269
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[26].x
-      value: 261.65533
+      value: 84.49118
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[26].y
-      value: 593.6417
+      value: -35.91269
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[27].x
-      value: 261.65527
+      value: 84.49118
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[27].y
-      value: -5.2444153
+      value: -155.68993
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[28].x
-      value: -108.064285
+      value: 81.106476
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[28].y
-      value: -5.2443542
+      value: -155.68993
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[29].x
-      value: -108.06419
+      value: 81.106476
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[29].y
-      value: 593.64185
+      value: -35.91269
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[30].x
-      value: 364.8626
+      value: 175.69183
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[30].y
-      value: 593.6417
+      value: -35.91269
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[31].x
-      value: 364.8625
+      value: 175.69183
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_verts.Array.data[31].y
-      value: -5.2444153
+      value: -155.68993
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[0].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[1].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[2].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[3].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[4].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[5].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[6].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[7].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[8].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[9].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[10].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[11].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[12].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[13].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[14].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[15].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[16].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[17].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[18].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[19].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[20].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[21].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[22].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[23].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[24].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[25].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[26].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[27].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[28].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[29].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[30].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683665483233532, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}
       propertyPath: m_animation_manager.m_current_mesh_colours.Array.data[31].a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4374683666470057259, guid: 3b9c4ea909d57074bbb6829f971ae02e,
         type: 3}

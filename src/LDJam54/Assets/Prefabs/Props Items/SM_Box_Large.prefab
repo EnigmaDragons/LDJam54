@@ -518,6 +518,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshFilter: {fileID: 8705265112386784578}
+  size: 2
+  _initialColor: 0
   renderer: {fileID: 6857758710680959368}
   colorToMaterial:
     keys: 000000000100000002000000030000000400000005000000

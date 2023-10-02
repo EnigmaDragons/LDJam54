@@ -4,6 +4,7 @@ using UnityEngine;
 public class ColoredBox : MonoBehaviour
 {
     public MeshFilter MeshFilter;
+    [SerializeField] private DropSize size;
     [SerializeField] private SortingColor _initialColor;
     [SerializeField] private MeshRenderer renderer;
     [SerializeField] private SerializableDictionary<SortingColor, Material> colorToMaterial;
@@ -13,6 +14,7 @@ public class ColoredBox : MonoBehaviour
 
     public SortingColor Color => _color;
     public SortingColor ColorLocation => _colorLocation;
+    public DropSize Size => size;
 
     public void SetColor(SortingColor color) => SetColor(color, color);
     public void SetColor(SortingColor color, SortingColor colorLocation)
@@ -48,12 +50,14 @@ public class ColoredBox : MonoBehaviour
 
     private void OnEnable()
     {
+        Message.Publish(new ColoredBoxAppeared(this));
         if (IsMisplaced)
             CurrentGameState.IncrementKPIStatic(KPI.BoxesUnsorted);
     } 
 
     private void OnDisable()
     {
+        Message.Publish(new ColoredBoxDisappeared(this));
         if (IsMisplaced)
             CurrentGameState.DecrementKPIStatic(KPI.BoxesUnsorted);
     }

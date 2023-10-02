@@ -57,9 +57,12 @@ public class WorkdayFadeController : OnMessage<StartNextDayRequested>
     {
         var player = GameObject.FindWithTag("Player");
         var spawnPoint = GameObject.FindWithTag("Respawn");
+        var rb = player.GetComponent<Rigidbody>();
+        rb.isKinematic = true;
         player.transform.position = spawnPoint.transform.position;
         player.transform.rotation = spawnPoint.transform.rotation;
         FirstPersonInteractionStatus.IsEnabled = true;
+        rb.isKinematic = false;
     }
     
     enum Mode
