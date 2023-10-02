@@ -66,6 +66,13 @@ MonoBehaviour:
       Data3: -1683993948
       Data4: 661756676
     Path: event:/ENVIRONMENT/Door/DoorOpen
+  doorClosed:
+    Guid:
+      Data1: 13904859
+      Data2: 1266881861
+      Data3: -1067655515
+      Data4: 697676674
+    Path: event:/ENVIRONMENT/Door/DoorClose
   workingMusic:
     Guid:
       Data1: -1736955488
