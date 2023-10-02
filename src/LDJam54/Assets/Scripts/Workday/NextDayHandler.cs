@@ -13,6 +13,7 @@ public class NextDayHandler : OnMessage<StartNextDayRequested, RestartDayRequest
         {
             g.CurrentDayNumber++;
             g.MeetingTime = MeetingTime.Morning;
+            g.KPIScoring = GameState.EmptyKpis();
         });
         
         Message.Publish(new DayChanged());
@@ -24,6 +25,7 @@ public class NextDayHandler : OnMessage<StartNextDayRequested, RestartDayRequest
         CurrentGameState.Update(g =>
         {
             g.MeetingTime = MeetingTime.Morning;
+            g.KPIScoring = GameState.EmptyKpis();
         });
         WorkdayFadeController.TeleportPlayerToHome();
         Message.Publish(new DayChanged());

@@ -4,6 +4,15 @@ using System.Collections.Generic;
 [Serializable]
 public sealed class GameState
 {
+    public static SerializableDictionary<KPI, int> EmptyKpis() => new()
+    {
+        { KPI.BoxesShelvedCorrectly, 20 },
+        { KPI.BoxesShipped, 20 },
+        { KPI.BoxesUnsorted, 20 },
+        { KPI.BoxesUnloaded, 20 },
+        { KPI.BoxShippingMistakes, 20 },
+    };
+    
     // Should consist of only serializable primitives.
     // Any logic or non-trivial data should be enriched in CurrentGameState.
     // Except for Save/Load Systems, everything should use CurrentGameState,
@@ -21,14 +30,7 @@ public sealed class GameState
     public List<string> Coworkers = new List<string>() { "38295" };
     public int[] CoworkerScores = new int[] { 20 };
     public KPI[] ActiveKPIs = { KPI.BoxesShipped };
-    public SerializableDictionary<KPI, int> KPIScoring = new()
-    {
-        { KPI.BoxesShelvedCorrectly, 20 },
-        { KPI.BoxesShipped, 20 },
-        { KPI.BoxesUnsorted, 20 },
-        { KPI.BoxesUnloaded, 20 },
-        { KPI.BoxShippingMistakes, 20 },
-    };
+    public SerializableDictionary<KPI, int> KPIScoring = EmptyKpis();
     public SerializableDictionary<KPI, int> KPIs = new() {
         { KPI.BoxesShelvedCorrectly, 0 },
         { KPI.BoxesShipped, 0 },
