@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
 	<object class="MixerReturn" id="{219af533-f623-4985-bfa1-10b16dff7d08}">
+		<property name="color">
+			<value>Blue</value>
+		</property>
 		<property name="name">
 			<value>ReverbLong</value>
 		</property>

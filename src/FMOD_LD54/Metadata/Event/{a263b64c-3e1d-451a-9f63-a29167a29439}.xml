@@ -137,17 +137,17 @@
 	</object>
 	<object class="SingleSound" id="{cb6e5cd8-e773-41d7-8fe5-79ec116ce975}">
 		<relationship name="audioFile">
-			<destination>{085ae9a7-6aa2-4608-bfbf-57f95e52136b}</destination>
+			<destination>{60e9b9fd-e0c3-4be0-8e77-93552d5cb1e1}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{493ad73f-b7b8-41df-a67b-b2513a137ba6}">
 		<relationship name="audioFile">
-			<destination>{ff4ff026-c1d5-4613-a201-4c1cac56d3d9}</destination>
+			<destination>{32a76620-fb29-49df-90d0-9c025f8fc539}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{5b1ba65a-055f-4f41-98f9-fea24e7653d9}">
 		<relationship name="audioFile">
-			<destination>{9a2b3795-0655-48cd-b437-6098c6c024af}</destination>
+			<destination>{10e22912-956a-4d1b-a255-c52f9d38d61f}</destination>
 		</relationship>
 	</object>
 </objects>
