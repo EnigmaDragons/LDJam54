@@ -13,7 +13,9 @@ public class SoundGuy : MonoBehaviour
     [SerializeField] private EventReference doorClosed;
     [SerializeField] private EventReference workingMusic;
     [SerializeField] private EventReference workingMusicDay2;
+    [SerializeField] private EventReference franticMusic;
     [SerializeField] private EventReference gameOverMusic;
+    [SerializeField] private EventReference workAssesmentMusic;
     [SerializeField] private EventReference jumpPad;
     [SerializeField] private EventReference shippingTeleporter;
     [SerializeField] private EventReference happyBossComment;
@@ -30,6 +32,7 @@ public class SoundGuy : MonoBehaviour
         Message.Subscribe<WorkdayStarted>(OnWorkdayStarted, this);
         Message.Subscribe<WorkdayNearlyOver>(OnWorkdayNearlyOver, this);
         Message.Subscribe<WorkdayEnded>(OnWorkdayEnded, this);
+        Message.Subscribe<PerformanceReview>(OnPerformanceReviewStarted, this);
         Message.Subscribe<WasFired>(OnWasFired, this);
         Message.Subscribe<DoorOpened>(OnDoorOpened, this);
         Message.Subscribe<DoorClosed>(OnDoorClosed, this);
@@ -99,9 +102,38 @@ public class SoundGuy : MonoBehaviour
         if (currentDay == 2)
         {
             _currentMusic.stop(STOP_MODE.ALLOWFADEOUT);
-            _currentMusic = RuntimeManager.CreateInstance(workingMusic);
+            _currentMusic = RuntimeManager.CreateInstance(workingMusicDay2);
             _currentMusic.start();
         }
+
+
+        if (currentDay == 3)
+        {
+            _currentMusic.stop(STOP_MODE.ALLOWFADEOUT);
+            _currentMusic = RuntimeManager.CreateInstance(workingMusicDay2);
+            _currentMusic.start();
+        }
+
+        if (currentDay == 4)
+        {
+            _currentMusic.stop(STOP_MODE.ALLOWFADEOUT);
+            _currentMusic = RuntimeManager.CreateInstance(franticMusic);
+            _currentMusic.start();
+        }
+
+        if (currentDay == 5)
+        {
+            _currentMusic.stop(STOP_MODE.ALLOWFADEOUT);
+            _currentMusic = RuntimeManager.CreateInstance(franticMusic);
+            _currentMusic.start();
+        }
+    }
+
+    private void OnPerformanceReviewStarted(PerformanceReview obj)
+    {
+        _currentMusic.stop(STOP_MODE.ALLOWFADEOUT);
+        _currentMusic = RuntimeManager.CreateInstance(workAssesmentMusic);
+        _currentMusic.start();
     }
 
     private void OnWorkdayEnded(WorkdayEnded obj)
