@@ -49,6 +49,7 @@ public class FirstPersonController : MonoBehaviour
 
     private void LogCamera()
     {
+        Debug.Log("Body: " + m_Rigid.transform.eulerAngles);
         Debug.Log("Camera: " + m_Camera.transform.eulerAngles);
     }
 
@@ -88,6 +89,7 @@ public class FirstPersonController : MonoBehaviour
                 Debug.Log("Camera Clamping from: " + cameraRotation);
                 cameraRotation.x = cameraRotation.x > 270 ? 270.01f : 89.99f;
                 cameraRotation.y = (cameraRotation.y + 180) % 360;
+                //cameraRotation.y = m_Rigid.transform.eulerAngles.y;
                 cameraRotation.z = 0;
                 Debug.Log("to: " + cameraRotation);
                 m_Camera.transform.eulerAngles = cameraRotation;
