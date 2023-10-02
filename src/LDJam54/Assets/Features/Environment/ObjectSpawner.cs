@@ -5,10 +5,8 @@ using Random = UnityEngine.Random;
 
 namespace Features.Environment
 {
-    public class ObjectSpawner : MonoBehaviour
+    public class ObjectSpawner : OnMessage<WorkdayStarted, WorkdayEnded>
     {
-        [SerializeField] private GameConfig gameConfig;
-        
         [SerializeField]
         private List<GameObject> spawnPool = new List<GameObject>();
         [SerializeField]
@@ -29,11 +27,6 @@ namespace Features.Environment
             currentIndex = (currentIndex + 1) % spawnPool.Count;
             return obj;
         }
-
-        private void Start()
-        {
-            InvokeRepeating(nameof(SpawnObject), 0.0f, CurrentGameState.State.BoxSpawnInterval);
-        }
         
         private void SpawnObject()
         {
@@ -47,6 +40,15 @@ namespace Features.Environment
             Instantiate(toSpawn, spawnPoint.position, Quaternion.identity);
         }
 
+        protected override void Execute(WorkdayStarted msg)
+        {
+            InvokeRepeating(nameof(SpawnObject), 0.0f, CurrentGameState.State.BoxSpawnInterval);
+        }
+
+        protected override void Execute(WorkdayEnded msg)
+        {
+            CancelInvoke();
+        }
 
         private enum SpawnType
         {
