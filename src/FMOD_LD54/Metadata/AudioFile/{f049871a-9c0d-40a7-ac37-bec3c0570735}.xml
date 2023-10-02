@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{f049871a-9c0d-40a7-ac37-bec3c0570735}">
 		<property name="assetPath">
-			<value>Boss_DX_Reverb/Boss_Morning_6_rev-001.wav</value>
+			<value>Boss_DX_Reverb/Boss_Morning_6_rev.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

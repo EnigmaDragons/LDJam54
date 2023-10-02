@@ -90,30 +90,12 @@
 	<object class="MixerBusPanner" id="{a776a29b-5a34-4191-af74-73df4103a217}" />
 	<object class="MixerBusEffectChain" id="{7f87989f-a5df-4ca0-8556-ab0bef2e19e6}">
 		<relationship name="effects">
-			<destination>{68196e41-e0aa-4609-aa50-c8bbdcc66fa8}</destination>
-			<destination>{2891d5d3-4287-4d83-8ebe-bdd8f8ab91b7}</destination>
 			<destination>{6e452760-60c1-4d80-8490-6214b9cd2bbc}</destination>
 			<destination>{121993e7-b33d-44cd-b69c-7d3ecdaa420d}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{92404727-da0f-4394-b778-bf68e49433a2}" />
 	<object class="MixerBusFader" id="{c01f393e-be61-4288-86da-831b341125cb}" />
-	<object class="DelayEffect" id="{68196e41-e0aa-4609-aa50-c8bbdcc66fa8}">
-		<property name="delay">
-			<value>240</value>
-		</property>
-		<property name="level">
-			<value>-19.5</value>
-		</property>
-	</object>
-	<object class="ThreeEQEffect" id="{2891d5d3-4287-4d83-8ebe-bdd8f8ab91b7}">
-		<property name="lowGain">
-			<value>-2</value>
-		</property>
-		<property name="midGain">
-			<value>4.5</value>
-		</property>
-	</object>
 	<object class="MixerBusFader" id="{6e452760-60c1-4d80-8490-6214b9cd2bbc}" />
 	<object class="SpatialiserEffect" id="{121993e7-b33d-44cd-b69c-7d3ecdaa420d}">
 		<property name="overrideRange">
