@@ -32,13 +32,18 @@ public class SoundGuy : MonoBehaviour
         Message.Subscribe<WorkdayStarted>(OnWorkdayStarted, this);
         Message.Subscribe<WorkdayNearlyOver>(OnWorkdayNearlyOver, this);
         Message.Subscribe<WorkdayEnded>(OnWorkdayEnded, this);
-        Message.Subscribe<PerformanceReview>(OnPerformanceReviewStarted, this);
         Message.Subscribe<WasFired>(OnWasFired, this);
         Message.Subscribe<DoorOpened>(OnDoorOpened, this);
         Message.Subscribe<DoorClosed>(OnDoorClosed, this);
         Message.Subscribe<TeleporterActivated>(OnTeleporterActivated, this);
         Message.Subscribe<JumpPadUsed>(OnJumpPadUsed, this);
         Message.Subscribe<PlayBossComment>(OnBossComment, this);
+        Message.Subscribe<StartKpiMeetingRequested>(OnMorningMeetingStarted, this);
+    }
+
+    private void OnMorningMeetingStarted(StartKpiMeetingRequested obj)
+    {
+        
     }
 
     private void OnIncineratorUsed(IncineratorUsed obj)
@@ -129,16 +134,11 @@ public class SoundGuy : MonoBehaviour
         }
     }
 
-    private void OnPerformanceReviewStarted(PerformanceReview obj)
+    private void OnWorkdayEnded(WorkdayEnded obj)
     {
         _currentMusic.stop(STOP_MODE.ALLOWFADEOUT);
         _currentMusic = RuntimeManager.CreateInstance(workAssesmentMusic);
         _currentMusic.start();
-    }
-
-    private void OnWorkdayEnded(WorkdayEnded obj)
-    {
-        _currentMusic.stop(STOP_MODE.ALLOWFADEOUT);
     }
 
     private void OnDisable() => Message.Unsubscribe(this);

@@ -12,7 +12,7 @@ public class KPIUIController : OnMessage<GameStateChanged>
         var activeKPIs = gs.ActiveKPIs;
         var KPIs = gs.KPIs;
         for (var i = 0; i < activeKPIs.Length; i++)
-            KPILabels[i].text = gs.KPIDescriptions[activeKPIs[i]] + ": " + KPIs[activeKPIs[i]];
+            KPILabels[i].text = activeKPIs[i].ToString().WithSpaceBetweenWords() + ": " + KPIs[activeKPIs[i]];
         for (var i = 0; i < KPILabels.Length; i++)
             KPILabels[i].gameObject.SetActive(activeKPIs.Length > i);
     }

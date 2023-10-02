@@ -150,7 +150,7 @@ Material:
     - _Color: {r: 0.7333333, g: 0.67058825, b: 0.5960784, a: 1}
     - _ColorAddSubDiff: {r: 1, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Fog_Color: {r: 0.26714, g: 0.31627202, b: 0.33962262, a: 1}
+    - _Fog_Color: {r: 0.18904199, g: 0.3018868, b: 0.29285923, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 0.054054055, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []

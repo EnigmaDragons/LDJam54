@@ -73,7 +73,8 @@ namespace Features.Interaction
             if (Physics.Raycast(ray, maxDistance: pickupDistance, hitInfo: out hit, layerMask: dropLayer | sizeLayer))
             {
                 dropTarget = hit.collider.GetComponent<DropTarget>();
-                somethingOnDropTarget = Physics.Raycast(dropTarget.Value.TopmostDropTarget.transform.position + Vector3.down * 0.1f, Vector3.up, out var _, held.Value.Bounds.size.y, interactableLayer);
+                if (dropTarget.Value != null && dropTarget.Value.TopmostDropTarget != null && held.Value != null)
+                    somethingOnDropTarget = Physics.Raycast(dropTarget.Value.TopmostDropTarget.transform.position + Vector3.down * 0.1f, Vector3.up, out var _, held.Value.Bounds.size.y, interactableLayer);
             }
             else
                 dropTarget = Maybe<DropTarget>.Missing();
