@@ -6,6 +6,7 @@
 // Escape Key: Escapes the mouse lock
 // Mouse click after pressing escape will lock the mouse again
 
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -38,8 +39,10 @@ public class FirstPersonController : MonoBehaviour
     private void Start()
     {
         m_Rigid = GetComponent<Rigidbody>();
-        LockCursor();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
+
 
     // Update is called once per frame
     public void Update()
@@ -70,6 +73,15 @@ public class FirstPersonController : MonoBehaviour
         {
             //negate this value so it rotates like a FPS not like a plane
             m_Camera.transform.Rotate(-m_cameraRotation);
+
+            Vector3 cameraRotation = m_Camera.transform.eulerAngles;
+            if (cameraRotation.z > 1)
+            {
+                cameraRotation.x = cameraRotation.x > 270 ? 270.01f : 89.99f;
+                cameraRotation.y = (cameraRotation.y + 180) % 360;
+                cameraRotation.z = 0;
+                m_Camera.transform.eulerAngles = cameraRotation;
+            }
         }
 
         InternalLockUpdate();
@@ -92,33 +104,11 @@ public class FirstPersonController : MonoBehaviour
     private void InternalLockUpdate()
     {
         if (Input.GetKeyUp(KeyCode.Escape))
-        {
             m_cursorIsLocked = false;
-        }
         else if (Input.GetMouseButtonUp(0))
-        {
             m_cursorIsLocked = true;
-        }
 
-        if (m_cursorIsLocked)
-        {
-            UnlockCursor();
-        }
-        else if (!m_cursorIsLocked)
-        {
-            LockCursor();
-        }
-    }
-
-    private void UnlockCursor()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
-
-    private void LockCursor()
-    {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        Cursor.lockState = m_cursorIsLocked ? CursorLockMode.Locked : CursorLockMode.None;
+        Cursor.visible = !m_cursorIsLocked;
     }
 }
