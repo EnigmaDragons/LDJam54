@@ -47,10 +47,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxPickUp:
     Guid:
-      Data1: 8228099
-      Data2: 1280470008
-      Data3: -1752361833
-      Data4: -1933694390
+      Data1: 1673968252
+      Data2: 1332453226
+      Data3: -594980200
+      Data4: 935051602
     Path: event:/ENVIRONMENT/Boxes/BoxPickUp
   boxSetDown:
     Guid:
@@ -59,6 +59,20 @@ MonoBehaviour:
       Data3: -2017328720
       Data4: -1503951190
     Path: event:/ENVIRONMENT/Boxes/BoxSetDown
+  doorOpened:
+    Guid:
+      Data1: -1592427143
+      Data2: 1312120558
+      Data3: -1683993948
+      Data4: 661756676
+    Path: event:/ENVIRONMENT/Door/DoorOpen
+  workingMusic:
+    Guid:
+      Data1: -1736955488
+      Data2: 1092246204
+      Data3: -2025171829
+      Data4: 1679170894
+    Path: event:/Music-Raw/MUSIC/WorkAssessmentMusic
 --- !u!114 &8895141721937899204
 MonoBehaviour:
   m_ObjectHideFlags: 0
