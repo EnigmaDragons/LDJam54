@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
 	<object class="MixerGroup" id="{b83998c9-2a13-440e-a666-94186bd8c468}">
-		<property name="volume">
-			<value>-1</value>
-		</property>
 		<property name="name">
 			<value>DX</value>
 		</property>
@@ -23,6 +20,7 @@
 			<destination>{4da10463-d85a-4f1b-acef-6ae17491c515}</destination>
 			<destination>{122037a1-2528-4ab8-b442-201e8de1ceb9}</destination>
 			<destination>{059bdf7d-a8c6-495a-924f-9e5e621933d6}</destination>
+			<destination>{b8fcaa3a-9a68-41dc-b2e4-7800a0341c77}</destination>
 			<destination>{3a92b27a-b3b0-40fb-a977-2c92082255f6}</destination>
 			<destination>{964a4d52-a371-4b24-a03b-9c4a2cfb23c0}</destination>
 		</relationship>
@@ -61,6 +59,11 @@
 		</property>
 		<property name="level">
 			<value>-17</value>
+		</property>
+	</object>
+	<object class="GainEffect" id="{b8fcaa3a-9a68-41dc-b2e4-7800a0341c77}">
+		<property name="gain">
+			<value>-4.5</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{3a92b27a-b3b0-40fb-a977-2c92082255f6}" />
