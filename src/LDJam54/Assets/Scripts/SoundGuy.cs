@@ -6,7 +6,7 @@ using STOP_MODE = FMOD.Studio.STOP_MODE;
 
 public class SoundGuy : MonoBehaviour
 {
-    [SerializeField] private EventReference boxPickUp;
+    [SerializeField] private EventReference boxLifted; 
     [SerializeField] private EventReference boxSetDown;
     [SerializeField] private EventReference doorOpened;
     [SerializeField] private EventReference doorClosed;
@@ -90,7 +90,7 @@ public class SoundGuy : MonoBehaviour
     private void OnObjectPickedUp(ObjectPickedUp obj)
     {
         if (obj.ObjectType == ObjectType.Box)
-            PlayOneShot(boxPickUp, obj.Position);
+            PlayOneShot(boxLifted, obj.Position);
     }
 
     private void PlayOneShot(EventReference eventName, Vector3 pos)

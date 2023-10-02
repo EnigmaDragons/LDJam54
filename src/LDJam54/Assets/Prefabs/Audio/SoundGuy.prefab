@@ -45,12 +45,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e81936958de343299c10e690f967104d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxPickUp:
+  boxLifted:
     Guid:
-      Data1: 8228099
-      Data2: 1280470008
-      Data3: -1752361833
-      Data4: -1933694390
+      Data1: -1010624890
+      Data2: 1173792516
+      Data3: 1040986505
+      Data4: 1933196839
     Path: event:/ENVIRONMENT/Boxes/BoxPickUp
   boxSetDown:
     Guid:
