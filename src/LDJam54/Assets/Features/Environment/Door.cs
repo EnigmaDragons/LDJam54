@@ -72,7 +72,7 @@ public class Door : MonoBehaviour {
 		if (inTrigger) 
 		{
 			Log("In Door Trigger");
-			if(Input.GetKeyDown(KeyCode.E) && !isAutomatic){
+			if(Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0) && !isAutomatic){
 				if (!isOpen) {
 					Debug.Log("Requested Door Open");
 					if (_isLocked)

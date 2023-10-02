@@ -287,90 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9ba5893e567ab40a3e6aa11a139e17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &251863198 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1866759171860415810, guid: db6e896a854233445bb472ee1f3a8324,
-    type: 3}
-  m_PrefabInstance: {fileID: 1866759171877266908}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &251863199 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1866759171860415811, guid: db6e896a854233445bb472ee1f3a8324,
-    type: 3}
-  m_PrefabInstance: {fileID: 1866759171877266908}
-  m_PrefabAsset: {fileID: 0}
---- !u!84 &254850163
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 5
-  m_Width: 1024
-  m_Height: 1024
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthStencilFormat: 90
-  m_ColorFormat: 0
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_EnableRandomWrite: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 0
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
-  m_ShadowSamplingMode: 2
---- !u!1 &258585296
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 258585297}
-  m_Layer: 0
-  m_Name: Views
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &258585297
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 258585296}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 977845828}
-  - {fileID: 1479251760}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!84 &609372056
+--- !u!84 &217193797
 RenderTexture:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -408,6 +325,51 @@ RenderTexture:
   m_Dimension: 2
   m_VolumeDepth: 1
   m_ShadowSamplingMode: 2
+--- !u!1 &251863198 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1866759171860415810, guid: db6e896a854233445bb472ee1f3a8324,
+    type: 3}
+  m_PrefabInstance: {fileID: 1866759171877266908}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &251863199 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1866759171860415811, guid: db6e896a854233445bb472ee1f3a8324,
+    type: 3}
+  m_PrefabInstance: {fileID: 1866759171877266908}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &258585296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 258585297}
+  m_Layer: 0
+  m_Name: Views
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &258585297
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258585296}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 977845828}
+  - {fileID: 1479251760}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &776589807
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,7 +899,7 @@ MonoBehaviour:
           m_StringArgument: GameScene
           m_BoolArgument: 0
         m_CallState: 2
---- !u!21 &1073097021
+--- !u!21 &1066917107
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -1053,6 +1015,44 @@ Material:
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
+--- !u!84 &1070766911
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 5
+  m_Width: 1024
+  m_Height: 1024
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthStencilFormat: 90
+  m_ColorFormat: 0
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_EnableRandomWrite: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 0
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
 --- !u!1 &1279554864
 GameObject:
   m_ObjectHideFlags: 0
@@ -1353,7 +1353,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1479251760
 Transform:
   m_ObjectHideFlags: 0
@@ -1696,6 +1696,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 107580172}
+        m_TargetAssemblyTypeName: FMOD_UI_Manager, Assembly-CSharp
+        m_MethodName: PlayCreditMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1880503122}
+        m_TargetAssemblyTypeName: FMOD_MenuMusic, Assembly-CSharp
+        m_MethodName: StopMenuMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1827418396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1805,6 +1829,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1880503121}
   - component: {fileID: 1880503120}
+  - component: {fileID: 1880503122}
   m_Layer: 0
   m_Name: BackgroundMusic
   m_TagString: Untagged
@@ -1827,11 +1852,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -201286779
-      Data2: 1264143949
-      Data3: 425426560
-      Data4: -94856479
-    Path: event:/Music/MenuMusic
+      Data1: -707324562
+      Data2: 1296370206
+      Data3: 1825540541
+      Data4: -30329700
+    Path: snapshot:/MenuKill
   Event: 
   PlayEvent: 1
   StopEvent: 2
@@ -1841,8 +1866,8 @@ MonoBehaviour:
   AllowNonRigidbodyDoppler: 0
   Params: []
   OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!4 &1880503121
 Transform:
   m_ObjectHideFlags: 0
@@ -1858,6 +1883,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1880503122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880503119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af641e5ce40d406448ac80f944908f09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1909727429
 GameObject:
   m_ObjectHideFlags: 0
@@ -1959,6 +1996,18 @@ MonoBehaviour:
       - m_Target: {fileID: 107580172}
         m_TargetAssemblyTypeName: FMOD_UI_Manager, Assembly-CSharp
         m_MethodName: StopHooverSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1880503122}
+        m_TargetAssemblyTypeName: FMOD_MenuMusic, Assembly-CSharp
+        m_MethodName: StopMenuMusicFade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3502,7 +3551,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1073097021}
+      objectReference: {fileID: 1066917107}
+    - target: {fileID: 8596171742078816913, guid: 75da5029cee0c64438db2695b010a323,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8596171742078816913, guid: 75da5029cee0c64438db2695b010a323,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3517,7 +3571,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 254850163}
+      objectReference: {fileID: 1070766911}
     - target: {fileID: 8596171742593757435, guid: 75da5029cee0c64438db2695b010a323,
         type: 3}
       propertyPath: m_Name
