@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d51715e4164a9b81fe7514697074cd, type: 3}
   m_Name: GameConfig
   m_EditorClassIdentifier: 
-  Coworkers:
-  - 34982
+  Coworkers: []
   BoxShippingScore: 20
   PlacedCorrectlyScore: 20
   BoxUnsortedFixedScore: 20
@@ -24,6 +23,6 @@ MonoBehaviour:
   TotalPlayableDays: 1
   Days:
   - ActiveKPIs: 00000000
-    CoworkerScores: 13000000
-    BoxSpawnInterval: 0
+    CoworkerScores: 7c010000
+    BoxSpawnInterval: 100
     ClockSpeedFactor: 1
