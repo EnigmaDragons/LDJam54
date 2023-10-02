@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1506210500160802324}
   - component: {fileID: 9198784298458244708}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: HudInstructionsCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4095
+    m_Bits: 0
 --- !u!1 &5466337956298109163
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@
 // Escape Key: Escapes the mouse lock
 // Mouse click after pressing escape will lock the mouse again
 
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -25,6 +26,7 @@ public class FirstPersonController : MonoBehaviour
     private Vector3 m_rotation;
     private Vector3 m_cameraRotation;
     private bool m_cursorIsLocked = true;
+    private bool debug_camera = true;
 
     [Header("The Camera the player looks through")]
     public Camera m_Camera;
@@ -38,7 +40,16 @@ public class FirstPersonController : MonoBehaviour
     private void Start()
     {
         m_Rigid = GetComponent<Rigidbody>();
-        LockCursor();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        if (debug_camera)
+            InvokeRepeating(nameof(LogCamera), 1, 1);
+    }
+
+    private void LogCamera()
+    {
+        Debug.Log("Camera: " + m_Camera.transform.eulerAngles);
     }
 
     // Update is called once per frame
@@ -70,6 +81,17 @@ public class FirstPersonController : MonoBehaviour
         {
             //negate this value so it rotates like a FPS not like a plane
             m_Camera.transform.Rotate(-m_cameraRotation);
+
+            Vector3 cameraRotation = m_Camera.transform.eulerAngles;
+            if (cameraRotation.z > 1 && cameraRotation.z < 359)
+            {
+                Debug.Log("Camera Clamping from: " + cameraRotation);
+                cameraRotation.x = cameraRotation.x > 270 ? 270.01f : 89.99f;
+                cameraRotation.y = (cameraRotation.y + 180) % 360;
+                cameraRotation.z = 0;
+                Debug.Log("to: " + cameraRotation);
+                m_Camera.transform.eulerAngles = cameraRotation;
+            }
         }
 
         InternalLockUpdate();
@@ -92,33 +114,11 @@ public class FirstPersonController : MonoBehaviour
     private void InternalLockUpdate()
     {
         if (Input.GetKeyUp(KeyCode.Escape))
-        {
             m_cursorIsLocked = false;
-        }
         else if (Input.GetMouseButtonUp(0))
-        {
             m_cursorIsLocked = true;
-        }
 
-        if (m_cursorIsLocked)
-        {
-            UnlockCursor();
-        }
-        else if (!m_cursorIsLocked)
-        {
-            LockCursor();
-        }
-    }
-
-    private void UnlockCursor()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
-
-    private void LockCursor()
-    {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        Cursor.lockState = m_cursorIsLocked ? CursorLockMode.Locked : CursorLockMode.None;
+        Cursor.visible = !m_cursorIsLocked;
     }
 }

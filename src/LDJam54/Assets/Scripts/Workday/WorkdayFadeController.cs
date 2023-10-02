@@ -37,7 +37,7 @@ public class WorkdayFadeController : OnMessage<StartNextDayRequested>
             {
                 _mode = Mode.Teleport;
                 _remainingFadeTime = asleepTime;
-                TeleportPlayer();
+                TeleportPlayerToHome();
                 Message.Publish(new DayChanged());
             }
             else if (_mode == Mode.Teleport)
@@ -53,11 +53,16 @@ public class WorkdayFadeController : OnMessage<StartNextDayRequested>
             group.alpha = Mathf.Lerp(_mode == Mode.FadeOut ? 1 : 0,  _mode == Mode.FadeOut ? 0 : 1, _remainingFadeTime / fadeTime);
     }
 
-    private void TeleportPlayer()
+    public static void TeleportPlayerToHome()
     {
         var player = GameObject.FindWithTag("Player");
         var spawnPoint = GameObject.FindWithTag("Respawn");
+        var rb = player.GetComponent<Rigidbody>();
+        rb.isKinematic = true;
         player.transform.position = spawnPoint.transform.position;
+        player.transform.rotation = spawnPoint.transform.rotation;
+        FirstPersonInteractionStatus.IsEnabled = true;
+        rb.isKinematic = false;
     }
     
     enum Mode

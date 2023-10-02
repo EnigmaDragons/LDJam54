@@ -15,6 +15,7 @@ public class Door : MonoBehaviour {
 	private string _animName;
 	private bool inTrigger = false;
 	private bool isOpen = false;
+	public bool startedLocked = false;
 	private Vector3 relativePos;
 	public GameObject lockedVisual;
 	public GameObject unlockedVisual;
@@ -40,7 +41,7 @@ public class Door : MonoBehaviour {
 		anim = GetComponent<Animation> ();
 		_animName = anim.clip.name;
 		if (!_lockedInitialized)
-			SetLocked(false);
+			SetLocked(startedLocked);
 		if (forwardLabel.text == "")
 			forwardLabel.text = initialForwardText;
 		if (backwardLabel.text == "")

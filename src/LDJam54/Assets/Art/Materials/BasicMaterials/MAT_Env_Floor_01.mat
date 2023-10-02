@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: MAT_Env_Floor_01
-  m_Shader: {fileID: -6465566751694194690, guid: d26bb1ce5d4d47b4493f6effa4dc8294,
+  m_Shader: {fileID: -6465566751694194690, guid: 45876f2718a967c4898eddeea4b4f3af,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []

@@ -2,6 +2,7 @@
 using FMOD.Studio;
 using FMODUnity;
 using UnityEngine;
+using STOP_MODE = FMOD.Studio.STOP_MODE;
 
 public class SoundGuy : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class SoundGuy : MonoBehaviour
     [SerializeField] private EventReference doorClosed;
     [SerializeField] private EventReference workingMusic;
     [SerializeField] private EventReference jumpPad;
+    [SerializeField] private EventReference happyBossComment;
+    [SerializeField] private EventReference unhappyBossComment;
+    [SerializeField] private EventReference neutralBossComment;
 
     private EventInstance _currentMusic;
     
@@ -25,7 +29,17 @@ public class SoundGuy : MonoBehaviour
         Message.Subscribe<DoorClosed>(OnDoorClosed, this);
         Message.Subscribe<TeleporterActivated>(OnTeleporterActivated, this);
         Message.Subscribe<JumpPadUsed>(OnJumpPadUsed, this);
-      
+        Message.Subscribe<PlayBossComment>(OnBossComment, this);
+    }
+
+    private void OnBossComment(PlayBossComment obj)
+    {
+        if (obj.Sentiment == BossSentiment.Happy)
+            PlayOneShot(happyBossComment, Vector3.zero);
+        if (obj.Sentiment == BossSentiment.Unhappy)
+            PlayOneShot(unhappyBossComment, Vector3.zero);
+        if (obj.Sentiment == BossSentiment.Neutral)
+            PlayOneShot(neutralBossComment, Vector3.zero);
     }
 
     private void OnWasFired(WasFired obj)
@@ -60,6 +74,7 @@ public class SoundGuy : MonoBehaviour
 
     private void OnWorkdayStarted(WorkdayStarted obj)
     {
+        _currentMusic.stop(STOP_MODE.ALLOWFADEOUT);
         _currentMusic = RuntimeManager.CreateInstance(workingMusic);
         _currentMusic.start();
     }
