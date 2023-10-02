@@ -8,7 +8,7 @@
 			<value>2</value>
 		</property>
 		<relationship name="folder">
-			<destination>{89416bac-5180-4da6-8381-a7a383e26b89}</destination>
+			<destination>{7c08e4a5-539c-4cc0-af8c-d9f02424bef0}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{dc43dba3-78f4-4ae5-b5b7-64989588ab05}</destination>
@@ -107,7 +107,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{8db27019-eb6e-4cdb-a382-2ec5d4bf2487}">
 		<property name="volume">
-			<value>-7.5</value>
+			<value>-2.29999995</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -124,8 +124,10 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{dbef07e2-19f3-4134-a2c3-9fcd0e3c1a33}">
 		<relationship name="effects">
+			<destination>{8064fed5-4c1c-4e5d-9baa-769a75b883f4}</destination>
 			<destination>{70630ca6-c166-4c6c-b84d-60781549eb32}</destination>
-			<destination>{be75ba72-3773-47f2-802c-f68e4185c9dc}</destination>
+			<destination>{7caeb1b8-5682-4123-8b26-e031c8250f62}</destination>
+			<destination>{fc880dfb-01e8-4655-9639-600dd267f534}</destination>
 			<destination>{4fc71e17-4814-4275-82ac-773173eee683}</destination>
 			<destination>{77997bf6-d671-470b-8c3f-a61879bbd144}</destination>
 		</relationship>
@@ -162,6 +164,29 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{ad3fc71e-46fe-4a8b-9084-ef4945c966ed}" />
+	<object class="TremoloEffect" id="{8064fed5-4c1c-4e5d-9baa-769a75b883f4}">
+		<property name="frequency">
+			<value>11</value>
+		</property>
+		<property name="depth">
+			<value>0.649999976</value>
+		</property>
+		<property name="shape">
+			<value>0.829999983</value>
+		</property>
+		<property name="skew">
+			<value>0.0199999996</value>
+		</property>
+		<property name="square">
+			<value>0.469999999</value>
+		</property>
+		<property name="phase">
+			<value>0.680000007</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{d7ba28a9-65da-4e5a-9070-60f4db3b9a6c}</destination>
+		</relationship>
+	</object>
 	<object class="FlangerEffect" id="{70630ca6-c166-4c6c-b84d-60781549eb32}">
 		<property name="rate">
 			<value>0.0899999961</value>
@@ -173,15 +198,27 @@
 			<value>41</value>
 		</property>
 	</object>
-	<object class="MixerSend" id="{be75ba72-3773-47f2-802c-f68e4185c9dc}">
+	<object class="MultibandEqEffect" id="{7caeb1b8-5682-4123-8b26-e031c8250f62}">
+		<property name="frequencyA">
+			<value>420</value>
+		</property>
+		<property name="qualityA">
+			<value>2.29999995</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{3059a3b2-d290-4433-9f04-e2c9da57d4ad}</destination>
+			<destination>{093075d0-ad96-4c14-a1c6-b408249b4494}</destination>
+		</relationship>
+	</object>
+	<object class="MixerSend" id="{fc880dfb-01e8-4655-9639-600dd267f534}">
 		<property name="level">
-			<value>-17</value>
+			<value>-12.5</value>
 		</property>
 		<property name="inputFormat">
 			<value>0</value>
 		</property>
 		<relationship name="mixerReturn">
-			<destination>{cd33114c-983b-4026-9100-4589b6d46f4f}</destination>
+			<destination>{219af533-f623-4985-bfa1-10b16dff7d08}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{4fc71e17-4814-4275-82ac-773173eee683}" />
@@ -211,4 +248,58 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{63eb0907-ec46-4358-83ae-cdf242bc60a7}" />
+	<object class="ADSRModulator" id="{d7ba28a9-65da-4e5a-9070-60f4db3b9a6c}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>frequency</value>
+		</property>
+		<property name="attackTime">
+			<value>4000</value>
+		</property>
+		<property name="peakValue">
+			<value>-100</value>
+		</property>
+		<property name="holdTime">
+			<value>2000</value>
+		</property>
+		<property name="sustainValue">
+			<value>100</value>
+		</property>
+		<property name="releaseTime">
+			<value>40000</value>
+		</property>
+	</object>
+	<object class="ADSRModulator" id="{3059a3b2-d290-4433-9f04-e2c9da57d4ad}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>frequencyA</value>
+		</property>
+		<property name="attackTime">
+			<value>510</value>
+		</property>
+		<property name="peakValue">
+			<value>100</value>
+		</property>
+		<property name="holdTime">
+			<value>0</value>
+		</property>
+		<property name="decayTime">
+			<value>60000</value>
+		</property>
+		<property name="sustainValue">
+			<value>96</value>
+		</property>
+		<property name="releaseTime">
+			<value>700</value>
+		</property>
+		<property name="finalValue">
+			<value>-56</value>
+		</property>
+	</object>
+	<object class="RandomizerModulator" id="{093075d0-ad96-4c14-a1c6-b408249b4494}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>frequencyA</value>
+		</property>
+		<property name="amount">
+			<value>42</value>
+		</property>
+	</object>
 </objects>

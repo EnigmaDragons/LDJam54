@@ -112,6 +112,9 @@
 		</relationship>
 	</object>
 	<object class="MultiSound" id="{47940e35-24fa-42d5-81cd-a583731b0176}">
+		<relationship name="modulators">
+			<destination>{a6a58b7d-c9d1-4c44-8b90-cbda640ee120}</destination>
+		</relationship>
 		<relationship name="sounds">
 			<destination>{694cf404-6df3-4649-8a57-7f3a00250832}</destination>
 			<destination>{8b802314-9616-48b4-a795-b5d6f00923e9}</destination>
@@ -176,6 +179,29 @@
 		<relationship name="audioFile">
 			<destination>{38881eaf-40e0-49d7-b0c8-1bcde75f9bbd}</destination>
 		</relationship>
+	</object>
+	<object class="ADSRModulator" id="{a6a58b7d-c9d1-4c44-8b90-cbda640ee120}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="attackTime">
+			<value>0</value>
+		</property>
+		<property name="holdTime">
+			<value>0</value>
+		</property>
+		<property name="decayTime">
+			<value>465</value>
+		</property>
+		<property name="sustainValue">
+			<value>-80</value>
+		</property>
+		<property name="finalValue">
+			<value>-80</value>
+		</property>
 	</object>
 	<object class="SingleSound" id="{694cf404-6df3-4649-8a57-7f3a00250832}">
 		<relationship name="audioFile">

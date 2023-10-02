@@ -484,7 +484,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19d7d1cb48b34928bdc9ff7df0762bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CanTriggerRepeatedly: 1
   cfg: {fileID: 11400000, guid: dce1e495c7aa5f3468f9c51b24abda14, type: 2}
+  youAreFiredSpeech:
+    Guid:
+      Data1: -1570523572
+      Data2: 1159347741
+      Data3: -1851628641
+      Data4: 966042215
+    Path: event:/Boss/Boss_Firing_You
 --- !u!1 &8185112099351934490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1718,7 +1726,7 @@ PrefabInstance:
     - target: {fileID: 9180712101168162579, guid: b24bd5d8c9e5cfe42a9b89830a7bbe6b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 9180712101168162579, guid: b24bd5d8c9e5cfe42a9b89830a7bbe6b,
         type: 3}

@@ -5,7 +5,7 @@
 			<value>WorkBossa_Level_1</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{11a0491f-335f-4403-ac6d-29253ce1322d}</destination>
@@ -148,6 +148,7 @@
 	<object class="MixerBusEffectChain" id="{97f4d254-5d3c-495d-a363-96383a5c1bb4}">
 		<relationship name="effects">
 			<destination>{4d00aedb-a64d-43d7-bcfe-966cb999fe34}</destination>
+			<destination>{c3f1c033-83ec-48ac-930c-ba5b43592edf}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{061e8f0c-ae88-4117-9b2c-dee256e5eea5}" />
@@ -159,5 +160,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{afa6363b-9964-4dd8-b6a1-b77b3305cab2}" />
 	<object class="MixerBusFader" id="{4d00aedb-a64d-43d7-bcfe-966cb999fe34}" />
+	<object class="SpatialiserEffect" id="{c3f1c033-83ec-48ac-930c-ba5b43592edf}" />
 	<object class="MixerBusFader" id="{b5e22fab-cb32-4925-aa54-17629ac6585e}" />
 </objects>
