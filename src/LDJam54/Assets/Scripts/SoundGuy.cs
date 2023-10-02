@@ -8,6 +8,7 @@ public class SoundGuy : MonoBehaviour
 {
     [SerializeField] private EventReference boxLifted; 
     [SerializeField] private EventReference boxSetDown;
+    [SerializeField] private EventReference incineratorUsed;
     [SerializeField] private EventReference doorOpened;
     [SerializeField] private EventReference doorClosed;
     [SerializeField] private EventReference workingMusic;
@@ -23,6 +24,7 @@ public class SoundGuy : MonoBehaviour
     {
         Message.Subscribe<ObjectPickedUp>(OnObjectPickedUp, this);
         Message.Subscribe<ObjectSetDown>(OnObjectSetDown, this);
+        Message.Subscribe<IncineratorUsed>(OnIncineratorUsed, this);
         Message.Subscribe<WorkdayStarted>(OnWorkdayStarted, this);
         Message.Subscribe<WorkdayNearlyOver>(OnWorkdayNearlyOver, this);
         Message.Subscribe<WasFired>(OnWasFired, this);
@@ -31,6 +33,11 @@ public class SoundGuy : MonoBehaviour
         Message.Subscribe<TeleporterActivated>(OnTeleporterActivated, this);
         Message.Subscribe<JumpPadUsed>(OnJumpPadUsed, this);
         Message.Subscribe<PlayBossComment>(OnBossComment, this);
+    }
+
+    private void OnIncineratorUsed(IncineratorUsed obj)
+    {
+        PlayOneShot(incineratorUsed, obj.Position);
     }
 
     private void OnBossComment(PlayBossComment obj)
