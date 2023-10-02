@@ -38,6 +38,7 @@ public class WorkdayFadeController : OnMessage<StartNextDayRequested>
                 _mode = Mode.Teleport;
                 _remainingFadeTime = asleepTime;
                 TeleportPlayerToHome();
+                Message.Publish(new WentToSleep());
                 Message.Publish(new DayChanged());
             }
             else if (_mode == Mode.Teleport)
