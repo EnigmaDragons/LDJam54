@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ColoredBox : MonoBehaviour
 {
@@ -13,7 +12,6 @@ public class ColoredBox : MonoBehaviour
     private SortingColor _colorLocation;
 
     public SortingColor Color => _color;
-    public SortingColor ColorLocation => _colorLocation;
     public DropSize Size => size;
 
     public void SetColor(SortingColor color) => SetColor(color, color);
@@ -30,35 +28,37 @@ public class ColoredBox : MonoBehaviour
         SetColor(_initialColor);
     }
     
-    private bool IsMisplaced => Color != ColorLocation;
+    private bool GetIsOutOfPlace()
+    {
+        var isOutOfPlace = _colorLocation != _color;
+        return isOutOfPlace;
+    }
 
     public void SetColorLocation(SortingColor color)
     {
-        if (IsMisplaced)
+        if (GetIsOutOfPlace())
         {
             _colorLocation = color;
-            if (!IsMisplaced)
-                CurrentGameState.DecrementKPIStatic(KPI.BoxesUnsorted);
+            if (!GetIsOutOfPlace())
+                CurrentGameState.IncrementKPIStatic(KPI.BoxesTidied);
         }
         else
         {
             _colorLocation = color;
-            if (IsMisplaced)
-                CurrentGameState.IncrementKPIStatic(KPI.BoxesUnsorted);
+            if (GetIsOutOfPlace())
+                CurrentGameState.DecrementKPIStatic(KPI.BoxesTidied);
         }
     }
 
     private void OnEnable()
     {
         Message.Publish(new ColoredBoxAppeared(this));
-        if (IsMisplaced)
-            CurrentGameState.IncrementKPIStatic(KPI.BoxesUnsorted);
     } 
 
     private void OnDisable()
     {
         Message.Publish(new ColoredBoxDisappeared(this));
-        if (IsMisplaced)
-            CurrentGameState.DecrementKPIStatic(KPI.BoxesUnsorted);
+        if (GetIsOutOfPlace())
+            CurrentGameState.IncrementKPIStatic(KPI.BoxesTidied);
     }
 }

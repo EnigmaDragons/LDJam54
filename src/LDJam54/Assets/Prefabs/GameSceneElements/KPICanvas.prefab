@@ -81,6 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d4b5f46c635fd4bb798506bcc3eaea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cfg: {fileID: 11400000, guid: dce1e495c7aa5f3468f9c51b24abda14, type: 2}
   ScoreLabel: {fileID: 3567485823690891637}
   KPILabels:
   - {fileID: 6983347943308254000}

@@ -4,13 +4,13 @@ using System.Collections.Generic;
 [Serializable]
 public sealed class GameState
 {
-    public static SerializableDictionary<KPI, int> EmptyKpis() => new()
+    public static SerializableDictionary<KPI, int> ZeroedKpis() => new()
     {
-        { KPI.BoxesShelvedCorrectly, 20 },
-        { KPI.BoxesShipped, 20 },
-        { KPI.BoxesUnsorted, 20 },
-        { KPI.BoxesUnloaded, 20 },
-        { KPI.BoxShippingMistakes, 20 },
+        { KPI.BoxesShelvedCorrectly, 0 },
+        { KPI.BoxesShipped, 0 },
+        { KPI.BoxesTidied, 0 },
+        { KPI.BoxesUnloaded, 0 },
+        { KPI.BoxShippingMistakes, 0 },
     };
     
     // Should consist of only serializable primitives.
@@ -34,18 +34,12 @@ public sealed class GameState
     {
         { KPI.BoxesShelvedCorrectly, "Shelved" },
         { KPI.BoxesShipped, "Shipped" },
-        { KPI.BoxesUnsorted, "Unsorted" },
+        { KPI.BoxesTidied, "Unsorted" },
         { KPI.BoxesUnloaded, "Unloaded" },
         { KPI.BoxShippingMistakes, "Shipping Mistake" },
     };
-    public SerializableDictionary<KPI, int> KPIScoring = EmptyKpis();
-    public SerializableDictionary<KPI, int> KPIs = new() {
-        { KPI.BoxesShelvedCorrectly, 0 },
-        { KPI.BoxesShipped, 0 },
-        { KPI.BoxesUnsorted, 0 },
-        { KPI.BoxesUnloaded, 0 },
-        { KPI.BoxShippingMistakes, 0 },
-    };
+    
+    public SerializableDictionary<KPI, int> KPIs = ZeroedKpis();
     public PerformanceReview PerformanceReview = new PerformanceReview();
     
     // Days
@@ -56,12 +50,6 @@ public sealed class GameState
 
     // Cutscene Stuff - Probably Not Needed
     public SerializableDictionary<string, bool> CutsceneStoryStates = new();
-    
-    public void ResetKpi() => KPIs = new() {
-        { KPI.BoxesShelvedCorrectly, 0 },
-        { KPI.BoxesShipped, 0 },
-        { KPI.BoxesUnsorted, 0 },
-        { KPI.BoxesUnloaded, 0 },
-        { KPI.BoxShippingMistakes, 0 },
-    };
+
+    public void ResetKpi() => KPIs = ZeroedKpis();
 }

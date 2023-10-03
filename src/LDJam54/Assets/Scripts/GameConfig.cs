@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [CreateAssetMenu]
 public class GameConfig : ScriptableObject
@@ -32,4 +31,13 @@ public class GameConfig : ScriptableObject
     public DayConfig[] Days;
 
     public DayConfig CurrentDayConfig => Days[CurrentGameState.State.CurrentDayNumber-1];
+    
+    public SerializableDictionary<KPI, int> KpiScoring => new()
+    {
+        { KPI.BoxesShelvedCorrectly, PlacedCorrectlyScore },
+        { KPI.BoxesShipped, BoxShippingScore },
+        { KPI.BoxesTidied, BoxUnsortedFixedScore },
+        { KPI.BoxesUnloaded, BoxUnloadedScore },
+        { KPI.BoxShippingMistakes, BoxShippingMistakesScore },
+    };
 }

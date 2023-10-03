@@ -93,11 +93,12 @@ public sealed class CurrentGameState
         Instance.DecrementKPI(kpi, amount);
     }
 
-    public static float GetPace()
+    public static float GetPace(GameConfig cfg)
     {
+        var kpiScoring = cfg.KpiScoring;
         var fractionOfDayCompleted = ((WorkdayState.CurrentHour - WorkdayConfig.START_OF_DAY) * 60 + WorkdayState.CurrentMinute) / ((WorkdayConfig.END_OF_DAY - WorkdayConfig.START_OF_DAY) * 60f);
         var lowestScoreForDay = State.CoworkerScores.Min();
-        var playerScores = State.ActiveKPIs.Select(kpi => State.KPIs[kpi] * State.KPIScoring[kpi]).Min();
+        var playerScores = State.ActiveKPIs.Select(kpi => State.KPIs[kpi] * kpiScoring[kpi]).Min();
         return 1f * playerScores / lowestScoreForDay / fractionOfDayCompleted;
     }
 }

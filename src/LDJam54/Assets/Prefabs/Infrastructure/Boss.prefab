@@ -44,4 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e113f95db344369a1dae2bca55c232f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cfg: {fileID: 11400000, guid: dce1e495c7aa5f3468f9c51b24abda14, type: 2}
   CommentHours: 0a0000000d00000010000000

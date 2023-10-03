@@ -53,7 +53,7 @@ public class ColoredBoxSpawner : OnMessage<WorkdayStarted, WorkdayEnded>
             var spawnColor = colors.Random();
             if (spawnColor == SortingColor.All)
                 spawnColor = SortingColors.All.Random();
-            box.SetColor(spawnColor);
+            box.SetColor(spawnColor, SortingColor.None);
         }
     }
 
