@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{25638275-ff08-4dac-b107-6af92ed9ae8e}">
 		<property name="assetPath">
-			<value>Sleep Jingle v01.mp3</value>
+			<value>Music/Sleep Jingle v01.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
