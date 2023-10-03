@@ -17,11 +17,11 @@ public class FmodSceneMusic : OnMessage<StopCurrentBackgroundMusic>
 
     protected override void AfterDisable()
     {
-        _musicInstance.stop(STOP_MODE.IMMEDIATE);
+        _musicInstance.stop(STOP_MODE.ALLOWFADEOUT);
     }
 
     protected override void Execute(StopCurrentBackgroundMusic msg)
     {
-        _musicInstance.stop(STOP_MODE.IMMEDIATE);
+        _musicInstance.stop(STOP_MODE.ALLOWFADEOUT);
     }
 }
