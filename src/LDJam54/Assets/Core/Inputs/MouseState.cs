@@ -25,6 +25,5 @@ public static class MouseState
         
         Cursor.lockState = !finalShouldBeVisible ? CursorLockMode.Locked : CursorLockMode.None;
         Cursor.visible = finalShouldBeVisible;
-        Debug.Log($"Cursor should be shown: {finalShouldBeVisible}. LockState: {Cursor.lockState}. Visible: {Cursor.visible}");
     }
 }
