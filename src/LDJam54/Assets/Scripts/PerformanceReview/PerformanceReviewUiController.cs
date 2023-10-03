@@ -12,11 +12,12 @@ public class PerformanceReviewUiController : OnMessage<StartPerformanceMeetingRe
     
     private void Review()
     {
-        if (CurrentGameState.State.MeetingTime != MeetingTime.Evening)
+        var gs = CurrentGameState.State;
+        if (gs.MeetingTime != MeetingTime.Evening)
             return;
             
-        var perfReview = CurrentGameState.State.PerformanceReview;
-        var kpisOrdered = perfReview.ScorePerPerson.OrderByDescending(x => x.Value).ToList();
+        var perfReview = gs.PerformanceReview;
+        var kpisOrdered = perfReview.ScorePerPerson.Where(x => x.Key != gs.BossID).OrderByDescending(x => x.Value).ToList();
         for (var i = 0; i < workers.Length; i++)
         {
             if (kpisOrdered.Count > i)
