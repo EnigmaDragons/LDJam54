@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 public class ChangeDayConfigs : OnMessage<DayChanged>
@@ -10,6 +11,7 @@ public class ChangeDayConfigs : OnMessage<DayChanged>
         CurrentGameState.Instance.UpdateState(s =>
         {
             var day = gameConfig.Days[s.CurrentDayNumber - 1];
+            s.Coworkers = gameConfig.Coworkers.Skip(s.CurrentDayNumber - 1).ToList();
             s.PlayerIsFired = false;
             s.ResetKpi();
             s.ActiveKPIs = day.ActiveKPIs;
