@@ -10,8 +10,10 @@ public class InitFMOD_Bus : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        RuntimeManager.GetBus("bus:/Music").setVolume(PlayerPrefs.GetFloat("bus:/Music", 0.5f));
-        RuntimeManager.GetBus("bus:/SFX").setVolume(PlayerPrefs.GetFloat("bus:/SFX", 0.5f));
-        RuntimeManager.GetBus("bus:/Music").setVolume(PlayerPrefs.GetFloat("bus:/UI", 0.5f));
+        RuntimeManager.GetBus("bus:/MSTBUS/Music").setVolume(PlayerPrefs.GetFloat("bus:/MSTBUS/Music", 0.5f));
+        RuntimeManager.GetBus("bus:/MSTBUS/SFX").setVolume(PlayerPrefs.GetFloat("bus:/MSTBUS/SFX", 0.5f));
+        RuntimeManager.GetBus("bus:/MSTBUS/UI").setVolume(PlayerPrefs.GetFloat("bus:/MSTBUS/UI", 0.5f));
+        RuntimeManager.GetBus("bus:/MSTBUS").setVolume(PlayerPrefs.GetFloat("bus:/MSTBUS", 0.5f));
+        RuntimeManager.GetBus("bus:/MSTBUS/DX").setVolume(PlayerPrefs.GetFloat("bus:/MSTBUS/DX", 0.5f));
     }
 }
