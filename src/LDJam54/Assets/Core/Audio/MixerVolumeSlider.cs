@@ -25,6 +25,6 @@ public sealed class MixerVolumeSlider : MonoBehaviour
         Message.Publish(new MixerVolumeChanged(valueName));
         fmodVol = sliderValue;
 
-        RuntimeManager.GetBus(valueName).setVolume(fmodVol);      
+        RuntimeManager.GetBus(valueName).setVolume(fmodVol);
     }
 }
