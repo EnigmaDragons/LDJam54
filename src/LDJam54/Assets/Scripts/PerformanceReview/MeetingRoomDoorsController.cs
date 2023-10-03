@@ -34,7 +34,7 @@ public class MeetingRoomDoorsController : OnMessage<StartPerformanceMeetingReque
         // Won Game
         if (s.CurrentDayNumber == cfg.TotalPlayableDays)
         {
-            gameWinDoor.SetLocked(false);
+            this.ExecuteAfterDelay(33f, () => gameWinDoor.SetLocked(false));
             nextDayDoor.SetLocked(true);
             warehouseDoor.SetLocked(true);
             return;

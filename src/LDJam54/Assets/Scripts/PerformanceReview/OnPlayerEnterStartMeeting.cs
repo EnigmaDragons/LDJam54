@@ -62,7 +62,7 @@ public class OnPlayerEnterStartMeeting : PlayerTrigger
         var speech = youAreFired ? youAreFiredSpeech : dayFiringSpeech;
         Log.Info($"Evening meeting speech: {speech}");
         if (!speech.IsNull)
-            Message.Publish(new PlayMeetingBossMonologue(speech));
+            Message.Publish(new PlayBossMonologue(speech));
         Message.Publish(new StartPerformanceMeetingRequested());
     }
 }

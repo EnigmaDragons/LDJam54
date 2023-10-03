@@ -1,10 +1,10 @@
 ﻿using FMODUnity;
 
-public class PlayMeetingBossMonologue
+public class PlayBossMonologue
 {
     public EventReference Speech;
 
-    public PlayMeetingBossMonologue(EventReference speech)
+    public PlayBossMonologue(EventReference speech)
     {
         Speech = speech;
     }
