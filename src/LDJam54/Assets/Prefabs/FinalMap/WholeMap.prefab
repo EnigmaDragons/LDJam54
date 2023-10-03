@@ -87,6 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a09986c1c84358afeba4b574ba6cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cfg: {fileID: 11400000, guid: dce1e495c7aa5f3468f9c51b24abda14, type: 2}
   gameWinDoor: {fileID: 6884175171527480710}
   nextDayDoor: {fileID: 2054814876171290434}
   warehouseDoor: {fileID: 5124464045999354481}
@@ -265,7 +266,7 @@ PrefabInstance:
     - target: {fileID: 3353509880875526254, guid: 040341e0227d5aa4e8d4ec3556a0a657,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3353509880875526254, guid: 040341e0227d5aa4e8d4ec3556a0a657,
         type: 3}

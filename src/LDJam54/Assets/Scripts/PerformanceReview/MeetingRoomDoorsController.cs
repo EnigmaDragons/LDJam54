@@ -1,6 +1,7 @@
 ﻿
 public class MeetingRoomDoorsController : OnMessage<StartPerformanceMeetingRequested, StartKpiMeetingRequested>
 {
+    public GameConfig cfg;
     public Door gameWinDoor;
     public Door nextDayDoor;
     public Door warehouseDoor;
@@ -31,7 +32,7 @@ public class MeetingRoomDoorsController : OnMessage<StartPerformanceMeetingReque
         // Evening
         
         // Won Game
-        if (s.CurrentDayNumber == s.TotalDays)
+        if (s.CurrentDayNumber == cfg.TotalPlayableDays)
         {
             gameWinDoor.SetLocked(false);
             nextDayDoor.SetLocked(true);
