@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using UnityEngine;
 using System.Collections;
+using System;
 
 namespace Features.PlayerControls
 {
@@ -50,9 +51,16 @@ namespace Features.PlayerControls
                 footStepManager.SetFootstepWalkLength();
             }
 
-            if ((Input.GetKeyDown(KeyCode.Space) || ControllerChecker.IsA()) && IsGrounded())
+            if (Input.GetKeyDown(KeyCode.Space) || ControllerChecker.IsA())
             {
-                Jump();    
+                if (IsGrounded())
+                    Jump();
+                else if(IsStuck())
+                {
+                    var position = _rigidbody.transform.position;
+                    position.y += 1;
+                    _rigidbody.transform.position = position;
+                }
             }
             else if ((Input.GetKeyDown(KeyCode.U) || ControllerChecker.IsY()))
             {
@@ -70,13 +78,20 @@ namespace Features.PlayerControls
                 animatorToSoundController.WalkAnimationStop();
             }
         }
-        
+
         private bool IsGrounded()
         {
             IsCurrentlyGrounded = Physics.RaycastAll(transform.position, Vector3.down, groundCheckDistance).Any(o => o.collider.gameObject != gameObject);
             return IsCurrentlyGrounded;
         }
-        
+
+        private bool IsStuck()
+        {
+            var position = transform.position;
+            position.y += 0.5f;
+            return Physics.RaycastAll(position, Vector3.down, 0.5f).Any(o => o.collider.gameObject.name == "SM_Env_Floor_001");
+        }
+
         private void Jump()
         {
             _rigidbody.AddForce(Vector3.up * gameConfig.PlayerJumpForce, ForceMode.Impulse);
