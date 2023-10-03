@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 9180713562000971345}
   - component: {fileID: 9180713562000971346}
   m_Layer: 5
-  m_Name: StartGameV2
+  m_Name: UiKitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
