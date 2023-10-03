@@ -20,7 +20,8 @@ MonoBehaviour:
   - 891231
   BoxShippingKPIDescription: Move the specified boxes to any shipping teleporter
   PlacedCorrectlyKPIDescription: Move boxes to corresponding colored shelving
-  BoxUnsortedFixedKPIDescription: Placeholder Unsorted
+  BoxUnsortedFixedKPIDescription: Warehouse tidiness matters. Resolve any boxes in
+    the work area who are not in their proper homes.
   BoxUnloadedKPIDescription: Move boxes from the conveyor belt area
   BoxShippingMistakesKPIDescription: Placerhold Shipping Mistakes
   BoxShippingScore: 47

@@ -13,10 +13,14 @@ public class ColoredBoxSpawner : OnMessage<WorkdayStarted, WorkdayEnded>
     private SpawnType spawnType;
 
     [SerializeField] private SortingColor[] colors;
+
+    [SerializeField] private int maxToSpawn = -1;
     
     [Header("Decoration Settings")]
     public float SpawnIntervalOverride;
     public bool BeginAutomatically;
+
+    private int _numSpawned;
 
     protected override void AfterEnable()
     {
@@ -40,6 +44,10 @@ public class ColoredBoxSpawner : OnMessage<WorkdayStarted, WorkdayEnded>
 
     private void SpawnObject()
     {
+        if (maxToSpawn > 0 && _numSpawned >= maxToSpawn)
+            return;
+        
+        _numSpawned++;
         GameObject toSpawn = spawnType switch
         {
             SpawnType.Random => GetRandomObject(),
