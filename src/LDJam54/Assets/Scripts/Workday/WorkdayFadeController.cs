@@ -11,7 +11,7 @@ public class WorkdayFadeController : OnMessage<StartNextDayRequested>
     
     protected override void Execute(StartNextDayRequested msg)
     {
-        if (CurrentGameState.State.PlayerIsFired)
+        if (CurrentGameState.State.PerformanceReview.EliminatedPerson.Equals(CurrentGameState.State.PlayerID))
             return;
 
         _remainingFadeTime = fadeTime;

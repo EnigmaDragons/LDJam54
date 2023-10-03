@@ -20,7 +20,7 @@ public class NextDayHandler : OnMessage<StartNextDayRequested, RestartDayRequest
         if (_t > 0)
             return;
         _t = minimumSecondsDelay;
-        if (CurrentGameState.State.PlayerIsFired)
+        if (CurrentGameState.State.PerformanceReview.EliminatedPerson.Equals(CurrentGameState.State.PlayerID))
         {
             Message.Publish(new WasFired());
             return;

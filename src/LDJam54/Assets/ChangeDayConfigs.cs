@@ -12,7 +12,6 @@ public class ChangeDayConfigs : OnMessage<DayChanged>
         {
             var day = gameConfig.Days[s.CurrentDayNumber - 1];
             s.Coworkers = gameConfig.Coworkers.Skip(s.CurrentDayNumber - 1).ToList();
-            s.PlayerIsFired = false;
             s.ResetKpi();
             s.ActiveKPIs = day.ActiveKPIs;
             s.CoworkerScores = day.CoworkerScores;

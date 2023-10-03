@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using FMODUnity;
+using UnityEngine;
 
 public class OnPlayerEnterStartMeeting : PlayerTrigger
 {
@@ -57,10 +58,13 @@ public class OnPlayerEnterStartMeeting : PlayerTrigger
         PerformanceEvaluator.Evaluate(cfg);
         CurrentGameState.Update(g => g.MeetingTime = MeetingTime.Evening);
         var gs = CurrentGameState.State;
-        var youAreFired = gs.PlayerIsFired;
+        var firedId = gs.PerformanceReview.EliminatedPerson;
         var dayFiringSpeech = cfg.CurrentDayConfig.AfternoonSpeech;
-        var speech = youAreFired ? youAreFiredSpeech : dayFiringSpeech;
+        var speech = firedId.Equals(gs.PlayerID) ? youAreFiredSpeech : dayFiringSpeech;
         Log.Info($"Evening meeting speech: {speech}");
+        Debug.Log("Eliminated: " + gs.PerformanceReview.EliminatedPerson);
+        if (!firedId.Equals(gs.PlayerID))
+            CurrentGameState.FireCoworker(firedId);
         if (!speech.IsNull)
             Message.Publish(new PlayMeetingBossMonologue(speech));
         Message.Publish(new StartPerformanceMeetingRequested());
