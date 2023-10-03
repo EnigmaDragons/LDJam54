@@ -35,11 +35,19 @@ public class Door : MonoBehaviour {
 		if (DEBUG_LOG)
 			Debug.Log(msg);
 	}
-	
-	void Start() 
+
+	private void InitIfNeeded()
 	{
-		anim = GetComponent<Animation> ();
-		_animName = anim.clip.name;
+		if (anim == null || _animName == null)
+		{
+			anim = GetComponent<Animation>();
+			_animName = anim.clip.name;
+		}
+	}
+	
+	private void Start() 
+	{
+		InitIfNeeded();
 		if (!_lockedInitialized)
 			SetLocked(startedLocked);
 		if (forwardLabel.text == "")
@@ -50,6 +58,7 @@ public class Door : MonoBehaviour {
 
 	public void SetLabels(string forwardText, string backwardText)
 	{
+		InitIfNeeded();
 		if (forwardLabel != null)
 			forwardLabel.text = forwardText;
 		if (backwardLabel != null)
@@ -58,12 +67,15 @@ public class Door : MonoBehaviour {
 	
 	public void SetLocked(bool isLocked)
 	{
+		InitIfNeeded();
 		_lockedInitialized = true;
 		_isLocked = isLocked;
 		if (lockedVisual != null)
 			lockedVisual.SetActive(isLocked);
 		if (unlockedVisual != null)
 			unlockedVisual.SetActive(!isLocked);
+		if (isLocked)
+			ForceCloseDoor();
 	}
 
 	// Update is called once per frame
@@ -108,13 +120,22 @@ public class Door : MonoBehaviour {
 	{
 		if (_isLocked)
 			return;
-		anim [_animName].speed = -1 * CloseSpeed;
-		if (anim [_animName].normalizedTime > 0) {
-			anim [_animName].normalizedTime = anim [_animName].normalizedTime;
-		} else {
-			anim [_animName].normalizedTime = 1;
+		ForceCloseDoor();
+	}
+
+	private void ForceCloseDoor()
+	{
+		anim[_animName].speed = -1 * CloseSpeed;
+		if (anim[_animName].normalizedTime > 0)
+		{
+			anim[_animName].normalizedTime = anim[_animName].normalizedTime;
 		}
-		anim.Play (_animName);
+		else
+		{
+			anim[_animName].normalizedTime = 1;
+		}
+
+		anim.Play(_animName);
 		Message.Publish(new DoorClosed(transform.position));
 	}
 

@@ -89,6 +89,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameWinDoor: {fileID: 6884175171527480710}
   nextDayDoor: {fileID: 2054814876171290434}
+  warehouseDoor: {fileID: 5124464045999354481}
 --- !u!1001 &976717755743869569
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -264,7 +265,7 @@ PrefabInstance:
     - target: {fileID: 3353509880875526254, guid: 040341e0227d5aa4e8d4ec3556a0a657,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3353509880875526254, guid: 040341e0227d5aa4e8d4ec3556a0a657,
         type: 3}
@@ -471,6 +472,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4666786999956499229}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5124464045999354481 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 566893810510731628, guid: 040341e0227d5aa4e8d4ec3556a0a657,
+    type: 3}
+  m_PrefabInstance: {fileID: 4666786999956499229}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc654a8e417749c996a7be82fbfd81fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6884175171527480710 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2254688045119110811, guid: 040341e0227d5aa4e8d4ec3556a0a657,

@@ -54,6 +54,8 @@ public class OnPlayerEnterStartMeeting : PlayerTrigger
             return;
         
         _eveningMeetingSpeechesPlayed.Add(CurrentGameState.State.CurrentDayNumber);
+        PerformanceEvaluator.Evaluate(cfg);
+        CurrentGameState.Update(g => g.MeetingTime = MeetingTime.Evening);
         var gs = CurrentGameState.State;
         var youAreFired = gs.PlayerIsFired;
         var dayFiringSpeech = cfg.CurrentDayConfig.AfternoonSpeech;
@@ -61,5 +63,6 @@ public class OnPlayerEnterStartMeeting : PlayerTrigger
         Log.Info($"Evening meeting speech: {speech}");
         if (!speech.IsNull)
             Message.Publish(new PlayMeetingBossMonologue(speech));
+        Message.Publish(new StartPerformanceMeetingRequested());
     }
 }

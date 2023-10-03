@@ -3,10 +3,18 @@
 public class MorningMeetingUiController : OnMessage<StartKpiMeetingRequested>
 {
     public GameConfig cfg;
+    [Header("Single")]
     public MeetingKpiLabels singleKpi;
+    
+    [Header("Double")]
     public MeetingKpiLabels leftKpi;
     public MeetingKpiLabels rightKpi;
-
+    
+    [Header("Triple")]
+    public MeetingKpiLabels threeKpi1;
+    public MeetingKpiLabels threeKpi2;
+    public MeetingKpiLabels threeKpi3;
+    
     private void Awake()
     {
         Hide();
@@ -22,6 +30,9 @@ public class MorningMeetingUiController : OnMessage<StartKpiMeetingRequested>
         singleKpi.gameObject.SetActive(false);
         leftKpi.gameObject.SetActive(false);
         rightKpi.gameObject.SetActive(false);
+        threeKpi1.gameObject.SetActive(false);
+        threeKpi2.gameObject.SetActive(false);
+        threeKpi3.gameObject.SetActive(false);
     }
 
     protected override void Execute(StartKpiMeetingRequested msg)
@@ -40,6 +51,15 @@ public class MorningMeetingUiController : OnMessage<StartKpiMeetingRequested>
             rightKpi.gameObject.SetActive(true);
             leftKpi.Set(kpis[0].ToString().WithSpaceBetweenWords(), CurrentGameState.State.KPIDescriptions[kpis[0]]);
             rightKpi.Set(kpis[1].ToString().WithSpaceBetweenWords(), CurrentGameState.State.KPIDescriptions[kpis[1]]);
+        }
+        else if (kpis.Length == 3)
+        {
+            threeKpi1.gameObject.SetActive(true);
+            threeKpi2.gameObject.SetActive(true);
+            threeKpi3.gameObject.SetActive(true);
+            threeKpi1.Set(kpis[0].ToString().WithSpaceBetweenWords(), CurrentGameState.State.KPIDescriptions[kpis[0]]);
+            threeKpi2.Set(kpis[1].ToString().WithSpaceBetweenWords(), CurrentGameState.State.KPIDescriptions[kpis[1]]);
+            threeKpi3.Set(kpis[2].ToString().WithSpaceBetweenWords(), CurrentGameState.State.KPIDescriptions[kpis[2]]);
         }
         else
         {

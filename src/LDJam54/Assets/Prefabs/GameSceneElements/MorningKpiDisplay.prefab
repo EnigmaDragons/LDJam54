@@ -52,6 +52,9 @@ MonoBehaviour:
   singleKpi: {fileID: 1683878194305842251}
   leftKpi: {fileID: 5531839979181889983}
   rightKpi: {fileID: 8758993590904413946}
+  threeKpi1: {fileID: 5531839979181889983}
+  threeKpi2: {fileID: 1683878194305842251}
+  threeKpi3: {fileID: 8758993590904413946}
 --- !u!1 &5000272917623766318
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,12 +245,12 @@ PrefabInstance:
     - target: {fileID: 1124819127275221622, guid: e3253de1afc73ed4fb6e340ddac8812a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.11
+      value: -13
       objectReference: {fileID: 0}
     - target: {fileID: 1124819127275221622, guid: e3253de1afc73ed4fb6e340ddac8812a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -15.8
+      value: -11.4
       objectReference: {fileID: 0}
     - target: {fileID: 1124819127275221622, guid: e3253de1afc73ed4fb6e340ddac8812a,
         type: 3}
@@ -329,12 +332,12 @@ PrefabInstance:
     - target: {fileID: 1124819127275221622, guid: e3253de1afc73ed4fb6e340ddac8812a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.65
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1124819127275221622, guid: e3253de1afc73ed4fb6e340ddac8812a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -15.799999
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 1124819127275221622, guid: e3253de1afc73ed4fb6e340ddac8812a,
         type: 3}
@@ -416,12 +419,12 @@ PrefabInstance:
     - target: {fileID: 1124819127275221622, guid: e3253de1afc73ed4fb6e340ddac8812a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.92
+      value: -29
       objectReference: {fileID: 0}
     - target: {fileID: 1124819127275221622, guid: e3253de1afc73ed4fb6e340ddac8812a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -15.799999
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 1124819127275221622, guid: e3253de1afc73ed4fb6e340ddac8812a,
         type: 3}
