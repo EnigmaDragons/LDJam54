@@ -154,58 +154,8 @@ MonoBehaviour:
       Path: 
     AfternoonSpeech:
       Guid:
-        Data1: 1927221162
-        Data2: 1276035917
-        Data3: -1506218098
-        Data4: -363764729
-      Path: event:/Boss/Boss_Afternoon_5
-  - ActiveKPIs: 
-    CoworkerScores: 
-    BoxSpawnInterval: 1
-    ClockSpeedFactor: 1
-    MorningSpeech:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
-    KpiSpeech:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
-    AfternoonSpeech:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
-  - ActiveKPIs: 
-    CoworkerScores: 
-    BoxSpawnInterval: 1
-    ClockSpeedFactor: 1
-    MorningSpeech:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
-    KpiSpeech:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
-    AfternoonSpeech:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1014301691
+        Data2: 1108698674
+        Data3: 1752959900
+        Data4: 2013637316
+      Path: event:/Boss/Boss_Firing_Self
