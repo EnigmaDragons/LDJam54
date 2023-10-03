@@ -10,6 +10,7 @@ public class ChangeDayConfigs : OnMessage<DayChanged>
         CurrentGameState.Instance.UpdateState(s =>
         {
             var day = gameConfig.Days[s.CurrentDayNumber - 1];
+            s.PlayerIsFired = false;
             s.ResetKpi();
             s.ActiveKPIs = day.ActiveKPIs;
             s.CoworkerScores = day.CoworkerScores;
