@@ -43,19 +43,19 @@ public class AreasController : OnMessage<GameStateChanged, DayChanged>
             Destroy(_currentDayPrefab);
             _currentDayPrefab = null;
         }
-        if (CurrentGameState.State.CurrentDayNumber == 1 && day1Prefab != null)
-            _currentDayPrefab = Instantiate(day1Prefab, transform);
         if (CurrentGameState.State.CurrentDayNumber == 2 && day2Prefab != null)
             _currentDayPrefab = Instantiate(day2Prefab, transform);
-        if (CurrentGameState.State.CurrentDayNumber == 3 && day3Prefab != null)
+        else if (CurrentGameState.State.CurrentDayNumber == 3 && day3Prefab != null)
             _currentDayPrefab = Instantiate(day3Prefab, transform);
-        if (CurrentGameState.State.CurrentDayNumber == 4 && day4Prefab != null)
+        else if (CurrentGameState.State.CurrentDayNumber == 4 && day4Prefab != null)
             _currentDayPrefab = Instantiate(day4Prefab, transform);
-        if (CurrentGameState.State.CurrentDayNumber == 5 && day5Prefab != null)
+        else if (CurrentGameState.State.CurrentDayNumber == 5 && day5Prefab != null)
             _currentDayPrefab = Instantiate(day5Prefab, transform);
-        if (CurrentGameState.State.CurrentDayNumber == 6 && day6Prefab != null)
+        else if (CurrentGameState.State.CurrentDayNumber == 6 && day6Prefab != null)
             _currentDayPrefab = Instantiate(day6Prefab, transform);
-        if (CurrentGameState.State.CurrentDayNumber == 7 && day7Prefab != null)
+        else if (CurrentGameState.State.CurrentDayNumber == 7 && day7Prefab != null)
             _currentDayPrefab = Instantiate(day7Prefab, transform);
+        else
+            _currentDayPrefab = Instantiate(day1Prefab, transform);
     }
 }

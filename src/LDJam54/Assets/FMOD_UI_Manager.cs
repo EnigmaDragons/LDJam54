@@ -7,6 +7,7 @@ using FMODUnity;
 public class FMOD_UI_Manager : MonoBehaviour
 {
     EventInstance hooverSound;
+    EventInstance creditMusic;
     public void ClickButton()
     {
         RuntimeManager.PlayOneShot("event:/UI/UIButtons");
@@ -22,5 +23,12 @@ public class FMOD_UI_Manager : MonoBehaviour
     public void StopHooverSound()
     {
         hooverSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); 
+    }
+
+    public void PlayCreditMusic()
+    {
+        creditMusic = RuntimeManager.CreateInstance("event:/MUSIC/CreditMusic");
+        creditMusic.start();
+        creditMusic.release();
     }
 }
