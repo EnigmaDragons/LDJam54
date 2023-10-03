@@ -54,8 +54,14 @@ namespace Features.PlayerControls
             {
                 Jump();    
             }
-            
-            if(_fpController.m_velocity != Vector3.zero && IsGrounded() && !isJumping) 
+            else if ((Input.GetKeyDown(KeyCode.U) || ControllerChecker.IsY()))
+            {
+                var position = _rigidbody.transform.position;
+                position.y++;
+                _rigidbody.transform.position = position;
+            }
+
+            if (_fpController.m_velocity != Vector3.zero && IsGrounded() && !isJumping) 
             {
                 animatorToSoundController.WalkAnimationStart();
             }
