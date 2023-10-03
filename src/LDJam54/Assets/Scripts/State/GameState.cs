@@ -21,7 +21,8 @@ public sealed class GameState
     // All enums used in this class should have specified integer values.
     // This is necessary to preserve backwards save compatibility.
 
-    public string PlayerID = "464947";
+    public readonly string BossID = "891231";
+    public readonly string PlayerID = "464947";
     public bool PlayerIsFired = false;
 
     public float ClockSpeedFactor = 1f;
