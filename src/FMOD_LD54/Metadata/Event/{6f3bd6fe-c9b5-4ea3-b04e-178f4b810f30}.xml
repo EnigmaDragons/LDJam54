@@ -81,9 +81,6 @@
 		<property name="length">
 			<value>46.950812499999998</value>
 		</property>
-		<property name="volume">
-			<value>4.5</value>
-		</property>
 		<relationship name="triggerConditions">
 			<destination>{af28c6fe-1602-40d2-a3dc-74bba7bba08f}</destination>
 		</relationship>
