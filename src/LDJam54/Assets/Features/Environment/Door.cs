@@ -27,6 +27,7 @@ public class Door : MonoBehaviour {
 	private const bool DEBUG_LOG = false;
 	private bool _lockedInitialized = false;
 	private bool _isLocked;
+	private bool _isClosed = true;
 	
 	public bool Locked => _isLocked;
 
@@ -74,7 +75,7 @@ public class Door : MonoBehaviour {
 			lockedVisual.SetActive(isLocked);
 		if (unlockedVisual != null)
 			unlockedVisual.SetActive(!isLocked);
-		if (isLocked)
+		if (isLocked && !_isClosed)
 			ForceCloseDoor();
 	}
 
@@ -110,6 +111,8 @@ public class Door : MonoBehaviour {
 	{
 		if (_isLocked)
 			return;
+		
+		_isClosed = false;
 		anim [_animName].speed = 1 * OpenSpeed;
 		anim [_animName].normalizedTime = 0;
 		anim.Play (_animName);
@@ -125,6 +128,7 @@ public class Door : MonoBehaviour {
 
 	private void ForceCloseDoor()
 	{
+		_isClosed = true;
 		anim[_animName].speed = -1 * CloseSpeed;
 		if (anim[_animName].normalizedTime > 0)
 		{
