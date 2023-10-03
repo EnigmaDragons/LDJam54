@@ -9,6 +9,7 @@ public class WorktimeController : OnMessage<StartWorkdayRequested, WorkdayEnded,
     protected override void Execute(StartWorkdayRequested msg)
     {
         WorkdayState.InitWorkday();
+        WorkdayState.IsWorkdayStarted = true;
         _worktimeIsActive = true;
         _elapsedInCurrentDay = 0f;
         CurrentGameState.Update(g => g.CurrentWorkdayEnded = false);

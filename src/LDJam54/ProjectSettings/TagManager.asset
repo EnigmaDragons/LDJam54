@@ -10,6 +10,7 @@ TagManager:
   - AppInfra
   - RaycastInteract
   - PlayerParent
+  - RespawnWork
   layers:
   - Default
   - TransparentFX
