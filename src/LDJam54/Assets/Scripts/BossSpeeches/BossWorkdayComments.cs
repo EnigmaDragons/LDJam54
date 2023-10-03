@@ -3,7 +3,7 @@
 public class BossWorkdayComments : OnMessage<WorktimeChanged, DayChanged>
 {
     public GameConfig cfg;
-    public int[] CommentHours = { 10, 13, 16 };
+    public int[] CommentHours = { 11, 13, 16 };
 
     private HashSet<int> hoursPublished = new HashSet<int>();
     
