@@ -1,0 +1,77 @@
+Retro Notes:
+
+1) What went well?
+Silas - Fantastic team! The art assets amazing!
+Silas - Didn't have to ship with (almost) any placeholder
+Silas - Designer was highly available for answering questions
+Night On Mars - Team and professionality were top-notch. Everyone treated it like a serious gig.
+Night On Mars - Watching everything fall into place was incredible
+Night On Mars - Team handled stress very well
+Night On Mars - 3D Art and Lighting are incredible!
+Paul - Really enjoyed it, as a first jam.
+Paul - Felt really calm and relaxed, even in the final hours
+Paul - Everyone knew what they were doing
+Paul - Very high quality on everything (art, sound, and voice acting)
+Noah - Having Unity-capable technical artists was a HUGE win
+Noah - Having a Sound Supervisor/Integrator was AMAZING
+Noah - Throwing a GREAT mechanic
+Gordy - We produced a game in 3 day. 
+Gordy - No one died or rage quit.
+Chaos - Figured out project architecture easily
+
+2) What didn't go well?
+Silas - Team was a little behind on the integration schedule
+Silas - We underinvested in player controller development
+Silas - Programming prioritization workflow wasn't ideal
+Night On Mars - Footsteps integration was clunky and non-ideal
+Paul - Music Transitioning was very hard. Sometimes music would play on top of other music tracks
+Paul - Would plan more for the timeflow moods of the game from the start
+Paul - Artistic vision and discussion could have been more fleshed out
+Paul - Hard to compose before seeing visuals and gameplay in action
+Paul - It wasn't clear which design ideas were outdated
+Noah - This felt like the slowest for the actual gameplay to exist
+Noah - Integration was behind
+Noah - Mapping was behind schedule
+Noah - Panic for fixing bugs at the end
+Noah - Performance Implementation Design should have been simpler
+Gordy - Couldn't really test the game until day 3
+Gordy - Game Skeleton milestone deliveries were not ideal
+Chaos - Time management. Real work things came up
+
+3) What lessons can we take moving forward?
+Silas - Should identify too complex gameplay bits earlier, in order to prevent workflow blocks
+Silas - Provided stronger Role clarity for inexperienced members
+Silas - A better organized game design document
+Silas - Prebake a Game Design Document template
+Silas - Really want a UI/Graphic Designer on the team
+Silas - Really want a Unity Technical Integrator on the team
+Night On Mars - Created and share a design document with everyone on the team
+Night On Mars - Update the design document at least once a day
+Night On Mars - Create a social media during jam guide
+Paul - Game designer needs to communicate clearly and frequently
+Paul - Could have added the music ideas description to the design docs
+Noah - Evolve the core documentation and guides in the Game Jam Template
+Noah - Pin all the document links in Discord
+Gordy - Should have started testing built copies
+Gordy - Test WebGL builds sooner
+Gordy - Try to have at least 1 Experienced Game Designer
+Chaos - Clear communication of scope and current tasks
+
+4) What was your personal favorite part of the jam?
+Silas - Loved seeing the high talent and high collaboration team in action
+Night On Mars - Loved throwing things at the Shipping teleporters!
+Paul - The teamwork, structure, and decision-making leadership. Very inspiring!
+Noah - Putting boxes on the conveyor belt
+Gordy - The developer playground scenes, specifically Chaos' dev scene
+Chaos - Team positivity and professionalism despite the flaws and challenges
+Chaos - New features were added in SO FAST. Blazing speed!
+
+5) What is your favorite thing in the game?
+Silas - Jumppads and throwing! I wish we had more jump pads in the game.
+Night On Mars - Loves how great the teleporters sound!
+Paul - Jumping, and throwing. The action parts. And also the boss voiceovers.
+Noah - The visuals. Fantastic set pieces!
+Gordy - The fact that game intentionally exploits KPIs. 
+Chaos - The visuals. Amazing boxes! Placing boxes on the shelves.
+
+

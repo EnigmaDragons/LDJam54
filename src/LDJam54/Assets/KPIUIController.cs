@@ -20,7 +20,7 @@ public class KPIUIController : OnMessage<GameStateChanged>
 
     private void Render(GameState gs)
     {
-        ScoreLabel.text = "Score: " + (gs.ActiveKPIs.Select(kpi => gs.KPIs[kpi] * _kpiScoring[kpi]).Min());
+        ScoreLabel.text = "KPI Score: " + (gs.ActiveKPIs.Select(kpi => gs.KPIs[kpi] * _kpiScoring[kpi]).Min());
         var activeKPIs = gs.ActiveKPIs;
         var KPIs = gs.KPIs;
         for (var i = 0; i < activeKPIs.Length; i++)

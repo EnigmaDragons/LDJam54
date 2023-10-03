@@ -37,7 +37,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -128, y: 0}
+  m_AnchoredPosition: {x: -64, y: 0}
   m_SizeDelta: {x: 256, y: 384}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!1 &3631043005439875655
@@ -181,8 +181,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Required Shipment
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d04ba47e14e113449a93f846fb5549f6, type: 2}
-  m_sharedMaterial: {fileID: 3488009994728427998, guid: d04ba47e14e113449a93f846fb5549f6,
+  m_fontAsset: {fileID: 11400000, guid: ab0ce5b62abd0ce4fa1710a3e98e53f1, type: 2}
+  m_sharedMaterial: {fileID: -8365509778644770462, guid: ab0ce5b62abd0ce4fa1710a3e98e53f1,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -317,8 +317,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Medium Purple Box
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d04ba47e14e113449a93f846fb5549f6, type: 2}
-  m_sharedMaterial: {fileID: 3488009994728427998, guid: d04ba47e14e113449a93f846fb5549f6,
+  m_fontAsset: {fileID: 11400000, guid: ab0ce5b62abd0ce4fa1710a3e98e53f1, type: 2}
+  m_sharedMaterial: {fileID: -8365509778644770462, guid: ab0ce5b62abd0ce4fa1710a3e98e53f1,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -590,5 +590,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipment: {fileID: 11400000, guid: 4066e500d2ce3e243b01a4ac050d9908, type: 2}
-  shippingScreen: {fileID: 935957334239433319}
   size: {fileID: 8958635002152443928}

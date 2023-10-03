@@ -6,7 +6,6 @@
 // Escape Key: Escapes the mouse lock
 // Mouse click after pressing escape will lock the mouse again
 
-using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -115,12 +114,11 @@ public class FirstPersonController : MonoBehaviour
     //controls the locking and unlocking of the mouse
     private void InternalLockUpdate()
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
-            m_cursorIsLocked = false;
-        else if (Input.GetMouseButtonUp(0))
+        // if (Input.GetKeyUp(KeyCode.Escape))
+        //     m_cursorIsLocked = false;
+        if (Input.GetMouseButtonUp(0))
             m_cursorIsLocked = true;
 
-        Cursor.lockState = m_cursorIsLocked ? CursorLockMode.Locked : CursorLockMode.None;
-        Cursor.visible = !m_cursorIsLocked;
+        MouseState.SetCursorVisible(!m_cursorIsLocked);
     }
 }

@@ -8,6 +8,7 @@ public class EventPublisher : ScriptableObject
     public static void PublishWasFired() => Message.Publish(new WasFired());
     public static void PublishRestartDayRequested() => Message.Publish(new RestartDayRequested());
     public static void PublishInstaWinDayRequested() => Message.Publish(new InstaWinDayRequested());
+    public static void ToggleTargetRequested(string elementName) => Message.Publish(new ToggleNamedTarget(elementName));
     public static void SetCurrentDay(int day) 
     {
         CurrentGameState.Instance.UpdateState(g => g.CurrentDayNumber = day);
