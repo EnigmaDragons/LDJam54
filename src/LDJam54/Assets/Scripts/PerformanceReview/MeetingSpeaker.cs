@@ -1,11 +1,11 @@
 ﻿using FMOD.Studio;
 using FMODUnity;
 
-public class MeetingSpeaker : OnMessage<PlayMeetingBossMonologue>
+public class MeetingSpeaker : OnMessage<PlayBossMonologue>
 {
     private EventInstance instance;
 
-    protected override void Execute(PlayMeetingBossMonologue msg)
+    protected override void Execute(PlayBossMonologue msg)
     {
         if (instance.isValid())
         {

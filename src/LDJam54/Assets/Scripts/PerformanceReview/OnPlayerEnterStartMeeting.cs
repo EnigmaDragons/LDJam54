@@ -66,7 +66,7 @@ public class OnPlayerEnterStartMeeting : PlayerTrigger
         if (!firedId.Equals(gs.PlayerID))
             CurrentGameState.FireCoworker(firedId);
         if (!speech.IsNull)
-            Message.Publish(new PlayMeetingBossMonologue(speech));
+            Message.Publish(new PlayBossMonologue(speech));
         Message.Publish(new StartPerformanceMeetingRequested());
     }
 }
