@@ -298,7 +298,7 @@ MonoBehaviour:
   valueName: bus:/MSTBUS
   reductionDb:
     UseConstant: 1
-    ConstantValue: 6
+    ConstantValue: 0
     FloatVariable: {fileID: 11400000, guid: 9ac918dfd50115d40affcd6790d23bf9, type: 2}
   fmodVol: 0
 --- !u!1 &1945109839375585791
@@ -1356,8 +1356,8 @@ MonoBehaviour:
   slider: {fileID: 8970765954255602357}
   valueName: bus:/MSTBUS/Music
   reductionDb:
-    UseConstant: 0
-    ConstantValue: 6
+    UseConstant: 1
+    ConstantValue: 0
     FloatVariable: {fileID: 11400000, guid: 9ac918dfd50115d40affcd6790d23bf9, type: 2}
   fmodVol: 0
 --- !u!1 &8970765954400246714
@@ -1875,7 +1875,7 @@ MonoBehaviour:
   valueName: bus:/MSTBUS/DX
   reductionDb:
     UseConstant: 1
-    ConstantValue: 6
+    ConstantValue: 0
     FloatVariable: {fileID: 11400000, guid: 9ac918dfd50115d40affcd6790d23bf9, type: 2}
   fmodVol: 0
 --- !u!1 &9123986389785492003
