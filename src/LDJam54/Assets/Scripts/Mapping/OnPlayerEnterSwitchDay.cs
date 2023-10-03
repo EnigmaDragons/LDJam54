@@ -1,23 +1,23 @@
 ﻿
 using System;
 
-public class OnPlayerEnterSwitchDay: PlayerTrigger
+public class OnPlayerEnterSwitchDay : PlayerTrigger
 {
-    private bool _waitingForDayChange;
+    private bool _workdayOver;
 
     private void Awake()
     {
-        _waitingForDayChange = false;
+        _workdayOver = false;
     }
 
-    private void OnEnable() => Message.Subscribe<DayChanged>(_ => _waitingForDayChange = false, this);
+    private void OnEnable() => Message.Subscribe<WorkdayEnded>(_ => _workdayOver = true, this);
     private void OnDisable() => Message.Unsubscribe(this);
 
     protected override void OnTriggered()
     {
-        if (_waitingForDayChange)
+        if (!_workdayOver)
             return;
-        _waitingForDayChange = true;
+        _workdayOver = false;
         Message.Publish(new StartNextDayRequested());
     }
 }
