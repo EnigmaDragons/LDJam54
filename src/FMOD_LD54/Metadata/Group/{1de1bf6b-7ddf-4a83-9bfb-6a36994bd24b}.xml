@@ -14,7 +14,7 @@
 			<destination>{dded587d-64b0-4f06-97db-c67536a0a8c8}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{c9fdca57-5f3b-4035-aa37-2b795f9ff268}</destination>
+			<destination>{1eb67dfc-76cd-4725-a9d2-be2c56a7530d}</destination>
 		</relationship>
 	</object>
 	<object class="SidechainModulator" id="{fb78c65c-a9a3-4000-91ea-3836a1418969}">
