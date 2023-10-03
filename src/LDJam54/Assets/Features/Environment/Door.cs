@@ -96,6 +96,8 @@ public class Door : MonoBehaviour {
 	
 	void OpenDoor()
 	{
+		if (_isLocked)
+			return;
 		anim [_animName].speed = 1 * OpenSpeed;
 		anim [_animName].normalizedTime = 0;
 		anim.Play (_animName);
@@ -104,6 +106,8 @@ public class Door : MonoBehaviour {
 	
 	void CloseDoor()
 	{
+		if (_isLocked)
+			return;
 		anim [_animName].speed = -1 * CloseSpeed;
 		if (anim [_animName].normalizedTime > 0) {
 			anim [_animName].normalizedTime = anim [_animName].normalizedTime;
@@ -127,7 +131,7 @@ public class Door : MonoBehaviour {
 					_animName = OpenBackwardAnimName;
 				}
 			}
-			if (isAutomatic && !_isLocked) {
+			if (isAutomatic) {
 				OpenDoor ();
 			}
 
