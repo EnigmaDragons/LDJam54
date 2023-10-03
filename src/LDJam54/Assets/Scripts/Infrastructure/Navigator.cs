@@ -13,4 +13,14 @@ public sealed class Navigator : ScriptableObject
         Log.Info($"Navigating to {sceneName}");
         Message.Publish(new NavigateToSceneRequested(sceneName));
     }
+    
+    public static void HardExitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#elif UNITY_WEBGL
+#else
+        Application.Quit();
+#endif 
+    }
 }
