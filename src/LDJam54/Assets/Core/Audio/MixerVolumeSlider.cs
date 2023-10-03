@@ -1,8 +1,7 @@
-﻿    using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 using FMODUnity;
-using FMOD.Studio;
 
 public sealed class MixerVolumeSlider : MonoBehaviour 
 {
