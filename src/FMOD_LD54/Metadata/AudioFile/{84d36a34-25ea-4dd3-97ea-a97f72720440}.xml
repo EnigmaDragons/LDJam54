@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{84d36a34-25ea-4dd3-97ea-a97f72720440}">
 		<property name="assetPath">
-			<value>Game Over music v01.mp3</value>
+			<value>Music/Game Over music v01.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
