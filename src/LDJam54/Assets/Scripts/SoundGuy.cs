@@ -41,6 +41,12 @@ public class SoundGuy : MonoBehaviour
         Message.Subscribe<PlayBossComment>(OnBossComment, this);
         Message.Subscribe<StartKpiMeetingRequested>(OnMorningMeetingStarted, this);
         Message.Subscribe<WentToSleep>(OnSleepTimeOut , this);
+        Message.Subscribe<StopCurrentBackgroundMusic>(OnStopCurrentBackgroundMusic, this);
+    }
+
+    private void OnStopCurrentBackgroundMusic(StopCurrentBackgroundMusic obj)
+    {
+        _currentMusic.stop(STOP_MODE.ALLOWFADEOUT);
     }
 
     private void OnMorningMeetingStarted(StartKpiMeetingRequested obj)

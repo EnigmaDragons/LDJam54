@@ -96,6 +96,8 @@ public class Door : MonoBehaviour {
 	
 	void OpenDoor()
 	{
+		if (_isLocked)
+			return;
 		anim [_animName].speed = 1 * OpenSpeed;
 		anim [_animName].normalizedTime = 0;
 		anim.Play (_animName);
@@ -104,6 +106,8 @@ public class Door : MonoBehaviour {
 	
 	void CloseDoor()
 	{
+		if (_isLocked)
+			return;
 		anim [_animName].speed = -1 * CloseSpeed;
 		if (anim [_animName].normalizedTime > 0) {
 			anim [_animName].normalizedTime = anim [_animName].normalizedTime;
@@ -120,12 +124,12 @@ public class Door : MonoBehaviour {
 		
 		if(other.GetComponent<Collider>().CompareTag(PlayerColliderTag)){
 			if(DoubleSidesOpen){
-			relativePos = gameObject.transform.InverseTransformPoint (other.transform.position);
-			if (relativePos.z > 0) {
-				_animName = OpenForwardAnimName;
-			} else {
-				_animName = OpenBackwardAnimName;
-			}
+				relativePos = gameObject.transform.InverseTransformPoint(other.transform.position);
+				if (relativePos.z > 0) {
+					_animName = OpenForwardAnimName;
+				} else {
+					_animName = OpenBackwardAnimName;
+				}
 			}
 			if (isAutomatic) {
 				OpenDoor ();

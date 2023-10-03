@@ -7,6 +7,7 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] private Collider collider;
     [SerializeField] private Collider[] colliders;
     [SerializeField] private ObjectType objectType;
+    [SerializeField] private GameObject burningParticles;
     public Rigidbody Body;
     //Hold Details
     public bool CanBeHeld;
@@ -101,6 +102,24 @@ public class InteractableObject : MonoBehaviour
         
         //move box up
         transform.DOMoveY(transform.position.y + 0.5f, 1f);
+        //fade out
+        renderer.material.DOColor(new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, 0f), 1f);
+        
+        Destroy(gameObject, 1.2f);
+    }
+    
+    public void PlayBurningAnimation()
+    {
+        //1 disable collider & rigidbody
+        SetColliders(false);
+        Body.isKinematic = true;
+        
+        //start burning
+        burningParticles.SetActive(true);
+        
+        //set the material to transparent
+        SetToTransparent();
+        
         //fade out
         renderer.material.DOColor(new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, 0f), 1f);
         

@@ -11,6 +11,7 @@ public class FMOD_UI_Manager : MonoBehaviour
     public void ClickButton()
     {
         RuntimeManager.PlayOneShot("event:/UI/UIButtons");
+        hooverSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); 
     }
 
     public void PlayeHooverSound()
