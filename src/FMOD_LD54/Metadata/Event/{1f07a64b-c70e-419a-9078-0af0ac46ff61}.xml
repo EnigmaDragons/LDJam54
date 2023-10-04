@@ -222,7 +222,14 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{4fc71e17-4814-4275-82ac-773173eee683}" />
-	<object class="SpatialiserEffect" id="{77997bf6-d671-470b-8c3f-a61879bbd144}" />
+	<object class="SpatialiserEffect" id="{77997bf6-d671-470b-8c3f-a61879bbd144}">
+		<property name="maximumDistance">
+			<value>34</value>
+		</property>
+		<property name="overrideRange">
+			<value>true</value>
+		</property>
+	</object>
 	<object class="RandomizerModulator" id="{7c702272-48c9-4943-8224-a24ea1f665ec}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>pitch</value>
