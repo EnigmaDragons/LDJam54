@@ -18,6 +18,8 @@ Noah - Throwing a GREAT mechanic
 Gordy - We produced a game in 3 day. 
 Gordy - No one died or rage quit.
 Chaos - Figured out project architecture easily
+Jordan - Really fast implementation of mechanics
+Jordan - Managed to ship a project that was fairly heavy in mechanics and scope in such a short time
 
 2) What didn't go well?
 Silas - Team was a little behind on the integration schedule
@@ -37,6 +39,9 @@ Noah - Performance Implementation Design should have been simpler
 Gordy - Couldn't really test the game until day 3
 Gordy - Game Skeleton milestone deliveries were not ideal
 Chaos - Time management. Real work things came up
+Jordan - There was a lack of inter-departmental communications, even with large changes
+Jordan - Full gameplay loop / level layout took too long to be settled resulting in lack of playtesting time
+Jordan - We discovered the shader build error far too late
 
 3) What lessons can we take moving forward?
 Silas - Should identify too complex gameplay bits earlier, in order to prevent workflow blocks
@@ -56,6 +61,9 @@ Gordy - Should have started testing built copies
 Gordy - Test WebGL builds sooner
 Gordy - Try to have at least 1 Experienced Game Designer
 Chaos - Clear communication of scope and current tasks
+Jordan - Having dedicated member (game designer or producer?) ensure all departments are up-to-date/on the same page in regards to top priorities
+Jordan - Settling on mechanical/structual gameplay early, focusing on smaller additions and improvements throughout the jam
+Jordan - Build early, build often
 
 4) What was your personal favorite part of the jam?
 Silas - Loved seeing the high talent and high collaboration team in action
@@ -65,6 +73,7 @@ Noah - Putting boxes on the conveyor belt
 Gordy - The developer playground scenes, specifically Chaos' dev scene
 Chaos - Team positivity and professionalism despite the flaws and challenges
 Chaos - New features were added in SO FAST. Blazing speed!
+Jordan - Aside from the always-fun playing with physics, I'd say creating shaders and VFX particle systems
 
 5) What is your favorite thing in the game?
 Silas - Jumppads and throwing! I wish we had more jump pads in the game.
@@ -73,5 +82,4 @@ Paul - Jumping, and throwing. The action parts. And also the boss voiceovers.
 Noah - The visuals. Fantastic set pieces!
 Gordy - The fact that game intentionally exploits KPIs. 
 Chaos - The visuals. Amazing boxes! Placing boxes on the shelves.
-
-
+Jordan - Jumppads and chucking boxes with physics (and low-key still the forklift lol)
