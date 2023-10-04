@@ -61,7 +61,7 @@ public sealed class CurrentGameState
     
     public void IncrementKPI(KPI kpi, int amount = 1)
     {
-        if (_gameState.CurrentWorkdayEnded)
+        if (!WorkdayState.IsWorkdayStarted || WorkdayState.IsWorkdayEnded)
             return;
         
         UpdateState(g =>
@@ -73,7 +73,7 @@ public sealed class CurrentGameState
     
     public void DecrementKPI(KPI kpi, int amount = 1)
     {
-        if (_gameState.CurrentWorkdayEnded)
+        if (!WorkdayState.IsWorkdayStarted || WorkdayState.IsWorkdayEnded)
             return;
         
         UpdateState(g =>
