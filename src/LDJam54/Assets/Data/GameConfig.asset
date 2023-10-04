@@ -36,7 +36,7 @@ MonoBehaviour:
   TotalPlayableDays: 5
   Days:
   - ActiveKPIs: 00000000
-    CoworkerScores: 100100006501000053020000a4060000370d0000
+    CoworkerScores: ee0000006501000053020000a4060000370d0000
     BoxSpawnInterval: 2
     ClockSpeedFactor: 1
     MorningSpeech:
@@ -86,7 +86,7 @@ MonoBehaviour:
         Data4: -1888312029
       Path: event:/Boss/Boss_Afternoon_2
   - ActiveKPIs: 01000000
-    CoworkerScores: 340200003904000053050000
+    CoworkerScores: d60100003904000053050000
     BoxSpawnInterval: 90
     ClockSpeedFactor: 0.5
     MorningSpeech:
