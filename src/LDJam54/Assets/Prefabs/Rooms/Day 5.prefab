@@ -12018,7 +12018,7 @@ PrefabInstance:
     - target: {fileID: 6593669928787732366, guid: ff7039b8b984ae14982faccaf570c145,
         type: 3}
       propertyPath: colors.Array.data[0]
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7551813775889544814, guid: ff7039b8b984ae14982faccaf570c145,
         type: 3}
